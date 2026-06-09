@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import localFont from "next/font/local";
+
+const rightGrotesk = localFont({
+  src: [
+    { path: "./fonts/RightGrotesk-Medium.otf", weight: "500" },
+    { path: "./fonts/RightGrotesk-CompactBlack.otf", weight: "900" },
+  ],
+  variable: "--font-right-grotesk",
+});
 
 export const metadata: Metadata = {
   title: "RITGB",
@@ -13,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#f0eeea] text-black antialiased">{children}</body>
+      <body className={`${rightGrotesk.variable} text-black antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
