@@ -1,17 +1,18 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import HeroBottom from "./HeroBottom";
-
-gsap.registerPlugin();
+import { useCursorTrail } from "@/hooks/useCursorTrail";
 
 const lines = ["WE MAKE THE", "INTERNET", "NOTICE YOU"];
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
+  const { handleMouseMove } = useCursorTrail(containerRef);
 
+  // text animation
   useGSAP(
     () => {
       gsap.from(".hero-line", {
@@ -24,6 +25,15 @@ export default function Hero() {
     },
     { scope: containerRef },
   );
+
+  // Cursor trail
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    container.addEventListener("mousemove", handleMouseMove);
+    return () => container.removeEventListener("mousemove", handleMouseMove);
+  }, [handleMouseMove]);
 
   return (
     <section
