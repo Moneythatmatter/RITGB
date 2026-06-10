@@ -38,7 +38,7 @@ export default function AboutText() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f0eeea] flex flex-col items-center justify-center py-24 px-8"
+      className="bg-white flex flex-col items-center justify- pt-100 pb-24 px-8"
     >
       {/* Label */}
       <p className="text-xs tracking-[0.2em] uppercase text-black mb-12">
@@ -50,7 +50,7 @@ export default function AboutText() {
         {lines.map((line, i) => (
           <div key={i} className="overflow-hidden mb-1">
             <h2
-              className={`statement-line font-(family-name:--font-right-grotesk) text-[7vw] font-black leading-[1.05] tracking-[-0.02em] uppercase ${
+              className={`statement-line font-(family-name:--font-right-grotesk) text-[7vw] font-black leading-[0.85] tracking-[-0.02em] uppercase ${
                 line.green ? "text-[#4DB685]" : "text-black"
               }`}
             >
