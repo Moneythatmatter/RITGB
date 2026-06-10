@@ -11,7 +11,7 @@ export default function Navbar() {
       {/* Right side */}
       <div className="flex items-center gap-4">
         {/* Hire Us button */}
-        <button className="bg-white text-black font-bold text-sm px-5 py-2.5 rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize">
+        <button className="bg-black text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize">
           Hire Us ↗
         </button>
 

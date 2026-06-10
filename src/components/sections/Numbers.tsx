@@ -83,8 +83,11 @@ export default function Numbers() {
       ref={sectionRef}
       className="bg-[#f0eeea] md:py-64 py-24 px-8 md:px-27.75"
     >
+      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-16">
+        Numbers Section
+      </p>
       {/* Headline */}
-      <div className="overflow-hidden mb-16 text-center">
+      <div className="overflow-hidden mb-24 text-center">
         <h2 className="numbers-title font-(family-name:--font-right-grotesk) text-[6vw] font-black leading-none tracking-[-0.02em] uppercase">
           What We&apos;ve Done So Far
         </h2>
@@ -98,7 +101,7 @@ export default function Numbers() {
             className="stat-card bg-white rounded-sm p-10 flex flex-col justify-between w-full aspect-368/264"
           >
             <span
-              className={`stat-number-${i} font-(family-name:--font-right-grotesk) text-6xl font-black`}
+              className={`stat-number-${i} font-grotesk text-6xl font-black`}
             >
               {stat.number}
               {stat.suffix}

@@ -34,16 +34,19 @@ export default function Services() {
   );
 
   return (
-    <section ref={sectionRef} className="bg-[#f0eeea]">
+    <section ref={sectionRef} className="bg-white">
+      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-16 px-8 md:px-27.75 pt-24">
+        service section
+      </p>
       {/* Headline */}
       <div className="py-24 px-8 md:px-27.75">
         <div className="overflow-hidden">
-          <h2 className="services-line font-grotesk text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
+          <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
             Where We Cause Internet Problems
           </h2>
         </div>
         <div className="overflow-hidden">
-          <h2 className="services-line font-grotesk text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
+          <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
             (For Your Competitors)
           </h2>
         </div>

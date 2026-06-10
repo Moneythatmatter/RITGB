@@ -52,14 +52,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll Down button */}
-      <div className="hidden md:block absolute right-66 top-[42%] -translate-y-1/2">
+      <div className="hidden md:block absolute right-66 top-[44%] -translate-y-1/2">
         <button
           onClick={() =>
             document
               .getElementById("next-section")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2  rounded-full px-4 py-2 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+          className="bg-[#f9f9f9] font-(family-name:--font-right-grotesk) flex items-baseline gap-2  rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
         >
           Scroll Down ↓
         </button>
