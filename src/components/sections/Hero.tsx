@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import HeroBottom from "./HeroBottom";
 import { useCursorTrail } from "@/hooks/useCursorTrail";
-import { ArrowDown } from "lucide-react";
 
 const lines = ["WE MAKE THE", "INTERNET", "NOTICE YOU"];
 
@@ -60,7 +59,7 @@ export default function Hero() {
               .getElementById("next-section")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2  rounded-full px-4 py-2 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300"
+          className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2  rounded-full px-4 py-2 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
         >
           Scroll Down ↓
         </button>

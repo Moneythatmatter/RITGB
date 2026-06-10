@@ -2,6 +2,9 @@ import Navbar from "@/components/layout/Navbar";
 import AboutImage from "@/components/sections/AboutImage";
 import AboutText from "@/components/sections/AboutText";
 import Hero from "@/components/sections/Hero";
+import MemeSection from "@/components/sections/MemeSection";
+import Numbers from "@/components/sections/Numbers";
+import Services from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       <div id="next-section">
         <AboutImage />
         <AboutText />
+        <MemeSection />
+        <Numbers />
+        <Services />
       </div>
     </main>
   );
