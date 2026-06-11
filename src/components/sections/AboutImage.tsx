@@ -16,7 +16,7 @@ export default function AboutImage() {
     () => {
       gsap.fromTo(
         imageRef.current,
-        { scale: 0.3 },
+        { scale: 0.5 },
         {
           scale: 1.2,
           ease: "none",
