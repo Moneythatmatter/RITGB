@@ -3,6 +3,7 @@ import AboutImage from "@/components/sections/AboutImage";
 import AboutText from "@/components/sections/AboutText";
 import CaseStudy from "@/components/sections/CaseStudy";
 import Hero from "@/components/sections/Hero";
+import Industry from "@/components/sections/Industry";
 import MemeSection from "@/components/sections/MemeSection";
 import Numbers from "@/components/sections/Numbers";
 import Portfolio from "@/components/sections/Portfolio";
@@ -23,6 +24,7 @@ export default function Home() {
         <Portfolio />
         <Projects />
         <CaseStudy />
+        <Industry />
       </div>
     </main>
   );
