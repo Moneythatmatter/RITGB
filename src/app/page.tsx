@@ -4,6 +4,8 @@ import AboutText from "@/components/sections/AboutText";
 import Hero from "@/components/sections/Hero";
 import MemeSection from "@/components/sections/MemeSection";
 import Numbers from "@/components/sections/Numbers";
+import Portfolio from "@/components/sections/Portfolio";
+import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
         <MemeSection />
         <Numbers />
         <Services />
+        <Portfolio />
+        <Projects />
       </div>
     </main>
   );
