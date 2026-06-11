@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import AboutImage from "@/components/sections/AboutImage";
 import AboutText from "@/components/sections/AboutText";
+import CaseStudy from "@/components/sections/CaseStudy";
 import Hero from "@/components/sections/Hero";
 import MemeSection from "@/components/sections/MemeSection";
 import Numbers from "@/components/sections/Numbers";
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Portfolio />
         <Projects />
+        <CaseStudy />
       </div>
     </main>
   );
