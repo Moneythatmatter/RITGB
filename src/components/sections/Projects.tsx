@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   {
-    src: "/images/project2.png",
+    src: "/images/project1.png",
     alt: "Project 1",
     style: {
       left: "5%",
@@ -60,7 +60,7 @@ const images = [
     },
   },
   {
-    src: "/images/project5.png",
+    src: "/images/project2.png",
     alt: "Project 6",
     style: {
       left: "68%",
@@ -73,10 +73,10 @@ const images = [
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useGSAP(
     () => {
-      // Headline animation
       gsap.from(".portfolio-title", {
         yPercent: 120,
         duration: 1,
@@ -94,35 +94,41 @@ export default function Projects() {
   return (
     <section
       ref={sectionRef}
-      className="bg-black min-h-screen md:min-h-screen relative px-8 md:px-27.75 py-16 overflow-hidden"
+      className="bg-black min-h-screen relative px-8 md:px-27.75 py-16"
     >
       {/* Top row */}
-      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-16">
-        {/* Headline */}
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-16 overflow-hidden">
         <div className="overflow-hidden">
-          <h2 className="portfolio-title font-(family-name:--font-right-grotesk) text-[8vw] md:text-[4vw] font-black leading-tight tracking-[-0.02em] uppercase text-white">
+          <h2 className="portfolio-title font-grotesk text-[8vw] md:text-[4vw] font-black leading-tight tracking-[-0.02em] uppercase text-white">
             Selected Client <br /> Projects
           </h2>
         </div>
-
-        {/* Button */}
         <button className="border border-white text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 rounded-sm hover:bg-white hover:text-black transition-colors duration-300 whitespace-nowrap self-start italic cursor-pointer">
           View All Projects →
         </button>
       </div>
 
       {/* Images */}
-      <div className="relative h-[50vh] md:h-[80vh] group">
+      <div className="relative h-[50vh] md:h-[80vh]">
         {images.map((img, i) => (
           <div
             key={i}
-            className="portfolio-img absolute w-[28%] md:w-[22%] transition-all duration-300 md:group-hover:opacity-40 md:hover:opacity-100! md:hover:scale-105 md:hover:z-100"
+            className="portfolio-img absolute w-[28%] md:w-[22%] transition-all duration-300"
             style={{
               left: img.style.left,
               bottom: img.style.bottom,
-              rotate: img.style.rotate,
               transformOrigin: img.style.transformOrigin,
+              transform: `rotate(${img.style.rotate}) ${hoveredIndex === i ? "translateY(-20px)" : "translateY(0px)"}`,
+              zIndex: hoveredIndex === i ? 50 : i + 1,
+              filter:
+                hoveredIndex !== null && hoveredIndex !== i
+                  ? "brightness(0.3)"
+                  : "brightness(1)",
+              transition:
+                "filter 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
             }}
+            onMouseEnter={() => setHoveredIndex(i)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             <Image
               src={img.src}
