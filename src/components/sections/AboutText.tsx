@@ -38,7 +38,7 @@ export default function AboutText() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white flex flex-col items-center justify- pt-100 pb-24 px-8"
+      className="bg-white flex flex-col items-center justify- pt-100 pb-60 px-8"
     >
       {/* Label */}
       <p className="text-xs tracking-[0.2em] uppercase text-black mb-12">

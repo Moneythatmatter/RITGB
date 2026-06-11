@@ -67,6 +67,7 @@ export default function Services() {
                 alt={card.alt}
                 fill
                 sizes="100vw"
+                loading="eager"
                 className="object-contain md:object-cover"
               />
             </div>
