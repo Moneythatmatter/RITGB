@@ -1,7 +1,11 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/layout/Navbar";
 import AboutImage from "@/components/sections/AboutImage";
 import AboutText from "@/components/sections/AboutText";
+import CaseStudy from "@/components/sections/CaseStudy";
+import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
+import Industry from "@/components/sections/Industry";
 import MemeSection from "@/components/sections/MemeSection";
 import Numbers from "@/components/sections/Numbers";
 import Portfolio from "@/components/sections/Portfolio";
@@ -21,6 +25,10 @@ export default function Home() {
         <Services />
         <Portfolio />
         <Projects />
+        <CaseStudy />
+        <Industry />
+        <Contact />
+        <Footer />
       </div>
     </main>
   );

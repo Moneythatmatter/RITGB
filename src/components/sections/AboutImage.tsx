@@ -16,7 +16,7 @@ export default function AboutImage() {
     () => {
       gsap.fromTo(
         imageRef.current,
-        { scale: 0.3 },
+        { scale: 0.5 },
         {
           scale: 1.2,
           ease: "none",
@@ -36,15 +36,16 @@ export default function AboutImage() {
     <section ref={sectionRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <div ref={imageRef} className="w-screen h-screen relative">
-          <Image
-            src="/images/aboutSectionImage.png"
-            alt="App mockup"
-            sizes="(min-width: 1024px) 100vw, 100vw"
-            loading="eager"
-            priority
-            fill
-            className="object-cover"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/Showreel-RITGB.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
