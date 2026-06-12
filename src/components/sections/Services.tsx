@@ -12,6 +12,8 @@ const cards = [
   {
     number: "1",
     title: "DESIGN",
+    background: "#000",
+    text: "#fff",
     description:
       "We design brands that people remember, stalk, and accidentally become obsessed with. From visuals and websites to full brand systems — we make sure your business doesn't look like it was built in a hurry.",
     bullets: [
@@ -30,6 +32,8 @@ const cards = [
   {
     number: "2",
     title: "TECH",
+    background: "#E64A5C",
+    text: "#fff",
     description:
       "We build fast, scalable digital products that actually work. From websites to full-stack applications — we make sure your tech doesn't embarrass your brand.",
     bullets: [
@@ -47,6 +51,8 @@ const cards = [
   {
     number: "3",
     title: "MARKETING",
+    background: "#FFC4DE",
+    text: "#000",
     description:
       "We run campaigns that get your brand noticed, remembered, and chosen. No vanity metrics — just real growth.",
     bullets: [
@@ -107,21 +113,34 @@ export default function Services() {
       {/* Stacked Cards */}
       <div className="relative">
         {cards.map((card, i) => (
-          <div key={i} className="sticky h-screen" style={{ top: "0px" }}>
-            <div className="w-full h-full bg-black flex flex-col md:flex-row">
+          <div
+            key={i}
+            className="sticky h-screen"
+            style={{ top: "0px", backgroundColor: card.background }}
+          >
+            <div className="w-full h-full flex flex-col md:flex-row">
               {/* Left text content */}
               <div className="flex flex-col justify-between w-full md:w-[60%] h-full px-8 md:px-16 py-12">
                 {/* Top content */}
                 <div className="flex flex-col gap-6">
                   {/* Circled number */}
-                  <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center">
-                    <span className="text-white text-sm font-medium">
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ borderColor: card.text, borderWidth: "1px" }}
+                  >
+                    <span
+                      style={{ color: card.text }}
+                      className="text-white text-sm font-medium"
+                    >
                       {card.number}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="font-[Arial] text-white text-sm leading-relaxed max-w-lg">
+                  <p
+                    style={{ color: card.text }}
+                    className="font-[Arial text-sm leading-relaxed max-w-lg"
+                  >
                     {card.description}
                   </p>
 
@@ -130,9 +149,13 @@ export default function Services() {
                     {card.bullets.map((bullet, j) => (
                       <li
                         key={j}
-                        className="font-[Arial] text-white text-sm flex items-center gap-2"
+                        className="font-[Arial] text-sm flex items-center gap-2"
+                        style={{ color: card.text }}
                       >
-                        <span className="w-1 h-1 rounded-full bg-white inline-block" />
+                        <span
+                          className="w-1 h-1 rounded-full inline-block"
+                          style={{ backgroundColor: card.text }}
+                        />
                         {bullet}
                       </li>
                     ))}
@@ -140,7 +163,10 @@ export default function Services() {
                 </div>
 
                 {/* Bottom big title */}
-                <h2 className="font-(family-name:--font-right-grotesk) text-white font-black uppercase leading-none text-[20vw] md:text-[12vw] tracking-[-0.02em]">
+                <h2
+                  className="font-(family-name:--font-right-grotesk)  font-black uppercase leading-none text-[20vw] md:text-[12vw] tracking-[-0.02em]"
+                  style={{ color: card.text }}
+                >
                   {card.title}
                 </h2>
               </div>
