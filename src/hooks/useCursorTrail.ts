@@ -20,9 +20,6 @@ export function useCursorTrail(
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
-      // Only run on desktop
-      if (window.innerWidth < 1024) return;
-
       const container = containerRef.current;
       if (!container) return;
 
