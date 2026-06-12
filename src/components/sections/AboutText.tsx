@@ -38,7 +38,7 @@ export default function AboutText() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white flex flex-col items-center py-15 md:pt-100 md:pb-60 px-8"
+      className="bg-white flex flex-col items-center py-15 md:pt-60 md:pb-60 px-8"
     >
       {/* Label */}
       <p className="text-[10px] md:text-xs tracking-[0.14em] md:tracking-[0.2em] whitespace-nowrap uppercase text-black mb-12">

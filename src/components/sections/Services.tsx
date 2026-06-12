@@ -85,12 +85,12 @@ export default function Services() {
   return (
     <section ref={sectionRef} className="bg-white">
       <div className="py-16 md:py-0">
-        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-32 px-8 md:px-27.75 md:pt-24">
+        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-16 px-8 md:px-27.75 md:pt-24">
           service section
         </p>
 
         {/* Headline */}
-        <div className="md:py-24 px-4 md:px-27.75">
+        <div className="md:pb-24 md:pt-0 px-4 md:px-27.75">
           <div className="overflow-hidden">
             <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[6vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] whitespace-nowrap uppercase text-center">
               Where We Cause Internet Problems
