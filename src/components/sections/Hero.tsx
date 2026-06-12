@@ -30,7 +30,6 @@ export default function Hero() {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
     container.addEventListener("mousemove", handleMouseMove);
     return () => container.removeEventListener("mousemove", handleMouseMove);
   }, [handleMouseMove]);
@@ -38,10 +37,10 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="bg-white relative min-h-screen flex flex-col justify-between pt-24 overflow-hidden"
+      className="bg-white relative md:min-h-[70vh] flex flex-col md:justify-between py-12 md:pt-24 md:pb-0 overflow-hidden"
     >
       {/* Headline */}
-      <div className="flex flex-col items-center text-center px-4 mt-8">
+      <div className="flex flex-col items-center text-center px-4 md:mt-8">
         {lines.map((line, i) => (
           <div key={i} className="overflow-hidden">
             <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[15vw] md:text-[13vw] lg:text-[11vw] font-black leading-[0.89] tracking-[-0.03em]  uppercase">
@@ -52,7 +51,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Down button */}
-      <div className="hidden md:block absolute right-66 top-[44%] -translate-y-1/2">
+      <div className="hidden md:block absolute right-66 top-[49%] -translate-y-1/2">
         <button
           onClick={() =>
             document

@@ -94,12 +94,12 @@ export default function Projects() {
   return (
     <section
       ref={sectionRef}
-      className="bg-black min-h-screen relative px-8 md:px-27.75 py-16"
+      className="bg-black min-h-[75svh] md:min-h-screen relative px-8 md:px-27.75 py-10 md:py-16"
     >
       {/* Top row */}
-      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-16 overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8 md:mb-16 overflow-hidden">
         <div className="overflow-hidden">
-          <h2 className="portfolio-title font-grotesk text-[8vw] md:text-[4vw] font-black leading-tight tracking-[-0.02em] uppercase text-white">
+          <h2 className="portfolio-title font-(family-name:--font-right-grotesk) text-[8vw] md:text-[4vw] font-black leading-tight tracking-[-0.02em] uppercase text-white">
             Selected Client <br /> Projects
           </h2>
         </div>
@@ -109,7 +109,7 @@ export default function Projects() {
       </div>
 
       {/* Images */}
-      <div className="relative h-[50vh] md:h-[80vh]">
+      <div className="relative h-[38svh] md:h-[80vh]">
         {images.map((img, i) => (
           <div
             key={i}

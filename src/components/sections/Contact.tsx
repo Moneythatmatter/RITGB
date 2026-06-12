@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="min-h-screen bg-[#ECECEC] flex flex-col items-center justify-center px-6">
+    <section className="min-h-[40vh] md:min-h-[50vh] bg-[#ECECEC] flex flex-col items-center justify-center px-6">
       {/* Heading */}
       <h2
         className="

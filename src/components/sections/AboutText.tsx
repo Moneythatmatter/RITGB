@@ -38,10 +38,10 @@ export default function AboutText() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white flex flex-col items-center justify- pt-100 pb-60 px-8"
+      className="bg-white flex flex-col items-center py-15 md:pt-100 md:pb-60 px-8"
     >
       {/* Label */}
-      <p className="text-xs tracking-[0.2em] uppercase text-black mb-12">
+      <p className="text-[10px] md:text-xs tracking-[0.14em] md:tracking-[0.2em] whitespace-nowrap uppercase text-black mb-12">
         RITGB: Full-Service Digital Growth Agency
       </p>
 
@@ -50,7 +50,7 @@ export default function AboutText() {
         {lines.map((line, i) => (
           <div key={i} className="overflow-hidden mb-1">
             <h2
-              className={`statement-line font-(family-name:--font-right-grotesk) text-[7vw] font-black leading-[0.85] tracking-[-0.02em] uppercase ${
+              className={`statement-line font-(family-name:--font-right-grotesk) text-[9vw] md:text-[7vw] font-black leading-[0.85] tracking-[-0.02em] uppercase ${
                 line.green ? "text-[#4DB685]" : "text-black"
               }`}
             >

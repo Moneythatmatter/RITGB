@@ -28,21 +28,23 @@ export default function Portfolio() {
 
   return (
     <section ref={sectionRef} className="bg-[#f0eeea]">
-      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-16 px-8 md:px-27.75 pt-40">
-        Portfolio Section
-      </p>
+      <div className="py-16 md:py-0">
+        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-16 px-8 md:px-27.75 md:pt-40">
+          Portfolio Section
+        </p>
 
-      {/* Headline */}
-      <div className="pb-24 px-8 md:px-27.75">
-        <div className="overflow-hidden">
-          <h2 className="portfolio-line font-(family-name:--font-right-grotesk) text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
-            Where We Cause Internet Problems
-          </h2>
-        </div>
-        <div className="overflow-hidden">
-          <h2 className="portfolio-line font-(family-name:--font-right-grotesk) text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
-            (For Your Competitors)
-          </h2>
+        {/* Headline */}
+        <div className="md:pb-24 px-4 md:px-27.75">
+          <div className="overflow-hidden">
+            <h2 className="portfolio-line font-(family-name:--font-right-grotesk) text-[6vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] whitespace-nowrap uppercase text-center">
+              Where We Cause Internet Problems
+            </h2>
+          </div>
+          <div className="overflow-hidden">
+            <h2 className="portfolio-line font-(family-name:--font-right-grotesk) text-[8vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
+              (For Your Competitors)
+            </h2>
+          </div>
         </div>
       </div>
     </section>
