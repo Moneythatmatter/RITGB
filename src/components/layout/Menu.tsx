@@ -3,7 +3,14 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const links = ["Home", "Agency", "Work", "Expertise", "Software", "Contact Us"];
+const links = [
+  { label: "Home", href: "/" },
+  { label: "Agency", href: "/" },
+  { label: "Work", href: "/" },
+  { label: "Expertise", href: "/" },
+  { label: "Software", href: "/" },
+  { label: "Contact Us", href: "/contact" },
+];
 
 interface MenuProps {
   isOpen: boolean;
@@ -67,11 +74,11 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
         {links.map((link, i) => (
           <li key={i} className="overflow-hidden">
             <a
-              href="#"
+              href={link.href}
               className="menu-link block font-grotesk text-[8vw] md:text-[6vw] font-black uppercase text-white leading-tight hover:opacity-60 transition-opacity"
               onClick={onClose}
             >
-              {link}
+              {link.label}
             </a>
           </li>
         ))}
