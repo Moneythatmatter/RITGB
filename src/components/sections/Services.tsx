@@ -29,7 +29,7 @@ const cards = [
   },
   {
     number: "2",
-    title: "TECHNOLOGY",
+    title: "TECH",
     description:
       "We build fast, scalable digital products that actually work. From websites to full-stack applications — we make sure your tech doesn't embarrass your brand.",
     bullets: [
@@ -84,21 +84,23 @@ export default function Services() {
 
   return (
     <section ref={sectionRef} className="bg-white">
-      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-16 px-8 md:px-27.75 pt-24">
-        service section
-      </p>
+      <div className="py-16 md:py-0">
+        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-32 px-8 md:px-27.75 md:pt-24">
+          service section
+        </p>
 
-      {/* Headline */}
-      <div className="py-24 px-8 md:px-27.75">
-        <div className="overflow-hidden">
-          <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
-            Where We Cause Internet Problems
-          </h2>
-        </div>
-        <div className="overflow-hidden">
-          <h2 className="font-(family-name:--font-right-grotesk) services-line text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
-            (For Your Competitors)
-          </h2>
+        {/* Headline */}
+        <div className="md:py-24 px-4 md:px-27.75">
+          <div className="overflow-hidden">
+            <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[6vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] whitespace-nowrap uppercase text-center">
+              Where We Cause Internet Problems
+            </h2>
+          </div>
+          <div className="overflow-hidden">
+            <h2 className="font-(family-name:--font-right-grotesk) services-line text-[8vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
+              (For Your Competitors)
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -138,7 +140,7 @@ export default function Services() {
                 </div>
 
                 {/* Bottom big title */}
-                <h2 className="font-(family-name:--font-right-grotesk) text-white font-black uppercase leading-none text-[10vw] md:text-[11vw] tracking-[-0.02em]">
+                <h2 className="font-(family-name:--font-right-grotesk) text-white font-black uppercase leading-none text-[20vw] md:text-[12vw] tracking-[-0.02em]">
                   {card.title}
                 </h2>
               </div>

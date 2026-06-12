@@ -81,14 +81,14 @@ export default function Numbers() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f0eeea] md:py-64 py-24 px-8 md:px-27.75"
+      className="bg-[#f0eeea] py-12 md:py-44 px-8 md:px-27.75"
     >
       <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-16">
         Numbers Section
       </p>
       {/* Headline */}
       <div className="overflow-hidden mb-24 text-center">
-        <h2 className="numbers-title font-(family-name:--font-right-grotesk) text-[6vw] font-black leading-none tracking-[-0.02em] uppercase">
+        <h2 className="numbers-title font-(family-name:--font-right-grotesk) text-[8vw] font-black leading-none tracking-[-0.02em] uppercase">
           What We&apos;ve Done So Far
         </h2>
       </div>

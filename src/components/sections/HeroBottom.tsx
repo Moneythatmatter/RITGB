@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function HeroBottom() {
   return (
-    <div className="font-[Arial] flex flex-col md:flex-row md:items-end md:justify-between px-8 md:px-27.75 pb-10 mt-16 gap-6 md:gap-0">
+    <div className="font-[Arial] flex flex-col md:flex-row md:items-end md:justify-between px-8 md:px-27.75 md:pb-10 mt-16 gap-6 md:gap-0">
       {/* Left */}
       <div className="flex flex-col gap-1">
         <span className="font-bold text-base">Let&apos;s Talk</span>
