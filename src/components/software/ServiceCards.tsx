@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const services = [
   {
     number: "(01)",
@@ -19,6 +21,8 @@ const services = [
       "Multi-Property Management",
       "Direct Booking Integration",
     ],
+    image: "/images/software/impact.png",
+    imageAlt: "Impact PMS",
   },
   {
     number: "(02)",
@@ -38,6 +42,8 @@ const services = [
       "Automated Reminders",
       "Analytics Dashboards",
     ],
+    image: "/images/software/crm.png",
+    imageAlt: "CRM Solutions",
   },
   {
     number: "(03)",
@@ -54,6 +60,8 @@ const services = [
       "Booking Analytics",
       "OTA Syncing",
     ],
+    image: "/images/software/direct.png",
+    imageAlt: "Direct booking engine",
   },
   {
     number: "(04)",
@@ -81,6 +89,8 @@ const services = [
         "Payment Reports",
       ],
     },
+    image: "/images/software/payment.png",
+    imageAlt: "Payment gateway:",
   },
   {
     number: "(05)",
@@ -97,6 +107,8 @@ const services = [
       "Booking Platforms",
       "Business Management Systems",
     ],
+    image: "/images/software/custom.png",
+    imageAlt: "Custom software",
   },
 ];
 
@@ -169,8 +181,16 @@ export default function ServiceCards() {
               </button>
             </div>
 
-            {/* Right column - image placeholder */}
-            <div className="bg-[#E07442] min-h-75 md:min-h-125 w-full" />
+            {/* Right column - image */}
+            <div className="relative min-h-75 md:min-h-125 w-full rounded-xl overflow-hidden">
+              <Image
+                src={service.image}
+                alt={service.imageAlt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         );
       })}

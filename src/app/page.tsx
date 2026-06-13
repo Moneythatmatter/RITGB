@@ -1,3 +1,4 @@
+import Testimonials from "@/components/agency/Testimonials";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/layout/Navbar";
 import AboutImage from "@/components/sections/AboutImage";
@@ -26,6 +27,7 @@ export default function Home() {
         <Projects />
         <CaseStudy />
         <Industry />
+        <Testimonials />
         <Contact />
         <Footer />
       </div>
