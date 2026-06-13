@@ -26,7 +26,7 @@ const cards = [
       "Social Media Design",
       "Creative Direction",
     ],
-    src: "/images/design.gif",
+    src: "/images/services/design.png",
     gifAlt: "Design",
   },
   {
@@ -44,7 +44,7 @@ const cards = [
       "API Development",
       "Performance Optimization",
     ],
-    src: "/images/design.gif",
+    src: "/images/services/tech.png",
     alt: "Technology",
     gifAlt: "Technology",
   },
@@ -63,7 +63,7 @@ const cards = [
       "Email Marketing",
       "Analytics",
     ],
-    src: "/images/design.gif",
+    src: "/images/services/marketing.png",
     alt: "Marketing",
     gifAlt: "Marketing",
   },
@@ -120,7 +120,7 @@ export default function Services() {
           >
             <div className="w-full h-full flex flex-col md:flex-row">
               {/* Left text content */}
-              <div className="flex flex-col justify-between w-full md:w-[60%] h-full px-8 md:px-16 py-12">
+              <div className="flex flex-col justify-between w-full md:w-[60%] h-auto md:h-full px-8 md:px-16 py-12">
                 {/* Top content */}
                 <div className="flex flex-col gap-6">
                   {/* Circled number */}
@@ -172,7 +172,7 @@ export default function Services() {
               </div>
 
               {/* Right gif */}
-              <div className="w-full h-[60vh] md:h-full md:w-[40%] relative">
+              <div className="w-full h-[45vh] md:h-full md:w-[40%] relative">
                 <Image
                   src={card.src}
                   alt={card.gifAlt}

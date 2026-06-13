@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   {
-    src: "/images/project1.png",
+    src: "/images/portfolio/P-1.png",
     alt: "Project 1",
     style: {
       left: "5%",
@@ -20,7 +20,7 @@ const images = [
     },
   },
   {
-    src: "/images/project2.png",
+    src: "/images/portfolio/P-2.png",
     alt: "Project 2",
     style: {
       left: "12%",
@@ -30,7 +30,7 @@ const images = [
     },
   },
   {
-    src: "/images/project3.png",
+    src: "/images/portfolio/P-4.png",
     alt: "Project 3",
     style: {
       left: "26%",
@@ -40,7 +40,7 @@ const images = [
     },
   },
   {
-    src: "/images/project4.png",
+    src: "/images/portfolio/P-7.png",
     alt: "Project 4",
     style: {
       left: "40%",
@@ -50,7 +50,7 @@ const images = [
     },
   },
   {
-    src: "/images/project5.png",
+    src: "/images/portfolio/P-1.png",
     alt: "Project 5",
     style: {
       left: "55%",
@@ -60,7 +60,7 @@ const images = [
     },
   },
   {
-    src: "/images/project2.png",
+    src: "/images/portfolio/P-2.png",
     alt: "Project 6",
     style: {
       left: "68%",
