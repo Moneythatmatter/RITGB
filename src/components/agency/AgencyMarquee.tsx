@@ -20,7 +20,7 @@ export default function AgencyMarquee() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=100%",
+          end: "+=90%",
           scrub: true,
           pin: true,
         },
@@ -32,27 +32,27 @@ export default function AgencyMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#F5F5F5] py-24 overflow-hidden flex items-center"
+      className="w-full bg-[#F5F5F5] py-8 md:py-16 overflow-hidden flex items-center"
     >
       <div
         ref={trackRef}
         className="flex items-center gap-4 px-6 whitespace-nowrap w-max"
       >
-        <h2 className="font-(family-name:--font-right-grotesk) text-[10vw] md:text-[6vw] font-black uppercase leading-none tracking-[-0.03em]">
+        <h2 className="font-(family-name:--font-right-grotesk) text-[7vw] md:text-[6vw] font-black uppercase leading-none tracking-[-0.03em]">
           We&apos;re Too Cool For
         </h2>
 
-        <div className="relative w-[20vw] md:w-[10vw] aspect-4/3 shrink-0">
+        <div className="relative w-[28vw] md:w-[10vw] aspect-4/3 shrink-0">
           <Image
             src="/images/agency/leo.png"
             alt="Too cool"
             fill
-            sizes="(max-width: 768px) 20vw, 10vw"
+            sizes="(max-width: 768px) 28vw, 10vw"
             className="object-cover"
           />
         </div>
 
-        <h2 className="font-(family-name:--font-right-grotesk) text-[10vw] md:text-[6vw] font-black uppercase leading-none tracking-[-0.03em]">
+        <h2 className="font-(family-name:--font-right-grotesk) text-[7vw] md:text-[6vw] font-black uppercase leading-none tracking-[-0.03em]">
           Boring Brands.
         </h2>
       </div>

@@ -79,7 +79,7 @@ export default function ProcessSection() {
         {steps.map((step, i) => (
           <div
             key={i}
-            className="process-card absolute w-full max-w-md md:max-w-xl aspect-square rounded-3xl overflow-hidden shadow-2xl"
+            className="process-card absolute w-full max-w-md md:max-w-xl aspect-square rounded-sm overflow-hidden shadow-2xl"
           >
             <div className="relative w-full h-full">
               <Image
