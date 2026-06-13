@@ -40,6 +40,29 @@ const groups: TeamGroup[] = [
   },
   {
     number: "(02)",
+    titlePrefix: "Advisors",
+    titleRest:
+      "Our advisory board: wisdom, guidance, and the occasional tough question",
+    members: [
+      {
+        name: "Arindam Roy Chowdhury",
+        role: "Advisor",
+        image: "/images/agency/arindam.png",
+      },
+      {
+        name: "Kamal Kumar Rout",
+        role: "Advisor",
+        image: "/images/agency/kamal.png",
+      },
+      {
+        name: "Abhijit Karfi Das",
+        role: "Advisor",
+        image: "/images/agency/abhijit.png",
+      },
+    ],
+  },
+  {
+    number: "(03)",
     titlePrefix: "Designers",
     titleRest: "obsessed with pixels",
     members: [
@@ -53,15 +76,10 @@ const groups: TeamGroup[] = [
         role: "Graphic Designer",
         image: "/images/agency/soumyashree.png",
       },
-      {
-        name: "Xyz-1",
-        role: "Founder, CFO",
-        image: "/images/agency/team.png",
-      },
     ],
   },
   {
-    number: "(03)",
+    number: "(04)",
     titlePrefix: "Marketers",
     titleRest: "fighting algorithms daily",
     members: [
@@ -75,15 +93,10 @@ const groups: TeamGroup[] = [
         role: "Seo Specialist",
         image: "/images/agency/shrinithi.png",
       },
-      {
-        name: "Xyz-1",
-        role: "Founder, CFO",
-        image: "/images/agency/team.png",
-      },
     ],
   },
   {
-    number: "(04)",
+    number: "(05)",
     titlePrefix: "Tech",
     titleRest: "people not just vibe-coding websites & apps",
     members: [
@@ -97,11 +110,28 @@ const groups: TeamGroup[] = [
         role: "Assistant Software Engineer",
         image: "/images/agency/hemant.png",
       },
+    ],
+  },
+  {
+    number: "(06)",
+    titlePrefix: "Content",
+    titleRest: "writers proving AI still needs a human touch",
+    members: [
       {
-        name: "Xyz-1",
-        role: "Founder, CFO",
-        image: "/images/agency/team.png",
+        name: "Shrinidhi Sharma",
+        role: "Content Writer",
+        image: "/images/agency/shrinidhi.png",
       },
+      {
+        name: "Priyanka Mishra",
+        role: "Content Writer",
+        image: "/images/agency/priyanka.png",
+      },
+      // {
+      //   name: "Xyz-1",
+      //   role: "Founder, CFO",
+      //   image: "/images/agency/team.png",
+      // },
     ],
   },
 ];
