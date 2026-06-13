@@ -14,11 +14,12 @@ export default function AboutImage() {
 
   useGSAP(
     () => {
+      const isMobile = window.innerWidth < 768;
       gsap.fromTo(
         imageRef.current,
         { scale: 0.5 },
         {
-          scale: 1.2,
+          scale: isMobile ? 1.0 : 1.2,
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
