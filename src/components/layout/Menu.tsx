@@ -65,7 +65,7 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-8 md:right-27.75 text-white text-sm tracking-widest uppercase hover:opacity-60 transition-opacity cursor-pointer"
+        className="font-[Arial] absolute top-6 right-8 md:right-27.75 text-white text-sm tracking-widest uppercase hover:opacity-60 transition-opacity cursor-pointer"
       >
         Close
       </button>

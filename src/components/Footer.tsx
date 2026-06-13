@@ -5,11 +5,11 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           {/* Left */}
           <p className="font-[Arial] text-sm text-black uppercase">
-            {new Date().getFullYear()} &copy; — RITGB
+            {new Date().getFullYear() + " "} &copy; — RITGB
           </p>
 
           {/* Right */}
-          <div className="flex gap-6 md:gap-8">
+          <div className="font-[Arial] flex gap-6 md:gap-8">
             <a
               href="https://github.com"
               target="_blank"
