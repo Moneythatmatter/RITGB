@@ -29,7 +29,7 @@ export default function Portfolio() {
   return (
     <section ref={sectionRef} className="bg-[#f0eeea]">
       <div className="py-16 md:py-0">
-        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-16 px-8 md:px-27.75 md:pt-40">
+        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-16 px-8 md:px-27.75 md:pt-24">
           Portfolio Section
         </p>
 

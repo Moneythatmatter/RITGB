@@ -40,7 +40,7 @@ export default function Hero() {
       className="bg-white relative md:min-h-[70vh] flex flex-col md:justify-between py-12 md:pt-24 md:pb-0 overflow-hidden"
     >
       {/* Headline */}
-      <div className="flex flex-col items-center text-center px-4 md:mt-8">
+      <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0">
         {lines.map((line, i) => (
           <div key={i} className="overflow-hidden">
             <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[15vw] md:text-[13vw] lg:text-[11vw] font-black leading-[0.89] tracking-[-0.03em]  uppercase">

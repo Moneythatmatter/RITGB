@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className=" top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-27.75 py-6">
+      <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-27.75 py-6">
         {/* Logo */}
         <span className="font-(family-name:--font-right-grotesk) text-black font-bold text-3xl tracking-tight uppercase">
           RITGB

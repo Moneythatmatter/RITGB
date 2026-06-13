@@ -15,7 +15,6 @@ import Services from "@/components/sections/Services";
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Hero />
       <div id="next-section">
         <AboutImage />

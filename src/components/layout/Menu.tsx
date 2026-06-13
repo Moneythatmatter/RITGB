@@ -2,8 +2,16 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
-const links = ["Home", "Agency", "Work", "Expertise", "Software", "Contact Us"];
+const links = [
+  { label: "Home", href: "/" },
+  { label: "Agency", href: "/" },
+  { label: "Work", href: "/work" },
+  { label: "Expertise", href: "/expertise" },
+  { label: "Software", href: "/software" },
+  { label: "Contact Us", href: "/contact" },
+];
 
 interface MenuProps {
   isOpen: boolean;
@@ -66,13 +74,13 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
       <ul className="flex flex-col gap-2">
         {links.map((link, i) => (
           <li key={i} className="overflow-hidden">
-            <a
-              href="#"
+            <Link
+              href={link.href}
               className="menu-link block font-grotesk text-[8vw] md:text-[6vw] font-black uppercase text-white leading-tight hover:opacity-60 transition-opacity"
               onClick={onClose}
             >
-              {link}
-            </a>
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>
