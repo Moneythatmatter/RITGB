@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroBottom() {
   return (
@@ -7,8 +8,8 @@ export default function HeroBottom() {
       <div className="flex flex-col gap-1">
         <span className="font-bold text-base">Let&apos;s Talk</span>
 
-        <a
-          href="#"
+        <Link
+          href="/work"
           className="group flex items-center gap-1 text-sm text-black hover:underline"
         >
           Make Us Impossible To Ignore
@@ -17,7 +18,7 @@ export default function HeroBottom() {
             strokeWidth={1.5}
             className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
-        </a>
+        </Link>
       </div>
 
       {/* Right */}

@@ -2,12 +2,13 @@ import { useRef, useCallback } from "react";
 import gsap from "gsap";
 
 const IMAGES = [
-  "/images/hero/cursor-1.png",
-  "/images/hero/cursor-2.png",
-  "/images/hero/cursor-3.png",
-  "/images/hero/cursor-4.png",
-  "/images/hero/cursor-5.png",
-  "/images/hero/cursor-6.png",
+  "/images/cursor/3.png",
+  "/images/cursor/4.png",
+  "/images/cursor/5.png",
+  "/images/cursor/6.png",
+  "/images/cursor/7.png",
+  "/images/cursor/8.png",
+  "/images/cursor/9.png",
 ];
 
 const DISTANCE_THRESHOLD = 180; // px cursor must move before new image spawns

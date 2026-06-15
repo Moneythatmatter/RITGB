@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 const topRow = [
   { num: "01", label: "Hospitality" },
   { num: "02", label: "E-Commerce" },
+  { num: "03", label: "Healthcare" },
+  { num: "04", label: "Tech & Startups'" },
 ];
 
 const bottomRow = [
@@ -35,17 +37,33 @@ export default function Industry() {
         },
       });
 
-      // Infinite horizontal loops
-      [topMarqueeRef.current, marqueeRef.current].forEach((el) => {
-        if (!el) return;
-        const totalWidth = el.scrollWidth / 2;
-        gsap.to(el, {
+      // Top row — moves left
+      const topEl = topMarqueeRef.current;
+      if (topEl) {
+        const totalWidth = topEl.scrollWidth / 4;
+        gsap.to(topEl, {
           x: -totalWidth,
-          duration: 10,
+          duration: 18,
           ease: "none",
           repeat: -1,
         });
-      });
+      }
+
+      // Bottom row — moves right
+      const botEl = marqueeRef.current;
+      if (botEl) {
+        const totalWidth = botEl.scrollWidth / 4;
+        gsap.fromTo(
+          botEl,
+          { x: -totalWidth },
+          {
+            x: 0,
+            duration: 18,
+            ease: "none",
+            repeat: -1,
+          },
+        );
+      }
     },
     { scope: sectionRef },
   );
@@ -66,13 +84,13 @@ export default function Industry() {
         </h2>
       </div>
 
-      {/* Top row — infinite marquee */}
+      {/* Top row — moves left */}
       <div className="w-full overflow-hidden mb-4">
         <div
           ref={topMarqueeRef}
           className="flex whitespace-nowrap will-change-transform"
         >
-          {[...topRow, ...topRow].map((item, i) => (
+          {[...topRow, ...topRow, ...topRow, ...topRow].map((item, i) => (
             <div key={i} className="flex items-start gap-1 mr-12 shrink-0">
               <sup className="font-[Arial] text-[10px] text-black mt-3 leading-none">
                 {item.num}
@@ -85,23 +103,24 @@ export default function Industry() {
         </div>
       </div>
 
-      {/* Bottom row — infinite marquee */}
+      {/* Bottom row — moves right */}
       <div className="w-full overflow-hidden">
         <div
           ref={marqueeRef}
           className="flex whitespace-nowrap will-change-transform"
         >
-          {/* duplicate for seamless loop */}
-          {[...bottomRow, ...bottomRow].map((item, i) => (
-            <div key={i} className="flex items-start gap-1 mr-12 shrink-0">
-              <sup className="font-[Arial] text-[10px] text-black mt-3 leading-none">
-                {item.num}
-              </sup>
-              <span className="font-(family-name:--font-right-grotesk) font-black uppercase leading-none text-[9vw] tracking-[-0.02em]">
-                {item.label}
-              </span>
-            </div>
-          ))}
+          {[...bottomRow, ...bottomRow, ...bottomRow, ...bottomRow].map(
+            (item, i) => (
+              <div key={i} className="flex items-start gap-1 mr-12 shrink-0">
+                <sup className="font-[Arial] text-[10px] text-black mt-3 leading-none">
+                  {item.num}
+                </sup>
+                <span className="font-(family-name:--font-right-grotesk) font-black uppercase leading-none text-[9vw] tracking-[-0.02em]">
+                  {item.label}
+                </span>
+              </div>
+            ),
+          )}
         </div>
       </div>
     </section>

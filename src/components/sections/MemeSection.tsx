@@ -42,9 +42,9 @@ export default function Meme() {
   return (
     <section
       ref={sectionRef}
-      className="bg-black flex flex-col items-center justify-center py-24 px-8 gap-10"
+      className="bg-black flex flex-col items-center justify-center py-20 px-8 gap-10"
     >
-      <div className="text-center text-white text-3xl md:text-4xl leading-snug">
+      <div className="text-center text-white text-2xl md:text-4xl leading-snug">
         <div className="overflow-hidden">
           <p className="meme-line">Basically:</p>
         </div>
