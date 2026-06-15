@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +51,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-1.png",
+    src: "/images/portfolio/P-3.png",
     alt: "Project 5",
     style: {
       left: "55%",
@@ -60,7 +61,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-2.png",
+    src: "/images/portfolio/P-5.png",
     alt: "Project 6",
     style: {
       left: "68%",
@@ -103,9 +104,12 @@ export default function Projects() {
             Selected Client <br /> Projects
           </h2>
         </div>
-        <button className="border border-white text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 rounded-sm hover:bg-white hover:text-black transition-colors duration-300 whitespace-nowrap self-start italic cursor-pointer">
+        <Link
+          href={"/work"}
+          className="border border-white text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 rounded-sm hover:bg-white hover:text-black transition-colors duration-300 whitespace-nowrap self-start italic cursor-pointer"
+        >
           View All Projects →
-        </button>
+        </Link>
       </div>
 
       {/* Images */}
@@ -140,6 +144,13 @@ export default function Projects() {
             />
           </div>
         ))}
+      </div>
+      {/* Touch hint — mobile/tablet only */}
+      <div className="flex md:hidden items-center justify-center gap-2 mt-4 text-white/40">
+        <span className="text-xs font-[Arial] tracking-widest uppercase animate-pulse">
+          Tap the images
+        </span>
+        <span className="text-sm animate-bounce">☝︎</span>
       </div>
     </section>
   );

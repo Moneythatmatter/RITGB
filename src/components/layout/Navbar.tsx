@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Menu from "./Menu";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,9 +18,12 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-4">
           {/* Hire Us button */}
-          <button className="bg-black text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize">
+          <Link
+            href="/contact"
+            className="bg-black text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize"
+          >
             Hire Us ↗
-          </button>
+          </Link>
 
           {/* Hamburger */}
           <button

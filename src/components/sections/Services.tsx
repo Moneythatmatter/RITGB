@@ -12,6 +12,7 @@ const cards = [
   {
     number: "1",
     title: "DESIGN",
+    titleSize: "text-[28vw] md:text-[15vw]",
     background: "#000",
     text: "#fff",
     description:
@@ -32,6 +33,7 @@ const cards = [
   {
     number: "2",
     title: "TECH",
+    titleSize: "text-[38vw] md:text-[18vw]",
     background: "#E64A5C",
     text: "#fff",
     description:
@@ -51,6 +53,7 @@ const cards = [
   {
     number: "3",
     title: "MARKETING",
+    titleSize: "text-[20vw] md:text-[13vw]",
     background: "#FFC4DE",
     text: "#000",
     description:
@@ -115,14 +118,14 @@ export default function Services() {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="sticky h-screen"
+            className="sticky min-h-max md:h-screen"
             style={{ top: "0px", backgroundColor: card.background }}
           >
             <div className="w-full h-full flex flex-col md:flex-row">
               {/* Left text content */}
-              <div className="flex flex-col justify-between w-full md:w-[60%] h-auto md:h-full px-8 md:px-16 py-12">
+              <div className="flex flex-col w-full md:w-[60%] h-auto md:h-full px-8 md:px-16 py-10 md:py-12 gap-6 md:gap-8">
                 {/* Top content */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
                   {/* Circled number */}
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center"
@@ -130,7 +133,7 @@ export default function Services() {
                   >
                     <span
                       style={{ color: card.text }}
-                      className="text-white text-sm font-medium"
+                      className="text-sm font-medium"
                     >
                       {card.number}
                     </span>
@@ -139,7 +142,7 @@ export default function Services() {
                   {/* Description */}
                   <p
                     style={{ color: card.text }}
-                    className="font-[Arial text-sm leading-relaxed max-w-lg"
+                    className="font-[Arial] text-sm leading-relaxed max-w-lg"
                   >
                     {card.description}
                   </p>
@@ -162,26 +165,27 @@ export default function Services() {
                   </ul>
                 </div>
 
-                {/* Bottom big title */}
                 <h2
-                  className="font-(family-name:--font-right-grotesk)  font-black uppercase leading-none text-[20vw] md:text-[12vw] tracking-[-0.02em]"
+                  className={`font-(family-name:--font-right-grotesk) font-black uppercase leading-none tracking-[-0.02em] mt-6 md:mt-8 ${card.titleSize}`}
                   style={{ color: card.text }}
                 >
                   {card.title}
                 </h2>
               </div>
 
-              {/* Right gif */}
-              <div className="w-full h-[45vh] md:h-full md:w-[40%] relative">
-                <Image
-                  src={card.src}
-                  alt={card.gifAlt}
-                  fill
-                  loading="eager"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  className="object-cover"
-                  unoptimized
-                />
+              {/* Right image */}
+              <div className="hidden md:flex w-full md:w-[40%] items-center justify-center p-6 md:p-10">
+                <div className="relative w-full h-[40vh] md:h-[75%] rounded-lg overflow-hidden">
+                  <Image
+                    src={card.src}
+                    alt={card.gifAlt}
+                    fill
+                    loading="eager"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <section className="min-h-[40vh] md:min-h-[50vh] bg-[#ECECEC] flex flex-col items-center justify-center px-6">
@@ -19,7 +21,8 @@ export default function Contact() {
       </h2>
 
       {/* CTA Button */}
-      <button
+      <Link
+        href={"/work"}
         className="group flex items-center gap-4 bg-black text-white rounded-full px-10 md:px-16 h-18
           md:h-22
           transition-all
@@ -49,7 +52,7 @@ export default function Contact() {
         >
           ↗
         </span>
-      </button>
+      </Link>
     </section>
   );
 }

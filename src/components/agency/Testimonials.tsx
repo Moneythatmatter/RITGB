@@ -57,14 +57,26 @@ export default function Testimonials() {
       duration: 0.5,
       ease: "power2.in",
       onComplete: () => {
-        current.style.display = "none";
+        // Reset this card and move it to the back
+        gsap.set(current, {
+          x: (testimonials.length - 1) * 16,
+          y: (testimonials.length - 1) * -16,
+          scale: 1 - (testimonials.length - 1) * 0.05,
+          zIndex: 1,
+          opacity: 1,
+          rotate: 0,
+          display: "flex",
+        });
       },
     });
 
-    for (let i = activeIndex + 1; i < testimonials.length; i++) {
-      const card = cardRefs.current[i];
+    const nextIndex = (activeIndex + 1) % testimonials.length;
+
+    for (let i = 1; i < testimonials.length; i++) {
+      const idx = (activeIndex + i) % testimonials.length;
+      const card = cardRefs.current[idx];
       if (!card) continue;
-      const newPos = i - (activeIndex + 1);
+      const newPos = i - 1;
 
       gsap.to(card, {
         x: newPos * 16,
@@ -76,11 +88,11 @@ export default function Testimonials() {
       });
     }
 
-    setActiveIndex((prev) => prev + 1);
+    setActiveIndex(nextIndex);
   };
 
   return (
-    <section className="w-full bg-black py-24 md:py-32 px-6 md:px-16 overflow-hidden">
+    <section className="w-full bg-black py-16 md:py-32 px-6 md:px-16 overflow-hidden">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left side */}
         <div>
@@ -88,13 +100,13 @@ export default function Testimonials() {
             Testimonials Section
           </p>
 
-          <h2 className="font-(family-name:--font-right-grotesk) text-white text-[10vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em] mb-8">
-            Things Clients Said Instead Of
+          <h2 className="font-(family-name:--font-right-grotesk) text-white text-[11vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em] mb-8">
+            Things Clients <br /> Said Instead Of
             <br />
             &ldquo;Looks Nice&rdquo;
           </h2>
 
-          <div className="relative w-48 md:w-64">
+          <div className="relative w-full md:w-64 hidden md:block">
             <Image
               src="/images/noice.png"
               alt="Noice"
@@ -105,45 +117,56 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Right side - card stack */}
-        <div
-          ref={containerRef}
-          className="relative h-100 md:h-112.5 flex items-center justify-center"
-        >
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              ref={(el) => {
-                cardRefs.current[i] = el;
-              }}
-              className="absolute w-full max-w-md rounded-tl-3xl p-8 md:p-10 flex flex-col justify-between"
-              style={{ backgroundColor: t.color, height: "420px" }}
-            >
-              <span className="font-(family-name:--font-right-grotesk) text-black text-6xl md:text-7xl font-black leading-none -mb-4">
-                &ldquo;
-              </span>
+        {/* Right side - image + card stack */}
+        <div className="w-full">
+          {/* Meme image, full width, only on mobile/tablet */}
+          <div className="relative w-full md:hidden mb-5">
+            <Image
+              src="/images/noice.png"
+              alt="Noice"
+              width={300}
+              height={250}
+              className="w-full h-auto"
+            />
+          </div>
 
-              <p className="font-[Arial] text-black text-sm md:text-base leading-relaxed pl-6 md:pl-8 -mt-4">
-                {t.quote}
-              </p>
+          <div
+            ref={containerRef}
+            className="relative h-100 md:h-112.5 flex items-center justify-center"
+          >
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                ref={(el) => {
+                  cardRefs.current[i] = el;
+                }}
+                className="absolute w-full max-w-md rounded-tl-3xl p-8 md:p-10 flex flex-col justify-between"
+                style={{ backgroundColor: t.color, height: "420px" }}
+              >
+                <span className="font-(family-name:--font-right-grotesk) text-black text-6xl md:text-7xl font-black leading-none -mb-4">
+                  &ldquo;
+                </span>
 
-              <div className="flex items-center justify-between">
-                <p className="text-black font-bold text-lg">{t.name}</p>
+                <p className="font-[Arial] text-black text-sm md:text-base leading-relaxed pl-6 md:pl-8 -mt-4">
+                  {t.quote}
+                </p>
 
-                {i < testimonials.length - 1 && (
+                <div className="flex items-center justify-between">
+                  <p className="text-black font-bold text-lg">{t.name}</p>
+
                   <button
                     onClick={handleNext}
-                    className="w-12 h-12 rounded-full  border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer shrink-0 font-bold border-2"
+                    className="w-12 h-12 rounded-full border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer shrink-0 font-bold border-2"
                     style={{
                       visibility: i === activeIndex ? "visible" : "hidden",
                     }}
                   >
                     →
                   </button>
-                )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

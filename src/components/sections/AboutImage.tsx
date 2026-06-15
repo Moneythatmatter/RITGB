@@ -18,7 +18,7 @@ export default function AboutImage() {
         imageRef.current,
         { scale: 0.5 },
         {
-          scale: isMobile ? 1.0 : 1.2,
+          scale: isMobile ? 1.0 : 1.4,
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
