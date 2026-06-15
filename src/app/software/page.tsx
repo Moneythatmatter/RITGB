@@ -8,10 +8,12 @@ export default function SoftwarePage() {
   return (
     <>
       <SoftwareHero />
-      <SoftwareIntro />
-      <SoftwareHighlight />
-      <ServiceCards />
-      <SoftwareCTA />
+      <div id="next-section">
+        <SoftwareIntro />
+        <SoftwareHighlight />
+        <ServiceCards />
+        <SoftwareCTA />
+      </div>
     </>
   );
 }

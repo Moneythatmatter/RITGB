@@ -14,16 +14,18 @@ export default function AgencyPage() {
   return (
     <>
       <AgencyHero />
-      <AgencyAbout />
-      <AgencyMission />
-      <AgencyMarquee />
-      <TeamSection />
-      <ProcessSection />
-      <CaseStudy />
-      <Industry />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <div id="next-section">
+        <AgencyAbout />
+        <AgencyMission />
+        <AgencyMarquee />
+        <TeamSection />
+        <ProcessSection />
+        <CaseStudy />
+        <Industry />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }

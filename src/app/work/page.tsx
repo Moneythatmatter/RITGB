@@ -12,13 +12,15 @@ export default function WorkPage() {
   return (
     <>
       <WorkHero />
-      <ShowReel />
-      <ProudOf />
-      <Industry />
-      <CaseStudy />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <div id="next-section">
+        <ShowReel />
+        <ProudOf />
+        <Industry />
+        <CaseStudy />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }

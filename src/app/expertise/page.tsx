@@ -11,13 +11,15 @@ export default function ExpertisePage() {
   return (
     <>
       <ExpertiseHero />
-      <ExpertiseIntro />
-      <ExpertiseCategories />
-      <ClientsSection />
-      <Industries />
-      <Portfolio />
-      <Projects />
-      <ExpertiseCta />
+      <div id="next-section">
+        <ExpertiseIntro />
+        <ExpertiseCategories />
+        <ClientsSection />
+        <Industries />
+        <Portfolio />
+        <Projects />
+        <ExpertiseCta />
+      </div>
     </>
   );
 }

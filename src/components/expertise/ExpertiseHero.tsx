@@ -36,7 +36,14 @@ export default function ExpertiseHero() {
         ))}
       </div>
 
-      <button className="bg-white font-(family-name:--font-right-grotesk) flex items-baseline gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer">
+      <button
+        onClick={() =>
+          document
+            .getElementById("next-section")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="bg-white font-(family-name:--font-right-grotesk) flex items-baseline gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+      >
         Scroll Down ↓
       </button>
     </section>

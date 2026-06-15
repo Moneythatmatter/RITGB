@@ -39,7 +39,7 @@ export default function WorkHero() {
       </div>
 
       {/* Scroll Down button */}
-      <div className="hidden md:block absolute right-120 top-[79%] -translate-y-1/2">
+      <div className="hidden md:block absolute right-100 top-[79%] -translate-y-1/2">
         <button
           onClick={() =>
             document
