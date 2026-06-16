@@ -66,21 +66,21 @@ export default function ContactPage() {
         <input
           type="text"
           placeholder="Name *"
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black"
+          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
         />
 
         {/* Email */}
         <input
           type="email"
           placeholder="Email *"
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black"
+          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
         />
 
         {/* Company */}
         <input
           type="text"
           placeholder="Company *"
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black"
+          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
         />
 
         {/* Budget Range */}
@@ -126,7 +126,7 @@ export default function ContactPage() {
         <textarea
           placeholder="Message"
           rows={6}
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black resize-none"
+          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40 resize-none"
         />
 
         {/* Submit */}

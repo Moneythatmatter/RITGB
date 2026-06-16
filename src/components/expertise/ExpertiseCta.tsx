@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ExpertiseCta() {
   const containerRef = useRef<HTMLElement>(null);
@@ -54,9 +55,12 @@ export default function ExpertiseCta() {
         Better internet energy.
       </p>
 
-      <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
-        Let&apos;s Build Something ↗
-      </button>
+      <Link href={"/contact"}>
+        {" "}
+        <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
+          Let&apos;s Build Something ↗
+        </button>
+      </Link>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import Testimonials from "@/components/agency/Testimonials";
 
-import Footer from "@/components/SiteFooter";
+import Footer from "@/components/Footer";
 import CaseStudy from "@/components/sections/CaseStudy";
 import Contact from "@/components/sections/Contact";
 import Industry from "@/components/sections/Industry";
@@ -16,7 +16,7 @@ export default function WorkPage() {
         <ShowReel />
         <ProudOf />
         <Industry />
-        <CaseStudy />
+        {/* <CaseStudy /> */}
         <Testimonials />
         <Contact />
         <Footer />

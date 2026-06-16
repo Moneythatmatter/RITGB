@@ -144,7 +144,7 @@ export default function TeamSection() {
         <p className="text-xs font-medium uppercase tracking-widest mb-12">
           Our Team Section
         </p>
-        <h2 className="font-(family-name:--font-right-grotesk) text-center text-[8vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em]">
+        <h2 className="font-(family-name:--font-right-grotesk) text-center text-[10vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em]">
           The Brains Behind
           <br />
           The Browser Tabs

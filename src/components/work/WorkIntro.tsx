@@ -39,7 +39,7 @@ export default function WorkIntro() {
       </div>
 
       {/* Scroll Down button */}
-      <div className="hidden md:block absolute right-100 top-[79%] -translate-y-1/2">
+      <div className="flex justify-center mt-8 min-[1364px]:mt-0 min-[1364px]:absolute min-[1364px]:right-100 min-[1364px]:top-[79%] min-[1364px]:-translate-y-1/2">
         <button
           onClick={() =>
             document

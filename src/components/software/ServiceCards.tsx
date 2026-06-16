@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -175,10 +176,13 @@ export default function ServiceCards() {
                 </div>
               )}
 
-              <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer">
-                Book a Call
-                <span className="bg-[#F4D9CE] rounded-full w-3 h-3 inline-block" />
-              </button>
+              <Link href="/contact">
+                {" "}
+                <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer">
+                  Book a Call
+                  <span className="bg-[#F4D9CE] rounded-full w-3 h-3 inline-block" />
+                </button>
+              </Link>
             </div>
 
             {/* Right column - image */}

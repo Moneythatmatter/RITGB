@@ -38,8 +38,7 @@ export default function AgencyHero() {
         ))}
       </div>
 
-      <div className="flex justify-center mt-8 md:mt-0 md:absolute md:right-120 md:top-[81%] md:-translate-y-1/2">
-        {" "}
+      <div className="flex justify-center mt-8 min-[1460px]:mt-0 min-[1460px]:absolute min-[1460px]:right-120 min-[1460px]:top-[81%] min-[1460px]:-translate-y-1/2">
         <button
           onClick={() =>
             document

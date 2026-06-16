@@ -25,6 +25,9 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
     if (!menuRef.current) return;
 
     if (isOpen) {
+      // Make visible before animating in
+      gsap.set(menuRef.current, { visibility: "visible" });
+
       gsap.to(menuRef.current, {
         yPercent: 0,
         duration: 0.6,
@@ -48,13 +51,18 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
         yPercent: -100,
         duration: 0.5,
         ease: "power4.in",
+        // Hide from paint once fully offscreen
+        onComplete: () => {
+          gsap.set(menuRef.current, { visibility: "hidden" });
+        },
       });
     }
   }, [isOpen]);
 
   useEffect(() => {
     if (!menuRef.current) return;
-    gsap.set(menuRef.current, { yPercent: -100 });
+    // Start offscreen AND invisible
+    gsap.set(menuRef.current, { yPercent: -100, visibility: "hidden" });
   }, []);
 
   return (
