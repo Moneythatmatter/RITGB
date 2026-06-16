@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function AgencyMission() {
   return (
     <section className="w-full bg-black py-24 md:py-32 px-6 flex flex-col items-center justify-center gap-12">
-      <h2 className="font-(family-name:--font-right-grotesk) text-center text-2xl md:text-4xl lg:text-5xl font-black uppercase leading-tight max-w-4xl">
+      <h2 className="font-(family-name:--font-right-grotesk) text-center text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight max-w-4xl">
         <span className="text-white">
           We Mix Creativity, Strategy, Design, Content, And Performance
           <br />

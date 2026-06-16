@@ -29,7 +29,7 @@ export default function Home() {
         <Industry />
         <Testimonials />
         <Contact />
-        <SiteFooter />
+
         <Footer />
       </div>
     </main>

@@ -143,11 +143,11 @@ export default function Testimonials() {
                 className="absolute w-full max-w-md rounded-tl-3xl p-8 md:p-10 flex flex-col justify-between"
                 style={{ backgroundColor: t.color, height: "420px" }}
               >
-                <span className="font-(family-name:--font-right-grotesk) text-black text-6xl md:text-7xl font-black leading-none -mb-4">
+                <span className="font-(family-name:--font-right-grotesk) text-black text-6xl md:text-7xl font-black leading-none -mb-8">
                   &ldquo;
                 </span>
 
-                <p className="font-[Arial] text-black text-sm md:text-base leading-relaxed pl-6 md:pl-8 -mt-4">
+                <p className="font-[Arial] text-black text-base md:text-base leading-relaxed pl-6 md:pl-8 -mt-4">
                   {t.quote}
                 </p>
 

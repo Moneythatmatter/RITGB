@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -42,9 +43,12 @@ export default function SoftwareCTA() {
         Better internet energy.
       </p>
 
-      <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
-        Talk To The Tech Team ↗
-      </button>
+      <Link href="/contact">
+        {" "}
+        <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
+          Talk To The Tech Team ↗
+        </button>
+      </Link>
     </section>
   );
 }

@@ -6,7 +6,7 @@ export default function HeroBottom() {
     <div className="font-[Arial] flex flex-col md:flex-row md:items-end md:justify-between px-8 md:px-27.75 md:pb-10 mt-16 gap-6 md:gap-0">
       {/* Left */}
       <div className="flex flex-col gap-1">
-        <span className="font-bold text-base">Let&apos;s Talk</span>
+        <span className="font-bold text-2xl md:text-base">Let&apos;s Talk</span>
 
         <Link
           href="/work"

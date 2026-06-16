@@ -64,7 +64,7 @@ export default function ProcessSection() {
         <p className="text-xs font-medium uppercase tracking-widest mb-12">
           Numbers Section
         </p>
-        <h2 className="font-(family-name:--font-right-grotesk) text-center text-[8vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em]">
+        <h2 className="font-(family-name:--font-right-grotesk) text-center text-[9vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em]">
           Our Process
           <br />
           Without The Buzzwords

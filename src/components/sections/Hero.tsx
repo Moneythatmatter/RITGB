@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0 overflow-hidden">
         {lines.map((line, i) => (
           <div key={i}>
-            <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[15vw] md:text-[13vw] lg:text-[11vw] font-black leading-[0.89] tracking-[-0.03em]  uppercase">
+            <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[15vw] md:text-[14rem] lg:text-[11vw] font-black leading-[0.89] tracking-[-0.03em]  uppercase">
               {line}
             </h1>
           </div>
@@ -51,7 +51,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Down button */}
-      <div className="flex justify-center mt-6 md:mt-0 md:absolute md:left-1/2 md:translate-x-[22vw] md:top-[49%] md:-translate-y-1/2">
+      <div className="flex justify-center mt-6 lg:mt-0 lg:absolute lg:left-1/2 lg:translate-x-[22vw] lg:top-[49%] lg:-translate-y-1/2">
         <button
           onClick={() =>
             document

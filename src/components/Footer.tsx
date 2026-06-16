@@ -38,6 +38,7 @@ export default function SiteFooter() {
               ))}
             </div>
 
+            {/* Pages col 2 */}
             <div className="flex flex-col gap-3 min-w-0">
               <p className="font-[Arial] text-[10px] text-white/30 tracking-[0.2em] uppercase mb-1">
                 &nbsp;
@@ -65,7 +66,6 @@ export default function SiteFooter() {
               >
                 Info@rayimpact.net
               </a>
-
               <a
                 href="https://maps.google.com/?q=260/1821,+Lane+2+Rd,+Mahadev+Nagar,+Jagannath+Nagar,+Jharapada,+Bhubaneswar,+Odisha+751025"
                 target="_blank"
@@ -79,6 +79,41 @@ export default function SiteFooter() {
                 Bhubaneswar, Odisha — 751025
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Bottom bar — copyright + socials */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-8">
+          <p className="font-[Arial] text-xs text-white/25 tracking-widest uppercase">
+            {new Date().getFullYear()} © — RITGB
+          </p>
+          <div className="flex gap-6 md:gap-8">
+            <a
+              href="https://www.facebook.com/share/1EMh3vxFjp/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-[Arial] text-xs text-white/25 hover:text-white/70 transition-colors tracking-widest capitalize"
+            >
+              Facebook
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/trinityglobalbusiness/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-[Arial] text-xs text-white/25 hover:text-white/70 transition-colors tracking-widest capitalize"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://www.instagram.com/ritgb.io/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-[Arial] text-xs text-white/25 hover:text-white/70 transition-colors tracking-widest capitalize"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function ExpertiseHero() {
   return (
     <section
       ref={containerRef}
-      className="w-full bg-[#4DB685] py-24 md:py-32 flex flex-col items-center justify-center gap-12 md:min-h-[80vh]"
+      className="w-full bg-[#4DB685] py-32 md:py-32 flex flex-col items-center justify-center gap-12 md:min-h-[80vh]"
     >
       <div className="flex flex-col items-center text-center">
         {lines.map((line, i) => (

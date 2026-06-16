@@ -20,7 +20,7 @@ export default function AgencyMarquee() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=90%",
+          end: "+=20%",
           scrub: true,
           pin: true,
         },

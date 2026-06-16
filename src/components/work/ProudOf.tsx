@@ -3,7 +3,10 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -11,119 +14,87 @@ const projects = [
     description:
       "Developed the resort's brand identity and website, and currently managing social media marketing, SEO, and performance marketing to drive visibility, engagement, and bookings.",
     link: "https://antaraalresort.com/",
+    instagramLink: "https://www.instagram.com/antaraal_resort/",
+    instagramUsername: "antaraal_resort",
     image: "/images/work/work1.png",
   },
   {
-    title: "Internship Project: Social Dining App Design",
+    title: "Pawzwell — End-to-End\nBrand Growth Partnership",
     description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
+      "Developed the brand identity, logo, and website, and currently managing social media marketing, SEO, and performance marketing focused on brand growth, customer acquisition, and long-term digital visibility.",
+    link: "https://pawzwell.com/",
+    instagramLink: "https://www.instagram.com/pawzwellofficial/",
+    instagramUsername: "pawzwellofficial",
     image: "/images/work/work2.png",
   },
   {
-    title: "Redesign Project: Fitness Tracker App Revamp",
+    title: "The Bliss Palampur — Ongoing\nDigital Growth Partnership",
     description:
-      "Elevating the user experience of a renowned fitness tracker app through a strategic.",
-    link: "www.google.com",
-    image: "/images/work/work4.png",
-  },
-  {
-    title: "Internship Project: Social Dining App Design",
-    description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
+      "From branding to website development, we have helped build the resort's digital presence and are currently managing social media marketing focused on customer acquisition, engagement, and brand growth.",
+    link: "https://theblisspalampur.com/",
+    instagramLink: "https://www.instagram.com/the.blisspalampur/",
+    instagramUsername: "the.blisspalampur",
     image: "/images/work/work3.png",
   },
   {
-    title: "Redesign Project: Fitness Tracker App Revamp",
+    title: "Hotel Victoria Grand — Complete\nHospitality Marketing Support",
     description:
-      "Elevating the user experience of a renowned fitness tracker app through a strategic.",
-    link: "www.google.com",
+      "Managing the hotel's social media growth while delivering end-to-end marketing collateral, including brochures, posters, promotional creatives, and branding materials to strengthen customer engagement and drive brand visibility.",
+    link: "https://hotelvictoriagrand.com/",
+    instagramLink: "https://www.instagram.com/hotelvictoriagrand/",
+    instagramUsername: "hotelvictoriagrand",
+    image: "/images/work/work4.png",
+  },
+  {
+    title: "Antaraal Resort — Website\nDesign & Development",
+    description:
+      "Designed and developed a fully responsive website aligned with the resort's brand identity, featuring smooth animations, optimized performance, and a seamless user experience across all devices.",
+    link: "https://antaraalresort.com/",
+    instagramLink: "https://www.instagram.com/antaraal_resort/",
+    instagramUsername: "antaraal_resort",
     image: "/images/work/work5.png",
   },
   {
-    title: "Internship Project: Social Dining App Design",
+    title: "Epsum Labs — Website\nRedesign & Digital Experience",
     description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
+      "Redesigned and developed the company's website with a refined brand identity, cohesive visual language, custom-designed imagery, and a consistent user experience that reflects their technology-driven positioning.",
+    link: "https://epsumlabs.com/",
+    instagramLink: "https://www.instagram.com/epsumlabs/",
+    instagramUsername: "epsumlabs",
     image: "/images/work/work6.png",
-  },
-  {
-    title: "Internship Project: Social Dining App Design",
-    description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
-    image: "/images/work/work7.png",
-  },
-  {
-    title: "Internship Project: Social Dining App Design",
-    description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
-    image: "/images/work/work8.png",
-  },
-  {
-    title: "Internship Project: Social Dining App Design",
-    description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
-    image: "/images/work/work9.png",
-  },
-  {
-    title: "Internship Project: Social Dining App Design",
-    description:
-      "Designing a mobile app to connect food enthusiasts through shared dining experiences,",
-    link: "www.google.com",
-    image: "/images/work/work10.png",
   },
 ];
 
 export default function ProudOf() {
-  const wrapperRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const innerRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
-    wrapperRefs.current.forEach((wrapper, i) => {
-      const inner = innerRefs.current[i];
-      if (!wrapper || !inner) return;
-
-      const handleMouseMove = (e: MouseEvent) => {
-        const rect = wrapper.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-
-        const xPercent = ((e.clientX - centerX) / rect.width) * 2;
-        const yPercent = ((e.clientY - centerY) / rect.height) * 2;
-
-        gsap.to(inner, {
-          x: -xPercent * 30,
-          y: -yPercent * 30,
-          duration: 0.6,
-          ease: "power2.out",
-        });
-      };
-
-      const handleMouseLeave = () => {
-        gsap.to(inner, {
-          x: 0,
-          y: 0,
-          duration: 0.6,
-          ease: "power2.out",
-        });
-      };
-
-      wrapper.addEventListener("mousemove", handleMouseMove);
-      wrapper.addEventListener("mouseleave", handleMouseLeave);
-
-      return () => {
-        wrapper.removeEventListener("mousemove", handleMouseMove);
-        wrapper.removeEventListener("mouseleave", handleMouseLeave);
-      };
-    });
-  });
+  useGSAP(
+    () => {
+      gsap.utils.toArray<HTMLElement>(".parallax-img").forEach((img) => {
+        gsap.fromTo(
+          img,
+          { yPercent: -10 },
+          {
+            yPercent: 10,
+            ease: "none",
+            scrollTrigger: {
+              trigger: img.closest(".project-card"),
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          },
+        );
+      });
+    },
+    { scope: sectionRef },
+  );
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-16">
+    <section
+      ref={sectionRef}
+      className="w-full bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-16"
+    >
       <p className="text-xs font-medium uppercase tracking-widest mb-12">
         Our Team Section
       </p>
@@ -134,51 +105,53 @@ export default function ProudOf() {
 
       <div className="grid md:grid-cols-2 gap-16 md:gap-12">
         {projects.map((project, i) => (
-          <div
-            key={i}
-            ref={(el) => {
-              wrapperRefs.current[i] = el;
-            }}
-          >
-            <div
-              ref={(el) => {
-                innerRefs.current[i] = el;
-              }}
-              className="flex flex-col flex-start"
-            >
-              {/* Image container — overflow-hidden here only, so text never clips */}
-              <div className="relative w-full aspect-4/3 overflow-hidden mb-6 rounded-sm">
-                <div className="mb-6">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={500}
-                    height={400}
-                    className="w-auto h-auto max-w-full"
-                  />
-                </div>
+          <div key={i} className="flex flex-col gap-4">
+            {/* Image container — clips the oversized parallax image */}
+            <div className="project-card relative w-full overflow-hidden rounded-sm aspect-4/3">
+              {/* Image is taller than container so parallax has room to move */}
+              <div className="parallax-img absolute inset-0 w-full h-[120%] top-[-10%]">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                />
               </div>
+            </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                {project.title}
-              </h3>
+            {/* Title */}
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 whitespace-pre-line">
+              {project.title}
+            </h3>
 
-              <p className="text-black/60 text-sm md:text-base mb-6 max-w-md">
-                {project.description}
-              </p>
+            {/* Description */}
+            <p className="text-black/60 text-sm md:text-base mb-6">
+              {project.description}
+            </p>
 
+            {/* Links */}
+            <div className="flex flex-col gap-1">
               <a
-                href={
-                  project.link.startsWith("http")
-                    ? project.link
-                    : `https://${project.link}`
-                }
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-sm md:text-base hover:underline"
+                className="font-bold text-sm md:text-base hover:underline underline-offset-2 w-fit"
               >
-                Website link: {project.link} →
+                Website link:{" "}
+                {project.link.replace(/^https?:\/\//, "").replace(/\/$/, "")} →
               </a>
+
+              {project.instagramLink && project.instagramUsername && (
+                <a
+                  href={project.instagramLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-sm md:text-base hover:underline underline-offset-2 w-fit"
+                >
+                  Instagram: @{project.instagramUsername} →
+                </a>
+              )}
             </div>
           </div>
         ))}
