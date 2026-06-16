@@ -111,7 +111,7 @@ export default function Testimonials() {
               src="/images/noice.png"
               alt="Noice"
               width={300}
-              height={250}
+              height={300}
               className="w-full h-auto"
             />
           </div>
@@ -120,7 +120,7 @@ export default function Testimonials() {
         {/* Right side - image + card stack */}
         <div className="w-full">
           {/* Meme image, full width, only on mobile/tablet */}
-          <div className="relative w-full md:hidden mb-5">
+          <div className="relative w-full md:hidden mb-16">
             <Image
               src="/images/noice.png"
               alt="Noice"

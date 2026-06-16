@@ -142,7 +142,7 @@ export default function Services() {
                   {/* Description */}
                   <p
                     style={{ color: card.text }}
-                    className="font-[Arial] text-sm leading-relaxed max-w-lg"
+                    className="font-[Arial] text-sm leading-relaxed max-w-lg whitespace-pre-line"
                   >
                     {card.description}
                   </p>

@@ -33,8 +33,8 @@ export default function AboutImage() {
   );
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh]">
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+    <section ref={sectionRef} className="relative h-[20vh] md:h-[300vh]">
+      <div className="h-[20vh] md:h-screen sticky top-0 flex items-center justify-center overflow-hidden">
         <div ref={imageRef} className="w-screen h-screen relative">
           <video
             autoPlay
@@ -42,7 +42,7 @@ export default function AboutImage() {
             loop
             playsInline
             preload="auto"
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full object-contain md:object-cover"
           >
             <source src="/videos/Showreel-RITGB.mp4" type="video/mp4" />
           </video>

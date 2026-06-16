@@ -22,7 +22,7 @@ export default function Contact() {
 
       {/* CTA Button */}
       <Link
-        href={"/work"}
+        href={"/contact"}
         className="group flex items-center gap-4 bg-black text-white rounded-full px-10 md:px-16 h-18
           md:h-22
           transition-all

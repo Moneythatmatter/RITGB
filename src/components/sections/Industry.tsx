@@ -11,7 +11,7 @@ const topRow = [
   { num: "01", label: "Hospitality" },
   { num: "02", label: "E-Commerce" },
   { num: "03", label: "Healthcare" },
-  { num: "04", label: "Tech & Startups'" },
+  { num: "04", label: "Tech & Startups" },
 ];
 
 const bottomRow = [
