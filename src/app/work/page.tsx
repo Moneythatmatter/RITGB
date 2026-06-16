@@ -6,12 +6,12 @@ import Contact from "@/components/sections/Contact";
 import Industry from "@/components/sections/Industry";
 import ProudOf from "@/components/work/ProudOf";
 import ShowReel from "@/components/work/ShowReel";
-import WorkHero from "@/components/work/WorkIntro";
+import WorkIntro from "@/components/work/WorkIntro";
 
 export default function WorkPage() {
   return (
     <>
-      <WorkHero />
+      <WorkIntro />
       <div id="next-section">
         <ShowReel />
         <ProudOf />

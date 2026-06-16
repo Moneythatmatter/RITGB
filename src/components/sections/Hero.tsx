@@ -37,7 +37,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="bg-white relative flex flex-col py-12 md:min-h-[70vh] md:justify-between md:pt-24 md:pb-0 h-auto"
+      className="bg-white relative flex flex-col py-20 md:min-h-[70vh] md:justify-between md:pt-24 md:pb-0 h-auto"
     >
       {/* Headline */}
       <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0 overflow-hidden">
@@ -51,14 +51,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll Down button */}
-      <div className="hidden md:block absolute right-66 top-[49%] -translate-y-1/2">
+      <div className="flex justify-center mt-6 md:mt-0 md:absolute md:left-1/2 md:translate-x-[22vw] md:top-[49%] md:-translate-y-1/2">
         <button
           onClick={() =>
             document
               .getElementById("next-section")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="bg-[#f9f9f9] font-(family-name:--font-right-grotesk) flex items-baseline gap-2  rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+          className="bg-[#f9f9f9] font-(family-name:--font-right-grotesk) flex items-baseline gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
         >
           Scroll Down ↓
         </button>

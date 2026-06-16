@@ -24,7 +24,7 @@ export default function SoftwareHero() {
   return (
     <section
       ref={containerRef}
-      className="w-full bg-[#F5F5F5] flex flex-col items-center justify-center relative gap-12 py-24 md:min-h-[80vh] z-10"
+      className="w-full bg-[#F5F5F5] flex flex-col items-center justify-center relative gap-12 py-32 md:min-h-[80vh] z-10"
     >
       <div className="flex flex-col items-center text-center">
         {lines.map((line, i) => (

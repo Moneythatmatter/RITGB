@@ -88,7 +88,7 @@ export default function Numbers() {
       </p>
       {/* Headline */}
       <div className="overflow-hidden mb-24 text-center">
-        <h2 className="numbers-title font-(family-name:--font-right-grotesk) text-[8vw] font-black leading-none tracking-[-0.02em] uppercase">
+        <h2 className="numbers-title font-(family-name:--font-right-grotesk) text-[9vw] font-black leading-none tracking-[-0.02em] uppercase">
           What We&apos;ve Done So Far
         </h2>
       </div>
@@ -101,7 +101,7 @@ export default function Numbers() {
             className="stat-card bg-white rounded-sm p-10 flex flex-col justify-between w-full aspect-368/264"
           >
             <span
-              className={`stat-number-${i} font-grotesk text-6xl font-black`}
+              className={`stat-number-${i} font-(family-name:--font-right-grotesk) text-7xl md:text-6xl font-black`}
             >
               {stat.number}
               {stat.suffix}

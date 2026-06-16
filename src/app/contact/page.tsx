@@ -47,7 +47,7 @@ export default function ContactPage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#FFC4DE] px-8 md:px-27.75 py-24 flex flex-col items-center"
+      className="min-h-screen bg-[#FFC4DE] px-8 md:px-27.75 py-32 flex flex-col items-center"
     >
       {/* Headline */}
       <div className="text-center mb-16 w-full">

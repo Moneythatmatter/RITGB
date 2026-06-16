@@ -6,7 +6,7 @@ import gsap from "gsap";
 
 const lines = ["STUFF WE", "ACTUALLY", "BUILT"];
 
-export default function WorkHero() {
+export default function WorkIntro() {
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -25,7 +25,7 @@ export default function WorkHero() {
   return (
     <section
       ref={containerRef}
-      className="bg-[#FA435B] relative md:min-h-[70vh] flex flex-col md:justify-center py-12 md:py-24 overflow-hidden"
+      className="bg-[#FA435B] relative md:min-h-[70vh] flex flex-col md:justify-center py-24 md:py-24 overflow-hidden"
     >
       {/* Headline */}
       <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0">
