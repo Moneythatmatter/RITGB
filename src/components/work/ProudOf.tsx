@@ -25,7 +25,7 @@ const projects = [
     link: "https://pawzwell.com/",
     instagramLink: "https://www.instagram.com/pawzwellofficial/",
     instagramUsername: "pawzwellofficial",
-    image: "/images/work/work2.png",
+    image: "/images/work/work8.png",
   },
   {
     title: "The Bliss Palampur — Ongoing\nDigital Growth Partnership",
@@ -112,6 +112,7 @@ export default function ProudOf() {
                 <Image
                   src={project.image}
                   alt={project.title}
+                  loading="eager"
                   width={800}
                   height={600}
                   className="w-full h-auto"

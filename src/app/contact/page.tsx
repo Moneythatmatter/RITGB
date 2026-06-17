@@ -30,47 +30,47 @@ export default function ContactPage() {
     );
   };
 
-  const handleSubmit = async () => {
-    if (
-      !name ||
-      !email ||
-      !company ||
-      !message ||
-      selectedBudgets.length === 0
-    ) {
-      alert("Please fill in all fields and select a budget range.");
-      return;
-    }
+  // const handleSubmit = async () => {
+  //   if (
+  //     !name ||
+  //     !email ||
+  //     !company ||
+  //     !message ||
+  //     selectedBudgets.length === 0
+  //   ) {
+  //     alert("Please fill in all fields and select a budget range.");
+  //     return;
+  //   }
 
-    setStatus("loading");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          company,
-          selectedBudgets,
-          message,
-        }),
-      });
+  //   setStatus("loading");
+  //   try {
+  //     const res = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({
+  //         name,
+  //         email,
+  //         company,
+  //         selectedBudgets,
+  //         message,
+  //       }),
+  //     });
 
-      const data = await res.json();
-      if (data.success) {
-        setStatus("success");
-        setName("");
-        setEmail("");
-        setCompany("");
-        setMessage("");
-        setSelectedBudgets([]);
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
+  //     const data = await res.json();
+  //     if (data.success) {
+  //       setStatus("success");
+  //       setName("");
+  //       setEmail("");
+  //       setCompany("");
+  //       setMessage("");
+  //       setSelectedBudgets([]);
+  //     } else {
+  //       setStatus("error");
+  //     }
+  //   } catch {
+  //     setStatus("error");
+  //   }
+  // };
 
   useGSAP(
     () => {
@@ -200,7 +200,7 @@ export default function ContactPage() {
         )}
         {/* Submit */}
         <button
-          onClick={handleSubmit}
+          // onClick={handleSubmit}
           disabled={status === "loading"}
           className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4  hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
         >
