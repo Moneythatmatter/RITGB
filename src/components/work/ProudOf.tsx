@@ -96,20 +96,19 @@ export default function ProudOf() {
       className="w-full bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-16"
     >
       <p className="text-xs font-medium uppercase tracking-widest mb-12">
-        Our Team Section
+        Portfolio Section
       </p>
 
       <h2 className="font-(family-name:--font-right-grotesk) text-[10vw] md:text-[5vw] font-black uppercase leading-none tracking-[-0.03em] mb-16">
         Stuff We&apos;re Proud Of
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-16 md:gap-12">
+      <div className="grid md:grid-cols-2 gap-16 md:gap-18">
         {projects.map((project, i) => (
-          <div key={i} className="flex flex-col gap-4">
+          <div key={i} className="flex flex-col gap-10">
             {/* Image container — clips the oversized parallax image */}
-            <div className="project-card relative w-full overflow-hidden rounded-sm aspect-4/3">
-              {/* Image is taller than container so parallax has room to move */}
-              <div className="parallax-img absolute inset-0 w-full h-[120%] top-[-10%]">
+            <div className="project-card relative w-full overflow-hidden rounded-sm">
+              <div className="parallax-img w-full h-[120%]">
                 <Image
                   src={project.image}
                   alt={project.title}

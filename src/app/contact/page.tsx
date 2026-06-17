@@ -14,6 +14,13 @@ const budgetOptions = [
 export default function ContactPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedBudgets, setSelectedBudgets] = useState<string[]>([]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const toggleBudget = (option: string) => {
     setSelectedBudgets((prev) =>
@@ -21,6 +28,48 @@ export default function ContactPage() {
         ? prev.filter((b) => b !== option)
         : [...prev, option],
     );
+  };
+
+  const handleSubmit = async () => {
+    if (
+      !name ||
+      !email ||
+      !company ||
+      !message ||
+      selectedBudgets.length === 0
+    ) {
+      alert("Please fill in all fields and select a budget range.");
+      return;
+    }
+
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          selectedBudgets,
+          message,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setName("");
+        setEmail("");
+        setCompany("");
+        setMessage("");
+        setSelectedBudgets([]);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   useGSAP(
@@ -66,21 +115,27 @@ export default function ContactPage() {
         <input
           type="text"
           placeholder="Name *"
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
         />
 
         {/* Email */}
         <input
           type="email"
           placeholder="Email *"
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full bg-white px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
         />
 
         {/* Company */}
         <input
           type="text"
           placeholder="Company *"
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
         />
 
         {/* Budget Range */}
@@ -95,7 +150,7 @@ export default function ContactPage() {
               onClick={() => toggleBudget(option)}
             >
               <div
-                className={`w-5 h-5 rounded flex items-center justify-center border transition-colors ${
+                className={`w-5 h-5  flex items-center justify-center border transition-colors ${
                   selectedBudgets.includes(option)
                     ? "bg-black border-black"
                     : "bg-white border-gray-300"
@@ -125,13 +180,31 @@ export default function ContactPage() {
         {/* Message */}
         <textarea
           placeholder="Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           rows={6}
-          className="w-full bg-white rounded-xl px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40 resize-none"
+          className="w-full  bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40 resize-none"
         />
 
+        {/* Success or error message  */}
+        {status === "success" && (
+          <p className="text-white text-shadow-2xs font-bold text-sm text-center">
+            Thank you! We&apos;ll be in touch soon.
+          </p>
+        )}
+
+        {status === "error" && (
+          <p className="text-red-400 text-shadow-2xs font-bold text-sm text-center">
+            Something went wrong. Please try again.
+          </p>
+        )}
         {/* Submit */}
-        <button className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4 rounded-lg hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer">
-          Book A 15 Min Call
+        <button
+          onClick={handleSubmit}
+          disabled={status === "loading"}
+          className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4  hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
+        >
+          {status === "loading" ? "Sending..." : "Book A 15 Min Call"}
         </button>
       </div>
     </div>

@@ -12,6 +12,7 @@ import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import SiteFooter from "@/components/SiteFooter";
 import Footer from "@/components/Footer";
+import ClientsSection from "@/components/expertise/ClientsSection";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <AboutText />
         <MemeSection />
         <Numbers />
+        <ClientsSection />
         <Services />
         <Portfolio />
         <Projects />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 type Category = {
   number: string;
@@ -8,6 +9,7 @@ type Category = {
   description: string;
   bgColor: string;
   textColor: string;
+  imageUrl: string;
   imageColor: string;
   items: { label: string; content: string }[];
 };
@@ -20,6 +22,7 @@ const categories: Category[] = [
       "Your audience judges your brand in seconds. We make sure those seconds work in your favor.",
     bgColor: "bg-black",
     textColor: "text-white",
+    imageUrl: "/images/services/design.png",
     imageColor: "bg-[#A42111]",
     items: [
       {
@@ -61,6 +64,7 @@ const categories: Category[] = [
       "Cool Design Means Nothing If The Website Breaks. We build websites, apps, automations, and digital systems that work smoothly without giving users emotional damage. Fast. Functional. Slightly addictive to use.",
     bgColor: "bg-[#FFC4DE]",
     textColor: "text-black",
+    imageUrl: "/images/services/tech.png",
     imageColor: "bg-white",
     items: [
       {
@@ -102,6 +106,7 @@ const categories: Category[] = [
       'We Market Brands Like People Actually Exist. No random posting. No "let\'s just boost it". Everything built to attract attention, leads, and growth.',
     bgColor: "bg-[#6DC9BC]",
     textColor: "text-black",
+    imageUrl: "/images/services/marketing.png",
     imageColor: "bg-white",
     items: [
       {
@@ -209,9 +214,15 @@ export default function ExpertiseCategories() {
               </p>
             </div>
 
-            <div
-              className={`${cat.imageColor} w-full md:w-100 aspect-4/5 shrink-0`}
-            />
+            <div className="relative w-full aspect-4/5 md:w-100 md:shrink-0 overflow-hidden">
+              <Image
+                src={cat.imageUrl}
+                alt={cat.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+            </div>
           </div>
 
           <div>
