@@ -20,7 +20,7 @@ const industries = [
       "Travel Brands",
       "Restaurant & Hospitality Groups",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/hospitality.png",
   },
   {
     number: "02",
@@ -33,7 +33,7 @@ const industries = [
       "Coaching Institutes",
       "Training Centers",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/education.png",
   },
   {
     number: "03",
@@ -46,7 +46,7 @@ const industries = [
       "Wellness Centers",
       "Medical Practices",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/hospital.png",
   },
   {
     number: "04",
@@ -59,7 +59,7 @@ const industries = [
       "Retail Businesses",
       "Fashion & Lifestyle Brands",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/ecommerce.png",
   },
   {
     number: "05",
@@ -67,12 +67,12 @@ const industries = [
     description:
       "We support startups and technology companies with scalable digital products, modern websites, UI/UX design, branding, launch campaigns, and creative marketing solutions that help brands grow faster and stand out in competitive markets.",
     items: [
-      "Online Stores",
-      "D2C Brands",
-      "Retail Businesses",
-      "Fashion & Lifestyle Brands",
+      "SaaS Companies",
+      "Technology",
+      "Software Product Companies",
+      "AI & Innovation Companies",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/tech.png",
   },
   {
     number: "06",
@@ -85,7 +85,7 @@ const industries = [
       "Property Consultants",
       "Commercial Projects",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/realEstate.png",
   },
   {
     number: "07",
@@ -98,7 +98,7 @@ const industries = [
       "Food & Beverage Brands",
       "Fine Dining Businesses",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/restaurant.png",
   },
   {
     number: "08",
@@ -111,7 +111,7 @@ const industries = [
       "Local Brands & Enterprises",
       "Small & Medium Businesses",
     ],
-    image: "/images/industries/industry.png",
+    image: "/images/industries/localBusinesses.png",
   },
 ];
 

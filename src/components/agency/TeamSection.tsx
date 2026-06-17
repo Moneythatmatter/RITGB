@@ -142,7 +142,7 @@ export default function TeamSection() {
       {/* Header */}
       <div className="py-16 md:py-24 px-6 md:px-16">
         <p className="text-xs font-medium uppercase tracking-widest mb-12">
-          Our Team Section
+          Portfolio Section
         </p>
         <h2 className="font-(family-name:--font-right-grotesk) text-center text-[10vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em]">
           The Brains Behind
@@ -166,7 +166,13 @@ export default function TeamSection() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div
+            className={`grid grid-cols-1 gap-8 md:gap-12 ${
+              group.members.length % 2 === 0
+                ? "md:grid-cols-2"
+                : "md:grid-cols-3"
+            }`}
+          >
             {group.members.map((member, j) => (
               <div key={j}>
                 <div className="relative w-full aspect-3/4 mb-4">

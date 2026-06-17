@@ -4,15 +4,29 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
-  { image: "/images/agency/process1.png" },
-  { image: "/images/agency/process1.png" },
-  { image: "/images/agency/process1.png" },
-  { image: "/images/agency/process1.png" },
+  {
+    heading: "WE UNDERSTAND",
+    description:
+      "Your Brand, Audience, Goals, Problems, And Why Your Current Marketing Probably Feels Stuck",
+  },
+  {
+    heading: "WE BUILD",
+    description:
+      "Strategy, Visuals, Campaigns, Content, And Systems Designed To Grab Attention",
+  },
+  {
+    heading: "WE OPTIMIZE",
+    description:
+      "Test. Improve. Repeat. Because Good Marketing Rarely Happens Accidentally",
+  },
+  {
+    heading: "WE LAUNCH",
+    description: "Into The Internet Battlefield We Go",
+  },
 ];
 
 export default function ProcessSection() {
@@ -26,7 +40,6 @@ export default function ProcessSection() {
       cards.forEach((card, i) => {
         gsap.set(card, {
           zIndex: i + 1,
-
           y: i === 0 ? 0 : "100vh",
         });
       });
@@ -43,15 +56,7 @@ export default function ProcessSection() {
 
       cards.forEach((card, i) => {
         if (i === 0) return;
-
-        tl.to(
-          card,
-          {
-            y: 0,
-            ease: "none",
-          },
-          i * 0.5,
-        );
+        tl.to(card, { y: 0, ease: "none" }, i * 0.5);
       });
     },
     { scope: sectionRef },
@@ -62,7 +67,7 @@ export default function ProcessSection() {
       {/* Header */}
       <div className="py-16 md:py-24 px-6 md:px-16">
         <p className="text-xs font-medium uppercase tracking-widest mb-12">
-          Numbers Section
+          Process Section
         </p>
         <h2 className="font-(family-name:--font-right-grotesk) text-center text-[9vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em]">
           Our Process
@@ -79,18 +84,17 @@ export default function ProcessSection() {
         {steps.map((step, i) => (
           <div
             key={i}
-            className="process-card absolute w-full max-w-md md:max-w-xl aspect-square rounded-sm overflow-hidden shadow-2xl"
+            className="process-card absolute w-full max-w-md md:max-w-xl aspect-square rounded-sm overflow-hidden shadow-2xl bg-black flex flex-col justify-between p-8 md:p-12"
           >
-            <div className="relative w-full h-full">
-              <Image
-                src={step.image}
-                alt=""
-                fill
-                loading="eager"
-                sizes="(max-width: 768px) 90vw, 600px"
-                className="object-cover"
-              />
-            </div>
+            {/* Heading top-left */}
+            <h3 className="font-(family-name:--font-right-grotesk) text-white text-3xl md:text-5xl font-black uppercase leading-tight">
+              {step.heading}
+            </h3>
+
+            {/* Description bottom-left */}
+            <p className="text-white text-sm md:text-base max-w-xs">
+              {step.description}
+            </p>
           </div>
         ))}
       </div>

@@ -8,11 +8,11 @@ const clients = [
   { id: 3, name: "Vladivostok Fish Port", file: "/images/clients/client3.png" },
   { id: 4, name: "Slavda Group", file: "/images/clients/client4.png" },
   { id: 5, name: "DNS City", file: "/images/clients/client5.png" },
-  { id: 6, name: "Eskadra", file: "/images/clients/client1.png" },
-  { id: 7, name: "Nobel", file: "/images/clients/client2.png" },
-  { id: 8, name: "Inlav", file: "/images/clients/client3.png" },
-  { id: 9, name: "Brynner", file: "/images/clients/client4.png" },
-  { id: 10, name: "Port May", file: "/images/clients/client5.png" },
+  { id: 6, name: "Eskadra", file: "/images/clients/client6.png" },
+  { id: 7, name: "Nobel", file: "/images/clients/client7.png" },
+  { id: 8, name: "Inlav", file: "/images/clients/client8.png" },
+  { id: 9, name: "Brynner", file: "/images/clients/client9.png" },
+  { id: 10, name: "Port May", file: "/images/clients/client10.png" },
 ];
 
 export default function ClientsSection() {

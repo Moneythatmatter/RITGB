@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function ExpertiseCta() {
   const containerRef = useRef<HTMLElement>(null);
@@ -24,22 +24,13 @@ export default function ExpertiseCta() {
   return (
     <section
       ref={containerRef}
-      className="w-full bg-[#F5F5F5] py-24 md:py-32 px-6 md:px-16"
+      className="w-full bg-[#F5F5F5] py-24 md:py-32 px-6 md:px-16 flex flex-col items-center text-center"
     >
       <div className="max-w-6xl">
         <div className="overflow-hidden">
-          <h2 className="cta-line font-(family-name:--font-right-grotesk) text-[14vw] md:text-[8vw] font-black leading-[0.95] uppercase tracking-[-0.03em] md:inline">
-            Your Brand{" "}
+          <h2 className="cta-line font-(family-name:--font-right-grotesk) text-[14vw] md:text-[8vw] font-black leading-[0.95] uppercase tracking-[-0.03em]">
+            Your Brand
           </h2>
-          <span className="block md:inline-block relative w-[50vw] md:w-[15vw] aspect-306/170 md:align-middle md:translate-y-[-10%] mt-2 md:mt-0">
-            <Image
-              src="/images/leo.png"
-              alt="Cheers"
-              fill
-              sizes="(max-width: 768px) 50vw, 15vw"
-              className="object-cover"
-            />
-          </span>
         </div>
 
         <div className="overflow-hidden">
@@ -48,17 +39,15 @@ export default function ExpertiseCta() {
           </h2>
         </div>
       </div>
-
-      <p className="text-sm md:text-base mt-6 max-w-md">
-        Better strategy. Better design. Better marketing.
-        <br />
-        Better internet energy.
+      <p className="text-sm md:text-base mt-6 md:whitespace-nowrap">
+        Better strategy. Better design.
+        <br className="md:hidden" /> Better marketing.
+        <br className="md:hidden" /> Better internet energy.
       </p>
 
-      <Link href={"/contact"}>
-        {" "}
-        <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center gap-3 rounded-full pl-6 pr-2 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
-          Let&apos;s Build Something ↗
+      <Link href={"/contact"} className="self-center">
+        <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center justify-center gap-3 rounded-full px-6 py-4 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
+          Let&apos;s Build Something <ArrowUpRight size={16} />
         </button>
       </Link>
     </section>

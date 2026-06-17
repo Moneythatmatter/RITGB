@@ -6,7 +6,7 @@ import ExpertiseIntro from "@/components/expertise/ExpertiseIntro";
 import Industries from "@/components/expertise/Industries";
 import Portfolio from "@/components/sections/Portfolio";
 import Projects from "@/components/sections/Projects";
-
+import Footer from "@/components/Footer";
 export default function ExpertisePage() {
   return (
     <>
@@ -19,6 +19,7 @@ export default function ExpertisePage() {
         <Portfolio />
         <Projects />
         <ExpertiseCta />
+        <Footer />
       </div>
     </>
   );

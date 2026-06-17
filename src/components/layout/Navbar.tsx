@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Menu from "./Menu";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,11 +12,15 @@ export default function Navbar() {
     <>
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-27.75 py-6">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-(family-name:--font-right-grotesk) text-black font-bold text-3xl tracking-tight uppercase"
-        >
-          RITGB
+        <Link href="/">
+          <Image
+            src="/images/logo/ritgb.png"
+            alt="RITGB"
+            width={140}
+            height={20}
+            priority
+            className="my-4"
+          />
         </Link>
 
         {/* Right side */}
