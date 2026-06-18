@@ -7,7 +7,7 @@ import StackingCards from "@/components/agency/StackingCards";
 import TeamSection from "@/components/agency/TeamSection";
 import Testimonials from "@/components/agency/Testimonials";
 import Footer from "@/components/Footer";
-import CaseStudy from "@/components/sections/CaseStudy";
+// import CaseStudy from "@/components/sections/CaseStudy";
 import Contact from "@/components/sections/Contact";
 import Industry from "@/components/sections/Industry";
 
@@ -19,7 +19,7 @@ export default function AgencyPage() {
         <AgencyAbout />
         <AgencyMission />
         <AgencyMarquee />
-        {/* <TeamSection />*/}
+        <TeamSection />
         <ProcessSection />
         {/* <CaseStudy /> */}
         <StackingCards />

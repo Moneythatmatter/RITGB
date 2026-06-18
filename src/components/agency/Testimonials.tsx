@@ -8,8 +8,8 @@ import Image from "next/image";
 const testimonials = [
   {
     quote:
-      "It's always a pleasure working with RITGB. The team does an excellent job of taking our designs and turning them into fully functional websites that look and perform beautifully. Their skill, responsiveness, and attention to detail make every project a smooth and enjoyable journey.",
-    name: "-Anurag Anupam",
+      "RITGB helped us establish a strong digital presence for Antaraal Resort. From creating a beautiful website that reflects our brand to managing SEO and digital marketing, their team has played a key role in increasing our visibility and guest inquiries. They understand the hospitality industry well and have been a reliable partner in our growth journey.",
+    name: "-Team Antaraal Resort",
     color: "#FA435B",
   },
   {
