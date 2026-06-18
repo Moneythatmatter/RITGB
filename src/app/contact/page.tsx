@@ -1,16 +1,10 @@
 "use client";
 
+import { getCalApi } from "@calcom/embed-react";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Footer from "@/components/Footer";
-
-const budgetOptions = [
-  "$500 - $1,000",
-  "$1,000 - $5,000",
-  "$5,000 - $10,000",
-  "Custom ",
-];
 
 export default function ContactPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,6 +16,21 @@ export default function ContactPage() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [currency, setCurrency] = useState("$");
+
+  const currencies = [
+    { symbol: "$", label: "USD" },
+    { symbol: "₹", label: "INR" },
+    { symbol: "€", label: "EUR" },
+    { symbol: "£", label: "GBP" },
+  ];
+
+  const budgetOptions = [
+    `${currency}500 - ${currency}1,000`,
+    `${currency}1,000 - ${currency}5,000`,
+    `${currency}5,000 - ${currency}10,000`,
+    "Custom",
+  ];
 
   const toggleBudget = (option: string) => {
     setSelectedBudgets((prev) =>
@@ -30,6 +39,9 @@ export default function ContactPage() {
         : [...prev, option],
     );
   };
+
+  const isValidEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleSubmit = async () => {
     if (
@@ -40,6 +52,10 @@ export default function ContactPage() {
       selectedBudgets.length === 0
     ) {
       alert("Please fill in all fields and select a budget range.");
+      return;
+    }
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email address.");
       return;
     }
 
@@ -53,6 +69,7 @@ export default function ContactPage() {
           email,
           company,
           selectedBudgets,
+          currency,
           message,
         }),
       });
@@ -65,6 +82,9 @@ export default function ContactPage() {
         setCompany("");
         setMessage("");
         setSelectedBudgets([]);
+
+        const cal = await getCalApi({ namespace: "15min" });
+        cal("modal", { calLink: "the-invincible-zgixdm/15min" });
       } else {
         setStatus("error");
       }
@@ -141,6 +161,31 @@ export default function ContactPage() {
             className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
           />
 
+          {/* Currency */}
+          <div className="flex flex-col gap-3 py-2">
+            <p className="font-[Arial] text-xs font-bold tracking-widest uppercase text-black">
+              Currency:
+            </p>
+            <div className="flex gap-2">
+              {currencies.map((c) => (
+                <button
+                  key={c.symbol}
+                  onClick={() => {
+                    setCurrency(c.symbol);
+                    setSelectedBudgets([]);
+                  }}
+                  className={`cursor-pointer px-4 py-2 text-sm font-[Arial] font-bold border transition-colors ${
+                    currency === c.symbol
+                      ? "bg-black text-white border-black"
+                      : "bg-white text-black border-gray-300 hover:border-black"
+                  }`}
+                >
+                  {c.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Budget Range */}
           <div className="flex flex-col gap-3 py-2">
             <p className="font-[Arial] text-xs font-bold tracking-widest uppercase text-black">
@@ -207,7 +252,7 @@ export default function ContactPage() {
           <button
             onClick={handleSubmit}
             disabled={status === "loading"}
-            className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4  hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
+            className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4 hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
           >
             {status === "loading" ? "Sending..." : "Book A 15 Min Call"}
           </button>
