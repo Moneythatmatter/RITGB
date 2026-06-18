@@ -12,15 +12,11 @@ export default function Navbar() {
     <>
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-27.75 pb-2">
         {/* Logo */}
-        <Link href="/">
-          <Image
-            src="/images/logo/logo.png"
-            alt="RITGB"
-            width={100}
-            height={30}
-            priority
-            className="my-4 brightness-0"
-          />
+        <Link
+          href="/"
+          className="font-(family-name:--font-right-grotesk) text-2xl md:text-3xl font-black uppercase tracking-tight leading-none py-4"
+        >
+          RITGB
         </Link>
 
         {/* Right side */}

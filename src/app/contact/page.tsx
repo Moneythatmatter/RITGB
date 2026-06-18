@@ -3,12 +3,13 @@
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Footer from "@/components/Footer";
 
 const budgetOptions = [
   "$500 - $1,000",
   "$1,000 - $5,000",
   "$5,000 - $10,000",
-  "$10,000+",
+  "Custom ",
 ];
 
 export default function ContactPage() {
@@ -94,119 +95,125 @@ export default function ContactPage() {
   );
 
   return (
-    <div
-      ref={containerRef}
-      className="min-h-screen bg-[#FFC4DE] px-8 md:px-27.75 py-32 flex flex-col items-center"
-    >
-      {/* Headline */}
-      <div className="text-center mb-16 w-full">
-        {["GOOD THINGS", "START WITH ONE", "MESSAGE"].map((line, i) => (
-          <div key={i} className="overflow-hidden">
-            <h1 className="contact-line font-(family-name:--font-right-grotesk) text-[12vw] md:text-[8vw] font-black leading-none tracking-[-0.02em] uppercase text-black">
-              {line}
-            </h1>
-          </div>
-        ))}
-      </div>
-
-      {/* Form */}
-      <div className="contact-form w-full max-w-lg flex flex-col gap-4">
-        {/* Name */}
-        <input
-          type="text"
-          placeholder="Name *"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
-        />
-
-        {/* Email */}
-        <input
-          type="email"
-          placeholder="Email *"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full bg-white px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
-        />
-
-        {/* Company */}
-        <input
-          type="text"
-          placeholder="Company *"
-          value={company}
-          onChange={(e) => setCompany(e.target.value)}
-          className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
-        />
-
-        {/* Budget Range */}
-        <div className="flex flex-col gap-3 py-2">
-          <p className="font-[Arial] text-xs font-bold tracking-widest uppercase text-black">
-            Budget Range:
-          </p>
-          {budgetOptions.map((option, i) => (
-            <label
-              key={i}
-              className="flex items-center gap-3 cursor-pointer"
-              onClick={() => toggleBudget(option)}
-            >
-              <div
-                className={`w-5 h-5  flex items-center justify-center border transition-colors ${
-                  selectedBudgets.includes(option)
-                    ? "bg-black border-black"
-                    : "bg-white border-gray-300"
-                }`}
-              >
-                {selectedBudgets.includes(option) && (
-                  <svg
-                    className="w-3 h-3 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={3}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                )}
-              </div>
-              <span className="font-[Arial] text-sm text-black">{option}</span>
-            </label>
+    <>
+      {" "}
+      <div
+        ref={containerRef}
+        className="min-h-screen bg-[#FFC4DE] px-8 md:px-27.75 py-32 flex flex-col items-center"
+      >
+        {/* Headline */}
+        <div className="text-center mb-16 w-full">
+          {["GOOD THINGS", "START WITH ONE", "MESSAGE"].map((line, i) => (
+            <div key={i} className="overflow-hidden">
+              <h1 className="contact-line font-(family-name:--font-right-grotesk) text-[14vw] md:text-[8vw] font-black leading-none tracking-[-0.02em] uppercase text-black">
+                {line}
+              </h1>
+            </div>
           ))}
         </div>
 
-        {/* Message */}
-        <textarea
-          placeholder="Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          rows={6}
-          className="w-full  bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40 resize-none"
-        />
+        {/* Form */}
+        <div className="contact-form w-full max-w-lg flex flex-col gap-4">
+          {/* Name */}
+          <input
+            type="text"
+            placeholder="Name *"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
+          />
 
-        {/* Success or error message  */}
-        {status === "success" && (
-          <p className="text-gray-800 text-shadow-2xs font-bold text-sm text-center">
-            Thank you! We&apos;ll be in touch soon.
-          </p>
-        )}
+          {/* Email */}
+          <input
+            type="email"
+            placeholder="Email *"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full bg-white px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
+          />
 
-        {status === "error" && (
-          <p className="text-red-400 text-shadow-2xs font-bold text-sm text-center">
-            Something went wrong. Please try again.
-          </p>
-        )}
-        {/* Submit */}
-        <button
-          onClick={handleSubmit}
-          disabled={status === "loading"}
-          className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4  hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
-        >
-          {status === "loading" ? "Sending..." : "Book A 15 Min Call"}
-        </button>
+          {/* Company */}
+          <input
+            type="text"
+            placeholder="Company *"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            className="w-full bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40"
+          />
+
+          {/* Budget Range */}
+          <div className="flex flex-col gap-3 py-2">
+            <p className="font-[Arial] text-xs font-bold tracking-widest uppercase text-black">
+              Budget Range:
+            </p>
+            {budgetOptions.map((option, i) => (
+              <label
+                key={i}
+                className="flex items-center gap-3 cursor-pointer"
+                onClick={() => toggleBudget(option)}
+              >
+                <div
+                  className={`w-5 h-5  flex items-center justify-center border transition-colors ${
+                    selectedBudgets.includes(option)
+                      ? "bg-black border-black"
+                      : "bg-white border-gray-300"
+                  }`}
+                >
+                  {selectedBudgets.includes(option) && (
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  )}
+                </div>
+                <span className="font-[Arial] text-sm text-black">
+                  {option}
+                </span>
+              </label>
+            ))}
+          </div>
+
+          {/* Message */}
+          <textarea
+            placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            rows={6}
+            className="w-full  bg-white  px-5 py-4 text-sm font-[Arial] outline-none placeholder:text-black/40 resize-none"
+          />
+
+          {/* Success or error message  */}
+          {status === "success" && (
+            <p className="text-gray-800 text-shadow-2xs font-bold text-sm text-center">
+              Thank you! We&apos;ll be in touch soon.
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="text-red-400 text-shadow-2xs font-bold text-sm text-center">
+              Something went wrong. Please try again.
+            </p>
+          )}
+          {/* Submit */}
+          <button
+            onClick={handleSubmit}
+            disabled={status === "loading"}
+            className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4  hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
+          >
+            {status === "loading" ? "Sending..." : "Book A 15 Min Call"}
+          </button>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

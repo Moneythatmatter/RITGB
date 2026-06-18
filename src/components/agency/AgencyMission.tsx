@@ -8,8 +8,7 @@ export default function AgencyMission() {
       <h2 className="font-(family-name:--font-right-grotesk) text-center text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight max-w-4xl">
         <span className="text-white">
           We Mix Creativity, Strategy, Design, Content, And Performance
-          <br />
-          Marketing To Help Brands Become <br />
+          Marketing <br /> To Help Brands Become <br />
         </span>{" "}
         <span className="text-[#5ECFC9]">Harder To Ignore Online.</span>
       </h2>

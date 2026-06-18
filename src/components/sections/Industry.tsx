@@ -71,9 +71,9 @@ export default function Industry() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white overflow-hidden py-16 md:pt-40 md:pb-32"
+      className="bg-white overflow-hidden py-32.5 md:pt-40 md:pb-32"
     >
-      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-16 px-8 md:px-27.75">
+      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12.5 md:mb-16 px-8 md:px-27.75">
         Industry Section
       </p>
 

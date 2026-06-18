@@ -150,7 +150,7 @@ export default function ServiceCards() {
 
               <div className="mb-8">
                 <h3 className="font-bold mb-4">{service.listTitle}</h3>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm max-w-md">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-xs max-w-md">
                   {colA.map((item, i) => (
                     <span key={`a-${i}`}>• {item}</span>
                   ))}
@@ -177,7 +177,7 @@ export default function ServiceCards() {
               )}
 
               <Link href="/contact">
-                <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center justify-center gap-3 rounded-full px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer">
+                <button className="bg-black text-white font-(family-name:--font-right-grotesk) flex items-center justify-center gap-3 rounded-full px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors duration-300 cursor-pointer mt-8">
                   Book a Call
                 </button>
               </Link>

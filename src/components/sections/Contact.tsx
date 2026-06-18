@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section className="min-h-[40vh] md:min-h-[50vh] bg-[#ECECEC] flex flex-col items-center justify-center px-6 py-16 md:py-24">
+    <section className="min-h-[40vh] md:min-h-[50vh] bg-[#ECECEC] flex flex-col items-center justify-center px-6 py-37.5 md:py-24">
       {/* Heading */}
       <h2
         className="

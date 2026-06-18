@@ -92,7 +92,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full bg-black py-16 md:py-32 px-6 md:px-16 overflow-hidden">
+    <section className="w-full bg-black py-37.5 md:py-32 px-6 md:px-16 overflow-hidden">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left side */}
         <div>
@@ -120,7 +120,7 @@ export default function Testimonials() {
         {/* Right side - image + card stack */}
         <div className="w-full">
           {/* Meme image, full width, only on mobile/tablet */}
-          <div className="relative w-full md:hidden mb-20">
+          <div className="relative w-full md:hidden mb-32.5">
             <Image
               src="/images/looksGood.gif"
               alt="Looks good"

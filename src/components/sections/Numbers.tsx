@@ -81,9 +81,9 @@ export default function Numbers() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f0eeea] py-12 md:py-44 px-8 md:px-27.75"
+      className="bg-[#f0eeea] py-25 md:py-44 px-8 md:px-27.75"
     >
-      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-16">
+      <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12.5">
         Numbers Section
       </p>
       {/* Headline */}

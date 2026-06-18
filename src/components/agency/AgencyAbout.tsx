@@ -8,11 +8,11 @@ export default function AgencyAbout() {
       </p>
 
       <p className="text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-snug px-4">
-        RITGB Was Built For Brands Tired Of Boring Marketing,
+        RITGB Was Built For Brands <br /> Tired Of Boring Marketing,
         <br />
         Random Posting, And{" "}
         <span className="font-serif italic font-medium">
-          &ldquo;Growth Hacks&rdquo;
+          <br /> &ldquo;Growth Hacks&rdquo;
         </span>{" "}
         That Solve
         <br />

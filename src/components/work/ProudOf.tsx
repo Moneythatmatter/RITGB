@@ -11,8 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     title: "Antaraal Resort — Complete\nDigital Growth Partnership",
+    // move and to new line
     description:
-      "Developed the resort's brand identity and website, and currently managing social media marketing, SEO, and performance marketing to drive visibility, engagement, and bookings.",
+      "Developed the resort's brand identity and website, and currently managing social media marketing, SEO, and performance marketing to drive visibility, engagement\nand bookings.",
     link: "https://antaraalresort.com/",
     instagramLink: "https://www.instagram.com/antaraal_resort/",
     instagramUsername: "antaraal_resort",
@@ -20,6 +21,7 @@ const projects = [
   },
   {
     title: "Pawzwell — End-to-End\nBrand Growth Partnership",
+    // move and to new line
     description:
       "Developed the brand identity, logo, and website, and currently managing social media marketing, SEO, and performance marketing focused on brand growth, customer acquisition, and long-term digital visibility.",
     link: "https://pawzwell.com/",
@@ -38,6 +40,7 @@ const projects = [
   },
   {
     title: "Hotel Victoria Grand — Complete\nHospitality Marketing Support",
+    // move 'to' to new line
     description:
       "Managing the hotel's social media growth while delivering end-to-end marketing collateral, including brochures, posters, promotional creatives, and branding materials to strengthen customer engagement and drive brand visibility.",
     link: "https://hotelvictoriagrand.com/",
@@ -47,6 +50,7 @@ const projects = [
   },
   {
     title: "Antaraal Resort — Website\nDesign & Development",
+    // move 'aligned' & "user" to new line
     description:
       "Designed and developed a fully responsive website aligned with the resort's brand identity, featuring smooth animations, optimized performance, and a seamless user experience across all devices.",
     link: "https://antaraalresort.com/",
@@ -65,6 +69,7 @@ const projects = [
   },
   {
     title: "Shopify E-commerce Store Development",
+    // move e-commerce to new line
     description:
       "Designed and developed a high-performance Shopify e-commerce platform for a pet care brand, focused on seamless shopping experiences, conversion optimization, and scalable online growth.",
     link: "https://pawzwell.com/",
@@ -111,7 +116,7 @@ export default function ProudOf() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-16"
+      className="w-full bg-[#F5F5F5] py-37.5 md:py-24 px-6 md:px-16"
     >
       <p className="text-xs font-medium uppercase tracking-widest mb-12">
         Portfolio Section
@@ -121,7 +126,7 @@ export default function ProudOf() {
         Stuff We&apos;re Proud Of
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-16 md:gap-18">
+      <div className="grid md:grid-cols-2 gap-37.5 md:gap-18">
         {projects.map((project, i) => (
           <div key={i} className="flex flex-col gap-10">
             {/* Image container — clips the oversized parallax image */}
