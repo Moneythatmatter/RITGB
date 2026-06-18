@@ -30,47 +30,47 @@ export default function ContactPage() {
     );
   };
 
-  // const handleSubmit = async () => {
-  //   if (
-  //     !name ||
-  //     !email ||
-  //     !company ||
-  //     !message ||
-  //     selectedBudgets.length === 0
-  //   ) {
-  //     alert("Please fill in all fields and select a budget range.");
-  //     return;
-  //   }
+  const handleSubmit = async () => {
+    if (
+      !name ||
+      !email ||
+      !company ||
+      !message ||
+      selectedBudgets.length === 0
+    ) {
+      alert("Please fill in all fields and select a budget range.");
+      return;
+    }
 
-  //   setStatus("loading");
-  //   try {
-  //     const res = await fetch("/api/contact", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         name,
-  //         email,
-  //         company,
-  //         selectedBudgets,
-  //         message,
-  //       }),
-  //     });
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          selectedBudgets,
+          message,
+        }),
+      });
 
-  //     const data = await res.json();
-  //     if (data.success) {
-  //       setStatus("success");
-  //       setName("");
-  //       setEmail("");
-  //       setCompany("");
-  //       setMessage("");
-  //       setSelectedBudgets([]);
-  //     } else {
-  //       setStatus("error");
-  //     }
-  //   } catch {
-  //     setStatus("error");
-  //   }
-  // };
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setName("");
+        setEmail("");
+        setCompany("");
+        setMessage("");
+        setSelectedBudgets([]);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
 
   useGSAP(
     () => {
@@ -102,7 +102,7 @@ export default function ContactPage() {
       <div className="text-center mb-16 w-full">
         {["GOOD THINGS", "START WITH ONE", "MESSAGE"].map((line, i) => (
           <div key={i} className="overflow-hidden">
-            <h1 className="contact-line font-(family-name:--font-right-grotesk) text-[10vw] md:text-[8vw] font-black leading-none tracking-[-0.02em] uppercase text-black">
+            <h1 className="contact-line font-(family-name:--font-right-grotesk) text-[12vw] md:text-[8vw] font-black leading-none tracking-[-0.02em] uppercase text-black">
               {line}
             </h1>
           </div>
@@ -188,7 +188,7 @@ export default function ContactPage() {
 
         {/* Success or error message  */}
         {status === "success" && (
-          <p className="text-white text-shadow-2xs font-bold text-sm text-center">
+          <p className="text-gray-800 text-shadow-2xs font-bold text-sm text-center">
             Thank you! We&apos;ll be in touch soon.
           </p>
         )}
@@ -200,7 +200,7 @@ export default function ContactPage() {
         )}
         {/* Submit */}
         <button
-          // onClick={handleSubmit}
+          onClick={handleSubmit}
           disabled={status === "loading"}
           className="w-full bg-black text-white font-(family-name:--font-right-grotesk) font-bold text-sm tracking-widest uppercase py-4  hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer disabled:opacity-50"
         >

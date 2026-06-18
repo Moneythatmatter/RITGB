@@ -13,13 +13,22 @@ import Services from "@/components/sections/Services";
 import SiteFooter from "@/components/SiteFooter";
 import Footer from "@/components/Footer";
 import ClientsSection from "@/components/expertise/ClientsSection";
+import ShowReel from "@/components/work/ShowReel";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <div id="next-section">
-        <AboutImage />
+        {/* Desktop */}
+        <div className="hidden md:block">
+          <AboutImage />
+        </div>
+
+        {/* Mobile */}
+        <div className="block md:hidden">
+          <ShowReel />
+        </div>
         <AboutText />
         <MemeSection />
         <Numbers />

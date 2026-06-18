@@ -37,7 +37,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="bg-white relative flex flex-col py-20 md:min-h-[70vh] md:justify-between md:pt-24 md:pb-0 h-auto"
+      className="bg-white relative flex flex-col pt-20 pb-8 md:min-h-[70vh] md:justify-between md:pt-24 md:pb-0 h-auto"
     >
       {/* Headline */}
       <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0 overflow-hidden">

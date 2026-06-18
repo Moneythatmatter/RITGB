@@ -14,12 +14,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/logo/ritgb.png"
+            src="/images/logo/logo.png"
             alt="RITGB"
-            width={140}
-            height={20}
+            width={100}
+            height={30}
             priority
-            className="my-4"
+            className="my-4 brightness-0"
           />
         </Link>
 
@@ -28,7 +28,7 @@ export default function Navbar() {
           {/* Hire Us button */}
           <Link
             href="/contact"
-            className="bg-black text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize"
+            className="hidden md:flex bg-black text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize"
           >
             Hire Us ↗
           </Link>
