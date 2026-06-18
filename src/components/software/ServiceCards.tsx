@@ -150,7 +150,7 @@ export default function ServiceCards() {
 
               <div className="mb-8">
                 <h3 className="font-bold mb-4">{service.listTitle}</h3>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-xs max-w-md">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-xs max-w-md">
                   {colA.map((item, i) => (
                     <span key={`a-${i}`}>• {item}</span>
                   ))}
@@ -165,7 +165,7 @@ export default function ServiceCards() {
                   <h3 className="font-bold mb-4">
                     {service.secondList.listTitle}
                   </h3>
-                  <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm max-w-md">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-xs max-w-md">
                     {secondCols[0].map((item, i) => (
                       <span key={`sa-${i}`}>• {item}</span>
                     ))}

@@ -33,7 +33,7 @@ export default function SoftwareCTA() {
             key={i}
             className="overflow-hidden flex justify-center items-center"
           >
-            <h2 className="cta-line font-(family-name:--font-right-grotesk) text-[12vw] md:text-[6vw] font-black leading-[0.95] uppercase tracking-[-0.03em]">
+            <h2 className="text-center cta-line font-(family-name:--font-right-grotesk) text-[12vw] md:text-[6vw] font-black leading-[0.95] uppercase tracking-[-0.03em]">
               {line}
             </h2>
           </div>
