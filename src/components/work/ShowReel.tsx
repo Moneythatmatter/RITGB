@@ -35,7 +35,7 @@ export default function ShowReel() {
   );
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#F5F5F5] overflow-hidden">
+    <section ref={sectionRef} className="w-full bg-white overflow-hidden">
       <video
         ref={videoRef}
         src="/videos/Showreel-RITGB.mp4"

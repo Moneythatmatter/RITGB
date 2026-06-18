@@ -6,7 +6,8 @@ export default function SoftwareIntro() {
       <p className="text-center text-3xl md:text-4xl lg:text-5xl font-bold leading-snug max-w-4xl px-4">
         From Hotels To Growing Businesses — We Build{" "}
         <span className="font-serif italic font-medium">Digital Systems</span>{" "}
-        Designed For Modern Operations, Not 2014 Problems.
+        Designed For Modern Operations, <br />
+        Not 2014 Problems.
       </p>
     </section>
   );

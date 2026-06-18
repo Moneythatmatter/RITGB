@@ -66,7 +66,7 @@ const cards = [
       "Email Marketing",
       "Analytics",
     ],
-    src: "/images/services/marketing.png",
+    src: "/images/services/marketingLatest.png",
     alt: "Marketing",
     gifAlt: "Marketing",
   },
@@ -94,15 +94,15 @@ export default function Services() {
   return (
     <section ref={sectionRef} className="bg-white">
       <div className="py-16 md:py-0">
-        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12 md:mb-16 px-8 md:px-27.75 md:pt-24">
+        <p className="font-[Arial] text-xs tracking-widest uppercase text-black mb-12.5 md:mb-16 px-8 md:px-27.75 md:pt-24">
           service section
         </p>
 
         {/* Headline */}
         <div className="md:pb-24 md:pt-0 px-4 md:px-27.75">
           <div className="overflow-hidden">
-            <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[6vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] whitespace-nowrap uppercase text-center">
-              Where We Cause Internet Problems
+            <h2 className="font-(family-name:--font-right-grotesk) services-line font-grotesk text-[10vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] whitespace-nowrap uppercase text-center">
+              Where We Cause <br /> Internet Problems
             </h2>
           </div>
           <div className="overflow-hidden">
@@ -123,7 +123,7 @@ export default function Services() {
           >
             <div className="w-full h-full flex flex-col md:flex-row">
               {/* Left text content */}
-              <div className="flex flex-col w-full md:w-[60%] h-auto md:h-full px-8 md:px-16 py-10 md:py-12 gap-6 md:gap-8">
+              <div className="flex flex-col w-full md:w-[60%] h-auto md:h-full px-8 md:px-16 py-20 md:py-12 gap-6 md:gap-8">
                 {/* Top content */}
                 <div className="flex flex-col gap-4">
                   {/* Circled number */}

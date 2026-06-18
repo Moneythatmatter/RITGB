@@ -138,11 +138,11 @@ export default function Industries() {
     <section ref={sectionRef} className="bg-[#F5F5F5]">
       {/* Headline */}
       <div className="py-16 md:py-24 px-8 md:px-16">
-        <p className="text-xs tracking-widest uppercase text-black mb-12">
+        <p className="text-xs tracking-widest uppercase text-black mb-12.5">
           Industry Section
         </p>
         <div className="overflow-hidden">
-          <h2 className="industries-line font-(family-name:--font-right-grotesk) text-[6vw] md:text-[3.5vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
+          <h2 className="industries-line font-(family-name:--font-right-grotesk) text-[9.5vw] md:text-[3.5vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
             Our Comfort Zone? We Don&apos;t Have One.
           </h2>
         </div>

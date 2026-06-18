@@ -3,6 +3,7 @@ import AgencyHero from "@/components/agency/AgencyHero";
 import AgencyMarquee from "@/components/agency/AgencyMarquee";
 import AgencyMission from "@/components/agency/AgencyMission";
 import ProcessSection from "@/components/agency/ProcessSection";
+import StackingCards from "@/components/agency/StackingCards";
 import TeamSection from "@/components/agency/TeamSection";
 import Testimonials from "@/components/agency/Testimonials";
 import Footer from "@/components/Footer";
@@ -18,9 +19,10 @@ export default function AgencyPage() {
         <AgencyAbout />
         <AgencyMission />
         <AgencyMarquee />
-        <TeamSection />
+        {/* <TeamSection />*/}
         <ProcessSection />
         {/* <CaseStudy /> */}
+        <StackingCards />
         <Industry />
         <Testimonials />
         <Contact />

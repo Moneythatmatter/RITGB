@@ -84,8 +84,9 @@ const categories: Category[] = [
           "Brochure Design",
           "Catalogue Design",
           "Flyer & Poster Design",
-          "Exhibition & Event Branding",
           "Menu Design",
+          "Exhibition & Event Branding",
+
           "Corporate Print Materials",
         ],
       },
@@ -121,9 +122,11 @@ const categories: Category[] = [
           "Custom-Coded Website Development",
           "WordPress Development",
           "Shopify Development",
+          "Website Redesign",
+
           "E-commerce Website Development",
           "Landing Page Development",
-          "Website Redesign",
+
           "Website Maintenance & Support",
           "Website Speed Optimization",
         ],
@@ -212,8 +215,8 @@ const categories: Category[] = [
           "Creative Design",
           "Reels & Short Videos",
           "Community Management",
-          "Social Media Advertising",
           "Monthly Reporting",
+          "Social Media Advertising",
           "Brand Growth Campaigns",
         ],
       },

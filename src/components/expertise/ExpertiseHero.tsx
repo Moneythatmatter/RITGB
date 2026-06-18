@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const lines = ["EVERYTHING YOUR", "BRAND NEEDS.", "UNDER ONE ROOF"];
+const lines = ["EVERYTHING", "YOUR BRAND", "NEEDS UNDER", "ONE ROOF"];
 
 export default function ExpertiseHero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -24,7 +24,7 @@ export default function ExpertiseHero() {
   return (
     <section
       ref={containerRef}
-      className="w-full bg-[#4DB685] py-32 md:py-32 flex flex-col items-center justify-center gap-12 md:min-h-[80vh]"
+      className="w-full bg-[#4DB685] pt-37.5 pb-32 md:py-32 flex flex-col items-center justify-center gap-12 md:min-h-[80vh]"
     >
       <div className="flex flex-col items-center text-center">
         {lines.map((line, i) => (

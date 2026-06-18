@@ -3,6 +3,7 @@ import SoftwareCTA from "@/components/software/SoftwareCta";
 import SoftwareHero from "@/components/software/SoftwareHero";
 import SoftwareHighlight from "@/components/software/SoftwareHightlight";
 import SoftwareIntro from "@/components/software/SoftwareIntro";
+import Footer from "@/components/Footer";
 
 export default function SoftwarePage() {
   return (
@@ -13,6 +14,7 @@ export default function SoftwarePage() {
         <SoftwareHighlight />
         <ServiceCards />
         <SoftwareCTA />
+        <Footer />
       </div>
     </>
   );
