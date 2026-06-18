@@ -202,7 +202,7 @@ const categories: Category[] = [
       'We Market Brands Like People Actually Exist. No random posting. No "let\'s just boost it". Everything built to attract attention, leads, and growth.',
     bgColor: "bg-[#6DC9BC]",
     textColor: "text-black",
-    imageUrl: "/images/services/marketing.png",
+    imageUrl: "/images/services/marketingNew.png",
     items: [
       {
         label: "SOCIAL MEDIA MARKETING",

@@ -25,7 +25,7 @@ const projects = [
     link: "https://pawzwell.com/",
     instagramLink: "https://www.instagram.com/pawzwellofficial/",
     instagramUsername: "pawzwellofficial",
-    image: "/images/work/work8.png",
+    image: "/images/work/work2.png",
   },
   {
     title: "The Bliss Palampur — Ongoing\nDigital Growth Partnership",
@@ -62,6 +62,24 @@ const projects = [
     instagramLink: "https://www.instagram.com/epsumlabs/",
     instagramUsername: "epsumlabs",
     image: "/images/work/work6.png",
+  },
+  {
+    title: "Shopify E-commerce Store Development",
+    description:
+      "Designed and developed a high-performance Shopify e-commerce platform for a pet care brand, focused on seamless shopping experiences, conversion optimization, and scalable online growth.",
+    link: "https://pawzwell.com/",
+    instagramLink: "https://www.instagram.com/pawzwellofficial/",
+    instagramUsername: "pawzwellofficial",
+    image: "/images/work/work8.png",
+  },
+  {
+    title: "Fashion E-commerce Website Development",
+    description:
+      "Designed and developed a premium e-commerce website for a clothing brand, creating a modern digital storefront that enhances brand identity and drives online sales.",
+    link: "https://www.monicanera.com/",
+    instagramLink: "https://www.instagram.com/pawzwellofficial/",
+    // instagramUsername: "pawzwellofficial",
+    image: "/images/work/work7.png",
   },
 ];
 

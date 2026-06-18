@@ -47,7 +47,7 @@ export default function ProcessSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top top",
+          start: "top 10%",
           end: "+=" + steps.length * 100 + "%",
           scrub: true,
           pin: true,
@@ -79,12 +79,12 @@ export default function ProcessSection() {
       {/* Stacked Cards Container */}
       <div
         ref={triggerRef}
-        className="relative h-screen w-full overflow-hidden flex items-center justify-center"
+        className="relative h-screen w-full overflow-hidden flex items-start justify-center pt-8 md:pt-16"
       >
         {steps.map((step, i) => (
           <div
             key={i}
-            className="process-card absolute w-full max-w-md md:max-w-xl aspect-square rounded-sm overflow-hidden shadow-2xl bg-black flex flex-col justify-between p-8 md:p-12"
+            className="process-card absolute w-[60vw] h-[65vw] md:w-110 md:h-110 rounded-sm overflow-hidden shadow-2xl bg-black flex flex-col justify-between p-8 md:p-12 text-center"
           >
             {/* Heading top-left */}
             <h3 className="font-(family-name:--font-right-grotesk) text-white text-3xl md:text-5xl font-black uppercase leading-tight">

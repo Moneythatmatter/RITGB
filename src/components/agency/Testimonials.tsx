@@ -100,7 +100,7 @@ export default function Testimonials() {
             Testimonials Section
           </p>
 
-          <h2 className="font-(family-name:--font-right-grotesk) text-white text-[11vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em] mb-8">
+          <h2 className="font-(family-name:--font-right-grotesk) text-white text-[11vw] md:text-[5vw] font-black uppercase leading-[1.05] tracking-[-0.03em] mb-2">
             Things Clients <br /> Said Instead Of
             <br />
             &ldquo;Looks Nice&rdquo;
@@ -108,8 +108,8 @@ export default function Testimonials() {
 
           <div className="relative w-full md:w-64 hidden md:block">
             <Image
-              src="/images/noice.png"
-              alt="Noice"
+              src="/images/looksGood.gif"
+              alt="Looks good"
               width={300}
               height={300}
               className="w-full h-auto"
@@ -120,10 +120,10 @@ export default function Testimonials() {
         {/* Right side - image + card stack */}
         <div className="w-full">
           {/* Meme image, full width, only on mobile/tablet */}
-          <div className="relative w-full md:hidden mb-16">
+          <div className="relative w-full md:hidden mb-20">
             <Image
-              src="/images/noice.png"
-              alt="Noice"
+              src="/images/looksGood.gif"
+              alt="Looks good"
               width={300}
               height={250}
               className="w-full h-auto"
