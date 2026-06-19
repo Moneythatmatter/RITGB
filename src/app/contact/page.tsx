@@ -84,7 +84,9 @@ export default function ContactPage() {
         setSelectedBudgets([]);
 
         const cal = await getCalApi({ namespace: "15min" });
-        cal("modal", { calLink: "the-invincible-zgixdm/15min" });
+        cal("modal", {
+          calLink: `${process.env.NEXT_PUBLIC_CAL_USERNAME}/15min`,
+        });
       } else {
         setStatus("error");
       }

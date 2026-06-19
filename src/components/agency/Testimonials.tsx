@@ -12,18 +12,18 @@ const testimonials = [
     name: "-Team Antaraal Resort",
     color: "#FA435B",
   },
-  {
-    quote:
-      "RITGB completely transformed our online presence. From branding to the final build, everything felt thought through. Communication was smooth and the end result exceeded our expectations.",
-    name: "-Priya Sharma",
-    color: "#5ECFC9",
-  },
-  {
-    quote:
-      "Working with this team was refreshing. No fluff, no buzzwords — just solid execution and a final product that actually works the way it's supposed to.",
-    name: "-Rohan Mehta",
-    color: "#FBC7E0",
-  },
+  // {
+  //   quote:
+  //     "RITGB completely transformed our online presence. From branding to the final build, everything felt thought through. Communication was smooth and the end result exceeded our expectations.",
+  //   name: "-Priya Sharma",
+  //   color: "#5ECFC9",
+  // },
+  // {
+  //   quote:
+  //     "Working with this team was refreshing. No fluff, no buzzwords — just solid execution and a final product that actually works the way it's supposed to.",
+  //   name: "-Rohan Mehta",
+  //   color: "#FBC7E0",
+  // },
 ];
 
 export default function Testimonials() {

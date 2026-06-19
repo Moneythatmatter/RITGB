@@ -7,9 +7,11 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { name, email, company, selectedBudgets, message } = body;
 
+  const toEmail = process.env.RESEND_TO_EMAIL;
+  if (!toEmail) return Response.json({ success: false }, { status: 500 });
   const result = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: "hemant.inkhub@gmail.com",
+    to: toEmail,
     subject: `New inquiry from ${name}`,
     html: `
       <p><b>Name:</b> ${name}</p>
