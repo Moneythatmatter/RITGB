@@ -80,7 +80,7 @@ export default function Industry() {
       {/* Headline */}
       <div className="overflow-hidden px-8 md:px-27.75 mb-12 md:mb-16">
         <h2 className="industry-title font-(family-name:--font-right-grotesk) text-[7vw] md:text-[4vw] font-black leading-none tracking-[-0.02em] uppercase text-center">
-          Some Of The Things We&apos;ve Done
+          The Industry Multiverse
         </h2>
       </div>
 

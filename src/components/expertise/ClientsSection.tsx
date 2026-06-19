@@ -3,16 +3,16 @@
 import Image from "next/image";
 
 const clients = [
-  { id: 1, name: "Vostokcement", file: "/images/clients/client1.png" },
-  { id: 2, name: "Vladivostok Sea Port", file: "/images/clients/client2.png" },
+  { id: 1, name: "The Shivalik", file: "/images/clients/client1.png" },
+  { id: 2, name: "Hotel JK Regency", file: "/images/clients/client2.png" },
   { id: 3, name: "Vladivostok Fish Port", file: "/images/clients/client3.png" },
-  { id: 4, name: "Slavda Group", file: "/images/clients/client4.png" },
-  { id: 5, name: "DNS City", file: "/images/clients/client5.png" },
-  { id: 6, name: "Eskadra", file: "/images/clients/client6.png" },
-  { id: 7, name: "Nobel", file: "/images/clients/client7.png" },
-  { id: 8, name: "Inlav", file: "/images/clients/client8.png" },
-  { id: 9, name: "Brynner", file: "/images/clients/client9.png" },
-  // { id: 10, name: "Port May", file: "/images/clients/client10.png" },
+  { id: 4, name: "Pawzwell", file: "/images/clients/client4.png" },
+  { id: 5, name: "The bliss", file: "/images/clients/client5.png" },
+  { id: 6, name: "Victoria grand", file: "/images/clients/client6.png" },
+  { id: 7, name: "Hotel de park", file: "/images/clients/client7.png" },
+  { id: 8, name: "Antaraal", file: "/images/clients/client8.png" },
+  { id: 9, name: "Epsum Labs", file: "/images/clients/client9.png" },
+  { id: 10, name: "Drivionix", file: "/images/clients/client11.png" },
 ];
 
 export default function ClientsSection() {
