@@ -72,11 +72,8 @@ export default function SiteFooter() {
                 rel="noopener noreferrer"
                 className="font-[Arial] text-sm text-white/60 hover:text-white transition-colors tracking-wide leading-relaxed break-words"
               >
-                260/1821, Lane 2 Rd,
-                <br />
-                Mahadev Nagar,
-                <br />
-                Bhubaneswar, Odisha — 751025
+                RITGB First Floor, Plot No 3637, behind Tanishq Showroom,
+                Chandrasekharpur, Bhubaneswar, Odisha 751016
               </a>
             </div>
           </div>
