@@ -25,12 +25,15 @@ export default function ContactPage() {
     { symbol: "£", label: "GBP" },
   ];
 
-  const budgetOptions = [
-    `${currency}500 - ${currency}1,000`,
-    `${currency}1,000 - ${currency}5,000`,
-    `${currency}5,000 - ${currency}10,000`,
-    "Custom",
-  ];
+  const budgetOptions =
+    currency === "₹"
+      ? ["₹5K - ₹10K", "₹15K - ₹25K", "₹30K - ₹55K", "Custom"]
+      : [
+          `${currency}500 - ${currency}1,000`,
+          `${currency}1,000 - ${currency}5,000`,
+          `${currency}5,000 - ${currency}10,000`,
+          "Custom",
+        ];
 
   const toggleBudget = (option: string) => {
     setSelectedBudgets((prev) =>

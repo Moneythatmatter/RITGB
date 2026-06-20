@@ -27,7 +27,7 @@ const projects = [
     link: "https://pawzwell.com/",
     instagramLink: "https://www.instagram.com/pawzwellofficial/",
     instagramUsername: "pawzwellofficial",
-    image: "/images/work/work2.png",
+    image: "/images/work/temp.png",
   },
   {
     title: "The Bliss Palampur — Ongoing\nDigital Growth Partnership",
