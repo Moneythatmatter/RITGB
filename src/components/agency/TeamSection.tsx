@@ -108,7 +108,7 @@ const groups: TeamGroup[] = [
       {
         name: "Hemant Kumar",
         role: "Assistant Software Engineer",
-        image: "/images/agency/hemant.png",
+        image: "/images/agency/hemantNew.png",
       },
     ],
   },
