@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
+import Preloader from "@/components/Preloader";
 
 const rightGrotesk = localFont({
   src: [
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rightGrotesk.variable} text-black antialiased`}>
+        <Preloader />
         <Navbar />
         {children}
         <ScrollToTop />
