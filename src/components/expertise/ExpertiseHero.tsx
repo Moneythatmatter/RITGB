@@ -3,11 +3,14 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useRouter } from "next/navigation";
+import GradientButton from "@/components/GradientButton";
 
 const lines = ["EVERYTHING", "YOUR BRAND", "NEEDS UNDER", "ONE ROOF"];
 
 export default function ExpertiseHero() {
   const containerRef = useRef<HTMLElement>(null);
+  const router = useRouter();
 
   useGSAP(
     () => {
@@ -36,16 +39,12 @@ export default function ExpertiseHero() {
         ))}
       </div>
 
-      <button
-        onClick={() =>
-          document
-            .getElementById("next-section")
-            ?.scrollIntoView({ behavior: "smooth" })
-        }
-        className="bg-white font-(family-name:--font-right-grotesk) flex items-baseline gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+      <GradientButton
+        onClick={() => router.push("/contact")}
+        className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
       >
-        Scroll Down ↓
-      </button>
+        Grow My Brand →
+      </GradientButton>
     </section>
   );
 }
