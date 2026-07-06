@@ -3,13 +3,16 @@
 import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useRouter } from "next/navigation";
 import HeroBottom from "./HeroBottom";
+import GradientButton from "@/components/GradientButton";
 import { useCursorTrail } from "@/hooks/useCursorTrail";
 
 const lines = ["WE MAKE", "THE INTERNET", "NOTICE YOU"];
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
+  const router = useRouter();
   const { handleMouseMove } = useCursorTrail(containerRef);
 
   // text animation
@@ -47,37 +50,17 @@ export default function Hero() {
             <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[15vw] md:text-[14rem] lg:text-[11vw] font-black leading-[0.89] tracking-[-0.03em] uppercase">
               {line}
             </h1>
-
-            {/* Button anchored to end of "THE INTERNET" line */}
-            {i === 1 && (
-              <div className="hidden lg:flex absolute right-0 bottom-2 translate-x-full pl-3 items-center">
-                <button
-                  onClick={() =>
-                    document
-                      .getElementById("next-section")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="bg-[#f9f9f9] font-(family-name:--font-right-grotesk) flex items-center gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
-                >
-                  Scroll Down ↓
-                </button>
-              </div>
-            )}
           </div>
         ))}
       </div>
-      {/* Mobile-only scroll button */}
-      <div className="flex justify-center mt-6 lg:hidden">
-        <button
-          onClick={() =>
-            document
-              .getElementById("next-section")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-[#f9f9f9] font-(family-name:--font-right-grotesk) flex items-center gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+      {/* CTA button */}
+      <div className="flex justify-center mt-6 md:mt-10">
+        <GradientButton
+          onClick={() => router.push("/contact")}
+          className="font-(family-name:--font-right-grotesk) text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
         >
-          Scroll Down ↓
-        </button>
+          Grow My Brand →
+        </GradientButton>
       </div>
       {/* Bottom strip */}
       <div className="hidden md:block">

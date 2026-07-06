@@ -3,11 +3,14 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useRouter } from "next/navigation";
+import GradientButton from "@/components/GradientButton";
 
 const lines = ["WE BUILD", "BRANDS FOR", "THE SCROLL", "ERA"];
 
 export default function AgencyHero() {
   const containerRef = useRef<HTMLElement>(null);
+  const router = useRouter();
 
   useGSAP(
     () => {
@@ -30,25 +33,36 @@ export default function AgencyHero() {
       {/* Headline */}
       <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0">
         {lines.map((line, i) => (
-          <div key={i} className="overflow-hidden pb-2">
-            <h1 className="font-(family-name:--font-right-grotesk) agency-line text-[15vw] md:text-[13vw] lg:text-[11vw] font-black leading-[0.95] tracking-[-0.03em] uppercase">
-              {line}
-            </h1>
+          <div key={i} className="relative inline-block pb-2">
+            <div className="overflow-hidden">
+              <h1 className="font-(family-name:--font-right-grotesk) agency-line text-[15vw] md:text-[13vw] lg:text-[11vw] font-black leading-[0.95] tracking-[-0.03em] uppercase">
+                {line}
+              </h1>
+            </div>
+
+            {/* Button anchored to the right of the last line */}
+            {i === lines.length - 1 && (
+              <div className="hidden lg:flex absolute left-full top-1/2 -translate-y-1/3 pl-6 items-center">
+                <GradientButton
+                  onClick={() => router.push("/contact")}
+                  className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2 whitespace-nowrap text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
+                >
+                  Grow My Brand →
+                </GradientButton>
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-      <div className="flex justify-center mt-8 min-[1460px]:mt-0 min-[1460px]:absolute min-[1460px]:right-120 min-[1460px]:top-[81%] min-[1460px]:-translate-y-1/2">
-        <button
-          onClick={() =>
-            document
-              .getElementById("next-section")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-[#f9f9f9] font-(family-name:--font-right-grotesk) flex items-baseline gap-2 rounded-full px-4 py-5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+      {/* Mobile/tablet CTA button */}
+      <div className="flex justify-center mt-8 lg:hidden">
+        <GradientButton
+          onClick={() => router.push("/contact")}
+          className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
         >
-          Scroll Down ↓
-        </button>
+          Grow My Brand →
+        </GradientButton>
       </div>
     </section>
   );
