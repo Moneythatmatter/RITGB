@@ -57,7 +57,7 @@ export default function Hero() {
       <div className="flex justify-center mt-6 md:mt-10">
         <GradientButton
           onClick={() => router.push("/contact")}
-          className="font-(family-name:--font-right-grotesk) text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
+          className="font-arial text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
         >
           Grow My Brand →
         </GradientButton>

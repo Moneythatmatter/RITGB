@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { useRouter } from "next/navigation";
 import GradientButton from "@/components/GradientButton";
 
-const lines = ["WE BUILD", "BRANDS FOR", "THE SCROLL", "ERA"];
+const lines = ["WE BUILD", "BRANDS FOR", "THE SCROLL ERA"];
 
 export default function AgencyHero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -39,27 +39,15 @@ export default function AgencyHero() {
                 {line}
               </h1>
             </div>
-
-            {/* Button anchored to the right of the last line */}
-            {i === lines.length - 1 && (
-              <div className="hidden lg:flex absolute left-full top-1/2 -translate-y-1/3 pl-6 items-center">
-                <GradientButton
-                  onClick={() => router.push("/contact")}
-                  className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2 whitespace-nowrap text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
-                >
-                  Grow My Brand →
-                </GradientButton>
-              </div>
-            )}
           </div>
         ))}
       </div>
 
-      {/* Mobile/tablet CTA button */}
-      <div className="flex justify-center mt-8 lg:hidden">
+      {/* CTA button — now below text on all screen sizes */}
+      <div className="flex justify-center mt-12">
         <GradientButton
           onClick={() => router.push("/contact")}
-          className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
+          className="font-arial flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
         >
           Grow My Brand →
         </GradientButton>
