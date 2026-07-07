@@ -45,7 +45,7 @@ export default function WorkIntro() {
       <div className="flex justify-center mt-8 md:mt-12">
         <GradientButton
           onClick={() => router.push("/contact")}
-          className="font-(family-name:--font-right-grotesk) flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
+          className="font-arial flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
         >
           Grow My Brand →
         </GradientButton>
