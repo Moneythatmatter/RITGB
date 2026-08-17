@@ -21,8 +21,8 @@ export default function Navbar() {
             width={320}
             height={96}
             priority
-            style={{ height: "auto", width: "auto", maxHeight: "4rem" }}
-            className="md:!max-h-24 object-contain"
+            style={{ height: "auto", width: "auto", maxHeight: "5rem" }}
+            className="md:!max-h-32 object-contain"
           />
         </Link>
 
