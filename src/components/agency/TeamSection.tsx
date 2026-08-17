@@ -23,12 +23,12 @@ const groups: TeamGroup[] = [
     members: [
       {
         name: "Sagarika Patra",
-        role: "CEO/Co-Founder",
+        role: "CEO / Co-Founder",
         image: "/images/agency/sagarika.png",
       },
       {
         name: "Atul Ranjan Das",
-        role: "Director/Co-Founder",
+        role: "Director / Co-Founder",
         image: "/images/agency/atul.png",
       },
       {
@@ -40,20 +40,20 @@ const groups: TeamGroup[] = [
   },
   {
     number: "(02)",
-    titlePrefix: "Advisors",
+    titlePrefix: "Our advisory board",
     titleRest:
-      "Our advisory board: wisdom, guidance, and the occasional tough question",
+      ": wisdom, guidance, and the occasional tough question",
     members: [
-      {
-        name: "Arindam Roy Chowdhury",
-        role: "Advisor",
-        image: "/images/agency/arindam.png",
-      },
-      {
-        name: "Kamal Kumar Rout",
-        role: "Advisor",
-        image: "/images/agency/kamal.png",
-      },
+      // {
+      //   name: "Arindam Roy Chowdhury",
+      //   role: "Advisor",
+      //   image: "/images/agency/arindam.png",
+      // },
+      // {
+      //   name: "Kamal Kumar Rout",
+      //   role: "Advisor",
+      //   image: "/images/agency/kamal.png",
+      // },
       {
         name: "Abhijit Karfi Das",
         role: "Advisor",
@@ -167,14 +167,20 @@ export default function TeamSection() {
           </div>
 
           <div
-            className={`grid grid-cols-1 gap-8 md:gap-12 ${
-              group.members.length % 2 === 0
-                ? "md:grid-cols-2"
-                : "md:grid-cols-3"
-            }`}
+            className={`grid grid-cols-1 gap-8 md:gap-12 ${group.members.length % 2 === 0
+              ? "md:grid-cols-2"
+              : "md:grid-cols-3"
+              }`}
           >
             {group.members.map((member, j) => (
-              <div key={j}>
+              <div
+                key={j}
+                className={
+                  group.members.length === 1 && j === 0
+                    ? "md:col-start-2 md:w-[140%] md:-ml-[20%]"
+                    : ""
+                }
+              >
                 <div className="relative w-full aspect-3/4 mb-4">
                   <Image
                     src={member.image}
