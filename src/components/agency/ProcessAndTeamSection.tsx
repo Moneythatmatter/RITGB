@@ -135,6 +135,11 @@ const groups: TeamGroup[] = [
         role: "Assistant Software Engineer",
         image: "/images/agency/hemant.png",
       },
+      {
+        name: "Jay Kumar Saw",
+        role: "Assistant Software Engineer",
+        image: "/images/agency/jay.jpeg",
+      },
     ],
   },
   {

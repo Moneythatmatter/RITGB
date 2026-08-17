@@ -14,25 +14,16 @@ export default function Navbar() {
     <>
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-27.75 pb-2">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-(family-name:--font-right-grotesk) text-2xl md:text-3xl font-black uppercase tracking-tight leading-none py-4"
-        >
-          RITGB
-        </Link>
-
-        {/* IMage logo( using temporarily) */}
-
-        {/* <Link href="/" className="py-4">
+        <Link href="/" className="py-2 flex items-center">
           <Image
-            src="/images/logo/tempLogo.png"
-            alt="Logo"
-            width={140}
-            height={40}
+            src="/images/logo/ritgb-logo-transparent.png"
+            alt="RITGB Logo"
+            width={320}
+            height={96}
             priority
-            className="h-8 md:h-10 w-auto"
+            className="h-16 md:h-24 w-auto object-contain"
           />
-        </Link> */}
+        </Link>
 
         {/* Right side */}
         <div className="flex items-center gap-4">

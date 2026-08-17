@@ -17,6 +17,11 @@ const rightGrotesk = localFont({
 export const metadata: Metadata = {
   title: "RITGB",
   description: "We make the internet notice you",
+  icons: {
+    icon: "/images/logo/ritgb-favicon.png",
+    shortcut: "/images/logo/ritgb-favicon.png",
+    apple: "/images/logo/ritgb-favicon.png",
+  },
 };
 
 export default function RootLayout({
