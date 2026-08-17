@@ -128,9 +128,9 @@ const groups: TeamGroup[] = [
         image: "/images/agency/shrinidhi.png",
       },
       {
-        name: "Priyanka Mishra",
+        name: "Chinmayee Sahoo",
         role: "Content Writer",
-        image: "/images/agency/priyanka.png",
+        image: "/images/agency/chinmayee-sahoo.png",
       },
       // {
       //   name: "Xyz-1",
