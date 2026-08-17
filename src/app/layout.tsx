@@ -36,7 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <ScrollToTop />
-        {/* <WhatsAppButton /> */}
+        <WhatsAppButton />
       </body>
     </html>
   );

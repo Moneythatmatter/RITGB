@@ -6,6 +6,7 @@ type Member = {
   name: string;
   role: string;
   image: string;
+  objectPosition?: string;
 };
 
 type TeamGroup = {
@@ -69,7 +70,8 @@ const groups: TeamGroup[] = [
       {
         name: "Ankita Rani Sahu",
         role: "Senior Graphic Designer",
-        image: "/images/agency/ankita.png",
+        image: "/images/agency/ankita-final-img.webp",
+        objectPosition: "top",
       },
       {
         name: "Soumya Shree Panda",
@@ -193,7 +195,8 @@ export default function TeamSection() {
                     fill
                     loading="eager"
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className={`object-cover ${member.objectPosition ? '' : ''}`}
+                    style={member.objectPosition ? { objectPosition: member.objectPosition } : undefined}
                   />
                 </div>
                 <p className="font-bold text-sm md:text-base">{member.name}</p>
