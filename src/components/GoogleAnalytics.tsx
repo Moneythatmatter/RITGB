@@ -5,6 +5,7 @@ import Script from "next/script";
 const getGAId = () => {
     const hostname = window.location.hostname;
 
+    // use env variables later once testing is done
     if (
         hostname === "ritgb.com" ||
         hostname === "www.ritgb.com"
