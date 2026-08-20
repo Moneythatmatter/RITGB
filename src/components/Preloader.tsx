@@ -82,8 +82,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     >
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="text-center text-4xl leading-tight sm:text-5xl">
-          Lowkey <em className="font-serif italic">Worth</em>
-          <br />
+          Lowkey <em className="font-serif italic">Worth</em>{" "}
           The Wait
         </h1>
 
