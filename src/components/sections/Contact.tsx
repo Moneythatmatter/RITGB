@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GradientButton from "@/components/GradientButton";
 
 export default function Contact() {
   return (
@@ -21,37 +22,21 @@ export default function Contact() {
       </h2>
 
       {/* CTA Button */}
-      <Link
-        href={"/contact"}
-        className="group flex items-center gap-4 bg-black text-white rounded-full px-10 md:px-16 h-18
-          md:h-22
-          transition-all
-          duration-300
-          hover:scale-105 cursor-pointer"
-      >
-        <span
-          className="
-          font-(family-name:--font-right-grotesk)
-          text-sm
-          md:text-lg
-          font-black
-          uppercase
-        "
-        >
-          Make Us Impossible To Ignore
-        </span>
-
-        <span
-          className="
-            text-xl
-            transition-transform
-            duration-300
-            group-hover:translate-x-1
-            group-hover:-translate-y-1
-          "
-        >
-          ↗
-        </span>
+      <Link href="/contact">
+        <GradientButton className="group flex items-center gap-4 font-(family-name:--font-right-grotesk) text-sm md:text-lg! font-black! tracking-wider! uppercase! px-10! md:px-16! h-18! md:h-22! rounded-full!">
+          <span>Make Us Impossible To Ignore</span>
+          <span
+            className="
+              text-xl
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+              group-hover:-translate-y-1
+            "
+          >
+            ↗
+          </span>
+        </GradientButton>
       </Link>
     </section>
   );
