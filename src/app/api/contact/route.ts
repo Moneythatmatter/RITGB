@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
@@ -16,9 +16,18 @@ export async function POST(req: Request) {
       message,
     });
 
+    const apiKey = process.env.RESEND_API_KEY;
     const toEmail = process.env.RESEND_TO_EMAIL;
     console.log("[contact] RESEND_TO_EMAIL:", toEmail);
-    console.log("[contact] RESEND_API_KEY set:", !!process.env.RESEND_API_KEY);
+    console.log("[contact] RESEND_API_KEY set:", !!apiKey);
+
+    if (!apiKey) {
+      console.error("[contact] Missing RESEND_API_KEY env var");
+      return Response.json(
+        { success: false, error: "Missing RESEND_API_KEY" },
+        { status: 500 },
+      );
+    }
 
     if (!toEmail) {
       console.error("[contact] Missing RESEND_TO_EMAIL env var");
@@ -27,6 +36,8 @@ export async function POST(req: Request) {
         { status: 500 },
       );
     }
+
+    const resend = new Resend(apiKey);
 
     console.log("[contact] Sending email via Resend...");
     const result = await resend.emails.send({

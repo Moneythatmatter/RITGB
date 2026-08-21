@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Preloader from "@/components/Preloader";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const rightGrotesk = localFont({
   src: [
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rightGrotesk.variable} text-black antialiased`}>
+        <GoogleAnalytics />
         <Preloader />
         <Navbar />
         {children}
