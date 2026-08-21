@@ -18,11 +18,11 @@ export default function Navbar() {
           <Image
             src="/images/logo/ritgb-logo-transparent.png"
             alt="RITGB Logo"
-            width={320}
-            height={96}
+            width={350}
+            height={110}
             priority
             style={{ height: "auto", width: "auto", maxHeight: "5rem" }}
-            className="md:!max-h-32 object-contain"
+            className="max-h-30! md:max-h-40! object-contain"
           />
         </Link>
 
