@@ -22,9 +22,7 @@ interface ChatMessageProps {
   message: Message;
 }
 
-export const ChatMessage: React.FC<ChatMessageProps> = ({
-  message,
-}) => {
+export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
   const [copied, setCopied] = useState(false);
   const isUser = message.role === 'user';
 
@@ -36,13 +34,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
   return (
     <div
-      className={`flex items-start gap-2.5 my-3 transition-opacity duration-200 ${
+      className={`flex items-start gap-2.5 my-2.5 transition-opacity duration-200 ${
         isUser ? 'flex-row-reverse' : 'flex-row'
       }`}
     >
-      {/* Avatar Icon */}
+      {/* Mascot Avatar for Assistant */}
       {!isUser && (
-        <div className="w-8 h-8 rounded-full bg-white text-white flex items-center justify-center shrink-0 shadow-xs mt-0.5 overflow-hidden p-0.5 border border-slate-200/80">
+        <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5 overflow-hidden p-0.5 border border-white/20">
           <Image
             src="/images/chatbot/mascot.gif"
             alt="Ritzy Mascot"
@@ -54,36 +52,36 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         </div>
       )}
 
-      {/* Message Content Container */}
+      {/* Message Content Bubble */}
       <div
-        className={`relative max-w-[85%] sm:max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-[0_2px_8px_rgba(0,0,0,0.03)] ${
+        className={`relative max-w-[86%] sm:max-w-[82%] rounded-2xl px-4 py-3 text-[13px] sm:text-sm leading-relaxed shadow-sm ${
           isUser
-            ? 'bg-[#E2EFE4] text-[#132018] font-medium rounded-tr-xs border border-[#cfe3d3]'
-            : 'bg-white text-[#1f2937] border border-slate-100 rounded-tl-xs'
+            ? 'bg-black text-white font-medium rounded-tr-xs border border-white/10'
+            : 'bg-white text-slate-800 border border-slate-200/90 rounded-tl-xs shadow-[0_2px_12px_rgba(0,0,0,0.04)]'
         }`}
       >
         {/* Render formatted message content */}
-        <div className="space-y-1.5 break-words">
+        <div className="space-y-1.5 break-words font-sans">
           {formatMessageContent(message.content, isUser)}
         </div>
 
-        {/* Streaming Cursor Animation */}
+        {/* Streaming Cursor */}
         {message.isStreaming && (
-          <span className="inline-block w-1.5 h-4 ml-1 bg-[#267a47] animate-pulse align-middle" />
+          <span className="inline-block w-1.5 h-3.5 ml-1 bg-black animate-pulse align-middle" />
         )}
 
         {/* Footer with copy button & timestamp */}
         <div
           className={`flex items-center gap-1.5 pt-1.5 mt-1.5 text-[10px] ${
             isUser
-              ? 'justify-end text-slate-500 font-normal'
+              ? 'justify-end text-white/50 font-normal'
               : 'justify-between border-t border-slate-100 text-slate-400'
           }`}
         >
           <span>{message.timestamp || 'Just now'}</span>
 
           {isUser && (
-            <CheckCheck className="w-3.5 h-3.5 text-[#267a47] shrink-0 inline-block ml-0.5" />
+            <CheckCheck className="w-3.5 h-3.5 text-white/70 shrink-0 inline-block ml-0.5" />
           )}
 
           {!isUser && !message.isStreaming && message.content && (
@@ -91,12 +89,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
               onClick={handleCopy}
               type="button"
               aria-label="Copy message"
-              className="inline-flex items-center gap-1 hover:text-[#0B351B] transition-colors p-1 rounded hover:bg-slate-100 cursor-pointer"
+              className="inline-flex items-center gap-1 text-slate-400 hover:text-black transition-colors p-1 rounded hover:bg-slate-100 cursor-pointer"
             >
               {copied ? (
                 <>
                   <Check className="w-3 h-3 text-emerald-600" />
-                  <span className="text-emerald-600">Copied</span>
+                  <span className="text-emerald-600 font-medium">Copied</span>
                 </>
               ) : (
                 <>
@@ -113,7 +111,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 };
 
 /**
- * Parses markdown-like strings (bold, bullets, headings, links) safely into React nodes.
+ * Parses markdown-like strings (bold, bullets, numbered lists, headings, links) safely into React nodes.
  */
 function formatMessageContent(content: string, isUser: boolean): React.ReactNode {
   if (!content) return null;
@@ -133,7 +131,7 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
         <h4
           key={lineIdx}
           className={`font-bold text-sm mt-2 mb-1 ${
-            isUser ? 'text-[#132018]' : 'text-[#0B351B]'
+            isUser ? 'text-white' : 'text-black'
           }`}
         >
           {renderInlineStyles(trimmed.slice(4), isUser)}
@@ -147,10 +145,12 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
         <div key={lineIdx} className="flex items-start gap-2 pl-0.5 my-0.5">
           <span
             className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${
-              isUser ? 'bg-[#0B351B]' : 'bg-[#267a47]'
+              isUser ? 'bg-white' : 'bg-black'
             }`}
           />
-          <span className="flex-1">{renderInlineStyles(trimmed.slice(2), isUser)}</span>
+          <span className="flex-1 leading-snug">
+            {renderInlineStyles(trimmed.slice(2), isUser)}
+          </span>
         </div>
       );
     }
@@ -162,18 +162,20 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
         <div key={lineIdx} className="flex items-start gap-2 pl-0.5 my-0.5">
           <span
             className={`font-semibold shrink-0 text-xs mt-0.5 ${
-              isUser ? 'text-[#132018]' : 'text-[#0B351B]'
+              isUser ? 'text-white/80' : 'text-black'
             }`}
           >
             {numMatch[1]}.
           </span>
-          <span className="flex-1">{renderInlineStyles(numMatch[2], isUser)}</span>
+          <span className="flex-1 leading-snug">
+            {renderInlineStyles(numMatch[2], isUser)}
+          </span>
         </div>
       );
     }
 
     return (
-      <p key={lineIdx} className="my-0.5">
+      <p key={lineIdx} className="my-0.5 leading-snug">
         {renderInlineStyles(line, isUser)}
       </p>
     );
@@ -205,10 +207,10 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
           <Link
             key={`link-${match.index}`}
             href={url}
-            className={`font-semibold underline underline-offset-2 transition-colors inline-flex items-center gap-0.5 ${
+            className={`font-bold underline underline-offset-2 transition-all inline-flex items-center gap-0.5 ${
               isUser
-                ? 'text-[#0B351B] hover:text-black font-bold'
-                : 'text-[#0B351B] hover:text-[#267a47] bg-[#E8F2EA] px-1.5 py-0.5 rounded border border-[#cfe3d3]'
+                ? 'text-white hover:text-white/80'
+                : 'text-black hover:text-[#E64A5C] bg-black/5 hover:bg-black/10 px-1.5 py-0.5 rounded border border-black/10'
             }`}
           >
             {label} →
@@ -221,10 +223,10 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-semibold underline underline-offset-2 transition-colors inline-flex items-center gap-1 ${
+            className={`font-bold underline underline-offset-2 transition-all inline-flex items-center gap-0.5 ${
               isUser
-                ? 'text-[#0B351B] hover:text-black font-bold'
-                : 'text-[#0B351B] hover:text-[#267a47] bg-[#E8F2EA] px-1.5 py-0.5 rounded border border-[#cfe3d3]'
+                ? 'text-white hover:text-white/80'
+                : 'text-black hover:text-[#E64A5C] bg-black/5 hover:bg-black/10 px-1.5 py-0.5 rounded border border-black/10'
             }`}
           >
             {label} ↗
@@ -235,7 +237,7 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
       nodes.push(
         <strong
           key={`bold-${match.index}`}
-          className={isUser ? 'font-bold text-[#132018]' : 'font-semibold text-slate-900'}
+          className={isUser ? 'font-bold text-white' : 'font-bold text-black'}
         >
           {match[4]}
         </strong>

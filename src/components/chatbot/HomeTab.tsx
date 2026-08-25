@@ -3,10 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import {
-  LayoutGrid,
-  Users,
-  ShieldCheck,
-  Calendar,
+  Sparkles,
+  Target,
+  Trophy,
+  Coffee,
   MessageSquare,
   ChevronRight,
 } from 'lucide-react';
@@ -18,32 +18,32 @@ interface HomeTabProps {
 
 const ACTION_CARDS = [
   {
-    id: 'modules',
-    title: 'Explore Modules 🚀',
-    description: '8 interconnected modules that actually slay.',
-    icon: LayoutGrid,
-    query: 'What modules does Impact PMS include?',
+    id: 'services',
+    title: 'Explore Services 🚀',
+    description: 'Branding, Next.js Web Dev, SEO & High-ROAS Ads.',
+    icon: Sparkles,
+    query: 'What core services does RITGB provide?',
   },
   {
-    id: 'who-for',
-    title: 'Who Is It For? 🏨',
-    description: 'Boutique stays, resorts, or hotel chains.',
-    icon: Users,
-    query: 'What types of hotels and properties is Impact PMS suitable for?',
+    id: 'audit',
+    title: 'Free Growth Audit 🎯',
+    description: 'Uncover conversion leaks & ad fatigue (zero fluff).',
+    icon: Target,
+    query: 'How can I claim a Free Growth Audit for my brand?',
   },
   {
-    id: 'why-us',
-    title: 'Why Impact PMS? ✨',
-    description: 'Say goodbye to legacy software slop & brainrot.',
-    icon: ShieldCheck,
-    query: 'Why should a hotel choose Impact PMS over legacy software?',
+    id: 'case-studies',
+    title: 'Case Studies & Wins 💅',
+    description: '4.8x ROAS, +340% inbound leads & 99/100 speed scores.',
+    icon: Trophy,
+    query: 'Can you share recent client case studies and results?',
   },
   {
-    id: 'demo',
-    title: 'Request a Live Demo 🎯',
-    description: 'See the live system in action (no boomer PPTs 💅).',
-    icon: Calendar,
-    query: 'How can I schedule a free live demo of Impact PMS?',
+    id: 'pricing',
+    title: 'Pricing & Retainers ☕',
+    description: 'Transparent project sprints & monthly growth retainers.',
+    icon: Coffee,
+    query: 'How does RITGB structure its pricing and retainers?',
   },
 ];
 
@@ -52,15 +52,15 @@ export const HomeTab: React.FC<HomeTabProps> = ({
   onStartChat,
 }) => {
   return (
-    <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#F7F9F6] scrollbar-thin scrollbar-thumb-slate-200">
-      {/* 1. Specialist Intro Card */}
-      <div className="bg-white rounded-2xl p-4.5 border border-slate-200/80 shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex items-start gap-4">
-        {/* Advisor Avatar */}
+    <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#F8F9FA] scrollbar-thin scrollbar-thumb-slate-200 font-sans">
+      {/* 1. Ritzy Specialist Intro Card */}
+      <div className="bg-white rounded-2xl p-4.5 border border-slate-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] flex items-start gap-4">
+        {/* Mascot Avatar with pulsing green dot */}
         <div className="relative shrink-0">
-          <div className="w-14 h-14 rounded-full bg-white p-0.5 shadow-md flex items-center justify-center border border-slate-200/80 overflow-hidden">
+          <div className="w-14 h-14 rounded-full bg-black p-0.5 shadow-md flex items-center justify-center border border-black/10 overflow-hidden">
             <Image
               src="/images/chatbot/mascot.gif"
-              alt="Impact PMS Mascot"
+              alt="Ritzy Mascot"
               width={56}
               height={56}
               className="w-full h-full object-cover rounded-full"
@@ -77,13 +77,13 @@ export const HomeTab: React.FC<HomeTabProps> = ({
         <div className="space-y-1.5 flex-1">
           <h3 className="text-[15px] font-bold text-slate-900 leading-snug">
             Hi, I&apos;m Ritzy 👋 <br />
-            <span className="text-[#0B351B]">Impact PMS Specialist.</span>
+            <span className="text-black font-black">AI Growth Specialist at RITGB.</span>
           </h3>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Spilling real tea on our 8 modules, 2-way OTA sync, direct bookings, and custom pricing without the corporate fluff.
+            Dropping unfiltered tea on Branding, Next.js Web Dev, High-ROAS Ads & SEO without the corporate buzzwords.
           </p>
-          <p className="text-xs font-semibold text-slate-800 pt-0.5">
-            What are we solving at your property today?
+          <p className="text-xs font-bold text-slate-800 pt-0.5">
+            Ready to make your business impossible to ignore? 🚀
           </p>
         </div>
       </div>
@@ -97,14 +97,14 @@ export const HomeTab: React.FC<HomeTabProps> = ({
               key={card.id}
               type="button"
               onClick={() => onSelectAction(card.query)}
-              className="w-full text-left bg-white hover:bg-slate-50/80 active:bg-slate-100 border border-slate-200/70 hover:border-[#267a47]/40 rounded-2xl p-3.5 transition-all duration-200 shadow-xs flex items-center justify-between gap-3 group cursor-pointer"
+              className="w-full text-left bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-200/80 hover:border-black/30 rounded-2xl p-3.5 transition-all duration-200 shadow-xs flex items-center justify-between gap-3 group cursor-pointer"
             >
               <div className="flex items-center gap-3.5 min-w-0">
-                <div className="w-10 h-10 rounded-xl bg-[#E8F2EA] text-[#0B351B] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                  <Icon className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-black text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <Icon className="w-5 h-5 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <h4 className="text-xs sm:text-sm font-semibold text-slate-900 tracking-tight group-hover:text-[#0B351B] transition-colors">
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight group-hover:text-black transition-colors">
                     {card.title}
                   </h4>
                   <p className="text-[11px] text-slate-500 truncate mt-0.5">
@@ -112,24 +112,24 @@ export const HomeTab: React.FC<HomeTabProps> = ({
                   </p>
                 </div>
               </div>
-              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#0B351B] group-hover:translate-x-0.5 transition-all shrink-0" />
+              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all shrink-0" />
             </button>
           );
         })}
       </div>
 
       {/* 3. Start a Conversation Banner Card */}
-      <div className="bg-[#E8F2EA]/90 border border-[#cfe3d3] rounded-2xl p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-xs">
+      <div className="bg-black text-white rounded-2xl p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-md border border-white/10">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="w-9 h-9 rounded-full bg-white text-[#0B351B] flex items-center justify-center shrink-0 shadow-xs">
-            <MessageSquare className="w-4 h-4 text-[#0B351B]" />
+          <div className="w-9 h-9 rounded-full bg-white/15 text-white flex items-center justify-center shrink-0">
+            <MessageSquare className="w-4 h-4 text-white" />
           </div>
           <div className="min-w-0">
-            <h4 className="text-xs sm:text-[13px] font-bold text-slate-900">
-              Can&apos;t find what you&apos;re looking for?
+            <h4 className="text-xs sm:text-[13px] font-bold text-white">
+              Have a custom growth goal?
             </h4>
-            <p className="text-[11px] text-slate-600 truncate mt-0.5">
-              Chat with our assistant or talk to our team.
+            <p className="text-[11px] text-white/70 truncate mt-0.5">
+              Chat directly with Ritzy or contact our team.
             </p>
           </div>
         </div>
@@ -137,10 +137,10 @@ export const HomeTab: React.FC<HomeTabProps> = ({
         <button
           type="button"
           onClick={onStartChat}
-          className="bg-[#0B351B] hover:bg-[#144e2b] text-white text-xs font-semibold px-3.5 py-2 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm transition-colors cursor-pointer"
+          className="bg-white hover:bg-slate-100 text-black text-xs font-bold px-3.5 py-2 rounded-full flex items-center gap-1.5 shrink-0 shadow-sm transition-all cursor-pointer transform active:scale-95"
         >
           <span>Start Chat</span>
-          <ChevronRight className="w-3.5 h-3.5" />
+          <ChevronRight className="w-3.5 h-3.5 text-black" />
         </button>
       </div>
     </div>

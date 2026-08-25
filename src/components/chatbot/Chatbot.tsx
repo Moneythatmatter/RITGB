@@ -11,11 +11,11 @@ const INITIAL_MESSAGE: Message = {
   id: 'welcome-1',
   role: 'assistant',
   content:
-    "I’m **Ritzy**—dropping some unfiltered tea: ☕👀\n\nMost legacy hotel PMS software is literally digital slop. Running a property shouldn't feel like mental warfare every shift fr. 💀\n\nI can help you unpack our core modules, 2-way OTA channel sync (zero double bookings 🚫), direct booking engine (0% commission slay 💅), or custom pricing.\n\nWhat part of your hotel operations are we rescuing today? 🤝",
+    "I’m **Ritzy**—dropping some unfiltered growth tea: ☕👀\n\nMost digital agency websites are literally buzzword soup. We make your business impossible to ignore, no cap. 💅\n\nI can help you unpack our Branding systems, lightning-fast Next.js websites, High-ROAS Meta & Google Ads, or claim your **[Free Growth Audit](/contact)**.\n\nWhat part of your digital presence are we leveling up today? 🚀",
   timestamp: 'Just now',
 };
 
-const STORAGE_KEY = 'impact_pms_chat_history';
+const STORAGE_KEY = 'ritgb_chat_history';
 
 export const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +69,6 @@ export const Chatbot: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // Convert messages to API format
       const payloadMessages = newMessages.map((m) => ({
         role: m.role,
         content: m.content,
@@ -86,7 +85,7 @@ export const Chatbot: React.FC = () => {
       if (!res.ok) {
         const errJson = await res.json().catch(() => ({}));
         throw new Error(
-          errJson.error || `Error ${res.status}: Failed to fetch response from assistant.`
+          errJson.error || `Error ${res.status}: Failed to fetch response from Ritzy.`
         );
       }
 
@@ -138,7 +137,7 @@ export const Chatbot: React.FC = () => {
       const errMessage =
         err instanceof Error
           ? err.message
-          : 'Unable to reach the assistant. Please try again.';
+          : 'Unable to reach Ritzy. Please try again or email Info@rayimpact.net.';
       setError(errMessage);
     } finally {
       setIsLoading(false);
@@ -157,20 +156,20 @@ export const Chatbot: React.FC = () => {
 
   return (
     <>
-      {/* 1. Floating Chat Trigger Button */}
-      <div className="fixed bottom-6 right-5 sm:bottom-8 sm:right-8 z-[999] flex flex-col items-end">
+      {/* 1. Floating Chat Trigger Button (Positioned above WhatsApp Button) */}
+      <div className="fixed bottom-23 right-5 sm:bottom-28 sm:right-8 z-[999] flex flex-col items-end">
         {/* Floating helper nudge bubble when chat hasn't been opened */}
         {!isOpen && !hasInteracted && (
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 2, duration: 0.4 }}
-            className="hidden sm:flex items-center gap-2 bg-[#082E15] text-white border border-[#267a47]/50 px-4 py-2 rounded-full shadow-[0_10px_25px_rgba(8,46,21,0.35)] mb-3 cursor-pointer group hover:border-[#62b578] transition-all"
+            className="hidden sm:flex items-center gap-2 bg-black text-white border border-white/20 px-4 py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.35)] mb-3 cursor-pointer group hover:border-white/50 transition-all font-sans"
             onClick={() => setIsOpen(true)}
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#bce5cb]" />
-            <span className="text-xs font-sans text-slate-200 group-hover:text-white font-medium">
-              Need hotel tech tea? Ask Impact PMS ☕✨
+            <Sparkles className="w-3.5 h-3.5 text-white animate-spin" style={{ animationDuration: '4s' }} />
+            <span className="text-xs font-semibold text-slate-200 group-hover:text-white">
+              Got marketing questions? Ask Ritzy ☕✨
             </span>
           </motion.div>
         )}
@@ -178,22 +177,23 @@ export const Chatbot: React.FC = () => {
         <motion.button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? 'Close chat' : 'Open Impact PMS Assistant'}
+          aria-label={isOpen ? 'Close chat' : 'Open RITGB Growth Assistant'}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className={`cursor-pointer relative w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-all duration-300 border ${isOpen
-              ? 'bg-[#082E15] text-white border-[#267a47] shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
-              : 'bg-white hover:bg-slate-50 text-white border-[#267a47]/30 shadow-[0_10px_25px_rgba(8,46,21,0.35)] hover:shadow-[0_14px_35px_rgba(8,46,21,0.5)] p-1'
-            }`}
+          className={`cursor-pointer relative w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-all duration-300 border ${
+            isOpen
+              ? 'bg-black text-white border-white/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
+              : 'bg-white hover:bg-slate-50 text-white border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)] p-1'
+          }`}
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-[#bce5cb]" />
+            <X className="w-6 h-6 text-white" />
           ) : (
             <>
-              <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-full">
+              <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-full bg-black">
                 <Image
                   src="/images/chatbot/mascot.gif"
-                  alt="Impact PMS Mascot"
+                  alt="RITGB Ritzy Mascot"
                   width={64}
                   height={64}
                   className="w-full h-full object-cover rounded-full"
@@ -228,7 +228,7 @@ export const Chatbot: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 25, scale: 0.95 }}
               transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed z-[999] inset-x-3 bottom-22 top-auto sm:inset-auto sm:bottom-24 sm:right-8 w-auto sm:w-[420px] h-[82vh] sm:h-[640px] max-h-[680px] flex shadow-2xl"
+              className="fixed z-[999] inset-x-3 bottom-6 top-auto sm:inset-auto sm:bottom-8 sm:right-8 w-auto sm:w-[420px] h-[82vh] sm:h-[640px] max-h-[680px] flex shadow-2xl"
             >
               <ChatWindow
                 messages={messages}

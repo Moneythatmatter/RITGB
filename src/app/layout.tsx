@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { Chatbot } from "@/components/chatbot/Chatbot";
 import Preloader from "@/components/Preloader";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
@@ -37,7 +38,8 @@ export default function RootLayout({
         <Preloader />
         <Navbar />
         {children}
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
+        <Chatbot />
         <WhatsAppButton />
       </body>
     </html>

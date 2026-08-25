@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     if (!rateLimit.allowed) {
       return NextResponse.json(
         {
-          error: `Too many requests. Please wait ${rateLimit.resetSeconds} seconds before sending another message.`,
+          error: `Too many requests. Please wait ${rateLimit.resetSeconds}s before sending another message.`,
         },
         { status: 429, headers: { 'Retry-After': String(rateLimit.resetSeconds) } }
       );
@@ -84,8 +84,8 @@ export async function POST(req: NextRequest) {
             { role: 'system', content: systemPrompt },
             ...recentMessages,
           ],
-          temperature: 0.3,
-          max_tokens: 600,
+          temperature: 0.6,
+          max_tokens: 500,
           stream: true,
         });
 
@@ -135,7 +135,7 @@ export async function POST(req: NextRequest) {
           const chunk = (i === 0 ? '' : ' ') + words[i];
           controller.enqueue(encoder.encode(chunk));
           // Brief typing delay
-          await new Promise((resolve) => setTimeout(resolve, 25));
+          await new Promise((resolve) => setTimeout(resolve, 20));
         }
         controller.close();
       },
@@ -155,7 +155,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         error:
-          'We encountered an issue connecting to our assistant. Please try again or contact our front desk at +91 9583002952.',
+          'We encountered an issue connecting to Ritzy. Please try again or reach out directly to our team at Info@rayimpact.net.',
       },
       { status: 500 }
     );

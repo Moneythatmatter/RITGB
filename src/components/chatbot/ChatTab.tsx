@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { AlertCircle, ChevronRight, LayoutGrid, Users, Calendar, HelpCircle } from 'lucide-react';
+import { AlertCircle, ChevronRight, Sparkles, Code, TrendingUp, Target } from 'lucide-react';
 import { ChatMessage, Message } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 
@@ -14,30 +14,30 @@ interface ChatTabProps {
   onClearHistory?: () => void;
 }
 
-const CHAT_SUGGESTION_CARDS = [
+const CHAT_SUGGESTIONS = [
   {
-    title: 'Explore Modules 🚀',
-    description: 'All 8 modules that make operations slay.',
-    icon: LayoutGrid,
-    query: 'What modules does Impact PMS include?',
+    title: 'Branding & Identity 🎨',
+    description: 'Logo systems, style guides & visual authority.',
+    icon: Sparkles,
+    query: 'Tell me about RITGB branding and visual identity services.',
   },
   {
-    title: 'Who Is It For? 🏨',
-    description: 'Boutique stays, resorts & hotel chains.',
-    icon: Users,
-    query: 'Who is Impact PMS designed for?',
+    title: 'Next.js Web Dev ⚡',
+    description: 'Sub-second speed, interactive UI & modern tech.',
+    icon: Code,
+    query: 'Why does RITGB build websites with Next.js and React?',
   },
   {
-    title: 'Request a Demo 🎯',
-    description: 'See the live system in action (no PPTs 💅).',
-    icon: Calendar,
-    query: 'Can I schedule a free product demo?',
+    title: 'Performance Ads & ROAS 📈',
+    description: 'Scale Meta & Google Ads with 4.8x ROAS funnels.',
+    icon: TrendingUp,
+    query: 'How do your Meta and Google Ads deliver high ROAS?',
   },
   {
-    title: 'Talk to Sales ☕',
-    description: 'Get custom pricing with zero gatekeeping.',
-    icon: HelpCircle,
-    query: 'How can I contact sales or discuss custom pricing?',
+    title: 'Claim Free Audit 🎯',
+    description: 'Find conversion leaks & competitor gaps.',
+    icon: Target,
+    query: 'How do I claim a Free Growth Audit for my brand?',
   },
 ];
 
@@ -65,7 +65,7 @@ export const ChatTab: React.FC<ChatTabProps> = ({
   }, [messages, isLoading]);
 
   return (
-    <div className="flex flex-col flex-1 h-full min-h-0 bg-[#F7F9F6]">
+    <div className="flex flex-col flex-1 h-full min-h-0 bg-[#F8F9FA] font-sans">
       {/* Messages Scroll Area */}
       <div
         ref={containerRef}
@@ -73,34 +73,31 @@ export const ChatTab: React.FC<ChatTabProps> = ({
       >
         {/* Render all conversation messages */}
         {messages.map((msg) => (
-          <ChatMessage
-            key={msg.id}
-            message={msg}
-          />
+          <ChatMessage key={msg.id} message={msg} />
         ))}
 
         {/* Suggestion cards shown below initial greeting */}
         {messages.length <= 1 && !isLoading && (
           <div className="pt-2 pb-1 space-y-2 animate-in fade-in duration-300">
-            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wide px-1">
-              You might be interested in:
+            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider px-1">
+              Popular Topics to Explore:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {CHAT_SUGGESTION_CARDS.map((card, idx) => {
+              {CHAT_SUGGESTIONS.map((card, idx) => {
                 const Icon = card.icon;
                 return (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => onSendMessage(card.query)}
-                    className="text-left bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-[#267a47]/50 rounded-xl p-2.5 sm:p-3 transition-all flex items-center justify-between gap-2 group cursor-pointer shadow-2xs"
+                    className="text-left bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-black/40 rounded-xl p-2.5 sm:p-3 transition-all flex items-center justify-between gap-2 group cursor-pointer shadow-xs"
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
-                      <div className="w-8 h-8 rounded-lg bg-[#E8F2EA] text-[#0B351B] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                        <Icon className="w-4 h-4" />
+                      <div className="w-8 h-8 rounded-lg bg-black text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                        <Icon className="w-4 h-4 text-white" />
                       </div>
                       <div className="min-w-0">
-                        <div className="text-xs font-bold text-slate-900 group-hover:text-[#0B351B] transition-colors truncate">
+                        <div className="text-xs font-bold text-slate-900 group-hover:text-black transition-colors truncate">
                           {card.title}
                         </div>
                         <div className="text-[10px] text-slate-500 truncate">
@@ -108,7 +105,7 @@ export const ChatTab: React.FC<ChatTabProps> = ({
                         </div>
                       </div>
                     </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0B351B] group-hover:translate-x-0.5 transition-all shrink-0" />
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all shrink-0" />
                   </button>
                 );
               })}
@@ -118,8 +115,8 @@ export const ChatTab: React.FC<ChatTabProps> = ({
 
         {/* Typing indicator */}
         {isLoading && (
-          <div className="flex items-center gap-2 text-xs text-[#0B351B] my-2 pl-1">
-            <div className="w-7 h-7 rounded-full bg-white flex items-center justify-center overflow-hidden p-0.5 border border-slate-200/80 shadow-2xs">
+          <div className="flex items-center gap-2 text-xs text-black my-2 pl-1">
+            <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center overflow-hidden p-0.5 border border-white/20 shadow-xs">
               <Image
                 src="/images/chatbot/mascot.gif"
                 alt="Ritzy Typing"
@@ -129,10 +126,10 @@ export const ChatTab: React.FC<ChatTabProps> = ({
                 unoptimized
               />
             </div>
-            <div className="flex items-center gap-1 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-2xl rounded-tl-xs shadow-xs">
-              <span className="w-1.5 h-1.5 bg-[#267a47] rounded-full animate-bounce [animation-delay:-0.3s]" />
-              <span className="w-1.5 h-1.5 bg-[#267a47] rounded-full animate-bounce [animation-delay:-0.15s]" />
-              <span className="w-1.5 h-1.5 bg-[#267a47] rounded-full animate-bounce" />
+            <div className="flex items-center gap-1 bg-white border border-slate-200/90 px-3.5 py-2.5 rounded-2xl rounded-tl-xs shadow-xs">
+              <span className="w-1.5 h-1.5 bg-black rounded-full animate-bounce [animation-delay:-0.3s]" />
+              <span className="w-1.5 h-1.5 bg-black rounded-full animate-bounce [animation-delay:-0.15s]" />
+              <span className="w-1.5 h-1.5 bg-black rounded-full animate-bounce" />
             </div>
           </div>
         )}

@@ -27,7 +27,7 @@ export default function WhatsAppButton() {
   if (pathname === "/contact") return null;
 
   return (
-    <div ref={menuRef} className="fixed bottom-24 right-8 z-50 flex flex-col items-end gap-3">
+    <div ref={menuRef} className="fixed bottom-6 right-5 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end gap-3">
       {/* Expandable contact cards */}
       <div
         className={`flex flex-col gap-2 transition-all duration-300 origin-bottom ${open
