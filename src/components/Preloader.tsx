@@ -82,15 +82,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     >
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="text-center text-4xl leading-tight sm:text-5xl">
-          Lowkey <em className="font-serif italic">Worth</em>{" "}
-          The Wait
+          Lowkey <em className="font-serif italic">Worth</em> The Wait
         </h1>
 
         <div className="mt-8 h-48 w-48 overflow-hidden sm:h-56 sm:w-56">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/loading/waiting meme gif.webp"
-            alt="Loading"
+            alt="Loading waiting meme GIF"
             className="h-full w-full object-cover"
           />
         </div>
