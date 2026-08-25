@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AgencyAbout from "@/components/agency/AgencyAbout";
 import AgencyHero from "@/components/agency/AgencyHero";
 import AgencyMarquee from "@/components/agency/AgencyMarquee";
@@ -10,6 +11,12 @@ import Footer from "@/components/Footer";
 // import CaseStudy from "@/components/sections/CaseStudy";
 import Contact from "@/components/sections/Contact";
 import Industry from "@/components/sections/Industry";
+
+export const metadata: Metadata = {
+  title: "About RITGB – Full-Service Digital Growth Agency, Bhubaneswar",
+  description:
+    "Meet RITGB — a Bhubaneswar-based branding, web design & digital marketing agency helping 50+ brands grow with bold, no-boring-marketing strategy.",
+};
 
 export default function AgencyPage() {
   return (
