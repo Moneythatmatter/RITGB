@@ -27,13 +27,17 @@ export default function WhatsAppButton() {
   if (pathname === "/contact") return null;
 
   return (
-    <div ref={menuRef} className="fixed bottom-6 right-5 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end gap-3">
+    <div
+      ref={menuRef}
+      className="fixed bottom-6 left-5 sm:bottom-8 sm:left-8 z-50 flex flex-col items-start gap-3"
+    >
       {/* Expandable contact cards */}
       <div
-        className={`flex flex-col gap-2 transition-all duration-300 origin-bottom ${open
-          ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 scale-90 translate-y-4 pointer-events-none"
-          }`}
+        className={`flex flex-col gap-2 transition-all duration-300 origin-bottom-left ${
+          open
+            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 scale-90 translate-y-4 pointer-events-none"
+        }`}
       >
         {contacts.map((c) => (
           <a
@@ -54,8 +58,8 @@ export default function WhatsAppButton() {
                 {c.label}
               </span>
               <span className="text-[11px] text-black/50 leading-tight">
-
-                +{c.number.slice(0, 2)}-{c.number.slice(2, 7)}-{c.number.slice(7)}
+                +{c.number.slice(0, 2)}-{c.number.slice(2, 7)}-
+                {c.number.slice(7)}
               </span>
             </div>
 
@@ -73,8 +77,9 @@ export default function WhatsAppButton() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Chat on WhatsApp"
-        className={`bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer ${open ? "rotate-90" : ""
-          }`}
+        className={`bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer ${
+          open ? "rotate-90" : ""
+        }`}
       >
         {open ? (
           <svg
@@ -85,7 +90,11 @@ export default function WhatsAppButton() {
             stroke="currentColor"
             strokeWidth={2.5}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         ) : (
           <svg viewBox="0 0 448 512" className="w-7 h-7" fill="currentColor">

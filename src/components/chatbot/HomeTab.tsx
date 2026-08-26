@@ -59,7 +59,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
         <div className="relative shrink-0">
           <div className="w-14 h-14 rounded-full bg-black p-0.5 shadow-md flex items-center justify-center border border-black/10 overflow-hidden">
             <Image
-              src="/images/chatbot/mascot.gif"
+              src="/images/chatbot/greeting-mascot.gif"
               alt="Ritzy Mascot"
               width={56}
               height={56}

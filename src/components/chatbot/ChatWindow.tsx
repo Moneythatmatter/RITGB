@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 import {
   ChevronDown,
   MoreVertical,
@@ -12,13 +12,13 @@ import {
   Sparkles,
   ExternalLink,
   Target,
-} from 'lucide-react';
-import { Message } from './ChatMessage';
-import { HomeTab } from './HomeTab';
-import { ChatTab } from './ChatTab';
-import { FaqsTab } from './FaqsTab';
+} from "lucide-react";
+import { Message } from "./ChatMessage";
+import { HomeTab } from "./HomeTab";
+import { ChatTab } from "./ChatTab";
+import { FaqsTab } from "./FaqsTab";
 
-export type TabType = 'home' | 'chat' | 'faqs';
+export type TabType = "home" | "chat" | "faqs";
 
 interface ChatWindowProps {
   messages: Message[];
@@ -37,16 +37,16 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
   onClearHistory,
   onClose,
 }) => {
-  const [activeTab, setActiveTab] = useState<TabType>('home');
+  const [activeTab, setActiveTab] = useState<TabType>("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSelectQuery = (query: string) => {
-    setActiveTab('chat');
+    setActiveTab("chat");
     onSendMessage(query);
   };
 
   const handleStartChat = () => {
-    setActiveTab('chat');
+    setActiveTab("chat");
   };
 
   return (
@@ -75,9 +75,9 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
               <h3 className="text-sm sm:text-base font-black text-white leading-tight tracking-tight uppercase">
                 Ritzy
               </h3>
-              <span className="bg-white/15 text-[10px] font-bold uppercase tracking-wider text-white px-1.5 py-0.2 rounded">
+              {/* <span className="bg-white/15 text-[10px] font-bold uppercase tracking-wider text-white px-1.5 py-0.2 rounded">
                 AI Mascot
-              </span>
+              </span> */}
             </div>
             <p className="text-[11px] text-white/70 font-normal">
               RITGB Growth Specialist
@@ -152,14 +152,14 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
 
       {/* 2. Active Tab Content Viewport */}
       <div className="flex-1 flex flex-col min-h-0 overflow-hidden relative">
-        {activeTab === 'home' && (
+        {activeTab === "home" && (
           <HomeTab
             onSelectAction={handleSelectQuery}
             onStartChat={handleStartChat}
           />
         )}
 
-        {activeTab === 'chat' && (
+        {activeTab === "chat" && (
           <ChatTab
             messages={messages}
             isLoading={isLoading}
@@ -169,7 +169,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
           />
         )}
 
-        {activeTab === 'faqs' && <FaqsTab onAskQuestion={handleSelectQuery} />}
+        {activeTab === "faqs" && <FaqsTab onAskQuestion={handleSelectQuery} />}
       </div>
 
       {/* 3. Footer Branding */}
@@ -185,20 +185,20 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         {/* Tab 1: Home */}
         <button
           type="button"
-          onClick={() => setActiveTab('home')}
+          onClick={() => setActiveTab("home")}
           className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${
-            activeTab === 'home'
-              ? 'text-black font-bold'
-              : 'text-slate-500 hover:text-slate-800 font-medium'
+            activeTab === "home"
+              ? "text-black font-bold"
+              : "text-slate-500 hover:text-slate-800 font-medium"
           }`}
         >
           <Home
             className={`w-5 h-5 ${
-              activeTab === 'home' ? 'text-black' : 'text-slate-400'
+              activeTab === "home" ? "text-black" : "text-slate-400"
             }`}
           />
           <span className="text-[11px] leading-none">Home</span>
-          {activeTab === 'home' && (
+          {activeTab === "home" && (
             <span className="absolute -bottom-1 left-3 right-3 h-0.5 bg-black rounded-full" />
           )}
         </button>
@@ -206,20 +206,20 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         {/* Tab 2: Chat */}
         <button
           type="button"
-          onClick={() => setActiveTab('chat')}
+          onClick={() => setActiveTab("chat")}
           className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${
-            activeTab === 'chat'
-              ? 'text-black font-bold'
-              : 'text-slate-500 hover:text-slate-800 font-medium'
+            activeTab === "chat"
+              ? "text-black font-bold"
+              : "text-slate-500 hover:text-slate-800 font-medium"
           }`}
         >
           <MessageSquare
             className={`w-5 h-5 ${
-              activeTab === 'chat' ? 'text-black' : 'text-slate-400'
+              activeTab === "chat" ? "text-black" : "text-slate-400"
             }`}
           />
           <span className="text-[11px] leading-none">Chat</span>
-          {activeTab === 'chat' && (
+          {activeTab === "chat" && (
             <span className="absolute -bottom-1 left-3 right-3 h-0.5 bg-black rounded-full" />
           )}
         </button>
@@ -227,20 +227,20 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         {/* Tab 3: FAQs */}
         <button
           type="button"
-          onClick={() => setActiveTab('faqs')}
+          onClick={() => setActiveTab("faqs")}
           className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${
-            activeTab === 'faqs'
-              ? 'text-black font-bold'
-              : 'text-slate-500 hover:text-slate-800 font-medium'
+            activeTab === "faqs"
+              ? "text-black font-bold"
+              : "text-slate-500 hover:text-slate-800 font-medium"
           }`}
         >
           <HelpCircle
             className={`w-5 h-5 ${
-              activeTab === 'faqs' ? 'text-black' : 'text-slate-400'
+              activeTab === "faqs" ? "text-black" : "text-slate-400"
             }`}
           />
           <span className="text-[11px] leading-none">FAQs</span>
-          {activeTab === 'faqs' && (
+          {activeTab === "faqs" && (
             <span className="absolute -bottom-1 left-3 right-3 h-0.5 bg-black rounded-full" />
           )}
         </button>
