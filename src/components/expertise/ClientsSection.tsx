@@ -5,78 +5,78 @@ import Image from "next/image";
 const clients = [
   {
     id: 1,
+    name: "Bravia Hotel",
+    file: "/images/clients/client13.png",
+    alt: "Bravia Hotel – RITGB client",
+  },
+  {
+    id: 2,
     name: "The Shivalik",
     file: "/images/clients/client1.png",
     alt: "The Shivalik Resort – RITGB branding client",
   },
 
   {
-    id: 2,
+    id: 3,
     name: "Hotel JK Regency",
     file: "/images/clients/client2.png",
     alt: "Hotel JK Regency – digital marketing client",
   },
 
   {
-    id: 3,
+    id: 4,
     name: "Vladivostok Fish Port",
     file: "/images/clients/client3.png",
     alt: "Vladivostok Fish Port – RITGB client",
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Pawzwell",
     file: "/images/clients/client4.png",
     alt: "Pawzwell – RITGB client",
   },
 
   {
-    id: 5,
+    id: 6,
     name: "The Bliss",
     file: "/images/clients/client5.png",
     alt: "The Bliss – RITGB client",
   },
 
   {
-    id: 6,
+    id: 7,
     name: "Victoria Grand",
     file: "/images/clients/client6.png",
     alt: "Victoria Grand – RITGB client",
   },
 
   {
-    id: 7,
+    id: 8,
     name: "Hotel De Park",
     file: "/images/clients/client7.png",
     alt: "Hotel De Park – RITGB client",
   },
 
   {
-    id: 8,
+    id: 9,
     name: "Antaraal",
     file: "/images/clients/client8.png",
     alt: "Antaraal – RITGB client",
   },
 
   {
-    id: 9,
+    id: 10,
     name: "Epsum Labs",
-    file: "/images/clients/client9.png",
+    file: "/images/clients/client9.webp",
     alt: "Epsum Labs – RITGB client",
   },
 
   {
-    id: 10,
+    id: 11,
     name: "Drivionix",
     file: "/images/clients/client11.png",
     alt: "Drivionix – RITGB client",
-  },
-  {
-    id: 11,
-    name: "Bravia Hotel",
-    file: "/images/clients/client13.png",
-    alt: "Bravia Hotel – RITGB client",
   },
 ];
 
