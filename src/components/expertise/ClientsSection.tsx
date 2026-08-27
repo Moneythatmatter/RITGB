@@ -3,16 +3,81 @@
 import Image from "next/image";
 
 const clients = [
-  { id: 1, name: "The Shivalik", file: "/images/clients/client1.png" },
-  { id: 2, name: "Hotel JK Regency", file: "/images/clients/client2.png" },
-  { id: 3, name: "Vladivostok Fish Port", file: "/images/clients/client3.png" },
-  { id: 4, name: "Pawzwell", file: "/images/clients/client4.png" },
-  { id: 5, name: "The bliss", file: "/images/clients/client5.png" },
-  { id: 6, name: "Victoria grand", file: "/images/clients/client6.png" },
-  { id: 7, name: "Hotel de park", file: "/images/clients/client7.png" },
-  { id: 8, name: "Antaraal", file: "/images/clients/client8.png" },
-  { id: 9, name: "Epsum Labs", file: "/images/clients/client9.png" },
-  { id: 10, name: "Drivionix", file: "/images/clients/client11.png" },
+  {
+    id: 1,
+    name: "The Shivalik",
+    file: "/images/clients/client1.png",
+    alt: "The Shivalik Resort – RITGB branding client",
+  },
+
+  {
+    id: 2,
+    name: "Hotel JK Regency",
+    file: "/images/clients/client2.png",
+    alt: "Hotel JK Regency – digital marketing client",
+  },
+
+  {
+    id: 3,
+    name: "Vladivostok Fish Port",
+    file: "/images/clients/client3.png",
+    alt: "Vladivostok Fish Port – RITGB client",
+  },
+
+  {
+    id: 4,
+    name: "Pawzwell",
+    file: "/images/clients/client4.png",
+    alt: "Pawzwell – RITGB client",
+  },
+
+  {
+    id: 5,
+    name: "The Bliss",
+    file: "/images/clients/client5.png",
+    alt: "The Bliss – RITGB client",
+  },
+
+  {
+    id: 6,
+    name: "Victoria Grand",
+    file: "/images/clients/client6.png",
+    alt: "Victoria Grand – RITGB client",
+  },
+
+  {
+    id: 7,
+    name: "Hotel De Park",
+    file: "/images/clients/client7.png",
+    alt: "Hotel De Park – RITGB client",
+  },
+
+  {
+    id: 8,
+    name: "Antaraal",
+    file: "/images/clients/client8.png",
+    alt: "Antaraal – RITGB client",
+  },
+
+  {
+    id: 9,
+    name: "Epsum Labs",
+    file: "/images/clients/client9.png",
+    alt: "Epsum Labs – RITGB client",
+  },
+
+  {
+    id: 10,
+    name: "Drivionix",
+    file: "/images/clients/client11.png",
+    alt: "Drivionix – RITGB client",
+  },
+  {
+    id: 11,
+    name: "Bravia Hotel",
+    file: "/images/clients/client13.png",
+    alt: "Bravia Hotel – RITGB client",
+  },
 ];
 
 export default function ClientsSection() {
@@ -31,7 +96,7 @@ export default function ClientsSection() {
           <Image
             key={client.id}
             src={client.file}
-            alt={client.name}
+            alt={client.alt}
             width={160}
             height={80}
             loading="eager"

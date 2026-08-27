@@ -6,6 +6,7 @@ import Image from "next/image";
 type Category = {
   number: string;
   title: string;
+  alt: string;
   description: string;
   bgColor: string;
   textColor: string;
@@ -17,6 +18,7 @@ const categories: Category[] = [
   {
     number: "1.",
     title: "DESIGN",
+    alt: "Brand identity and UI/UX design services",
     description:
       "Your audience judges your brand in seconds. We make sure those seconds work in your favor.",
     bgColor: "bg-black",
@@ -109,6 +111,7 @@ const categories: Category[] = [
   {
     number: "2.",
     title: "TECH",
+    alt: "Web & app development services",
     description:
       "Cool Design Means Nothing If The Website Breaks. We build websites, apps, automations, and digital systems that work smoothly without giving users emotional damage. Fast. Functional. Slightly addictive to use.",
     bgColor: "bg-[#FFC4DE]",
@@ -201,6 +204,7 @@ const categories: Category[] = [
   {
     number: "3.",
     title: "MARKETING",
+    alt: "SEO and digital marketing services",
     description:
       'We Market Brands Like People Actually Exist. No random posting. No "let\'s just boost it". Everything built to attract attention, leads, and growth.',
     bgColor: "bg-[#6DC9BC]",
@@ -385,7 +389,7 @@ export default function ExpertiseCategories() {
             <div className="relative w-full aspect-4/5 md:w-100 md:shrink-0 overflow-hidden">
               <Image
                 src={cat.imageUrl}
-                alt={cat.title}
+                alt={cat.alt}
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 400px"

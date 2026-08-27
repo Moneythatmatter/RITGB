@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { Chatbot } from "@/components/chatbot/Chatbot";
 import Preloader from "@/components/Preloader";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
@@ -16,8 +17,10 @@ const rightGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "RITGB",
-  description: "We make the internet notice you",
+  metadataBase: new URL("https://www.ritgb.com"),
+  title: " RITGB – Digital Marketing & Branding Agency in Bhubaneswar",
+  description:
+    "RITGB is a full-service digital growth agency in Bhubaneswar offering branding, web design, development & SEO. We make your business impossible to ignore.",
   icons: {
     icon: "/images/logo/ritgb-favicon.png",
     shortcut: "/images/logo/ritgb-favicon.png",
@@ -38,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <ScrollToTop />
+        <Chatbot />
         <WhatsAppButton />
       </body>
     </html>
