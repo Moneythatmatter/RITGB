@@ -97,17 +97,17 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const jsonLdFaq = faqSection?.faqs
     ? {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqSection.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    }
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqSection.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
     : null;
 
   return (
@@ -136,7 +136,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               Blog
             </Link>
             <span>/</span>
-            <span className="text-black">{post.categoryLabel || post.category}</span>
+            <span className="text-black">
+              {post.categoryLabel || post.category}
+            </span>
           </div>
 
           {/* Article Header */}
@@ -152,7 +154,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
                 <div>
                   <p className="font-bold text-black">{post.author.name}</p>
-                  <p className="text-[11px] text-black/50">{post.author.role}</p>
+                  <p className="text-[11px] text-black/50">
+                    {post.author.role}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -201,7 +205,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                   return (
                     <p
                       key={idx}
-                      dangerouslySetInnerHTML={{ __html: section.content || "" }}
+                      dangerouslySetInnerHTML={{
+                        __html: section.content || "",
+                      }}
                     />
                   );
                 case "quote":
@@ -219,7 +225,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                       {section.items?.map((item, itemIdx) => (
                         <li key={itemIdx} className="flex items-start gap-3">
                           <span className="w-2 h-2 rounded-full bg-black shrink-0 mt-2.5"></span>
-                          <span className="text-black/90 font-normal">{item}</span>
+                          <span className="text-black/90 font-normal">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -253,7 +261,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           {/* Back link */}
-          <div className="max-w-3xl mx-auto mt-14 pt-8 border-t border-black/10 flex items-center justify-between">
+          <div className="max-w-full mx-auto mt-14 pt-8 border-t border-black/10 flex items-center justify-between">
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 font-arial font-bold text-xs md:text-sm uppercase tracking-wider text-black hover:opacity-60 transition-opacity"
