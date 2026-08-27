@@ -17,6 +17,7 @@ const rightGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.ritgb.com"),
   title: " RITGB – Digital Marketing & Branding Agency in Bhubaneswar",
   description:
     "RITGB is a full-service digital growth agency in Bhubaneswar offering branding, web design, development & SEO. We make your business impossible to ignore.",

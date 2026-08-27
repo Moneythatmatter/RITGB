@@ -72,6 +72,12 @@ const clients = [
     file: "/images/clients/client11.png",
     alt: "Drivionix – RITGB client",
   },
+  {
+    id: 11,
+    name: "Bravia Hotel",
+    file: "/images/clients/client13.png",
+    alt: "Bravia Hotel – RITGB client",
+  },
 ];
 
 export default function ClientsSection() {
