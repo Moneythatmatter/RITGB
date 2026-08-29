@@ -5,7 +5,7 @@ import Image from 'next/image';
 import {
   Sparkles,
   Target,
-  Trophy,
+  Bot,
   Coffee,
   MessageSquare,
   ChevronRight,
@@ -19,31 +19,31 @@ interface HomeTabProps {
 const ACTION_CARDS = [
   {
     id: 'services',
-    title: 'Explore Services 🚀',
-    description: 'Branding, Next.js Web Dev, SEO & High-ROAS Ads.',
+    title: 'Explore 17 Services 🚀',
+    description: 'Branding, Next.js Web Dev, Mobile Apps, AI & Ads.',
     icon: Sparkles,
-    query: 'What core services does RITGB provide?',
+    query: 'What services does RITGB provide?',
+  },
+  {
+    id: 'ai-tech',
+    title: 'AI & Custom Software 🤖',
+    description: 'AI Chatbots, business automation & mobile apps.',
+    icon: Bot,
+    query: 'Tell me about RITGB AI automation and custom software solutions.',
   },
   {
     id: 'audit',
     title: 'Free Growth Audit 🎯',
-    description: 'Uncover conversion leaks & ad fatigue (zero fluff).',
+    description: 'Uncover conversion leaks & SEO gaps (zero fluff).',
     icon: Target,
     query: 'How can I claim a Free Growth Audit for my brand?',
   },
   {
-    id: 'case-studies',
-    title: 'Case Studies & Wins 💅',
-    description: '4.8x ROAS, +340% inbound leads & 99/100 speed scores.',
-    icon: Trophy,
-    query: 'Can you share recent client case studies and results?',
-  },
-  {
     id: 'pricing',
-    title: 'Pricing & Retainers ☕',
-    description: 'Transparent project sprints & monthly growth retainers.',
+    title: 'Pricing & Process ☕',
+    description: '5-stage workflow, custom proposals & retainers.',
     icon: Coffee,
-    query: 'How does RITGB structure its pricing and retainers?',
+    query: 'How does RITGB structure its pricing and project process?',
   },
 ];
 
@@ -80,7 +80,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
             <span className="text-black font-black">AI Growth Specialist at RITGB.</span>
           </h3>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Dropping unfiltered tea on Branding, Next.js Web Dev, High-ROAS Ads & SEO without the corporate buzzwords.
+            Dropping unfiltered tea on Branding, Next.js Web Dev, Mobile Apps, AI Automation & High-ROAS Ads.
           </p>
           <p className="text-xs font-bold text-slate-800 pt-0.5">
             Ready to make your business impossible to ignore? 🚀
@@ -126,7 +126,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
           </div>
           <div className="min-w-0">
             <h4 className="text-xs sm:text-[13px] font-bold text-white">
-              Have a custom growth goal?
+              Have a custom project in mind?
             </h4>
             <p className="text-[11px] text-white/70 truncate mt-0.5">
               Chat directly with Ritzy or contact our team.
