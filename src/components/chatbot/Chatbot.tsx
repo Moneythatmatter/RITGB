@@ -11,7 +11,7 @@ const INITIAL_MESSAGE: Message = {
   id: "welcome-1",
   role: "assistant",
   content:
-    "I’m **Ritzy**—dropping some unfiltered growth tea: ☕👀\n\nMost digital agency websites are literally buzzword soup. We make your business impossible to ignore, no cap. 💅\n\nI can help you unpack our Branding systems, lightning-fast Next.js websites, High-ROAS Meta & Google Ads, or claim your **[Free Growth Audit](/contact)**.\n\nWhat part of your digital presence are we leveling up today? 🚀",
+    "I’m **Ritzy**—dropping some unfiltered growth tea: ☕👀\n\nMost digital agency websites are pure buzzword soup. We make your business impossible to ignore, no cap. 💅\n\nI can help you unpack our 17 services (Branding, Next.js Web & Mobile Apps, AI Automation, High-ROAS Ads & Local SEO), or claim your **[Free Growth Audit](/contact)**.\n\nWhat part of your digital presence are we leveling up today? 🚀",
   timestamp: "Just now",
 };
 

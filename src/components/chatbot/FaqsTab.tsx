@@ -31,7 +31,7 @@ export const FaqsTab: React.FC<FaqsTabProps> = ({ onAskQuestion }) => {
             Agency FAQs
           </h3>
           <p className="text-xs text-slate-500">
-            Quick answers about RITGB services, SEO, ads & retainers.
+            Quick answers about RITGB services, AI, web dev, SEO & process.
           </p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export const FaqsTab: React.FC<FaqsTabProps> = ({ onAskQuestion }) => {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search services, SEO, pricing..."
+          placeholder="Search services, AI, web, SEO, pricing, careers..."
           className="w-full bg-white border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black/10 shadow-xs transition-all"
         />
       </div>

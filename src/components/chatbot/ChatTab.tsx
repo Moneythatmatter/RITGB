@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { AlertCircle, ChevronRight, Sparkles, Code, TrendingUp, Target } from 'lucide-react';
+import { AlertCircle, ChevronRight, Sparkles, Code, Bot, TrendingUp } from 'lucide-react';
 import { ChatMessage, Message } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 
@@ -16,28 +16,28 @@ interface ChatTabProps {
 
 const CHAT_SUGGESTIONS = [
   {
-    title: 'Branding & Identity 🎨',
-    description: 'Logo systems, style guides & visual authority.',
+    title: 'Brand & UI/UX Design 🎨',
+    description: 'Logo systems, style guides & digital experiences.',
     icon: Sparkles,
-    query: 'Tell me about RITGB branding and visual identity services.',
+    query: 'Tell me about RITGB branding and UI/UX design services.',
   },
   {
-    title: 'Next.js Web Dev ⚡',
-    description: 'Sub-second speed, interactive UI & modern tech.',
+    title: 'Web & Mobile Dev ⚡',
+    description: 'Next.js apps, iOS/Android & sub-second speed.',
     icon: Code,
-    query: 'Why does RITGB build websites with Next.js and React?',
+    query: 'Can RITGB build a custom Next.js website or mobile app for my business?',
   },
   {
-    title: 'Performance Ads & ROAS 📈',
-    description: 'Scale Meta & Google Ads with 4.8x ROAS funnels.',
+    title: 'AI Automation & Bots 🤖',
+    description: '24/7 customer support bots & workflow automation.',
+    icon: Bot,
+    query: 'Does RITGB provide AI chatbot development and automation?',
+  },
+  {
+    title: 'Paid Ads & Local SEO 📈',
+    description: 'High-ROAS Meta/Google Ads & Google map rankings.',
     icon: TrendingUp,
     query: 'How do your Meta and Google Ads deliver high ROAS?',
-  },
-  {
-    title: 'Claim Free Audit 🎯',
-    description: 'Find conversion leaks & competitor gaps.',
-    icon: Target,
-    query: 'How do I claim a Free Growth Audit for my brand?',
   },
 ];
 

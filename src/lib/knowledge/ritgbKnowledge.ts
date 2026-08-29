@@ -7,6 +7,20 @@ export interface AgencyService {
   deliverables: string[];
 }
 
+export interface IndustrySolution {
+  industry: string;
+  headline: string;
+  description: string;
+  solutions: string[];
+}
+
+export interface ProjectWorkflowStep {
+  step: string;
+  title: string;
+  description: string;
+  tasks: string[];
+}
+
 export interface CaseStudyItem {
   client: string;
   category: string;
@@ -17,7 +31,7 @@ export interface CaseStudyItem {
 export interface FaqItem {
   question: string;
   answer: string;
-  category: 'Services' | 'SEO & Ads' | 'Pricing & Process' | 'General';
+  category: 'General' | 'Services' | 'SEO & Ads' | 'Pricing & Process' | 'Careers';
 }
 
 export interface RitgbKnowledgeBase {
@@ -28,6 +42,7 @@ export interface RitgbKnowledgeBase {
   location: {
     city: string;
     state: string;
+    country: string;
     address: string;
     mapLink: string;
   };
@@ -43,28 +58,34 @@ export interface RitgbKnowledgeBase {
     facebook: string;
   };
   coreServices: AgencyService[];
+  industriesServed: IndustrySolution[];
   targetAudience: string[];
   caseStudies: CaseStudyItem[];
   pricingModel: {
     overview: string;
+    quotationFactors: string[];
     tiers: string[];
   };
-  workflow: {
-    step: string;
-    title: string;
-    description: string;
-  }[];
+  workflow: ProjectWorkflowStep[];
+  leadCollectionFields: string[];
+  escalationTriggers: string[];
+  careers: {
+    overview: string;
+    domains: string[];
+    applicationProcess: string;
+  };
   faqs: FaqItem[];
 }
 
 export const RITGB_KNOWLEDGE: RitgbKnowledgeBase = {
   name: 'RITGB',
-  fullName: 'RITGB – Digital Marketing & Branding Agency',
+  fullName: 'RITGB – Ray Impact Trinity Global Business',
   tagline: 'We make your business impossible to ignore.',
-  bio: 'Bhubaneswar’s premier digital growth and creative agency. We engineer unforgettable brand identities, high-converting Next.js web experiences, and aggressive performance marketing funnels that turn clicks into revenue.',
+  bio: 'RITGB (Ray Impact Trinity Global Business) is a premier full-service digital growth agency based in Bhubaneswar, Odisha, India. We combine branding, technology, marketing, and business transformation solutions to help businesses create, develop, and scale their digital presence.',
   location: {
     city: 'Bhubaneswar',
     state: 'Odisha',
+    country: 'India',
     address: 'First Floor, Plot No 3637, behind Tanishq Showroom, Chandrasekharpur, Bhubaneswar, Odisha 751016',
     mapLink: 'https://maps.google.com/?q=260/1821,+Lane+2+Rd,+Mahadev+Nagar,+Jagannath+Nagar,+Jharapada,+Bhubaneswar,+Odisha+751025',
   },
@@ -81,81 +102,311 @@ export const RITGB_KNOWLEDGE: RitgbKnowledgeBase = {
   },
   coreServices: [
     {
-      id: 'branding',
-      name: 'Branding & Identity',
+      id: 'brand-identity',
+      name: 'Brand Identity',
       badge: 'Visual Systems',
-      headline: 'Brands that people remember, stalk, and obsess over.',
-      description: 'We don’t do generic Canva logos. We craft full-scale brand systems, typography, color architecture, and brand storytelling that command authority.',
+      headline: 'Unforgettable brand identities that command authority and trust.',
+      description: 'We develop comprehensive brand solutions by understanding business goals, target customers, and competitive environments to build lasting customer trust and recognition.',
       deliverables: [
-        'Visual Identity & Logo Systems',
-        'Brand Guidelines & Tone of Voice Book',
-        'Packaging & Print Collateral',
-        'Social Media Brand Toolkits',
-        'Creative Direction & Storytelling',
+        'Brand strategy development',
+        'Brand positioning',
+        'Visual identity creation',
+        'Creative direction',
+        'Brand guidelines & Brand Bible',
+        'Colour & typography selection',
+        'Marketing design systems',
+        'Digital brand assets',
       ],
     },
     {
-      id: 'web-dev',
-      name: 'Web Design & Tech',
-      badge: 'Next.js & Full-Stack',
-      headline: 'Lightning-fast digital experiences that convert at scale.',
-      description: 'Websites that don’t embarrass your brand. Built on modern Next.js/React stacks with responsive UI/UX, seamless animations, and sub-second load times.',
+      id: 'logo-design',
+      name: 'Logo Design',
+      badge: 'Brand Marks',
+      headline: 'Distinctive, scalable logos engineered for digital and offline platforms.',
+      description: 'Professional logo design reflecting company values and brand message with versatile formats across websites, social media, print, and corporate documents.',
       deliverables: [
-        'Custom Next.js & React Web Applications',
-        'High-Converting Landing Pages',
-        'Interactive UI/UX & Motion Design',
-        'E-Commerce & Headless CMS Integration',
-        'Core Web Vitals & Speed Optimization',
+        'Custom logo concept creation',
+        'Typography-based & icon marks',
+        'Scalable vector formats (SVG, AI, PNG, PDF)',
+        'Social media profile & favicon assets',
+        'Brand mark usage guidelines',
+      ],
+    },
+    {
+      id: 'ui-ux-design',
+      name: 'UI/UX Design',
+      badge: 'Product Design',
+      headline: 'Frictionless, visually stunning digital experiences that convert.',
+      description: 'User-centric UI/UX design for web apps, mobile apps, SaaS dashboards, and digital platforms focusing on customer behavior, usability, and modern aesthetics.',
+      deliverables: [
+        'User research & wireframing',
+        'Interactive Figma prototypes',
+        'Design systems & component libraries',
+        'Dashboard & portal interfaces',
+        'Mobile app & responsive web layouts',
+      ],
+    },
+    {
+      id: 'website-design',
+      name: 'Website Design',
+      badge: 'Creative Web',
+      headline: 'Modern, responsive website layouts tailored to your business identity.',
+      description: 'High-aesthetic website designs created to engage audiences, build credibility, and drive conversions across all device types.',
+      deliverables: [
+        'Business & corporate website designs',
+        'High-converting landing pages',
+        'Portfolio & showcase sites',
+        'E-commerce layouts',
+        'Custom responsive layouts & animations',
+      ],
+    },
+    {
+      id: 'website-development',
+      name: 'Website Development',
+      badge: 'Next.js & Full-Stack',
+      headline: 'Sub-second loading, ultra-scalable web platforms built on modern stacks.',
+      description: 'Custom web development combining cutting-edge frameworks (Next.js, React, Node.js), robust security, database integrations, and high performance.',
+      deliverables: [
+        'Custom Next.js & React web applications',
+        'Corporate & enterprise web portals',
+        'Database & third-party API integration',
+        'Performance & Core Web Vitals optimization',
+        'Ongoing website maintenance & support',
+      ],
+    },
+    {
+      id: 'mobile-app-development',
+      name: 'Mobile Application Development',
+      badge: 'iOS & Android',
+      headline: 'Native & cross-platform mobile apps engineered for seamless UX.',
+      description: 'End-to-end mobile application development for Android and iOS designed for user retention, speed, and real-time business operations.',
+      deliverables: [
+        'Android & iOS native application development',
+        'Cross-platform applications (Flutter / React Native)',
+        'Customer & service-based apps',
+        'E-commerce & on-demand mobile solutions',
+        'App Store & Play Store deployment',
+      ],
+    },
+    {
+      id: 'ecommerce-development',
+      name: 'E-commerce Development',
+      badge: 'Online Stores',
+      headline: 'High-converting online shopping platforms built for scale.',
+      description: 'Custom e-commerce platforms with smooth shopping carts, robust payment gateway integrations, real-time inventory, and optimized checkout funnels.',
+      deliverables: [
+        'Custom online store development',
+        'Product catalogue & inventory management',
+        'Payment gateway integration (Stripe, Razorpay, etc.)',
+        'Order management & automated invoicing',
+        'E-commerce checkout optimization & CRO',
+      ],
+    },
+    {
+      id: 'cms-development',
+      name: 'CMS Development',
+      badge: 'Content Control',
+      headline: 'Intuitive Content Management Systems giving you 100% control.',
+      description: 'Flexible CMS platforms enabling your team to publish articles, update services, manage media, and edit site copy with zero technical hurdles.',
+      deliverables: [
+        'Headless & custom CMS solutions',
+        'Corporate content management portals',
+        'Blog & publishing engines',
+        'Admin dashboards & role-based permissions',
+        'SEO-friendly content editing workflows',
+      ],
+    },
+    {
+      id: 'api-development',
+      name: 'API Development & Integration',
+      badge: 'System Connectivity',
+      headline: 'Secure, high-throughput APIs connecting your digital ecosystem.',
+      description: 'Custom RESTful and GraphQL APIs allowing seamless communication between websites, mobile apps, CRM systems, payment providers, and cloud services.',
+      deliverables: [
+        'Custom REST & GraphQL API development',
+        'Third-party software & SaaS integrations',
+        'Secure authentication & data exchange',
+        'Database synchronization & backend services',
+        'API performance optimization & documentation',
+      ],
+    },
+    {
+      id: 'software-solutions',
+      name: 'Software Solutions',
+      badge: 'Custom Enterprise',
+      headline: 'Bespoke software systems to automate workflows and scale operations.',
+      description: 'Tailored business management software, digital platforms, and automation tools designed to eliminate operational bottlenecks and boost productivity.',
+      deliverables: [
+        'Custom business management systems (ERP/CRM)',
+        'Workflow & operations automation',
+        'Internal employee & client portals',
+        'Cloud infrastructure & database architecture',
+        'Technology consulting & architecture planning',
+      ],
+    },
+    {
+      id: 'social-media-marketing',
+      name: 'Social Media Marketing',
+      badge: 'Viral Content',
+      headline: 'Turn casual scrollers into loyal customers and brand advocates.',
+      description: 'Data-backed social media management, aesthetic content creation, short-form video production, and active community growth strategies.',
+      deliverables: [
+        'Social media strategy & content planning',
+        'Viral Reels, Shorts & video production',
+        'Creative graphic design & carousel posts',
+        'Audience engagement & community management',
+        'Social media growth & performance reporting',
+      ],
+    },
+    {
+      id: 'paid-advertising',
+      name: 'Paid Advertising',
+      badge: 'High-ROAS Funnels',
+      headline: 'Laser-targeted Meta & Google ad campaigns engineered for maximum ROI.',
+      description: 'Performance marketing funnels across Google Search, Display, YouTube, and Meta (Facebook & Instagram) focused on verified lead generation and customer acquisition.',
+      deliverables: [
+        'Meta Ads (Facebook & Instagram funnels)',
+        'Google Search, Display & Performance Max ads',
+        'High-intent lead generation campaigns',
+        'A/B creative testing & copywriting',
+        'Conversion API, Pixel setup & tracking',
       ],
     },
     {
       id: 'seo',
-      name: 'SEO & Organic Growth',
+      name: 'Search Engine Optimization (SEO)',
       badge: 'Dominating Search',
-      headline: 'Rank #1 on Google without burning money on low-intent traffic.',
-      description: 'Comprehensive Local SEO in Bhubaneswar and national ranking strategies. Technical audits, semantic keyword clusters, and high-authority link acquisition.',
+      headline: 'Rank #1 on Google and capture sustainable organic search traffic.',
+      description: 'Comprehensive Local SEO in Bhubaneswar and national ranking strategies covering technical optimization, high-intent keyword clusters, and high-authority links.',
       deliverables: [
-        'Local SEO & Google Business Profile (GBP) Domination',
-        'Technical SEO & Core Web Vitals Audits',
-        'High-Intent Keyword & Competitor Analysis',
-        'Content Strategy & Topic Clusters',
-        'Organic Conversion Rate Optimization (CRO)',
+        'Local SEO & Google Business Profile (GBP) optimization',
+        'Technical SEO & Core Web Vitals audits',
+        'Keyword research & competitor analysis',
+        'On-page content optimization & topic clusters',
+        'SEO reporting, rankings tracking & monitoring',
       ],
     },
     {
-      id: 'performance-marketing',
-      name: 'Performance Marketing',
-      badge: 'Meta & Google Ads',
-      headline: 'Aggressive ad campaigns engineered for maximum ROAS.',
-      description: 'No vanity impressions. We run precision-targeted Meta Ads (Instagram/Facebook) and Google Ads that capture high-intent leads and generate measurable revenue.',
+      id: 'content-strategy',
+      name: 'Content Strategy',
+      badge: 'Brand Messaging',
+      headline: 'Strategic storytelling that builds authority and drives engagement.',
+      description: 'End-to-end content planning, brand communication guidelines, SEO articles, and conversion copywriting that connect deeply with target buyers.',
       deliverables: [
-        'Meta Ads (Facebook & Instagram Funnels)',
-        'Google Search, Display & Performance Max Ads',
-        'High-ROAS E-commerce & Lead Gen Funnels',
-        'A/B Creative & Copy Testing',
-        'Conversion API & Pixel Tracking Setup',
+        'Website conversion copywriting',
+        'SEO blog & article strategy',
+        'Brand communication frameworks',
+        'Marketing collateral & whitepapers',
+        'Content calendar & publication workflow',
       ],
     },
     {
-      id: 'social-media',
-      name: 'Social Media Management',
-      badge: 'Viral Content Strategy',
-      headline: 'Turning casual scrollers into loyal brand disciples.',
-      description: 'Organic short-form video strategies, viral trend jacking, and aesthetic community building designed to dominate feeds.',
+      id: 'email-marketing',
+      name: 'Email Marketing',
+      badge: 'Retention & Nurture',
+      headline: 'Automated email funnels that nurture leads and generate repeat sales.',
+      description: 'Personalized email campaigns, automated drip sequences, newsletters, and promotional broadcasts designed to maximize subscriber lifetime value.',
       deliverables: [
-        'Viral Reels & Short-Form Video Production',
-        'Content Calendar & High-Aesthetic Feed Design',
-        'Community Engagement & DM Funnels',
-        'Influencer Collaborations & Campaigns',
-        'Trend-Jacking & Cultural Relevance Strategies',
+        'Email campaign planning & copywriting',
+        'Automated welcome & lead nurturing workflows',
+        'Newsletter design & list segmentation',
+        'Promotional & product launch broadcasts',
+        'Open rate, CTR & conversion analytics',
+      ],
+    },
+    {
+      id: 'analytics',
+      name: 'Analytics and Reporting',
+      badge: 'Data Intelligence',
+      headline: 'Actionable data insights to optimize campaigns and accelerate growth.',
+      description: 'Deep tracking of user journeys, marketing channels, conversion rates, and ROI to deliver clear recommendations for business scaling.',
+      deliverables: [
+        'Website traffic & user behavior tracking',
+        'Multi-channel campaign performance analysis',
+        'Conversion funnel tracking & drop-off analysis',
+        'Executive performance dashboards & reports',
+        'Data-backed growth recommendations',
+      ],
+    },
+    {
+      id: 'ai-automation',
+      name: 'AI Automation Solutions',
+      badge: 'Smart Systems',
+      headline: 'AI chatbots, automated workflows, and intelligent business systems.',
+      description: 'Custom AI solutions including intelligent customer support chatbots, automated lead qualification, CRM integrations, and business process automation.',
+      deliverables: [
+        'Custom AI chatbot development & deployment',
+        '24/7 customer support automation',
+        'Automated lead collection & CRM routing',
+        'Internal workflow & task automation',
+        'Smart digital assistants & AI integrations',
+      ],
+    },
+  ],
+  industriesServed: [
+    {
+      industry: 'Hospitality',
+      headline: 'Hotels, Resorts, Restaurants & Travel Businesses',
+      description: 'We help hospitality brands improve guest bookings, local discovery, and customer engagement through stunning websites, local SEO, paid campaigns, and AI reservation chatbots.',
+      solutions: [
+        'Hotel & resort website development',
+        'Local SEO & Google Maps optimization for tourist searches',
+        'Digital marketing & seasonal ad campaigns',
+        'Customer enquiry & AI booking assistant systems',
+      ],
+    },
+    {
+      industry: 'Healthcare',
+      headline: 'Clinics, Hospitals & Healthcare Providers',
+      description: 'Professional digital platforms and patient enquiry systems that build trust, facilitate appointment bookings, and dominate local medical search rankings.',
+      solutions: [
+        'Healthcare & clinic website development',
+        'Patient enquiry & appointment booking systems',
+        'Local SEO for specialized treatments and doctors',
+        'Patient education content & reputation management',
+      ],
+    },
+    {
+      industry: 'Education',
+      headline: 'Educational Institutions, Training Centers & E-Learning',
+      description: 'Engaging digital platforms and admission lead funnels that connect institutions with prospective students and parents.',
+      solutions: [
+        'Institutional website & student portal development',
+        'Admission lead generation campaigns',
+        'Course catalogues & content platforms',
+        'Student enquiry handling & chatbot systems',
+      ],
+    },
+    {
+      industry: 'E-commerce & Retail',
+      headline: 'D2C Brands, Retailers & Online Sellers',
+      description: 'High-speed shopping platforms, automated inventory systems, and high-ROAS paid media funnels to scale e-commerce revenue.',
+      solutions: [
+        'Custom e-commerce store development',
+        'High-ROAS Meta & Google Shopping ads',
+        'Shopping cart & conversion funnel optimization',
+        'Customer retention & automated email flows',
+      ],
+    },
+    {
+      industry: 'Technology & Startups',
+      headline: 'SaaS, Tech Companies & Fast-Growing Startups',
+      description: 'Brand identity systems, Next.js web applications, custom software solutions, and growth marketing to accelerate early-stage traction.',
+      solutions: [
+        'Interactive Next.js web applications & SaaS UI/UX',
+        'Product branding & investor-ready pitch materials',
+        'Custom software & API development',
+        'AI automation & scalable growth marketing',
       ],
     },
   ],
   targetAudience: [
-    'Fast-growing Startups & D2C Brands',
-    'Local Businesses & Service Providers in Bhubaneswar & Odisha',
-    'Hospitality, Real Estate & Healthcare Brands',
-    'Enterprises seeking complete digital transformation and high ROAS',
+    'Startups & fast-growing D2C brands',
+    'Local businesses & service providers in Bhubaneswar & Odisha',
+    'Hospitality, hotel, restaurant & travel enterprises',
+    'Healthcare clinics, hospitals & diagnostic centers',
+    'Educational institutions & training platforms',
+    'Enterprises requiring full digital transformation & technology solutions',
   ],
   caseStudies: [
     {
@@ -178,65 +429,175 @@ export const RITGB_KNOWLEDGE: RitgbKnowledgeBase = {
     },
   ],
   pricingModel: {
-    overview: 'Customized & performance-focused. We don’t gatekeep pricing: we structure transparent monthly retainers and project sprints based on your specific growth goals.',
+    overview: 'Customized & performance-driven. Every project quotation is tailored to your business requirements, technical complexity, feature scope, and growth goals with transparent deliverables and zero hidden fees.',
+    quotationFactors: [
+      'Service category and combination of solutions',
+      'Project complexity, scale, and technical scope',
+      'Number of custom features, integrations, and pages',
+      'Design fidelity, interactive prototypes, and revision requirements',
+      'Marketing campaign budget, channels, and targeted goals',
+    ],
     tiers: [
-      '⚡ **Starter Sprint:** Fast-turnaround branding or single landing page setup.',
-      '🚀 **Growth Retainer:** Full-service SEO + Meta/Google Ads + Social Media execution.',
-      '👑 **Enterprise Domination:** Bespoke Next.js web development, full brand overhaul, and dedicated performance team.',
+      '⚡ **Project Sprints:** Fixed-scope delivery for branding systems, logo suites, or Next.js web builds.',
+      '🚀 **Growth Retainers:** Dedicated monthly execution for SEO, Meta/Google Ads, Social Media, and Content.',
+      '👑 **Full Transformation:** End-to-end agency partnership spanning custom software, AI automation, and omnichannel growth.',
     ],
   },
   workflow: [
     {
       step: '01',
-      title: 'Discovery & Vibe Check ☕',
-      description: 'We audit your current tech, brand presence, competitors, and ad performance to find low-hanging revenue leaks.',
+      title: 'Requirement Discussion ☕',
+      description: 'We understand your business objectives, target customers, current digital presence, technical requirements, and growth targets.',
+      tasks: [
+        'Business goals & market audit',
+        'Target audience & competitor analysis',
+        'Technical & feature scope definition',
+        'Recommended solution roadmap',
+      ],
     },
     {
       step: '02',
-      title: 'Strategy & Game Plan 🧠',
-      description: 'We map out a custom growth roadmap: messaging hooks, target keyword clusters, and ad funnels.',
+      title: 'Strategy & Planning 🧠',
+      description: 'We formulate a tailored project strategy, technology architecture, design direction, and marketing funnels.',
+      tasks: [
+        'Solution architecture & tech stack selection',
+        'Creative direction & design wireframes',
+        'Timeline, milestones & resource allocation',
+        'Campaign funnel & KPI roadmap',
+      ],
     },
     {
       step: '03',
-      title: 'Execution & Firepower 🔥',
-      description: 'Our design, dev, and media teams build the assets, launch the campaigns, and push the live code.',
+      title: 'Design & Development 🔥',
+      description: 'Our creative and engineering teams craft visual assets, build clean code, integrate APIs, and implement features.',
+      tasks: [
+        'Visual identity & UI/UX prototyping',
+        'Full-stack development & database setup',
+        'Content integration & ad creative production',
+        'Client review checkpoints & iterative refinement',
+      ],
     },
     {
       step: '04',
-      title: 'Scale & Dominate 📈',
-      description: 'Continuous A/B testing, ROAS scaling, weekly KPI reporting, and zero vanity fluff.',
+      title: 'Testing & Improvement 🧪',
+      description: 'Rigorous functionality, performance, cross-device, security, and user experience testing before deployment.',
+      tasks: [
+        'Cross-browser & mobile responsiveness verification',
+        'Page speed & Core Web Vitals optimization',
+        'API & payment gateway testing',
+        'Conversion tracking & tracking pixel audit',
+      ],
+    },
+    {
+      step: '05',
+      title: 'Delivery & Support 🚀',
+      description: 'Seamless launch, training, campaign rollout, and ongoing maintenance support based on service agreements.',
+      tasks: [
+        'Live deployment & domain setup',
+        'Marketing campaign launch & ad spend optimization',
+        'Ongoing technical maintenance & security updates',
+        'Weekly/monthly performance reports & scaling insights',
+      ],
     },
   ],
+  leadCollectionFields: [
+    'Customer Name',
+    'Company / Business Name',
+    'Business Category / Industry',
+    'Required Service (Branding, Web, Mobile App, Ads, SEO, AI, etc.)',
+    'Current Website or Social Media Links',
+    'Project Requirements & Expected Deliverables',
+    'Expected Timeline & Launch Date',
+    'Estimated Budget Range',
+    'Phone Number / WhatsApp',
+    'Email Address',
+    'Preferred Communication Method',
+  ],
+  escalationTriggers: [
+    'Formal quotation or cost proposal requests',
+    'Detailed technical architecture or bespoke software discussions',
+    'Custom contractual terms or NDA requirements',
+    'Payment schedules, invoicing, or commercial negotiations',
+    'Final project sign-off or kickoff scheduling',
+  ],
+  careers: {
+    overview: 'RITGB welcomes talented, creative, and motivated professionals looking to build a career in technology, marketing, and design.',
+    domains: [
+      'Digital Marketing & Performance Ads',
+      'Web Development (React, Next.js, Node.js)',
+      'Mobile Application Development (iOS / Android)',
+      'UI/UX Design & Graphic Design',
+      'AI & Automation Solutions',
+      'Business Development & Client Support',
+      'Content Creation & Copywriting',
+    ],
+    applicationProcess: 'Interested candidates can submit their resume and portfolio through official RITGB communication channels or email Info@rayimpact.net.',
+  },
   faqs: [
     {
-      question: 'What does RITGB do and where are you located?',
-      answer: 'RITGB is a full-service digital marketing and branding agency based in Bhubaneswar, Odisha (Chandrasekharpur). We specialize in Brand Identity, Custom Next.js Web Development, Local SEO, High-ROAS Performance Ads, and Viral Social Media.',
+      question: 'What is RITGB and where are you located?',
+      answer: 'RITGB (Ray Impact Trinity Global Business) is a full-service digital growth agency located in Bhubaneswar, Odisha, India (HQ: Chandrasekharpur). We specialize in Branding, Next.js Web Development, Mobile Applications, AI Automation, Local SEO, and High-ROAS Performance Ads.',
       category: 'General',
     },
     {
-      question: 'How do your Meta and Google Ads deliver high ROAS?',
-      answer: 'We don’t just boost posts and pray. We build full multi-stage funnels (Top of Funnel awareness, Middle of Funnel consideration, and Bottom of Funnel retargeting) paired with high-converting creative copy, dynamic video hooks, and strict Conversion API tracking.',
-      category: 'SEO & Ads',
-    },
-    {
-      question: 'Can you help my local business in Bhubaneswar rank #1 on Google?',
-      answer: 'Absolutely! Our Local SEO sprint optimizes your Google Business Profile (GBP), geo-tagged citations, local backlinks, schema markup, and on-page localized content so customers nearby find you first.',
-      category: 'SEO & Ads',
-    },
-    {
-      question: 'Why do you build websites with Next.js & React instead of WordPress?',
-      answer: 'Next.js delivers sub-second load times, unbreakable security, top-tier SEO rankings, and complete design freedom without plugin bloat or maintenance headaches.',
+      question: 'What services does RITGB provide?',
+      answer: 'RITGB provides 17 full-suite digital solutions including Brand Identity, Logo Design, UI/UX Design, Website Design & Development, Mobile Apps (Android/iOS), E-commerce, CMS, APIs, Custom Software, Social Media Marketing, Paid Advertising (Google/Meta), SEO, Content Strategy, Email Marketing, Analytics, and AI Automation Solutions.',
       category: 'Services',
     },
     {
-      question: 'How does your pricing and retainer model work?',
-      answer: 'We offer modular project-based pricing (for branding/web dev) and monthly growth retainers (for Ads, SEO, and Social Media). We provide clear deliverables and zero hidden fees.',
+      question: 'Who can use RITGB services?',
+      answer: 'Our solutions are tailored for startups, small businesses, growing companies, corporate enterprises, hospitality brands, healthcare providers, educational institutions, and e-commerce stores.',
+      category: 'General',
+    },
+    {
+      question: 'Can RITGB create a custom website or web app for my business?',
+      answer: 'Yes! We design and develop custom, sub-second loading websites and web applications using modern tech stacks like Next.js, React, and TypeScript, complete with responsive UI/UX, database integration, and high SEO performance.',
+      category: 'Services',
+    },
+    {
+      question: 'Does RITGB provide mobile application development?',
+      answer: 'Yes. We develop native and cross-platform mobile applications for Android and iOS, including customer-facing apps, on-demand platforms, service apps, and internal company management tools.',
+      category: 'Services',
+    },
+    {
+      question: 'Does RITGB provide AI Automation & Chatbot development?',
+      answer: 'Yes. We build custom AI chatbots, 24/7 customer support automation, lead qualification funnels, CRM workflow automation, and smart digital assistants tailored to your operations.',
+      category: 'Services',
+    },
+    {
+      question: 'Can RITGB help hotels, restaurants, and hospitality businesses?',
+      answer: 'Yes. We provide dedicated hospitality solutions including booking-optimized websites, local SEO to capture traveler searches, seasonal paid ad funnels, and AI reservation chatbots.',
+      category: 'Services',
+    },
+    {
+      question: 'Can RITGB help my business rank #1 on Google in Bhubaneswar?',
+      answer: 'Yes! Our Local SEO and Google Business Profile (GBP) domination strategies optimize local citations, geo-tagged schema, localized content, and backlinks so customers find you first.',
+      category: 'SEO & Ads',
+    },
+    {
+      question: 'How do your Meta and Google Ads deliver high ROAS?',
+      answer: 'We engineer full multi-stage funnels (Top of Funnel awareness, Middle of Funnel consideration, and Bottom of Funnel retargeting) paired with high-converting video hooks, Conversion API tracking, and relentless A/B testing.',
+      category: 'SEO & Ads',
+    },
+    {
+      question: 'How much does a project cost and how does quotation work?',
+      answer: 'Project pricing is scope-based, determined by service category, feature complexity, design requirements, and marketing goals. Share your project requirements to receive a customized proposal.',
       category: 'Pricing & Process',
     },
     {
-      question: 'How do I claim a Free Growth Audit for my brand?',
-      answer: 'Hit our [Contact Form](/contact) or message us directly on WhatsApp (+91 918128551051). We’ll review your website, SEO, and current ads and send you a custom audit with actionable insights.',
+      question: 'How can I start a project with RITGB?',
+      answer: 'To start, submit our [Contact Form](/contact), email us at Info@rayimpact.net, or chat on WhatsApp (+91 918128551051). Share your business name, required service, project goals, and timeline to begin.',
       category: 'Pricing & Process',
+    },
+    {
+      question: 'Does RITGB provide website maintenance and support after launch?',
+      answer: 'Yes. We offer post-launch technical assistance, ongoing maintenance, performance optimization, security updates, and marketing retainers based on your service agreement.',
+      category: 'Pricing & Process',
+    },
+    {
+      question: 'Does RITGB have career openings and how can I apply?',
+      answer: 'Yes! RITGB hires across Web Development, Mobile Apps, UI/UX Design, Digital Marketing, AI Solutions, and Business Development. Submit your portfolio and CV to Info@rayimpact.net.',
+      category: 'Careers',
     },
   ],
 };
