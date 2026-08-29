@@ -1,4 +1,4 @@
-import { RITGB_KNOWLEDGE } from './ritgbKnowledge';
+import { RITGB_KNOWLEDGE } from "./ritgbKnowledge";
 
 /**
  * Intelligent deterministic fallback matcher grounded in RITGB Agency knowledge.
@@ -9,17 +9,17 @@ export function getGroundedFallbackResponse(userMessage: string): string {
 
   // 0. Identity & Name & What is RITGB
   if (
-    q.includes('your name') ||
-    q.includes('who are you') ||
-    q.includes('who r u') ||
-    q.includes('what is your name') ||
-    q.includes('whats your name') ||
-    q.includes('what are you') ||
-    q.includes('what is ritgb') ||
-    q.includes('what does ritgb stand for') ||
-    q.includes('full name') ||
-    q === 'ritzy' ||
-    q.includes('ritzy')
+    q.includes("your name") ||
+    q.includes("who are you") ||
+    q.includes("who r u") ||
+    q.includes("what is your name") ||
+    q.includes("whats your name") ||
+    q.includes("what are you") ||
+    q.includes("what is ritgb") ||
+    q.includes("what does ritgb stand for") ||
+    q.includes("full name") ||
+    q === "ritzy" ||
+    q.includes("ritzy")
   ) {
     return `I’m **Ritzy**! 💁‍♀️✨ Official AI Growth Specialist and resident hype mascot for **RITGB** (*${RITGB_KNOWLEDGE.fullName}*).
 
@@ -32,14 +32,18 @@ Ready to enter your brand's growth era? 👉 **[Get a Free Audit](/contact)**! �
   }
 
   // 0.1 Greetings
-  if (/^(hi|hello|hey|greetings|good\s*(morning|afternoon|evening)|namaste|yo|sup|hola)\b/i.test(q)) {
+  if (
+    /^(hi|hello|hey|greetings|good\s*(morning|afternoon|evening)|namaste|yo|sup|hola)\b/i.test(
+      q,
+    )
+  ) {
     return `I’m **Ritzy**—dropping some unfiltered growth tea: ☕👀
 
 Most agency websites are pure buzzword soup. We make your business impossible to ignore, no cap.
 
 ✨ **Quick Menu:**
 - 🎨 [Branding & UI/UX Design](/expertise) 💅
-- ⚡ [Next.js Web & Mobile Apps](/software) 🚀
+- ⚡ [Web & Mobile Apps](/software) 🚀
 - 🤖 [AI Chatbots & Automation](/expertise) 🧠
 - 📈 [High-ROAS Paid Ads & SEO](/expertise) 🔥
 - 🏆 [Past Client Wins & Work](/work) 👀
@@ -50,15 +54,15 @@ What part of your digital presence are we leveling up today? 🚀`;
 
   // 1. Pricing / Cost / Quotation / Budget / Retainers
   if (
-    q.includes('price') ||
-    q.includes('pricing') ||
-    q.includes('cost') ||
-    q.includes('quote') ||
-    q.includes('quotation') ||
-    q.includes('budget') ||
-    q.includes('rate') ||
-    q.includes('retainer') ||
-    q.includes('how much')
+    q.includes("price") ||
+    q.includes("pricing") ||
+    q.includes("cost") ||
+    q.includes("quote") ||
+    q.includes("quotation") ||
+    q.includes("budget") ||
+    q.includes("rate") ||
+    q.includes("retainer") ||
+    q.includes("how much")
   ) {
     return `Zero gatekeeping on pricing—we tailor quotes to your exact scope: ☕🤝
 
@@ -74,11 +78,11 @@ Every single rupee/dollar goes directly toward measurable ROI. 💅
 
   // 2. Free Audit / Consultation / Strategy Call / Demo
   if (
-    q.includes('audit') ||
-    q.includes('consultation') ||
-    q.includes('free') ||
-    q.includes('meeting') ||
-    q.includes('schedule')
+    q.includes("audit") ||
+    q.includes("consultation") ||
+    q.includes("free") ||
+    q.includes("meeting") ||
+    q.includes("schedule")
   ) {
     return `No 40-page boring audit PDFs you’ll never read. Real talk only: ☕💀
 
@@ -94,11 +98,11 @@ Zero gatekeeping. 100% actionable game plan. 💅
 
   // 3. How to Start a Project / Client Onboarding / Lead Intake
   if (
-    q.includes('start a project') ||
-    q.includes('how to start') ||
-    q.includes('get started') ||
-    q.includes('onboarding') ||
-    q.includes('submit requirements')
+    q.includes("start a project") ||
+    q.includes("how to start") ||
+    q.includes("get started") ||
+    q.includes("onboarding") ||
+    q.includes("submit requirements")
   ) {
     return `Ready to level up? Starting a project with RITGB is super simple: 🚀📝
 
@@ -116,13 +120,13 @@ Drop these in our form and our team will get back to you within 2 hours! ⏱️
 
   // 4. Careers / Hiring / Jobs / Internships
   if (
-    q.includes('career') ||
-    q.includes('job') ||
-    q.includes('hiring') ||
-    q.includes('intern') ||
-    q.includes('opening') ||
-    q.includes('apply') ||
-    q.includes('vacancy')
+    q.includes("career") ||
+    q.includes("job") ||
+    q.includes("hiring") ||
+    q.includes("intern") ||
+    q.includes("opening") ||
+    q.includes("apply") ||
+    q.includes("vacancy")
   ) {
     return `We’re always on the lookout for top-tier creative and technical talent! 💼✨
 
@@ -139,17 +143,17 @@ Ready to join our team? Send your resume & portfolio to **[${RITGB_KNOWLEDGE.con
 
   // 5. All Services Overview / What services do you offer?
   if (
-    q.includes('all service') ||
-    q.includes('what services') ||
-    q.includes('list services') ||
-    q.includes('services do you provide') ||
-    q.includes('offerings') ||
-    q === 'services'
+    q.includes("all service") ||
+    q.includes("what services") ||
+    q.includes("list services") ||
+    q.includes("services do you provide") ||
+    q.includes("offerings") ||
+    q === "services"
   ) {
     return `We provide 17 full-suite digital solutions across 4 powerhouse verticals: 🚀✨
 
 🎨 **Design & Brand:** Brand Identity, Logo Design, UI/UX Design & Website Design
-⚡ **Tech & Code:** Next.js Web Dev, Mobile Apps (iOS/Android), E-Commerce, CMS & APIs
+⚡ **Tech & Code:** Web Dev, Mobile Apps (iOS/Android), E-Commerce, CMS & APIs
 🤖 **AI & Systems:** Custom AI Chatbots, Business Automation & Software Solutions
 📈 **Growth & Marketing:** SEO, Google/Meta Ads, Social Media, Content & Email Marketing
 
@@ -160,14 +164,14 @@ We don't do half-baked MVPs; we build scalable market leaders. 💅
 
   // 6. Brand Identity & Logo Design
   if (
-    q.includes('brand') ||
-    q.includes('branding') ||
-    q.includes('logo') ||
-    q.includes('identity') ||
-    q.includes('packaging') ||
-    q.includes('visual identity') ||
-    q.includes('brand guidelines') ||
-    q.includes('typography')
+    q.includes("brand") ||
+    q.includes("branding") ||
+    q.includes("logo") ||
+    q.includes("identity") ||
+    q.includes("packaging") ||
+    q.includes("visual identity") ||
+    q.includes("brand guidelines") ||
+    q.includes("typography")
   ) {
     return `Generic Canva templates are giving NPC energy. We build main characters. 💅✨
 
@@ -184,14 +188,14 @@ Make your brand unforgettable. Period. 🤝
 
   // 7. UI/UX Design & Product Design
   if (
-    q.includes('ui/ux') ||
-    q.includes('ui ux') ||
-    q.includes('ui design') ||
-    q.includes('ux design') ||
-    q.includes('prototype') ||
-    q.includes('wireframe') ||
-    q.includes('dashboard') ||
-    q.includes('interface')
+    q.includes("ui/ux") ||
+    q.includes("ui ux") ||
+    q.includes("ui design") ||
+    q.includes("ux design") ||
+    q.includes("prototype") ||
+    q.includes("wireframe") ||
+    q.includes("dashboard") ||
+    q.includes("interface")
   ) {
     return `If users can't navigate your product in 3 seconds, they bounce. 💀📱
 
@@ -208,14 +212,14 @@ Great design is good business. We understood the assignment. 💅
 
   // 8. Web Design & Website Development / Next.js / Tech
   if (
-    q.includes('website') ||
-    q.includes('web design') ||
-    q.includes('web dev') ||
-    q.includes('next.js') ||
-    q.includes('react') ||
-    q.includes('web development') ||
-    q.includes('landing page') ||
-    q.includes('speed')
+    q.includes("website") ||
+    q.includes("web design") ||
+    q.includes("web dev") ||
+    q.includes("next.js") ||
+    q.includes("react") ||
+    q.includes("web development") ||
+    q.includes("landing page") ||
+    q.includes("speed")
   ) {
     return `If your website takes 5 seconds to load, your conversion rate is cooked. 💀⚡
 
@@ -232,14 +236,14 @@ Your website is your best salesperson. Make it count. 💅
 
   // 9. Mobile Application Development (iOS / Android / Flutter / React Native)
   if (
-    q.includes('mobile app') ||
-    q.includes('app dev') ||
-    q.includes('ios') ||
-    q.includes('android') ||
-    q.includes('flutter') ||
-    q.includes('react native') ||
-    q.includes('mobile application') ||
-    q.includes('app development')
+    q.includes("mobile app") ||
+    q.includes("app dev") ||
+    q.includes("ios") ||
+    q.includes("android") ||
+    q.includes("flutter") ||
+    q.includes("react native") ||
+    q.includes("mobile application") ||
+    q.includes("app development")
   ) {
     return `Mobile apps that lag get uninstalled in 60 seconds. We build buttery-smooth apps. 📱⚡
 
@@ -256,14 +260,14 @@ From wireframing to App Store & Play Store deployment, we handle it all. 💅
 
   // 10. E-Commerce Development & CMS
   if (
-    q.includes('ecommerce') ||
-    q.includes('e-commerce') ||
-    q.includes('online store') ||
-    q.includes('shop') ||
-    q.includes('shopping cart') ||
-    q.includes('cms') ||
-    q.includes('shopify') ||
-    q.includes('woocommerce')
+    q.includes("ecommerce") ||
+    q.includes("e-commerce") ||
+    q.includes("online store") ||
+    q.includes("shop") ||
+    q.includes("shopping cart") ||
+    q.includes("cms") ||
+    q.includes("shopify") ||
+    q.includes("woocommerce")
   ) {
     return `High cart abandonment? Your checkout flow needs a serious vibe check. 🛒💀
 
@@ -280,13 +284,13 @@ Scale your store from 10 orders to 10,000 orders seamlessly. 🚀
 
   // 11. API Development & Custom Software Solutions
   if (
-    q.includes('api') ||
-    q.includes('software') ||
-    q.includes('custom software') ||
-    q.includes('backend') ||
-    q.includes('erp') ||
-    q.includes('crm') ||
-    q.includes('system integration')
+    q.includes("api") ||
+    q.includes("software") ||
+    q.includes("custom software") ||
+    q.includes("backend") ||
+    q.includes("erp") ||
+    q.includes("crm") ||
+    q.includes("system integration")
   ) {
     return `Siloed systems are silently bleeding your team's productivity. ☕⚙️
 
@@ -303,12 +307,12 @@ Eliminate manual bottlenecks and scale your operations effortlessly. 🧠
 
   // 12. AI Automation Solutions & Chatbots
   if (
-    q.includes('ai') ||
-    q.includes('artificial intelligence') ||
-    q.includes('chatbot') ||
-    q.includes('bot') ||
-    q.includes('automation') ||
-    q.includes('assistant')
+    q.includes("ai") ||
+    q.includes("artificial intelligence") ||
+    q.includes("chatbot") ||
+    q.includes("bot") ||
+    q.includes("automation") ||
+    q.includes("assistant")
   ) {
     return `Automating repetitive tasks is how modern businesses 10x their output. 🤖⚡
 
@@ -325,14 +329,14 @@ Never lose a customer because of delayed response times again. 💅
 
   // 13. Search Engine Optimization (SEO) & Local SEO
   if (
-    q.includes('seo') ||
-    q.includes('rank') ||
-    q.includes('ranking') ||
-    q.includes('google search') ||
-    q.includes('organic') ||
-    q.includes('traffic') ||
-    q.includes('keyword') ||
-    q.includes('local seo')
+    q.includes("seo") ||
+    q.includes("rank") ||
+    q.includes("ranking") ||
+    q.includes("google search") ||
+    q.includes("organic") ||
+    q.includes("traffic") ||
+    q.includes("keyword") ||
+    q.includes("local seo")
   ) {
     return `Major side eye to agencies selling spam backlinks and empty promises. 😒📉
 
@@ -349,17 +353,17 @@ Stop paying for ad clicks when you can own the search results organically. 🧠
 
   // 14. Paid Advertising (Meta & Google Ads) / ROAS / PPC
   if (
-    q.includes('ad') ||
-    q.includes('ads') ||
-    q.includes('meta') ||
-    q.includes('facebook') ||
-    q.includes('instagram ad') ||
-    q.includes('google ad') ||
-    q.includes('roas') ||
-    q.includes('paid') ||
-    q.includes('ppc') ||
-    q.includes('lead gen') ||
-    q.includes('campaign')
+    q.includes("ad") ||
+    q.includes("ads") ||
+    q.includes("meta") ||
+    q.includes("facebook") ||
+    q.includes("instagram ad") ||
+    q.includes("google ad") ||
+    q.includes("roas") ||
+    q.includes("paid") ||
+    q.includes("ppc") ||
+    q.includes("lead gen") ||
+    q.includes("campaign")
   ) {
     return `Boosting Instagram posts with no funnel is literally burning cash. 💸💀
 
@@ -376,14 +380,14 @@ We scaled D2C brands to 4.8x ROAS. We understood the assignment. 💅
 
   // 15. Social Media Marketing & Content Strategy
   if (
-    q.includes('social media') ||
-    q.includes('social') ||
-    q.includes('reels') ||
-    q.includes('instagram') ||
-    q.includes('content') ||
-    q.includes('viral') ||
-    q.includes('video') ||
-    q.includes('community')
+    q.includes("social media") ||
+    q.includes("social") ||
+    q.includes("reels") ||
+    q.includes("instagram") ||
+    q.includes("content") ||
+    q.includes("viral") ||
+    q.includes("video") ||
+    q.includes("community")
   ) {
     return `Boring corporate graphics in 2026? Instant swipe-away. 💀📱
 
@@ -400,12 +404,12 @@ Enter your viral era without looking cringe. 💅
 
   // 16. Email Marketing & Analytics
   if (
-    q.includes('email marketing') ||
-    q.includes('newsletter') ||
-    q.includes('analytics') ||
-    q.includes('reporting') ||
-    q.includes('data') ||
-    q.includes('tracking')
+    q.includes("email marketing") ||
+    q.includes("newsletter") ||
+    q.includes("analytics") ||
+    q.includes("reporting") ||
+    q.includes("data") ||
+    q.includes("tracking")
   ) {
     return `Your email list and marketing data are your most undervalued assets. 📈☕
 
@@ -422,20 +426,20 @@ Turn raw customer data into predictable, compounding revenue. 🧠
 
   // 17. Industries Served: Hospitality, Healthcare, Education, Tech, E-commerce
   if (
-    q.includes('hospitality') ||
-    q.includes('hotel') ||
-    q.includes('resort') ||
-    q.includes('restaurant') ||
-    q.includes('healthcare') ||
-    q.includes('clinic') ||
-    q.includes('hospital') ||
-    q.includes('doctor') ||
-    q.includes('education') ||
-    q.includes('school') ||
-    q.includes('college') ||
-    q.includes('startup') ||
-    q.includes('industry') ||
-    q.includes('industries')
+    q.includes("hospitality") ||
+    q.includes("hotel") ||
+    q.includes("resort") ||
+    q.includes("restaurant") ||
+    q.includes("healthcare") ||
+    q.includes("clinic") ||
+    q.includes("hospital") ||
+    q.includes("doctor") ||
+    q.includes("education") ||
+    q.includes("school") ||
+    q.includes("college") ||
+    q.includes("startup") ||
+    q.includes("industry") ||
+    q.includes("industries")
   ) {
     return `We build tailor-made growth engines for specialized industries: 🏨🏥🎓
 
@@ -443,7 +447,7 @@ Turn raw customer data into predictable, compounding revenue. 🧠
 🏥 **Healthcare:** Clinic platforms, appointment funnels & local medical search
 🎓 **Education:** Admissions lead funnels, institutional portals & student bots
 🛍️ **E-Commerce & D2C:** High-speed stores & 4.8x ROAS paid media funnels
-🚀 **Startups & Tech:** Brand identity, Next.js web apps & SaaS growth
+🚀 **Startups & Tech:** Brand identity, web apps & SaaS growth
 
 We know what converts in your specific market. 💅
 
@@ -452,12 +456,12 @@ We know what converts in your specific market. 💅
 
   // 18. Project Process / 5-stage Workflow
   if (
-    q.includes('process') ||
-    q.includes('workflow') ||
-    q.includes('how it works') ||
-    q.includes('steps') ||
-    q.includes('timeline') ||
-    q.includes('lifecycle')
+    q.includes("process") ||
+    q.includes("workflow") ||
+    q.includes("how it works") ||
+    q.includes("steps") ||
+    q.includes("timeline") ||
+    q.includes("lifecycle")
   ) {
     return `Zero guesswork. We follow a structured 5-stage project lifecycle: 📋🚀
 
@@ -474,20 +478,20 @@ Clear milestones, transparent communication, and zero missed deadlines. 💅
 
   // 19. Case Studies / Portfolio / Proof / Past Work / Results
   if (
-    q.includes('work') ||
-    q.includes('portfolio') ||
-    q.includes('case stud') ||
-    q.includes('clients') ||
-    q.includes('results') ||
-    q.includes('proof') ||
-    q.includes('examples')
+    q.includes("work") ||
+    q.includes("portfolio") ||
+    q.includes("case stud") ||
+    q.includes("clients") ||
+    q.includes("results") ||
+    q.includes("proof") ||
+    q.includes("examples")
   ) {
     return `Numbers speak louder than agency hype. Here’s the real tea: 📊👀
 
 Recent client flexes:
 🛍️ **D2C Lifestyle Brand:** Scaled from ₹2.5L to ₹18L/mo at **4.8x ROAS** 🚀
 🏥 **Bhubaneswar Healthcare:** **+340% Inbound Leads** via local SEO rankings 📈
-⚡ **Fintech SaaS:** Award-worthy Next.js web app with **99/100 speed score** 💅
+⚡ **Fintech SaaS:** Award-worthy web app with **99/100 speed score** 💅
 
 We don’t just talk about growth; we engineer it. 🤝
 
@@ -496,18 +500,18 @@ We don’t just talk about growth; we engineer it. 🤝
 
   // 20. Location / Bhubaneswar / Odisha / Address / Office
   if (
-    q.includes('location') ||
-    q.includes('where are you') ||
-    q.includes('office') ||
-    q.includes('address') ||
-    q.includes('bhubaneswar') ||
-    q.includes('odisha') ||
-    q.includes('chandrasekharpur')
+    q.includes("location") ||
+    q.includes("where are you") ||
+    q.includes("office") ||
+    q.includes("address") ||
+    q.includes("bhubaneswar") ||
+    q.includes("odisha") ||
+    q.includes("chandrasekharpur")
   ) {
     return `Proudly headquartered in the smart city of **Bhubaneswar, Odisha, India**! 📍✨
 
 🏢 **HQ Address:** ${RITGB_KNOWLEDGE.location.address}
-📞 **Phone:** ${RITGB_KNOWLEDGE.contact.phone.join(' | ')}
+📞 **Phone:** ${RITGB_KNOWLEDGE.contact.phone.join(" | ")}
 📧 **Email:** [${RITGB_KNOWLEDGE.contact.email}](mailto:${RITGB_KNOWLEDGE.contact.email})
 
 Drop by our office for chai & strategy, or jump on a quick discovery call! ☕
@@ -517,16 +521,16 @@ Drop by our office for chai & strategy, or jump on a quick discovery call! ☕
 
   // 21. Human Escalation / Speak to Human / Contact Info
   if (
-    q.includes('human') ||
-    q.includes('real person') ||
-    q.includes('talk to someone') ||
-    q.includes('phone') ||
-    q.includes('email') ||
-    q.includes('whatsapp') ||
-    q.includes('contact') ||
-    q.includes('hire') ||
-    q.includes('talk') ||
-    q.includes('reach')
+    q.includes("human") ||
+    q.includes("real person") ||
+    q.includes("talk to someone") ||
+    q.includes("phone") ||
+    q.includes("email") ||
+    q.includes("whatsapp") ||
+    q.includes("contact") ||
+    q.includes("hire") ||
+    q.includes("talk") ||
+    q.includes("reach")
   ) {
     return `Let’s connect you directly with our human strategy and leadership team: 🚀📞
 
@@ -545,7 +549,7 @@ We usually respond in under 2 hours during work hours. No waiting for days! 💅
 
 **RITGB** (*${RITGB_KNOWLEDGE.fullName}*) provides full-scale digital growth:
 - 🎨 [Branding & UI/UX Design](/expertise)
-- ⚡ [Next.js Websites & Mobile Apps](/software)
+- ⚡ [Websites & Mobile Apps](/software)
 - 🤖 [AI Automation & Custom Software](/software)
 - 📈 [High-ROAS Meta & Google Ads](/expertise)
 - 🔍 [Dominant Local & National SEO](/expertise)

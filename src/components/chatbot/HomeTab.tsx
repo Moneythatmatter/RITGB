@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import {
   Sparkles,
   Target,
@@ -9,7 +9,7 @@ import {
   Coffee,
   MessageSquare,
   ChevronRight,
-} from 'lucide-react';
+} from "lucide-react";
 
 interface HomeTabProps {
   onSelectAction: (query: string) => void;
@@ -18,32 +18,32 @@ interface HomeTabProps {
 
 const ACTION_CARDS = [
   {
-    id: 'services',
-    title: 'Explore 17 Services 🚀',
-    description: 'Branding, Next.js Web Dev, Mobile Apps, AI & Ads.',
+    id: "services",
+    title: "Explore 17 Services 🚀",
+    description: "Branding, Web Dev, Mobile Apps, AI & Ads.",
     icon: Sparkles,
-    query: 'What services does RITGB provide?',
+    query: "What services does RITGB provide?",
   },
   {
-    id: 'ai-tech',
-    title: 'AI & Custom Software 🤖',
-    description: 'AI Chatbots, business automation & mobile apps.',
+    id: "ai-tech",
+    title: "AI & Custom Software 🤖",
+    description: "AI Chatbots, business automation & mobile apps.",
     icon: Bot,
-    query: 'Tell me about RITGB AI automation and custom software solutions.',
+    query: "Tell me about RITGB AI automation and custom software solutions.",
   },
   {
-    id: 'audit',
-    title: 'Free Growth Audit 🎯',
-    description: 'Uncover conversion leaks & SEO gaps (zero fluff).',
+    id: "audit",
+    title: "Free Growth Audit 🎯",
+    description: "Uncover conversion leaks & SEO gaps (zero fluff).",
     icon: Target,
-    query: 'How can I claim a Free Growth Audit for my brand?',
+    query: "How can I claim a Free Growth Audit for my brand?",
   },
   {
-    id: 'pricing',
-    title: 'Pricing & Process ☕',
-    description: '5-stage workflow, custom proposals & retainers.',
+    id: "pricing",
+    title: "Pricing & Process ☕",
+    description: "5-stage workflow, custom proposals & retainers.",
     icon: Coffee,
-    query: 'How does RITGB structure its pricing and project process?',
+    query: "How does RITGB structure its pricing and project process?",
   },
 ];
 
@@ -77,10 +77,13 @@ export const HomeTab: React.FC<HomeTabProps> = ({
         <div className="space-y-1.5 flex-1">
           <h3 className="text-[15px] font-bold text-slate-900 leading-snug">
             Hi, I&apos;m Ritzy 👋 <br />
-            <span className="text-black font-black">AI Growth Specialist at RITGB.</span>
+            <span className="text-black font-black">
+              AI Growth Specialist at RITGB.
+            </span>
           </h3>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Dropping unfiltered tea on Branding, Next.js Web Dev, Mobile Apps, AI Automation & High-ROAS Ads.
+            Dropping unfiltered tea on Branding, Web Dev, Mobile Apps, AI
+            Automation & High-ROAS Ads.
           </p>
           <p className="text-xs font-bold text-slate-800 pt-0.5">
             Ready to make your business impossible to ignore? 🚀

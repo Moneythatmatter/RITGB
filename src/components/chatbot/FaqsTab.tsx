@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, MessageSquare, Search } from 'lucide-react';
-import { RITGB_KNOWLEDGE, FaqItem } from '@/lib/knowledge/ritgbKnowledge';
+import React, { useState } from "react";
+import { ChevronDown, HelpCircle, MessageSquare, Search } from "lucide-react";
+import { RITGB_KNOWLEDGE, FaqItem } from "@/lib/knowledge/ritgbKnowledge";
 
 interface FaqsTabProps {
   onAskQuestion: (question: string) => void;
 }
 
 export const FaqsTab: React.FC<FaqsTabProps> = ({ onAskQuestion }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   const filteredFaqs: FaqItem[] = RITGB_KNOWLEDGE.faqs.filter(
     (faq) =>
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.category.toLowerCase().includes(searchQuery.toLowerCase())
+      faq.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -72,7 +72,7 @@ export const FaqsTab: React.FC<FaqsTabProps> = ({ onAskQuestion }) => {
                   </span>
                   <ChevronDown
                     className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      isExpanded ? 'rotate-180 text-black' : ''
+                      isExpanded ? "rotate-180 text-black" : ""
                     }`}
                   />
                 </button>
