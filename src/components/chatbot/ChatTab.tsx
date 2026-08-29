@@ -1,10 +1,17 @@
-'use client';
+"use client";
 
-import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
-import { AlertCircle, ChevronRight, Sparkles, Code, Bot, TrendingUp } from 'lucide-react';
-import { ChatMessage, Message } from './ChatMessage';
-import { ChatInput } from './ChatInput';
+import React, { useRef, useEffect } from "react";
+import Image from "next/image";
+import {
+  AlertCircle,
+  ChevronRight,
+  Sparkles,
+  Code,
+  Bot,
+  TrendingUp,
+} from "lucide-react";
+import { ChatMessage, Message } from "./ChatMessage";
+import { ChatInput } from "./ChatInput";
 
 interface ChatTabProps {
   messages: Message[];
@@ -16,28 +23,28 @@ interface ChatTabProps {
 
 const CHAT_SUGGESTIONS = [
   {
-    title: 'Brand & UI/UX Design 🎨',
-    description: 'Logo systems, style guides & digital experiences.',
+    title: "Brand & UI/UX Design 🎨",
+    description: "Logo systems, style guides & digital experiences.",
     icon: Sparkles,
-    query: 'Tell me about RITGB branding and UI/UX design services.',
+    query: "Tell me about RITGB branding and UI/UX design services.",
   },
   {
-    title: 'Web & Mobile Dev ⚡',
-    description: 'Next.js apps, iOS/Android & sub-second speed.',
+    title: "Web & Mobile Dev ⚡",
+    description: "Next.js apps, iOS/Android & sub-second speed.",
     icon: Code,
-    query: 'Can RITGB build a custom Next.js website or mobile app for my business?',
+    query: "Can RITGB build a custom website or mobile app for my business?",
   },
   {
-    title: 'AI Automation & Bots 🤖',
-    description: '24/7 customer support bots & workflow automation.',
+    title: "AI Automation & Bots 🤖",
+    description: "24/7 customer support bots & workflow automation.",
     icon: Bot,
-    query: 'Does RITGB provide AI chatbot development and automation?',
+    query: "Does RITGB provide AI chatbot development and automation?",
   },
   {
-    title: 'Paid Ads & Local SEO 📈',
-    description: 'High-ROAS Meta/Google Ads & Google map rankings.',
+    title: "Paid Ads & Local SEO 📈",
+    description: "High-ROAS Meta/Google Ads & Google map rankings.",
     icon: TrendingUp,
-    query: 'How do your Meta and Google Ads deliver high ROAS?',
+    query: "How do your Meta and Google Ads deliver high ROAS?",
   },
 ];
 
@@ -54,8 +61,8 @@ export const ChatTab: React.FC<ChatTabProps> = ({
   const scrollToBottom = (smooth = true) => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({
-        behavior: smooth ? 'smooth' : 'auto',
-        block: 'end',
+        behavior: smooth ? "smooth" : "auto",
+        block: "end",
       });
     }
   };
