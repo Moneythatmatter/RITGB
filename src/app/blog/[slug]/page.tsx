@@ -97,17 +97,17 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const jsonLdFaq = faqSection?.faqs
     ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqSection.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      }
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqSection.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    }
     : null;
 
   return (
@@ -243,7 +243,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                           href={section.ctaLink}
                           className="font-arial font-bold text-base md:text-lg text-black underline underline-offset-4 decoration-black/40 hover:decoration-black transition-colors"
                         >
-                          {section.ctaText} →
+                          {section.ctaText}
                         </a>
                       )}
                     </div>
