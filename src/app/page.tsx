@@ -1,7 +1,6 @@
 import Testimonials from "@/components/agency/Testimonials";
 import AboutImage from "@/components/sections/AboutImage";
 import AboutText from "@/components/sections/AboutText";
-// import CaseStudy from "@/components/sections/CaseStudy";
 import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import Industry from "@/components/sections/Industry";
@@ -10,7 +9,6 @@ import Numbers from "@/components/sections/Numbers";
 import Portfolio from "@/components/sections/Portfolio";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
-import SiteFooter from "@/components/SiteFooter";
 import Footer from "@/components/Footer";
 import ClientsSection from "@/components/expertise/ClientsSection";
 import ShowReel from "@/components/work/ShowReel";

@@ -68,7 +68,7 @@ export default function SiteFooter() {
                 Info@rayimpact.net
               </a>
               <a
-                href="https://maps.google.com/?q=260/1821,+Lane+2+Rd,+Mahadev+Nagar,+Jagannath+Nagar,+Jharapada,+Bhubaneswar,+Odisha+751025"
+                href="https://maps.google.com/?q=RITGB+First+Floor,+Plot+No+3637,+behind+Tanishq+Showroom,+Chandrasekharpur,+Bhubaneswar,+Odisha+751016"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-[Arial] text-sm text-white/60 hover:text-white transition-colors tracking-wide leading-relaxed break-words"
