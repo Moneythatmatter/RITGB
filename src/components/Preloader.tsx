@@ -34,7 +34,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     const finish = () => {
       gsap.to(counter, {
         value: 100,
-        duration: 1.5,
+        duration: 0.7,
         ease: "power1.out",
         onUpdate: () => {
           const val = Math.round(counter.value);
@@ -42,7 +42,6 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           if (numberRef.current) numberRef.current.textContent = `${val}%`;
         },
         onComplete: () => {
-          // Exit animation
           const exitTl = gsap.timeline({
             onComplete: () => {
               document.body.style.overflow = "";
@@ -88,7 +87,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         <div className="mt-8 h-48 w-48 overflow-hidden sm:h-56 sm:w-56">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/loading/waiting meme gif.webp"
+            src="/images/loading/waiting-meme-mr-bean.webp"
             alt="Loading waiting meme GIF"
             className="h-full w-full object-cover"
           />

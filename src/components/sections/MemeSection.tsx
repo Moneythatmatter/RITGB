@@ -65,7 +65,7 @@ export default function Meme() {
         <Image
           src="/images/breaking-bad.gif"
           alt="RITGB team ready to grow your brand"
-          loading="eager"
+          loading="lazy"
           width={484}
           height={282}
           className="w-full h-auto"
