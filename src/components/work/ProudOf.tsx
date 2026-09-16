@@ -17,7 +17,7 @@ const projects = [
     link: "https://antaraalresort.com/",
     instagramLink: "https://www.instagram.com/antaraal_resort/",
     instagramUsername: "antaraal_resort",
-    image: "/images/work/work1.png",
+    image: "/images/work/work1.webp",
   },
   {
     title: "Pawzwell — End-to-End\nBrand Growth Partnership",
@@ -27,7 +27,7 @@ const projects = [
     link: "https://pawzwell.com/",
     instagramLink: "https://www.instagram.com/pawzwellofficial/",
     instagramUsername: "pawzwellofficial",
-    image: "/images/work/temp.png",
+    image: "/images/work/temp.webp",
   },
   {
     title: "The Bliss Palampur — Ongoing\nDigital Growth Partnership",
@@ -36,7 +36,7 @@ const projects = [
     link: "https://theblisspalampur.com/",
     instagramLink: "https://www.instagram.com/the.blisspalampur/",
     instagramUsername: "the.blisspalampur",
-    image: "/images/work/work3.png",
+    image: "/images/work/work3.webp",
   },
   {
     title: "Hotel Victoria Grand — Complete\nHospitality Marketing Support",
@@ -46,7 +46,7 @@ const projects = [
     link: "https://hotelvictoriagrand.com/",
     instagramLink: "https://www.instagram.com/hotelvictoriagrand/",
     instagramUsername: "hotelvictoriagrand",
-    image: "/images/work/work4.png",
+    image: "/images/work/work4.webp",
   },
   {
     title: "Antaraal Resort — Website\nDesign & Development",
@@ -56,7 +56,7 @@ const projects = [
     link: "https://antaraalresort.com/",
     instagramLink: "https://www.instagram.com/antaraal_resort/",
     instagramUsername: "antaraal_resort",
-    image: "/images/work/work5.png",
+    image: "/images/work/work5.webp",
   },
   {
     title: "Epsum Labs — Website\nRedesign & Digital Experience",
@@ -65,7 +65,7 @@ const projects = [
     link: "https://epsumlabs.com/",
     instagramLink: "https://www.instagram.com/epsumlabs/",
     instagramUsername: "epsumlabs",
-    image: "/images/work/work6.png",
+    image: "/images/work/work6.webp",
   },
   {
     title: "Shopify E-commerce Store Development",
@@ -75,7 +75,7 @@ const projects = [
     link: "https://pawzwell.com/",
     instagramLink: "https://www.instagram.com/pawzwellofficial/",
     instagramUsername: "pawzwellofficial",
-    image: "/images/work/work8.png",
+    image: "/images/work/work8.webp",
   },
   {
     title: "Fashion E-commerce Website Development",
@@ -84,7 +84,7 @@ const projects = [
     link: "https://www.monicanera.com/",
     instagramLink: "https://www.instagram.com/pawzwellofficial/",
     // instagramUsername: "pawzwellofficial",
-    image: "/images/work/work7.png",
+    image: "/images/work/work7.webp",
   },
 ];
 

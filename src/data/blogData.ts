@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "GROWTH",
     date: "2026",
     readTime: "5 min read",
-    image: "/images/blog/blog1.png",
+    image: "/images/blog/blog1.webp",
     excerpt:
       "The hours people spend online keep climbing. Buying something, tracking down a service, sizing up a company — nearly every journey now begins with a search box.",
     author: {
@@ -409,7 +409,7 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "MARKETING",
     date: "2026",
     readTime: "6 min read",
-    image: "/images/blog/blog2.png",
+    image: "/images/blog/blog2.webp",
     excerpt:
       "Owning a good product is no longer enough to carry a business through 2026. Before anyone spends money, they look you up. They weigh you against rivals, scan reviews, click through your website and decide whether you seem worth trusting.",
     author: {
@@ -733,7 +733,7 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "BRANDING & SEO",
     date: "2026",
     readTime: "6 min read",
-    image: "/images/blog/blog3.jpeg",
+    image: "/images/blog/blog3.webp",
     excerpt:
       "Think of the last time you looked for a new place to eat, needed a doctor, or hired someone for a job at home. Odds are the search began on a screen. The people you want as customers are behaving exactly the same way.",
     author: {
@@ -1199,7 +1199,7 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "DIGITAL MARKETING",
     date: "2026",
     readTime: "6 min read",
-    image: "/images/blog/blog4.jpeg",
+    image: "/images/blog/blog4.webp",
     excerpt:
       "Business in 2026 does not look the way it did even a short while ago. A customer now types a product name into Google before they buy it, scrolls through Instagram before they book a table, and reads a handful of reviews before they pick up the phone.",
     author: {

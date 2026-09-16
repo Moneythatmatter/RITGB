@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   description:
     "RITGB is a full-service digital growth agency in Bhubaneswar offering branding, web design, development & SEO. We make your business impossible to ignore.",
   icons: {
-    icon: "/images/logo/ritgb-favicon.png",
-    shortcut: "/images/logo/ritgb-favicon.png",
-    apple: "/images/logo/ritgb-favicon.png",
+    icon: "/images/logo/ritgb-favicon.webp",
+    shortcut: "/images/logo/ritgb-favicon.webp",
+    apple: "/images/logo/ritgb-favicon.webp",
   },
 };
 

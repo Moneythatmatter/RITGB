@@ -15,7 +15,7 @@ export default function AgencyMission() {
 
       <div className="relative w-full max-w-xl">
         <Image
-          src="/images/agency/agency.png"
+          src="/images/agency/agency.webp"
           alt="Team collaboration"
           width={960}
           height={540}

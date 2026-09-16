@@ -86,7 +86,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       url: "https://www.ritgb.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.ritgb.com/images/logo/ritgb-logo-transparent.png",
+        url: "https://www.ritgb.com/images/logo/ritgb-logo-transparent.webp",
       },
     },
     mainEntityOfPage: {

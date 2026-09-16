@@ -16,7 +16,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="py-2 flex items-center">
           <Image
-            src="/images/logo/ritgb-logo-transparent.png"
+            src="/images/logo/ritgb-logo-transparent.webp"
             alt="RITGB – Digital Marketing Agency Bhubaneswar Logo"
             width={350}
             height={110}

@@ -22,7 +22,7 @@ const services = [
       "Multi-Property Management",
       "Direct Booking Integration",
     ],
-    image: "/images/software/impact.png",
+    image: "/images/software/impact.webp",
     imageAlt: "Impact PMS",
   },
   {
@@ -43,7 +43,7 @@ const services = [
       "Automated Reminders",
       "Analytics Dashboards",
     ],
-    image: "/images/software/crm.png",
+    image: "/images/software/crm.webp",
     imageAlt: "CRM Solutions",
   },
   {
@@ -61,7 +61,7 @@ const services = [
       "Booking Analytics",
       "OTA Syncing",
     ],
-    image: "/images/software/direct.png",
+    image: "/images/software/direct.webp",
     imageAlt: "Direct booking engine",
   },
   {
@@ -90,7 +90,7 @@ const services = [
         "Payment Reports",
       ],
     },
-    image: "/images/software/payment.png",
+    image: "/images/software/payment.webp",
     imageAlt: "Payment gateway:",
   },
   {
@@ -108,7 +108,7 @@ const services = [
       "Booking Platforms",
       "Business Management Systems",
     ],
-    image: "/images/software/custom.png",
+    image: "/images/software/custom.webp",
     imageAlt: "Custom software",
   },
 ];
