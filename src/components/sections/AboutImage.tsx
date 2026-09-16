@@ -41,7 +41,7 @@ export default function AboutImage() {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="none"
             className="absolute inset-0 w-full h-full object-contain md:object-cover"
           >
             <source src="/videos/Showreel-RITGB.mp4" type="video/mp4" />

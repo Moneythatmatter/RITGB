@@ -14,60 +14,71 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   const numberRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    // Lock scroll while loading
     document.body.style.overflow = "hidden";
 
     const counter = { value: 0 };
-    const tl = gsap.timeline();
+    let isFinished = false;
 
-    tl.to(counter, {
-      value: 90,
-      duration: 1,
-      ease: "power1.out",
-      onUpdate: () => {
-        const val = Math.round(counter.value);
-        if (barRef.current) barRef.current.style.width = `${val}%`;
-        if (numberRef.current) numberRef.current.textContent = `${val}%`;
-      },
-    });
+    const exitAnimation = () => {
+      const exitTl = gsap.timeline({
+        onComplete: () => {
+          document.body.style.overflow = "";
+          setIsDone(true);
+          onComplete?.();
+        },
+      });
+
+      exitTl.to(containerRef.current, {
+        yPercent: -100,
+        duration: 0.8,
+        ease: "power4.inOut",
+        delay: 0.15,
+      });
+    };
 
     const finish = () => {
+      if (isFinished) return;
+      isFinished = true;
+
       gsap.to(counter, {
         value: 100,
-        duration: 0.7,
-        ease: "power1.out",
+        duration: 0.35,
+        ease: "power2.out",
         onUpdate: () => {
           const val = Math.round(counter.value);
           if (barRef.current) barRef.current.style.width = `${val}%`;
           if (numberRef.current) numberRef.current.textContent = `${val}%`;
         },
-        onComplete: () => {
-          const exitTl = gsap.timeline({
-            onComplete: () => {
-              document.body.style.overflow = "";
-              setIsDone(true);
-              onComplete?.();
-            },
-          });
-
-          exitTl.to(containerRef.current, {
-            yPercent: -100,
-            duration: 0.9,
-            ease: "power4.inOut",
-            delay: 0.2,
-          });
-        },
+        onComplete: exitAnimation,
       });
     };
+
+    const progressTween = gsap.to(counter, {
+      value: 100,
+      duration: 1.4,
+      ease: "power1.inOut",
+      onUpdate: () => {
+        const val = Math.round(counter.value);
+        if (barRef.current) barRef.current.style.width = `${val}%`;
+        if (numberRef.current) numberRef.current.textContent = `${val}%`;
+      },
+      onComplete: () => {
+        if (!isFinished) {
+          isFinished = true;
+          exitAnimation();
+        }
+      },
+    });
 
     if (document.readyState === "complete") {
       finish();
     } else {
-      window.addEventListener("load", finish);
+      window.addEventListener("load", finish, { once: true });
     }
 
     return () => {
       window.removeEventListener("load", finish);
+      progressTween.kill();
       document.body.style.overflow = "";
     };
   }, [onComplete]);

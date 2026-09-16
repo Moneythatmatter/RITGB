@@ -39,6 +39,7 @@ export default function ShowReel() {
       <video
         ref={videoRef}
         src="/videos/Showreel-RITGB.mp4"
+        preload="none"
         autoPlay
         muted
         loop
