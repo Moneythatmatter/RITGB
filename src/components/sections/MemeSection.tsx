@@ -63,7 +63,7 @@ export default function Meme() {
 
       <div ref={imageRef} className="w-full max-w-lg">
         <Image
-          src="/images/breaking-bad.gif"
+          src="/images/breaking-bad.webp"
           alt="RITGB team ready to grow your brand"
           loading="lazy"
           width={484}
