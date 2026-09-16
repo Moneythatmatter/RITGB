@@ -75,7 +75,6 @@ export default function CaseStudy() {
                   src={c.src}
                   alt={c.name}
                   fill
-                  loading="eager"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />

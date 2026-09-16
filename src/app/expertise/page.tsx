@@ -9,6 +9,8 @@ import Portfolio from "@/components/sections/Portfolio";
 import Projects from "@/components/sections/Projects";
 import Footer from "@/components/Footer";
 
+import { BreadcrumbSchema } from "@/components/StructuredData";
+
 export const metadata: Metadata = {
   title: "Our Expertise – Branding, Web Development & SEO Services",
   description:
@@ -17,6 +19,12 @@ export const metadata: Metadata = {
 export default function ExpertisePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.ritgb.com" },
+          { name: "Expertise", url: "https://www.ritgb.com/expertise" },
+        ]}
+      />
       <ExpertiseHero />
       <div id="next-section">
         <ExpertiseIntro />

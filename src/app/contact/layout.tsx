@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Contact RITGB – Get a Free Digital Marketing Consultation",
@@ -11,5 +12,15 @@ export default function ContactLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.ritgb.com" },
+          { name: "Contact", url: "https://www.ritgb.com/contact" },
+        ]}
+      />
+      {children}
+    </>
+  );
 }

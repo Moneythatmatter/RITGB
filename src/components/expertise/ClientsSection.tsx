@@ -99,7 +99,6 @@ export default function ClientsSection() {
             alt={client.alt}
             width={160}
             height={80}
-            loading="eager"
             className="w-full h-auto aspect-[4/3 object-contain bg-[#EFEFEF] p-1"
           />
         ))}

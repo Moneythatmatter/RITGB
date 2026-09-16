@@ -12,6 +12,8 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/sections/Contact";
 import Industry from "@/components/sections/Industry";
 
+import { BreadcrumbSchema } from "@/components/StructuredData";
+
 export const metadata: Metadata = {
   title: "About RITGB – Full-Service Digital Growth Agency, Bhubaneswar",
   description:
@@ -21,6 +23,12 @@ export const metadata: Metadata = {
 export default function AgencyPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.ritgb.com" },
+          { name: "Agency", url: "https://www.ritgb.com/agency" },
+        ]}
+      />
       <AgencyHero />
       <div id="next-section">
         <AgencyAbout />

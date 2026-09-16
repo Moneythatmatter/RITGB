@@ -135,7 +135,6 @@ export default function ProudOf() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  loading="eager"
                   width={800}
                   height={600}
                   className="w-full h-auto"

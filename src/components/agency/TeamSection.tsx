@@ -193,7 +193,6 @@ export default function TeamSection() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    loading="eager"
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className={`object-cover ${member.objectPosition ? '' : ''}`}
                     style={member.objectPosition ? { objectPosition: member.objectPosition } : undefined}

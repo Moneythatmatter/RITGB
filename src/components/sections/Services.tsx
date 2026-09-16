@@ -180,10 +180,8 @@ export default function Services() {
                     src={card.src}
                     alt={card.gifAlt}
                     fill
-                    loading="eager"
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-contain"
-                    unoptimized
                   />
                 </div>
               </div>

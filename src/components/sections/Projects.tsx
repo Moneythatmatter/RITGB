@@ -139,7 +139,6 @@ export default function Projects() {
               alt={img.alt}
               width={400}
               height={500}
-              loading="eager"
               className="w-full h-auto object-cover shadow-2xl"
             />
           </div>

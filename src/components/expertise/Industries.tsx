@@ -190,7 +190,6 @@ export default function Industries() {
                   src={industry.image}
                   alt={industry.title}
                   fill
-                  loading="eager"
                   sizes="(max-width: 768px) 100vw, 55vw"
                   className="object-cover"
                 />
