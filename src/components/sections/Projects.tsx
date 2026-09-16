@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   {
-    src: "/images/portfolio/P-1.png",
+    src: "/images/portfolio/P-1.webp",
     alt: "Project 1",
     style: {
       left: "5%",
@@ -21,7 +21,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-2.png",
+    src: "/images/portfolio/P-2.webp",
     alt: "Project 2",
     style: {
       left: "12%",
@@ -31,7 +31,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-4.png",
+    src: "/images/portfolio/P-4.webp",
     alt: "Project 3",
     style: {
       left: "26%",
@@ -41,7 +41,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-7.png",
+    src: "/images/portfolio/P-7.webp",
     alt: "Project 4",
     style: {
       left: "40%",
@@ -51,7 +51,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-3.png",
+    src: "/images/portfolio/P-3.webp",
     alt: "Project 5",
     style: {
       left: "55%",
@@ -61,7 +61,7 @@ const images = [
     },
   },
   {
-    src: "/images/portfolio/P-5.png",
+    src: "/images/portfolio/P-5.webp",
     alt: "Project 6",
     style: {
       left: "68%",
@@ -139,7 +139,6 @@ export default function Projects() {
               alt={img.alt}
               width={400}
               height={500}
-              loading="eager"
               className="w-full h-auto object-cover shadow-2xl"
             />
           </div>

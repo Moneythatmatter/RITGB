@@ -9,8 +9,8 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const cases = [
-  { src: "/images/crtly.png", name: "Crtly", category: "Mobile App" },
-  { src: "/images/tansto.png", name: "Tansto", category: "Web Design" },
+  { src: "/images/crtly.webp", name: "Crtly", category: "Mobile App" },
+  { src: "/images/tansto.webp", name: "Tansto", category: "Web Design" },
 ];
 
 export default function CaseStudy() {
@@ -75,7 +75,6 @@ export default function CaseStudy() {
                   src={c.src}
                   alt={c.name}
                   fill
-                  loading="eager"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />

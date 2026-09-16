@@ -108,7 +108,7 @@ export default function Testimonials() {
 
           <div className="relative w-full md:w-64 hidden md:block">
             <Image
-              src="/images/looksGood.gif"
+              src="/images/looksGood.webp"
               alt="Looks good"
               width={300}
               height={300}
@@ -122,7 +122,7 @@ export default function Testimonials() {
           {/* Meme image, full width, only on mobile/tablet */}
           <div className="relative w-full md:hidden mb-32.5">
             <Image
-              src="/images/looksGood.gif"
+              src="/images/looksGood.webp"
               alt="Looks good"
               width={300}
               height={250}

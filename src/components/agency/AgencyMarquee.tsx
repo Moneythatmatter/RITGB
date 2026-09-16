@@ -45,7 +45,7 @@ export default function AgencyMarquee() {
 
         <div className="relative w-[40vw] md:w-[18vw] aspect-4/3 shrink-0">
           <Image
-            src="/images/agency/leo.png"
+            src="/images/agency/leo.webp"
             alt="Too cool"
             fill
             sizes="(max-width: 768px) 40vw, 18vw"

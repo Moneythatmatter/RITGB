@@ -125,7 +125,7 @@ export const ChatTab: React.FC<ChatTabProps> = ({
           <div className="flex items-center gap-2 text-xs text-black my-2 pl-1">
             <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center overflow-hidden p-0.5 border border-white/20 shadow-xs">
               <Image
-                src="/images/chatbot/mascot.gif"
+                src="/images/chatbot/mascot.webp"
                 alt="Ritzy Typing"
                 width={28}
                 height={28}

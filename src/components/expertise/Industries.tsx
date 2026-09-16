@@ -20,7 +20,7 @@ const industries = [
       "Travel Brands",
       "Restaurant & Hospitality Groups",
     ],
-    image: "/images/industries/hospitality.png",
+    image: "/images/industries/hospitality.webp",
   },
   {
     number: "02",
@@ -33,7 +33,7 @@ const industries = [
       "Coaching Institutes",
       "Training Centers",
     ],
-    image: "/images/industries/education.png",
+    image: "/images/industries/education.webp",
   },
   {
     number: "03",
@@ -46,7 +46,7 @@ const industries = [
       "Wellness Centers",
       "Medical Practices",
     ],
-    image: "/images/industries/hospital.png",
+    image: "/images/industries/hospital.webp",
   },
   {
     number: "04",
@@ -59,7 +59,7 @@ const industries = [
       "Retail Businesses",
       "Fashion & Lifestyle Brands",
     ],
-    image: "/images/industries/ecommerce.png",
+    image: "/images/industries/ecommerce.webp",
   },
   {
     number: "05",
@@ -72,7 +72,7 @@ const industries = [
       "Software Product Companies",
       "AI & Innovation Companies",
     ],
-    image: "/images/industries/tech.png",
+    image: "/images/industries/tech.webp",
   },
   {
     number: "06",
@@ -85,7 +85,7 @@ const industries = [
       "Property Consultants",
       "Commercial Projects",
     ],
-    image: "/images/industries/realEstate.png",
+    image: "/images/industries/realEstate.webp",
   },
   {
     number: "07",
@@ -98,7 +98,7 @@ const industries = [
       "Food & Beverage Brands",
       "Fine Dining Businesses",
     ],
-    image: "/images/industries/restaurant.png",
+    image: "/images/industries/restaurant.webp",
   },
   {
     number: "08",
@@ -111,7 +111,7 @@ const industries = [
       "Local Brands & Enterprises",
       "Small & Medium Businesses",
     ],
-    image: "/images/industries/localBusinesses.png",
+    image: "/images/industries/localBusinesses.webp",
   },
 ];
 
@@ -190,7 +190,6 @@ export default function Industries() {
                   src={industry.image}
                   alt={industry.title}
                   fill
-                  loading="eager"
                   sizes="(max-width: 768px) 100vw, 55vw"
                   className="object-cover"
                 />

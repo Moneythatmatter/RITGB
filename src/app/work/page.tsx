@@ -7,6 +7,8 @@ import ProudOf from "@/components/work/ProudOf";
 import ShowReel from "@/components/work/ShowReel";
 import WorkIntro from "@/components/work/WorkIntro";
 
+import { BreadcrumbSchema } from "@/components/StructuredData";
+
 export const metadata: Metadata = {
   title: "Our Work – Branding, Web Design & Marketing Portfolio",
   description:
@@ -16,6 +18,12 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.ritgb.com" },
+          { name: "Work", url: "https://www.ritgb.com/work" },
+        ]}
+      />
       <WorkIntro />
       <div id="next-section">
         <ShowReel />

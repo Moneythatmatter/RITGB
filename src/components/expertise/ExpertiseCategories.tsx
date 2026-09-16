@@ -23,7 +23,7 @@ const categories: Category[] = [
       "Your audience judges your brand in seconds. We make sure those seconds work in your favor.",
     bgColor: "bg-black",
     textColor: "text-white",
-    imageUrl: "/images/services/design.png",
+    imageUrl: "/images/services/design.webp",
     items: [
       {
         label: "BRAND IDENTITY",
@@ -116,7 +116,7 @@ const categories: Category[] = [
       "Cool Design Means Nothing If The Website Breaks. We build websites, apps, automations, and digital systems that work smoothly without giving users emotional damage. Fast. Functional. Slightly addictive to use.",
     bgColor: "bg-[#FFC4DE]",
     textColor: "text-black",
-    imageUrl: "/images/services/tech.png",
+    imageUrl: "/images/services/tech.webp",
     items: [
       {
         label: "WEBSITE DEVELOPMENT",
@@ -209,7 +209,7 @@ const categories: Category[] = [
       'We Market Brands Like People Actually Exist. No random posting. No "let\'s just boost it". Everything built to attract attention, leads, and growth.',
     bgColor: "bg-[#6DC9BC]",
     textColor: "text-black",
-    imageUrl: "/images/services/marketingNew.png",
+    imageUrl: "/images/services/marketingNew.webp",
     items: [
       {
         label: "SOCIAL MEDIA MARKETING",

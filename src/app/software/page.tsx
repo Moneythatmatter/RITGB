@@ -6,6 +6,8 @@ import SoftwareHighlight from "@/components/software/SoftwareHightlight";
 import SoftwareIntro from "@/components/software/SoftwareIntro";
 import Footer from "@/components/Footer";
 
+import { BreadcrumbSchema } from "@/components/StructuredData";
+
 export const metadata: Metadata = {
   title: "Custom Software & Web Development Services",
   description:
@@ -15,6 +17,12 @@ export const metadata: Metadata = {
 export default function SoftwarePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.ritgb.com" },
+          { name: "Software", url: "https://www.ritgb.com/software" },
+        ]}
+      />
       <SoftwareHero />
       <div id="next-section">
         <SoftwareIntro />

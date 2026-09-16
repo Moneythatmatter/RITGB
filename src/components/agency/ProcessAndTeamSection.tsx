@@ -49,17 +49,17 @@ const groups: TeamGroup[] = [
       {
         name: "Sagarika Patra",
         role: "CEO/Co-Founder",
-        image: "/images/agency/sagarika.png",
+        image: "/images/agency/sagarika.webp",
       },
       {
         name: "Atul Ranjan Das",
         role: "Director / Co-Founder",
-        image: "/images/agency/atul.png",
+        image: "/images/agency/atul.webp",
       },
       {
         name: "Premchand Kumar Shaw",
         role: "Managing Director",
-        image: "/images/agency/prem.png",
+        image: "/images/agency/prem.webp",
       },
     ],
   },
@@ -72,17 +72,17 @@ const groups: TeamGroup[] = [
       // {
       //   name: "Arindam Roy Chowdhury",
       //   role: "Advisor",
-      //   image: "/images/agency/arindam.png",
+      //   image: "/images/agency/arindam.webp",
       // },
       // {
       //   name: "Kamal Kumar Rout",
       //   role: "Advisor",
-      //   image: "/images/agency/kamal.png",
+      //   image: "/images/agency/kamal.webp",
       // },
       {
         name: "Abhijit Karfi Das",
         role: "Advisor",
-        image: "/images/agency/abhijit.png",
+        image: "/images/agency/abhijit.webp",
       },
     ],
   },
@@ -100,7 +100,7 @@ const groups: TeamGroup[] = [
       {
         name: "Soumya Shree Panda",
         role: "Graphic Designer",
-        image: "/images/agency/soumyashree.png",
+        image: "/images/agency/soumyashree.webp",
       },
     ],
   },
@@ -112,12 +112,12 @@ const groups: TeamGroup[] = [
       {
         name: "Soumya Ranjan Barik",
         role: "SEO Specialist",
-        image: "/images/agency/soumya.png",
+        image: "/images/agency/soumya.webp",
       },
       {
         name: "Shriniti Babu",
         role: "SEO Specialist",
-        image: "/images/agency/shrinithi.png",
+        image: "/images/agency/shrinithi.webp",
       },
     ],
   },
@@ -129,17 +129,17 @@ const groups: TeamGroup[] = [
       {
         name: "Mohit Kumar Saw",
         role: "Software Engineer",
-        image: "/images/agency/mohit.png",
+        image: "/images/agency/mohit.webp",
       },
       {
         name: "Hemant Kumar",
         role: "Assistant Software Engineer",
-        image: "/images/agency/hemant.png",
+        image: "/images/agency/hemant.webp",
       },
       {
         name: "Jay Kumar Saw",
         role: "Assistant Software Engineer",
-        image: "/images/agency/jay.jpeg",
+        image: "/images/agency/jay.webp",
       },
     ],
   },
@@ -151,12 +151,12 @@ const groups: TeamGroup[] = [
       {
         name: "Shrinidhi Sharma",
         role: "Content Writer",
-        image: "/images/agency/shrinidhi.png",
+        image: "/images/agency/shrinidhi.webp",
       },
       {
         name: "Chinmayee Sahoo",
         role: "Content Writer",
-        image: "/images/agency/chinmayee-sahoo.png",
+        image: "/images/agency/chinmayee-sahoo.webp",
       },
     ],
   },
@@ -277,7 +277,6 @@ export default function ProcessAndTeamSection() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    loading="eager"
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                     style={member.objectPosition ? { objectPosition: member.objectPosition } : undefined}

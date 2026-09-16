@@ -4,6 +4,8 @@ import BlogCard from "@/components/blog/BlogCard";
 import BlogHero from "@/components/blog/BlogHero";
 import { getAllPosts } from "@/data/blogData";
 
+import { BreadcrumbSchema } from "@/components/StructuredData";
+
 export const metadata: Metadata = {
   title: "The Blog – Things Worth Knowing | RITGB",
   description:
@@ -23,6 +25,12 @@ export default function BlogPage() {
 
   return (
     <main className="bg-white min-h-screen text-black flex flex-col justify-between">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.ritgb.com" },
+          { name: "Blog", url: "https://www.ritgb.com/blog" },
+        ]}
+      />
       <div className="pt-28 md:pt-36 pb-20 px-6 sm:px-10 md:px-16 lg:px-24 max-w-7xl mx-auto w-full">
         {/* Animated Hero Header */}
         <BlogHero />

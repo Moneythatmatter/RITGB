@@ -27,7 +27,7 @@ const cards = [
       "Social Media Design",
       "Creative Direction",
     ],
-    src: "/images/services/design.png",
+    src: "/images/services/design.webp",
     gifAlt: "Design",
   },
   {
@@ -46,7 +46,7 @@ const cards = [
       "API Development",
       "Performance Optimization",
     ],
-    src: "/images/services/tech.png",
+    src: "/images/services/tech.webp",
     alt: "Technology",
     gifAlt: "Technology",
   },
@@ -66,7 +66,7 @@ const cards = [
       "Email Marketing",
       "Analytics",
     ],
-    src: "/images/services/marketingLatest.png",
+    src: "/images/services/marketingLatest.webp",
     alt: "Marketing",
     gifAlt: "Marketing",
   },
@@ -180,10 +180,8 @@ export default function Services() {
                     src={card.src}
                     alt={card.gifAlt}
                     fill
-                    loading="eager"
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-contain"
-                    unoptimized
                   />
                 </div>
               </div>

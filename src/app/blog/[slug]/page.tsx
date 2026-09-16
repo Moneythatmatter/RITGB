@@ -71,13 +71,16 @@ export default async function BlogPostPage({ params }: PageProps) {
   const faqSection = post.content.find((section) => section.type === "faq");
   const jsonLdArticle = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
     image: `https://www.ritgb.com${post.image}`,
+    datePublished: "2026-01-15T08:00:00+05:30",
+    dateModified: "2026-09-07T18:40:00+05:30",
+    inLanguage: "en-US",
     author: {
       "@type": "Organization",
-      name: post.author.name,
+      name: post.author.name || "RITGB Team",
       url: "https://www.ritgb.com",
     },
     publisher: {
@@ -86,13 +89,38 @@ export default async function BlogPostPage({ params }: PageProps) {
       url: "https://www.ritgb.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.ritgb.com/images/logo/ritgb-logo-transparent.png",
+        url: "https://www.ritgb.com/images/logo/ritgb-logo-transparent.webp",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://www.ritgb.com/blog/${post.slug}`,
     },
+  };
+
+  const jsonLdBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.ritgb.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.ritgb.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://www.ritgb.com/blog/${post.slug}`,
+      },
+    ],
   };
 
   const jsonLdFaq = faqSection?.faqs
@@ -116,6 +144,10 @@ export default async function BlogPostPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }}
       />
       {jsonLdFaq && (
         <script
