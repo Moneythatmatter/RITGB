@@ -58,7 +58,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
           <div className="relative shrink-0">
             <div className="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center shadow-md overflow-hidden p-0.5 border border-white/20">
               <Image
-                src="/images/chatbot/mascot.gif"
+                src="/images/chatbot/mascot.webp"
                 alt="Ritzy Mascot"
                 width={40}
                 height={40}
@@ -186,16 +186,14 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab("home")}
-          className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${
-            activeTab === "home"
+          className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${activeTab === "home"
               ? "text-black font-bold"
               : "text-slate-500 hover:text-slate-800 font-medium"
-          }`}
+            }`}
         >
           <Home
-            className={`w-5 h-5 ${
-              activeTab === "home" ? "text-black" : "text-slate-400"
-            }`}
+            className={`w-5 h-5 ${activeTab === "home" ? "text-black" : "text-slate-400"
+              }`}
           />
           <span className="text-[11px] leading-none">Home</span>
           {activeTab === "home" && (
@@ -207,16 +205,14 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab("chat")}
-          className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${
-            activeTab === "chat"
+          className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${activeTab === "chat"
               ? "text-black font-bold"
               : "text-slate-500 hover:text-slate-800 font-medium"
-          }`}
+            }`}
         >
           <MessageSquare
-            className={`w-5 h-5 ${
-              activeTab === "chat" ? "text-black" : "text-slate-400"
-            }`}
+            className={`w-5 h-5 ${activeTab === "chat" ? "text-black" : "text-slate-400"
+              }`}
           />
           <span className="text-[11px] leading-none">Chat</span>
           {activeTab === "chat" && (
@@ -228,16 +224,14 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab("faqs")}
-          className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${
-            activeTab === "faqs"
+          className={`flex flex-col items-center gap-1 py-1 px-4 relative rounded-xl transition-colors cursor-pointer ${activeTab === "faqs"
               ? "text-black font-bold"
               : "text-slate-500 hover:text-slate-800 font-medium"
-          }`}
+            }`}
         >
           <HelpCircle
-            className={`w-5 h-5 ${
-              activeTab === "faqs" ? "text-black" : "text-slate-400"
-            }`}
+            className={`w-5 h-5 ${activeTab === "faqs" ? "text-black" : "text-slate-400"
+              }`}
           />
           <span className="text-[11px] leading-none">FAQs</span>
           {activeTab === "faqs" && (

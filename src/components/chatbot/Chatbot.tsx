@@ -92,7 +92,7 @@ export const Chatbot: React.FC = () => {
         const errJson = await res.json().catch(() => ({}));
         throw new Error(
           errJson.error ||
-            `Error ${res.status}: Failed to fetch response from Ritzy.`,
+          `Error ${res.status}: Failed to fetch response from Ritzy.`,
         );
       }
 
@@ -199,7 +199,7 @@ export const Chatbot: React.FC = () => {
           >
             <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-full bg-black">
               <Image
-                src="/images/chatbot/mascot.gif"
+                src="/images/chatbot/mascot.webp"
                 alt="RITGB Ritzy Mascot"
                 width={64}
                 height={64}

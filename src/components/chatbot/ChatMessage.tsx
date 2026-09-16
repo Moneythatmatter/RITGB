@@ -34,15 +34,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
   return (
     <div
-      className={`flex items-start gap-2.5 my-2.5 transition-opacity duration-200 ${
-        isUser ? 'flex-row-reverse' : 'flex-row'
-      }`}
+      className={`flex items-start gap-2.5 my-2.5 transition-opacity duration-200 ${isUser ? 'flex-row-reverse' : 'flex-row'
+        }`}
     >
       {/* Mascot Avatar for Assistant */}
       {!isUser && (
         <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5 overflow-hidden p-0.5 border border-white/20">
           <Image
-            src="/images/chatbot/mascot.gif"
+            src="/images/chatbot/mascot.webp"
             alt="Ritzy Mascot"
             width={32}
             height={32}
@@ -54,11 +53,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
       {/* Message Content Bubble */}
       <div
-        className={`relative max-w-[86%] sm:max-w-[82%] rounded-2xl px-4 py-3 text-[13px] sm:text-sm leading-relaxed shadow-sm ${
-          isUser
+        className={`relative max-w-[86%] sm:max-w-[82%] rounded-2xl px-4 py-3 text-[13px] sm:text-sm leading-relaxed shadow-sm ${isUser
             ? 'bg-black text-white font-medium rounded-tr-xs border border-white/10'
             : 'bg-white text-slate-800 border border-slate-200/90 rounded-tl-xs shadow-[0_2px_12px_rgba(0,0,0,0.04)]'
-        }`}
+          }`}
       >
         {/* Render formatted message content */}
         <div className="space-y-1.5 break-words font-sans">
@@ -72,11 +70,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
         {/* Footer with copy button & timestamp */}
         <div
-          className={`flex items-center gap-1.5 pt-1.5 mt-1.5 text-[10px] ${
-            isUser
+          className={`flex items-center gap-1.5 pt-1.5 mt-1.5 text-[10px] ${isUser
               ? 'justify-end text-white/50 font-normal'
               : 'justify-between border-t border-slate-100 text-slate-400'
-          }`}
+            }`}
         >
           <span>{message.timestamp || 'Just now'}</span>
 
@@ -130,9 +127,8 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
       return (
         <h4
           key={lineIdx}
-          className={`font-bold text-sm mt-2 mb-1 ${
-            isUser ? 'text-white' : 'text-black'
-          }`}
+          className={`font-bold text-sm mt-2 mb-1 ${isUser ? 'text-white' : 'text-black'
+            }`}
         >
           {renderInlineStyles(trimmed.slice(4), isUser)}
         </h4>
@@ -144,9 +140,8 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
       return (
         <div key={lineIdx} className="flex items-start gap-2 pl-0.5 my-0.5">
           <span
-            className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${
-              isUser ? 'bg-white' : 'bg-black'
-            }`}
+            className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${isUser ? 'bg-white' : 'bg-black'
+              }`}
           />
           <span className="flex-1 leading-snug">
             {renderInlineStyles(trimmed.slice(2), isUser)}
@@ -161,9 +156,8 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
       return (
         <div key={lineIdx} className="flex items-start gap-2 pl-0.5 my-0.5">
           <span
-            className={`font-semibold shrink-0 text-xs mt-0.5 ${
-              isUser ? 'text-white/80' : 'text-black'
-            }`}
+            className={`font-semibold shrink-0 text-xs mt-0.5 ${isUser ? 'text-white/80' : 'text-black'
+              }`}
           >
             {numMatch[1]}.
           </span>
@@ -207,11 +201,10 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
           <Link
             key={`link-${match.index}`}
             href={url}
-            className={`font-bold underline underline-offset-2 transition-all inline-flex items-center gap-0.5 ${
-              isUser
+            className={`font-bold underline underline-offset-2 transition-all inline-flex items-center gap-0.5 ${isUser
                 ? 'text-white hover:text-white/80'
                 : 'text-black hover:text-[#E64A5C] bg-black/5 hover:bg-black/10 px-1.5 py-0.5 rounded border border-black/10'
-            }`}
+              }`}
           >
             {label} →
           </Link>
@@ -223,11 +216,10 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-bold underline underline-offset-2 transition-all inline-flex items-center gap-0.5 ${
-              isUser
+            className={`font-bold underline underline-offset-2 transition-all inline-flex items-center gap-0.5 ${isUser
                 ? 'text-white hover:text-white/80'
                 : 'text-black hover:text-[#E64A5C] bg-black/5 hover:bg-black/10 px-1.5 py-0.5 rounded border border-black/10'
-            }`}
+              }`}
           >
             {label} ↗
           </a>
