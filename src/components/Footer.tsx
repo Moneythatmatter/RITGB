@@ -67,6 +67,32 @@ export default function SiteFooter() {
               >
                 Info@rayimpact.net
               </a>
+
+              <div className="flex flex-col gap-1.5 mt-1">
+                <div className="flex flex-col gap-0.5">
+                  <span className="font-[Arial] text-[10px] text-white/25 tracking-[0.15em] uppercase">
+                    Support
+                  </span>
+                  <a
+                    href="tel:+918128551051"
+                    className="font-[Arial] text-sm text-white/60 hover:text-white transition-colors tracking-wide"
+                  >
+                    +91 81285 51051
+                  </a>
+                </div>
+                <div className="flex flex-col gap-0.5">
+                  <span className="font-[Arial] text-[10px] text-white/25 tracking-[0.15em] uppercase">
+                    Sales &amp; Enquiry
+                  </span>
+                  <a
+                    href="tel:+919937672721"
+                    className="font-[Arial] text-sm text-white/60 hover:text-white transition-colors tracking-wide"
+                  >
+                    +91 99376 72721
+                  </a>
+                </div>
+              </div>
+
               <a
                 href="https://maps.google.com/?q=RITGB+First+Floor,+Plot+No+3637,+behind+Tanishq+Showroom,+Chandrasekharpur,+Bhubaneswar,+Odisha+751016"
                 target="_blank"
