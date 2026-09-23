@@ -62,24 +62,14 @@ export default function BrandingProcess() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`p-6 sm:p-8 min-h-[260px] md:min-h-[300px] flex flex-col justify-between rounded-sm bg-[#0a0a0a] transition-colors duration-200 ${step.active
-              ? "border border-[#4db685]"
-              : "border border-white/20 hover:border-white/50"
-              }`}
+            className={`p-6 sm:p-8 min-h-[260px] md:min-h-[300px] flex flex-col justify-between rounded-sm bg-[#0a0a0a] transition-colors duration-200 border border-white/20 hover:border-white/50`}
           >
             {/* Top row with number and arrow */}
             <div className="flex items-center justify-between">
               <span
-                className={`font-sans text-xs tracking-wider font-semibold ${step.active ? "text-[#4db685]" : "text-white"
-                  }`}
+                className={`font-sans text-xs tracking-wider font-semibold`}
               >
                 {step.num}
-              </span>
-              <span
-                className={`text-xs font-semibold ${step.active ? "text-[#4db685]" : "text-white"
-                  }`}
-              >
-                ↗
               </span>
             </div>
 
