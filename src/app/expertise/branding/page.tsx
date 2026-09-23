@@ -5,6 +5,7 @@ import BrandingWhatWeDesign from "@/components/expertise/branding/BrandingWhatWe
 import BrandingSelectedWork from "@/components/expertise/branding/BrandingSelectedWork";
 import BrandingProcess from "@/components/expertise/branding/BrandingProcess";
 import BrandingDeliverables from "@/components/expertise/branding/BrandingDeliverables";
+import BrandingCta from "@/components/expertise/branding/BrandingCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -40,6 +41,7 @@ export default function BrandingPage() {
           <BrandingSelectedWork />
           <BrandingProcess />
           <BrandingDeliverables />
+          <BrandingCta />
           <Footer />
         </div>
       </main>

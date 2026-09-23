@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
+import { Asterisk } from "lucide-react";
 
 const marqueeItems = [
   "CREATIVE DIRECTION",
@@ -53,20 +54,25 @@ export default function BrandingHero() {
       ref={containerRef}
       className="w-full bg-[#080808] text-white flex flex-col justify-between pt-24 md:pt-28 min-h-[92vh] relative overflow-hidden"
     >
+
+      {/* Main Content Area */}
       <div className="px-6 md:px-14 lg:px-20 py-12 md:py-16 grow flex flex-col justify-center">
+        {/* Meta / Subhead: 01 / 07 and DESIGN / BRANDING */}
         <div className="branding-meta mb-8 md:mb-10 flex flex-col items-start gap-1">
           <span className="font-mono text-xs md:text-sm text-neutral-400 tracking-widest">
             01 / 07
           </span>
           <div className="flex items-center gap-4 mt-1">
-            <div className="w-10 h-[1.5px] bg-[#4db685]" />
+            <div className="w-10 h-[1.5px] bg-[#5BBFA4]" />
             <span className="font-sans text-xs md:text-sm uppercase tracking-[0.25em] text-neutral-300 font-medium">
               DESIGN &nbsp;/&nbsp; BRANDING
             </span>
           </div>
         </div>
 
+        {/* 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-end">
+          {/* Left: Giant Display Typography */}
           <div className="lg:col-span-7 flex flex-col select-none">
             <div className="overflow-hidden">
               <h1 className="branding-line font-(family-name:--font-right-grotesk) text-[18vw] sm:text-[14vw] lg:text-[10vw] font-black leading-[0.88] uppercase tracking-[-0.03em] text-white">
@@ -85,6 +91,7 @@ export default function BrandingHero() {
             </div>
           </div>
 
+          {/* Right: Subtitle copy & Underlined CTA Button */}
           <div className="branding-right-col lg:col-span-5 flex flex-col items-start lg:pl-8 pb-3 md:pb-6">
             <p className="text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-8 max-w-md">
               A clear strategy. A distinctive identity.
@@ -93,15 +100,17 @@ export default function BrandingHero() {
               <br />
               they even see your name.
             </p>
+
+            {/* CTA Group: Underlined text + Circular Arrow Button */}
             <div className="flex items-center gap-4">
               <Link
                 href="/contact"
                 className="group inline-flex flex-col text-white text-sm md:text-base font-normal tracking-wide"
               >
-                <span className="pb-1.5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-[#4db685]">
+                <span className="pb-1.5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-[#5BBFA4]">
                   Let&apos;s build it <span className="text-xs">↗</span>
                 </span>
-                <span className="w-full h-[2px] bg-[#4db685] group-hover:bg-white transition-colors duration-300" />
+                <span className="w-full h-[2px] bg-[#5BBFA4] group-hover:bg-white transition-colors duration-300" />
               </Link>
 
               <Link
@@ -116,6 +125,7 @@ export default function BrandingHero() {
         </div>
       </div>
 
+      {/* Bottom White Strip / Marquee */}
       <div className="w-full bg-white text-black py-4 md:py-5 overflow-hidden select-none border-y border-neutral-200">
         <div className="flex w-max animate-[marquee_24s_linear_infinite] whitespace-nowrap items-center">
           {[...marqueeItems, ...marqueeItems, ...marqueeItems].map(
@@ -125,13 +135,15 @@ export default function BrandingHero() {
                   {item}
                 </span>
                 <span className="text-[#FF4E78] text-2xl md:text-3xl font-bold px-2 md:px-3">
-                  ✳
+                  <Asterisk className="w-12 h-12" strokeWidth={1} />
                 </span>
               </div>
             ),
           )}
         </div>
       </div>
+
+      {/* Marquee Animation Keyframe */}
       <style jsx>{`
         @keyframes marquee {
           0% {
