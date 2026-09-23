@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import GraphicDesignHero from "@/components/expertise/graphic-design/GraphicDesignHero";
+import GraphicDesignIdea from "@/components/expertise/graphic-design/GraphicDesignIdea";
+import GraphicDesignWhatWeDesign from "@/components/expertise/graphic-design/GraphicDesignWhatWeDesign";
+import GraphicDesignSelectedWork from "@/components/expertise/graphic-design/GraphicDesignSelectedWork";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -30,10 +33,16 @@ export default function GraphicDesignPage() {
         ]}
       />
 
-      <main className="w-full bg-[#050505] min-h-screen flex flex-col justify-between">
+      <main className="w-full bg-[#050505] min-h-screen">
         <GraphicDesignHero />
-        <Footer />
+        <div id="next-section">
+          <GraphicDesignIdea />
+          <GraphicDesignWhatWeDesign />
+          <GraphicDesignSelectedWork />
+          <Footer />
+        </div>
       </main>
     </>
   );
 }
+

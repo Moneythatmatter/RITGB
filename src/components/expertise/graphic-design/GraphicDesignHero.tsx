@@ -58,7 +58,7 @@ export default function GraphicDesignHero() {
       <div className="px-6 md:px-14 lg:px-20 py-12 md:py-16 grow flex flex-col justify-center">
         {/* Meta / Subhead: 02 / 07 and DESIGN / GRAPHIC DESIGN */}
         <div className="graphic-meta mb-8 md:mb-10 flex flex-col items-start gap-1">
-          <span className="font-mono text-xs md:text-sm text-neutral-400 tracking-widest">
+          <span className="font-sans text-xs md:text-sm text-neutral-400 tracking-widest">
             02 / 07
           </span>
           <div className="flex items-center gap-4 mt-1">
@@ -107,14 +107,6 @@ export default function GraphicDesignHero() {
                   Let&apos;s build it <span className="text-xs">↗</span>
                 </span>
                 <span className="w-full h-[2px] bg-[#4db685] group-hover:bg-white transition-colors duration-300" />
-              </Link>
-
-              <Link
-                href="/contact"
-                className="w-10 h-10 md:w-11 md:h-11 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
-                aria-label="Let's build it"
-              >
-                <span className="text-sm font-light">→</span>
               </Link>
             </div>
           </div>
