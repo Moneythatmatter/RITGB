@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BrandingHero from "@/components/expertise/branding/BrandingHero";
 import BrandingIdea from "@/components/expertise/branding/BrandingIdea";
+import BrandingWhatWeDesign from "@/components/expertise/branding/BrandingWhatWeDesign";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -32,6 +33,7 @@ export default function BrandingPage() {
         <BrandingHero />
         <div id="next-section">
           <BrandingIdea />
+          <BrandingWhatWeDesign />
           <Footer />
         </div>
       </main>
