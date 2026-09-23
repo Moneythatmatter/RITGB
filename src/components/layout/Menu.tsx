@@ -19,28 +19,26 @@ interface ExpertiseCategory {
 const EXPERTISE_DATA: ExpertiseCategory[] = [
   {
     num: "01",
-    title: "BRAND",
+    title: "DESIGN",
     services: [
-      { name: "Brand Strategy", slug: "/expertise/brand-strategy" },
-      { name: "Brand Identity", slug: "/expertise/brand-identity" },
-      { name: "Logo Design", slug: "/expertise/logo-design" },
-      { name: "Visual Identity", slug: "/expertise/visual-identity" },
-      { name: "Brand Guidelines", slug: "/expertise/brand-guidelines" },
+      { name: "Branding", slug: "/expertise/branding" },
+      { name: "Graphic Design", slug: "/expertise/graphic-design" },
+      { name: "Social Media Creatives", slug: "/expertise/social-media-creatives" },
       { name: "Packaging Design", slug: "/expertise/packaging-design" },
-      { name: "Creative Direction", slug: "/expertise/creative-direction" },
+      { name: "Website Design", slug: "/expertise/website-design" },
+      { name: "UI/UX Design", slug: "/expertise/ui-ux-design" },
+      { name: "Video Production", slug: "/expertise/video-production" },
     ],
   },
   {
     num: "02",
     title: "TECH",
     services: [
-      { name: "Website Design", slug: "/expertise/website-design" },
       { name: "Website Development", slug: "/expertise/website-development" },
       { name: "E-commerce Development", slug: "/expertise/ecommerce-development" },
       { name: "Shopify", slug: "/expertise/shopify" },
       { name: "WordPress", slug: "/expertise/wordpress" },
       { name: "Custom Web Development", slug: "/expertise/custom-web-development" },
-      { name: "UI/UX Design", slug: "/expertise/ui-ux-design" },
       { name: "Custom Software", slug: "/expertise/custom-software" },
     ],
   },
@@ -220,8 +218,8 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
                         <span>{link.label}</span>
                         <span
                           className={`text-[3.5vw] xl:text-[3vw] transition-all duration-300 ${showDesktopExpertise
-                              ? "opacity-100 translate-x-1 text-white"
-                              : "opacity-0 -translate-x-3 pointer-events-none"
+                            ? "opacity-100 translate-x-1 text-white"
+                            : "opacity-0 -translate-x-3 pointer-events-none"
                             }`}
                         >
                           →
@@ -254,8 +252,8 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
             onMouseEnter={handleMouseEnterPanel}
             onMouseLeave={handleMouseLeavePanel}
             className={`flex-1 pl-6 xl:pl-10 min-w-0 transition-all duration-300 ${showDesktopExpertise
-                ? "opacity-100 translate-x-0 pointer-events-auto"
-                : "opacity-0 translate-x-4 pointer-events-none"
+              ? "opacity-100 translate-x-0 pointer-events-auto"
+              : "opacity-0 translate-x-4 pointer-events-none"
               }`}
           >
             <div className="grid grid-cols-3 gap-6 xl:gap-10">

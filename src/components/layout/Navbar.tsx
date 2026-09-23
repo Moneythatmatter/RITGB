@@ -10,6 +10,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname();
+  const isDark = pathname.startsWith("/expertise/branding");
+
   return (
     <>
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-27.75 pb-2">
@@ -22,20 +24,23 @@ export default function Navbar() {
             height={110}
             priority
             style={{ height: "auto", width: "auto", maxHeight: "5rem" }}
-            className="max-h-30! md:max-h-40! object-contain"
+            className={`max-h-30! md:max-h-40! object-contain transition-all duration-300 ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
           />
         </Link>
 
         {/* Right side */}
         <div className="flex items-center gap-4">
           {/* Hire Us button */}
-
-          {/* hide "hire us" button on the contact page  */}
-
           {pathname !== "/contact" && (
             <Link
               href="/contact"
-              className="hidden md:flex bg-black text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize"
+              className={`hidden md:flex font-bold text-sm px-5 py-2.5 rounded-full transition-colors duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.15)] capitalize ${
+                isDark
+                  ? "bg-white text-black hover:bg-neutral-200"
+                  : "bg-black text-white hover:bg-white hover:text-black"
+              }`}
             >
               Hire Us ↗
             </Link>
@@ -44,10 +49,23 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(true)}
             className="flex flex-col gap-1.5 p-2 cursor-pointer z-50 relative"
+            aria-label="Open menu"
           >
-            <span className="block w-6 h-0.5 bg-black"></span>
-            <span className="block w-6 h-0.5 bg-black"></span>
-            <span className="block w-6 h-0.5 bg-black"></span>
+            <span
+              className={`block w-6 h-0.5 transition-colors duration-300 ${
+                isDark ? "bg-white" : "bg-black"
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 transition-colors duration-300 ${
+                isDark ? "bg-white" : "bg-black"
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 transition-colors duration-300 ${
+                isDark ? "bg-white" : "bg-black"
+              }`}
+            ></span>
           </button>
         </div>
       </nav>
