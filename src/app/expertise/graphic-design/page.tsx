@@ -3,6 +3,9 @@ import GraphicDesignHero from "@/components/expertise/graphic-design/GraphicDesi
 import GraphicDesignIdea from "@/components/expertise/graphic-design/GraphicDesignIdea";
 import GraphicDesignWhatWeDesign from "@/components/expertise/graphic-design/GraphicDesignWhatWeDesign";
 import GraphicDesignSelectedWork from "@/components/expertise/graphic-design/GraphicDesignSelectedWork";
+import GraphicDesignProcess from "@/components/expertise/graphic-design/GraphicDesignProcess";
+import GraphicDesignDeliverables from "@/components/expertise/graphic-design/GraphicDesignDeliverables";
+import GraphicDesignCta from "@/components/expertise/graphic-design/GraphicDesignCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,10 +42,16 @@ export default function GraphicDesignPage() {
           <GraphicDesignIdea />
           <GraphicDesignWhatWeDesign />
           <GraphicDesignSelectedWork />
+          <GraphicDesignProcess />
+          <GraphicDesignDeliverables />
+          <GraphicDesignCta />
           <Footer />
         </div>
       </main>
     </>
   );
 }
+
+
+
 
