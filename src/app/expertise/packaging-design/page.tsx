@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import PackagingDesignHero from "@/components/expertise/packaging-design/PackagingDesignHero";
 import PackagingDesignIdea from "@/components/expertise/packaging-design/PackagingDesignIdea";
+import PackagingDesignWhatWeDesign from "@/components/expertise/packaging-design/PackagingDesignWhatWeDesign";
+import PackagingDesignSelectedWork from "@/components/expertise/packaging-design/PackagingDesignSelectedWork";
+import PackagingDesignProcess from "@/components/expertise/packaging-design/PackagingDesignProcess";
+import PackagingDesignDeliverables from "@/components/expertise/packaging-design/PackagingDesignDeliverables";
+import PackagingDesignCta from "@/components/expertise/packaging-design/PackagingDesignCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -35,6 +40,11 @@ export default function PackagingDesignPage() {
         <PackagingDesignHero />
         <div id="next-section">
           <PackagingDesignIdea />
+          <PackagingDesignWhatWeDesign />
+          <PackagingDesignSelectedWork />
+          <PackagingDesignProcess />
+          <PackagingDesignDeliverables />
+          <PackagingDesignCta />
           <Footer />
         </div>
       </main>
