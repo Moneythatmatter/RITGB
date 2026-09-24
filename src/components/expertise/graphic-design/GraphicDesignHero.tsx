@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import GradientButton from "@/components/GradientButton";
 import { Asterisk } from "lucide-react";
 
 const marqueeItems = [
@@ -17,19 +18,18 @@ const marqueeItems = [
   "BRAND ASSETS",
 ];
 
+const lines = [
+  { text: "DESIGN THAT", isAccent: false },
+  { text: "SAYS MORE", isAccent: false },
+  { text: "AT A GLANCE.", isAccent: true },
+];
+
 export default function GraphicDesignHero() {
   const containerRef = useRef<HTMLElement>(null);
+  const router = useRouter();
 
   useGSAP(
     () => {
-      gsap.from(".graphic-meta", {
-        opacity: 0,
-        y: -15,
-        duration: 0.8,
-        ease: "power3.out",
-        delay: 0.1,
-      });
-
       gsap.from(".graphic-line", {
         yPercent: 110,
         duration: 0.9,
@@ -38,12 +38,12 @@ export default function GraphicDesignHero() {
         delay: 0.2,
       });
 
-      gsap.from(".graphic-right-col", {
+      gsap.from(".graphic-sub-content", {
         opacity: 0,
         y: 20,
         duration: 0.8,
         ease: "power3.out",
-        delay: 0.4,
+        delay: 0.5,
       });
     },
     { scope: containerRef },
@@ -54,61 +54,39 @@ export default function GraphicDesignHero() {
       ref={containerRef}
       className="w-full bg-[#080808] text-white flex flex-col justify-between pt-24 md:pt-28 min-h-[92vh] relative overflow-hidden"
     >
-      {/* Main Content Area */}
-      <div className="px-6 md:px-14 lg:px-20 py-12 md:py-16 grow flex flex-col justify-center">
-        {/* Meta / Subhead: 02 / 07 and DESIGN / GRAPHIC DESIGN */}
-        <div className="graphic-meta mb-8 md:mb-10 flex flex-col items-start gap-1">
-          <span className="font-sans text-xs md:text-sm text-neutral-400 tracking-widest">
-            02 / 07
-          </span>
-          <div className="flex items-center gap-4 mt-1">
-            <div className="w-10 h-[1.5px] bg-[#4db685]" />
-            <span className="font-sans text-xs md:text-sm uppercase tracking-[0.25em] text-neutral-300 font-medium">
-              DESIGN &nbsp;/&nbsp; GRAPHIC DESIGN
-            </span>
-          </div>
-        </div>
-
-        {/* 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-end">
-          {/* Left: Giant Display Typography */}
-          <div className="lg:col-span-7 flex flex-col select-none">
-            <div className="overflow-hidden">
-              <h1 className="graphic-line font-(family-name:--font-right-grotesk) text-[18vw] sm:text-[14vw] lg:text-[10vw] font-black leading-[0.88] uppercase tracking-[-0.03em] text-white">
-                DESIGN THAT
-              </h1>
-            </div>
-            <div className="overflow-hidden">
-              <h1 className="graphic-line font-(family-name:--font-right-grotesk) text-[18vw] sm:text-[14vw] lg:text-[10vw] font-black leading-[0.88] uppercase tracking-[-0.03em] text-white">
-                SAYS MORE
-              </h1>
-            </div>
-            <div className="overflow-hidden">
-              <h1 className="graphic-line font-(family-name:--font-right-grotesk) text-[18vw] sm:text-[14vw] lg:text-[10vw] font-black leading-[0.88] uppercase tracking-[-0.03em] text-[#4db685]">
-                AT A GLANCE.
-              </h1>
-            </div>
-          </div>
-
-          {/* Right: Subtitle copy & Underlined CTA Button */}
-          <div className="graphic-right-col lg:col-span-5 flex flex-col items-start lg:pl-8 pb-3 md:pb-6">
-            <p className="text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-8 max-w-md">
-              Clear, distinctive visuals for the moments your business needs to
-              communicate fast.
-            </p>
-
-            {/* CTA Group: Underlined text + Circular Arrow Button */}
-            <div className="flex items-center gap-4">
-              <Link
-                href="/contact"
-                className="group inline-flex flex-col text-white text-sm md:text-base font-normal tracking-wide"
+      {/* Centered Main Content Area */}
+      <div className="px-6 md:px-14 lg:px-20 py-12 md:py-20 grow flex flex-col items-center justify-center text-center">
+        {/* Giant Display Typography with single semantic <h1> */}
+        <h1 className="flex flex-col items-center text-center select-none">
+          {lines.map((item, index) => (
+            <span key={index} className="overflow-hidden block">
+              <span
+                className={`graphic-line font-(family-name:--font-right-grotesk) text-[15vw] sm:text-[13vw] lg:text-[9.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block ${
+                  item.isAccent ? "text-[#4db685]" : "text-white"
+                }`}
               >
-                <span className="pb-1.5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-[#4db685]">
-                  Let&apos;s build it <span className="text-xs">↗</span>
-                </span>
-                <span className="w-full h-[2px] bg-[#4db685] group-hover:bg-white transition-colors duration-300" />
-              </Link>
-            </div>
+                {item.text}
+              </span>
+            </span>
+          ))}
+        </h1>
+
+        {/* Subtitle copy & Centered CTA Button */}
+        <div className="graphic-sub-content flex flex-col items-center text-center mt-6 md:mt-8 max-w-xl">
+          <p className="text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-6 md:mb-8">
+            Clear, distinctive visuals for the moments your business needs to
+            communicate fast.
+          </p>
+
+          {/* Glowing Gradient Button (Light on Dark Background) */}
+          <div className="flex justify-center">
+            <GradientButton
+              theme="light"
+              onClick={() => router.push("/contact")}
+              className="font-arial text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-8! py-5! md:px-10! md:py-6! rounded-full!"
+            >
+              Let&apos;s Build It →
+            </GradientButton>
           </div>
         </div>
       </div>
@@ -145,3 +123,4 @@ export default function GraphicDesignHero() {
     </section>
   );
 }
+

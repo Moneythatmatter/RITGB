@@ -10,6 +10,7 @@ export interface GradientButtonProps extends React.ButtonHTMLAttributes<HTMLButt
   glowEffect?: boolean;
   glowSize?: number;
   variant?: "default" | "outline" | "ghost";
+  theme?: "dark" | "light";
 }
 
 export function GradientButton({
@@ -29,6 +30,7 @@ export function GradientButton({
   glowEffect = true,
   glowSize = 4,
   variant = "default",
+  theme = "dark",
   ...props
 }: GradientButtonProps) {
   // Generate gradient string from colors
@@ -49,6 +51,11 @@ export function GradientButton({
     ghost: "border-transparent bg-opacity-10",
   };
 
+  const themeClasses =
+    theme === "light"
+      ? "bg-white text-black hover:bg-neutral-100"
+      : "bg-black text-white hover:bg-neutral-900";
+
   return (
     <>
       <style
@@ -60,7 +67,7 @@ export function GradientButton({
             height: 30%;
             width: 80%;
             position: absolute;
-            bottom: -20%;np
+            bottom: -20%;
             z-index: 0;
             background-size: 200%;
             animation: gradient-animate ${animationSpeed}s infinite linear;
@@ -90,20 +97,17 @@ export function GradientButton({
 
       <button
         className={`cursor-pointer
-          btn-gradient relative bg-black text-white
-          hover:bg-primary dark:hover:bg-primary/90
+          btn-gradient relative ${themeClasses}
           flex items-center
-           justify-center
-          border-[0.15rem] Z-20 ${borderStyles[variant]} ${sizeClasses[size]}
+          justify-center
+          border-[0.15rem] z-20 ${borderStyles[variant]} ${sizeClasses[size]}
           ${className}
         `}
         style={{
           background:
             variant === "ghost"
               ? `linear-gradient(90deg, ${gradientString})`
-              : `
-
-            `,
+              : undefined,
           backgroundOrigin: "border-box",
           backgroundClip: "padding-box, border-box, border-box",
           backgroundSize: "200%",
@@ -130,3 +134,4 @@ export function GradientButton({
 }
 
 export default GradientButton;
+
