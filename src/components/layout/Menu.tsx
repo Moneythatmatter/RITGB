@@ -26,7 +26,7 @@ const EXPERTISE_DATA: ExpertiseCategory[] = [
       { name: "Social Media Creatives", slug: "/expertise/social-media-creatives" },
       { name: "Packaging Design", slug: "/expertise/packaging-design" },
       { name: "Website Design", slug: "/expertise/website-design" },
-      { name: "UI/UX Design", slug: "/expertise/ui-ux-design" },
+      { name: "UI/UX Design", slug: "/expertise/ui-ux" },
       { name: "Video Production", slug: "/expertise/video-production" },
     ],
   },
