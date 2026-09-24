@@ -3,6 +3,7 @@ import SocialMediaCreativesHero from "@/components/expertise/social-media-creati
 import SocialMediaCreativesIdea from "@/components/expertise/social-media-creatives/SocialMediaCreativesIdea";
 import SocialMediaCreativesWhatWeDesign from "@/components/expertise/social-media-creatives/SocialMediaCreativesWhatWeDesign";
 import SocialMediaCreativesSelectedWork from "@/components/expertise/social-media-creatives/SocialMediaCreativesSelectedWork";
+import SocialMediaCreativesProcess from "@/components/expertise/social-media-creatives/SocialMediaCreativesProcess";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,12 +40,14 @@ export default function SocialMediaCreativesPage() {
           <SocialMediaCreativesIdea />
           <SocialMediaCreativesWhatWeDesign />
           <SocialMediaCreativesSelectedWork />
+          <SocialMediaCreativesProcess />
           <Footer />
         </div>
       </main>
     </>
   );
 }
+
 
 
 
