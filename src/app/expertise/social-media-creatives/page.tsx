@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SocialMediaCreativesHero from "@/components/expertise/social-media-creatives/SocialMediaCreativesHero";
 import SocialMediaCreativesIdea from "@/components/expertise/social-media-creatives/SocialMediaCreativesIdea";
+import SocialMediaCreativesWhatWeDesign from "@/components/expertise/social-media-creatives/SocialMediaCreativesWhatWeDesign";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -35,10 +36,12 @@ export default function SocialMediaCreativesPage() {
         <SocialMediaCreativesHero />
         <div id="next-section">
           <SocialMediaCreativesIdea />
+          <SocialMediaCreativesWhatWeDesign />
           <Footer />
         </div>
       </main>
     </>
   );
 }
+
 
