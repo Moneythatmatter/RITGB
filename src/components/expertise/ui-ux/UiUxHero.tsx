@@ -13,9 +13,6 @@ const marqueeItems = [
   "PROTOTYPES",
   "DESIGN SYSTEMS",
   "WIREFRAMES",
-  "MOBILE APPS",
-  "WEB APPS",
-  "USABILITY TESTING",
 ];
 
 const lines = [
@@ -54,9 +51,7 @@ export default function UiUxHero() {
       ref={containerRef}
       className="w-full bg-[#080808] text-white flex flex-col justify-between pt-24 md:pt-28 min-h-[92vh] relative overflow-hidden"
     >
-      {/* Centered Main Content Area */}
       <div className="px-6 md:px-14 lg:px-20 py-12 md:py-20 grow flex flex-col items-center justify-center text-center">
-        {/* Giant Display Typography with single semantic <h1> */}
         <h1 className="flex flex-col items-center text-center select-none">
           {lines.map((item, index) => (
             <span key={index} className="overflow-hidden block">
@@ -70,14 +65,12 @@ export default function UiUxHero() {
           ))}
         </h1>
 
-        {/* Subtitle copy & Centered CTA Button */}
         <div className="uiux-sub-content flex flex-col items-center text-center mt-6 md:mt-8 max-w-xl">
           <p className="text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-6 md:mb-8">
             Digital experiences that feel clear, considered and built around
             real people.
           </p>
 
-          {/* Glowing Gradient Button (Light on Dark Background) */}
           <div className="flex justify-center">
             <GradientButton
               theme="light"
@@ -90,7 +83,6 @@ export default function UiUxHero() {
         </div>
       </div>
 
-      {/* Bottom White Strip / Marquee */}
       <div className="w-full bg-white text-black py-4 md:py-5 overflow-hidden select-none border-y border-neutral-200">
         <div className="flex w-max animate-[marquee_24s_linear_infinite] whitespace-nowrap items-center">
           {[...marqueeItems, ...marqueeItems, ...marqueeItems].map(
@@ -108,7 +100,6 @@ export default function UiUxHero() {
         </div>
       </div>
 
-      {/* Marquee Animation Keyframe */}
       <style jsx>{`
         @keyframes marquee {
           0% {
