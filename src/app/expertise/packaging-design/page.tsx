@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PackagingDesignHero from "@/components/expertise/packaging-design/PackagingDesignHero";
+import PackagingDesignIdea from "@/components/expertise/packaging-design/PackagingDesignIdea";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -33,6 +34,7 @@ export default function PackagingDesignPage() {
       <main className="w-full bg-[#050505] min-h-screen">
         <PackagingDesignHero />
         <div id="next-section">
+          <PackagingDesignIdea />
           <Footer />
         </div>
       </main>
