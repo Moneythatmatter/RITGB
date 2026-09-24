@@ -4,6 +4,7 @@ import UiUxIdea from "@/components/expertise/ui-ux/UiUxIdea";
 import UiUxWhatWeDesign from "@/components/expertise/ui-ux/UiUxWhatWeDesign";
 import UiUxSelectedWork from "@/components/expertise/ui-ux/UiUxSelectedWork";
 import UiUxProcess from "@/components/expertise/ui-ux/UiUxProcess";
+import UiUxDeliverables from "@/components/expertise/ui-ux/UiUxDeliverables";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -41,12 +42,14 @@ export default function UiUxPage() {
           <UiUxWhatWeDesign />
           <UiUxSelectedWork />
           <UiUxProcess />
+          <UiUxDeliverables />
           <Footer />
         </div>
       </main>
     </>
   );
 }
+
 
 
 
