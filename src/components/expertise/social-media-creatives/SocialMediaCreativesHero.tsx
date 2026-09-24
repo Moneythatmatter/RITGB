@@ -8,28 +8,29 @@ import GradientButton from "@/components/GradientButton";
 import { Asterisk } from "lucide-react";
 
 const marqueeItems = [
-  "CREATIVE DIRECTION",
-  "BRAND GUIDELINES",
-  "PACKAGING DESIGN",
-  "BRAND POSITIONING",
-  "LOGO SYSTEMS",
-  "VISUAL IDENTITY",
-  "BRAND STRATEGY",
-  "DESIGN SYSTEMS",
+  "POSTS",
+  "CAROUSELS",
+  "STORIES",
+  "AD CREATIVES",
+  "REELS COVERS",
+  "MOTION ASSETS",
+  "CAMPAIGN GRAPHICS",
+  "STATIC ADS",
 ];
 
 const lines = [
-  { text: "BRANDS BUILT", isAccent: false },
-  { text: " TO BE SEEN.", isAccent: true },
+  { text: "MAKE THE", isAccent: false },
+  { text: "SCROLL", isAccent: false },
+  { text: "STOP.", isAccent: true },
 ];
 
-export default function BrandingHero() {
+export default function SocialMediaCreativesHero() {
   const containerRef = useRef<HTMLElement>(null);
   const router = useRouter();
 
   useGSAP(
     () => {
-      gsap.from(".branding-line", {
+      gsap.from(".creative-line", {
         yPercent: 110,
         duration: 0.9,
         ease: "power4.out",
@@ -37,7 +38,7 @@ export default function BrandingHero() {
         delay: 0.2,
       });
 
-      gsap.from(".branding-sub-content", {
+      gsap.from(".creative-sub-content", {
         opacity: 0,
         y: 20,
         duration: 0.8,
@@ -60,8 +61,9 @@ export default function BrandingHero() {
           {lines.map((item, index) => (
             <span key={index} className="overflow-hidden block">
               <span
-                className={`branding-line font-(family-name:--font-right-grotesk) text-[15vw] sm:text-[13vw] lg:text-[9.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block ${item.isAccent ? "text-[#4db685]" : "text-white"
-                  }`}
+                className={`creative-line font-(family-name:--font-right-grotesk) text-[15vw] sm:text-[13vw] lg:text-[9.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block ${
+                  item.isAccent ? "text-[#4db685]" : "text-white"
+                }`}
               >
                 {item.text}
               </span>
@@ -70,10 +72,10 @@ export default function BrandingHero() {
         </h1>
 
         {/* Subtitle copy & Centered CTA Button */}
-        <div className="branding-sub-content flex flex-col items-center text-center mt-6 md:mt-8 max-w-xl">
+        <div className="creative-sub-content flex flex-col items-center text-center mt-6 md:mt-8 max-w-xl">
           <p className="text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-6 md:mb-8">
-            A clear strategy. A distinctive identity. A brand people know is
-            yours before they even see your name.
+            Social visuals designed for your brand, your message and the format
+            they live in.
           </p>
 
           {/* Glowing Gradient Button (Light on Dark Background) */}
@@ -121,4 +123,3 @@ export default function BrandingHero() {
     </section>
   );
 }
-

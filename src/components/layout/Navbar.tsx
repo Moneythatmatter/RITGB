@@ -11,8 +11,7 @@ export default function Navbar() {
 
   const pathname = usePathname();
   const isDark =
-    pathname.startsWith("/expertise/branding") ||
-    pathname.startsWith("/expertise/graphic-design");
+    pathname.startsWith("/expertise/") && pathname !== "/expertise";
 
   return (
     <>
