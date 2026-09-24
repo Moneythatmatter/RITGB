@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import WebsiteDesignHero from "@/components/expertise/website-design/WebsiteDesignHero";
+import WebsiteDesignIdea from "@/components/expertise/website-design/WebsiteDesignIdea";
+import WebsiteDesignWhatWeDesign from "@/components/expertise/website-design/WebsiteDesignWhatWeDesign";
+import WebsiteDesignSelectedWork from "@/components/expertise/website-design/WebsiteDesignSelectedWork";
+import WebsiteDesignProcess from "@/components/expertise/website-design/WebsiteDesignProcess";
+import WebsiteDesignDeliverables from "@/components/expertise/website-design/WebsiteDesignDeliverables";
+import WebsiteDesignFaq from "@/components/expertise/website-design/WebsiteDesignFaq";
+import WebsiteDesignCta from "@/components/expertise/website-design/WebsiteDesignCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -33,6 +40,13 @@ export default function WebsiteDesignPage() {
       <main className="w-full bg-[#050505] min-h-screen">
         <WebsiteDesignHero />
         <div id="next-section">
+          <WebsiteDesignIdea />
+          <WebsiteDesignWhatWeDesign />
+          <WebsiteDesignSelectedWork />
+          <WebsiteDesignProcess />
+          <WebsiteDesignDeliverables />
+          <WebsiteDesignFaq />
+          <WebsiteDesignCta />
           <Footer />
         </div>
       </main>
