@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -119,7 +120,7 @@ export default function SocialMediaCreativesSelectedWork() {
           href="/work"
           className="font-[Arial] font-bold text-xs uppercase tracking-widest text-black border-b border-black pb-1 hover:text-[#4db685] hover:border-[#4db685] transition-colors inline-flex items-center gap-1.5"
         >
-          EXPLORE ALL WORK <span>↗</span>
+          EXPLORE ALL WORK <span><ArrowUpRight className="w-4 h-4" /></span>
         </Link>
       </div>
     </section>

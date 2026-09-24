@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,9 +70,7 @@ export default function UiUxSelectedWork() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-14 md:mb-16">
         <div className="lg:col-span-7">
           <h2 className="work-headline font-(family-name:--font-right-grotesk) text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black uppercase leading-[0.88] tracking-[-0.03em] text-black select-none">
-            SELECTED
-
-            WORK.
+            SELECTED WORK.
           </h2>
         </div>
 
@@ -121,7 +120,7 @@ export default function UiUxSelectedWork() {
           href="/work"
           className="font-[Arial] font-bold text-xs uppercase tracking-widest text-black border-b border-black pb-1 hover:text-[#4db685] hover:border-[#4db685] transition-colors inline-flex items-center gap-1.5"
         >
-          EXPLORE ALL WORK <span>↗</span>
+          EXPLORE ALL WORK <span><ArrowUpRight className="w-4 h-4" /></span>
         </Link>
       </div>
     </section>
