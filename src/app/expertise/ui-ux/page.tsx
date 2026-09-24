@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import UiUxHero from "@/components/expertise/ui-ux/UiUxHero";
 import UiUxIdea from "@/components/expertise/ui-ux/UiUxIdea";
+import UiUxWhatWeDesign from "@/components/expertise/ui-ux/UiUxWhatWeDesign";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -35,10 +36,12 @@ export default function UiUxPage() {
         <UiUxHero />
         <div id="next-section">
           <UiUxIdea />
+          <UiUxWhatWeDesign />
           <Footer />
         </div>
       </main>
     </>
   );
 }
+
 
