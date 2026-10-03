@@ -1994,7 +1994,7 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "SEO GUIDE",
     date: "2026",
     readTime: "5 min read",
-    image: "/images/blog/blog5.png",
+    image: "/images/blog/blog5.webp",
     excerpt:
       "Picking an SEO agency is rarely straightforward. Run a single search and hundreds of firms appear. Scroll through them and the messaging starts to blur together — higher rankings, more traffic, more leads and faster growth.",
     author: {
@@ -2423,7 +2423,7 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "MARKETING GUIDE",
     date: "2026",
     readTime: "5 min read",
-    image: "/images/blog/blog6.png",
+    image: "/images/blog/blog6.webp",
     excerpt:
       "Searching for a digital marketing agency in India can leave you more confused than when you started. There are hundreds of options, and nearly every one of them says the same thing: more traffic, more leads, better Google rankings, faster growth.",
     author: {
@@ -2733,6 +2733,584 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           'Ready to build a digital marketing strategy that drives genuine business growth? <a href="https://www.ritgb.com/contact" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Connect with the RITGB team</a>.',
+      },
+    ],
+  },
+  {
+    slug: "best-digital-marketing-company-in-india-2026-top-agencies-services-how-to-choose",
+    title:
+      "Best Digital Marketing Company in India 2026: Top Agencies, Services & How to Choose",
+    metaDescription:
+      "Discover the best digital marketing company in India in 2026. Explore top agency services, SEO, paid ads, social media, and how to choose the right partner.",
+    category: "MARKETING",
+    categoryLabel: "MARKETING GUIDE",
+    date: "2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog7.webp",
+    excerpt:
+      "Here's something most business owners know but don't always act on: your customers are checking you out online long before they pick up the phone.",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "Here's something most business owners know but don't always act on: your customers are checking you out online long before they pick up the phone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Say you run a small interior design studio in Pune. A couple planning their new flat won't just walk in. They'll Google “interior designers near me,” scroll through a few Instagram pages, read some reviews, and maybe look at your website. If you're not there, or if what they find looks outdated, they'll move on to the next name. Simple as that.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It doesn't matter if you're a two-person startup or a company with a hundred employees. Being visible online is now part of doing business.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'That\'s the reason more people are searching for the <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">best digital marketing company in India</a>. A good agency can get your business in front of the right people, bring in enquiries that actually turn into sales, and help you grow without wasting money on guesswork.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB is one such agency. The team works on SEO, website development, branding, social media marketing, and digital advertising. But the part we think matters most is how they start. Before talking about services, they want to know what the business is trying to achieve.",
+      },
+      {
+        type: "heading2",
+        content: "Why Is Digital Marketing Important in 2026?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "India has hundreds of millions of people online now, and it's not just the big cities. Someone in Indore or Coimbatore is just as likely to research a purchase on their phone as someone in Mumbai.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For a business, this means your next customer could be anywhere. Digital marketing lets you reach them without opening a branch in every city.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It also helps you build trust. A business with an active Instagram page, good Google reviews and a clean website simply looks more reliable than one with no online presence at all.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "And then there's the numbers side of it. With a hoarding or a newspaper ad, you pay and hope for the best. Online, you can see how many people clicked, how many called, and which campaign brought in the most leads. If something isn't working, you change it. No need to wait six months to find out.",
+      },
+      {
+        type: "heading2",
+        content:
+          "Services Offered by the Best Digital Marketing Agencies in India",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Most agencies offer a similar menu of services. What separates the best digital marketing agency in India from the rest is how well these services are connected to each other and to your business goals.",
+      },
+      {
+        type: "cta",
+        ctaText: "Ready to Grow Your Business Online? – Contact us",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading3",
+        content: "1. Search Engine Optimization (SEO)",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Be honest, when was the last time you clicked on page two of Google? Most people don't. SEO is the work of getting your website onto page one for the searches your customers are making.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It involves figuring out what people type when they look for businesses like yours, improving your website pages, sorting out technical issues that slow things down, and writing content that's genuinely useful. It's not quick, but once it starts working, it keeps bringing in visitors without you paying for every click.",
+      },
+      {
+        type: "heading3",
+        content: "2. Social Media Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "People check a brand's social media the way they'd check someone's LinkedIn before a meeting. They want to see if you're real, active, and worth their time.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "An agency takes care of planning posts, creating content, managing your pages and replying to people. Instagram and YouTube work well for showing off products and telling your story. Facebook is still useful for local communities. LinkedIn is the place to be if you sell to other businesses.",
+      },
+      {
+        type: "heading3",
+        content: "3. Google Ads and Paid Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you need leads this month and not next year, paid ads are the way to go. Google Ads and social media ads let you show up in front of people based on where they live, what they're interested in, and what they're searching for.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The catch? It's very easy to burn through money if nobody is watching the campaigns. A good agency checks performance regularly, cuts what isn't working, and puts more behind what is.",
+      },
+      {
+        type: "heading3",
+        content: "4. Website Design and Development",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Your website is often the first proper look someone gets at your business. If it takes forever to load or looks broken on a phone, most visitors won't stick around to find out how good you are.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "That's why many top digital marketing companies in India build websites as well. A good site doesn't need to be fancy. It needs to load fast, work on mobile, and make it easy for someone to call you or fill in a form.",
+      },
+      {
+        type: "heading3",
+        content: "5. Content Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Customers trust businesses that help them without asking for anything first. A blog post that answers a common question, a short video that explains how your product works, a helpful Instagram carousel. All of this builds trust over time.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It helps your SEO too, since Google tends to reward websites that actually answer people's questions.",
+      },
+      {
+        type: "heading2",
+        content: "Why Businesses Choose RITGB for Digital Marketing Solutions",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A clothing brand and a CA firm shouldn't have the same marketing plan. That sounds obvious, but a lot of agencies still sell the same package to everyone.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB works differently. The team handles SEO, website design and development, social media marketing, branding, online advertising and overall digital growth planning. But before any of that begins, they spend time understanding the brand, who its customers are and what the competition looks like. The plan comes after that, built around the business rather than squeezed into a template.",
+      },
+      {
+        type: "heading2",
+        content:
+          "What Makes the Top Digital Marketing Companies in India Different?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Running ads and posting on Instagram isn't hard to learn. Plenty of agencies can do it. What the top digital marketing companies in India bring is a better understanding of business itself.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "They'll ask you questions before giving you answers. They'll tell you where your money is going. They'll keep up with changes on Google and social platforms so you don't have to. And they'll look at your results every month and tweak things instead of running the same campaign forever.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Good agency relationships are built on trust and regular, honest communication. If you feel like you're always chasing your agency for updates, that's usually a bad sign.",
+      },
+      {
+        type: "heading2",
+        content: "Future of Digital Marketing in India",
+      },
+      {
+        type: "paragraph",
+        content:
+          "More people are going to be online next year than this year. More businesses will be competing for their attention too. Getting noticed is only going to get harder.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Businesses that start investing in SEO, content and social media now will have a real head start. They'll already have the audience, the trust and the search rankings when others are just getting started.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Working with an agency like RITGB can help you figure out where to focus and build an online presence that holds up over time.",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Take Your Digital Presence to the Next Level – Talk to Our Experts",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Conclusion",
+      },
+      {
+        type: "paragraph",
+        content:
+          'There isn\'t one agency that\'s right for everyone. The <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">best digital marketing company in India</a> for you is the one that understands your goals, works within your budget and is honest about what it can deliver.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "SEO, social media, a good website and well-run ads can make a real difference to a business of any size. Take your time comparing options. And if you want a partner that plans around your business instead of a fixed package, RITGB is worth a conversation.",
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions (FAQs)",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question:
+              "1. What services does a digital marketing company provide?",
+            answer:
+              "Usually SEO, social media marketing, website development, content marketing, branding and paid advertising. Some agencies do all of it, others specialise.",
+          },
+          {
+            question:
+              "2. Why should businesses hire a digital marketing agency?",
+            answer:
+              "Because doing it well takes skill and time, and most business owners don't have much of either to spare. An agency brings the experience and lets you focus on running your business.",
+          },
+          {
+            question: "3. Is digital marketing useful for small businesses?",
+            answer:
+              "Very much so. It's one of the few ways a small business can reach the same customers as a big brand, often on a much smaller budget.",
+          },
+          {
+            question:
+              "4. How long does digital marketing take to show results?",
+            answer:
+              "It depends on what you're doing. SEO generally takes a few months to pick up. Paid ads can start bringing in visitors within days.",
+          },
+          {
+            question: "5. Why choose RITGB for digital marketing services?",
+            answer:
+              "RITGB offers SEO, website development, branding and online marketing, and builds each strategy around what the client's business actually needs.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          'Looking for the best digital marketing company in India to grow your brand? <a href="https://www.ritgb.com/contact" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Connect with the RITGB team</a>.',
+      },
+    ],
+  },
+  {
+    slug: "best-seo-company-in-india-2026-how-to-choose-the-right-seo-agency",
+    title:
+      "Best SEO Company in India 2026: How to Choose the Right SEO Agency",
+    metaDescription:
+      "Discover how to choose the best SEO company in India in 2026. Learn what to look for in experience, strategy, content, reviews, reporting, and long-term results.",
+    category: "SEO",
+    categoryLabel: "SEO GUIDE",
+    date: "2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog8.webp",
+    excerpt:
+      "Most business owners we talk to have the same complaint. “We spent good money on a website, and nobody visits it.”",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "Most business owners we talk to have the same complaint. “We spent good money on a website, and nobody visits it.”",
+      },
+      {
+        type: "paragraph",
+        content:
+          "It's a common story. The site looks nice, the services are listed, the contact form works. But when a potential customer types something into Google, the website is sitting on page four where nobody ever goes. It might as well not exist.",
+      },
+      {
+        type: "paragraph",
+        content: "Fixing that is what SEO is for.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Search Engine Optimization sounds technical, and parts of it are. But the idea is simple. You make your website the kind of page Google wants to show people, so that when someone searches for what you offer, they find you first.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Now, here's where it gets confusing. Search for the best SEO company in India and you'll get hundreds of results, all promising top rankings and more traffic. Some of them are excellent. Some are not. And unless you know what to look for, it's hard to tell which is which.",
+      },
+      {
+        type: "paragraph",
+        content: "So let's go through it properly.",
+      },
+      {
+        type: "heading2",
+        content: "What Makes the Best SEO Company in India 2026?",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Don\'t be swayed by a famous name or a slick sales presentation. The <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">best SEO company in India 2026</a> for you is simply the one that gets your business and knows how to grow it.',
+      },
+      {
+        type: "paragraph",
+        content: "A few things usually give the good ones away.",
+      },
+      {
+        type: "heading3",
+        content: "1. Experience and Knowledge",
+      },
+      {
+        type: "paragraph",
+        content:
+          "There's no shortcut for experience in SEO. An agency that has worked on dozens of websites across different industries has already made its mistakes (on someone else's budget, thankfully) and learned from them.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Ask to see their past work. Find out which industries they've worked in and what actually changed for those clients.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Any serious best SEO agency in India should be confident talking about keyword research, site audits, on-page and technical SEO, content, link building and local SEO. If they fumble on the basics, that tells you a lot.",
+      },
+      {
+        type: "heading3",
+        content: "2. Clear SEO Strategy",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Here's a quick test. Ask them, “What exactly will you do for my website in the first three months?”",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A good agency will give you a clear, honest answer. They'll talk about auditing your site, looking at what your competitors are doing, choosing the right keywords, improving your content, and sending you monthly reports.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A bad agency will talk about guaranteed first-page rankings. Walk away from those. Google uses hundreds of signals to rank pages, and no one can promise where you'll land or how fast.",
+      },
+      {
+        type: "cta",
+        ctaText: "Ready to Grow Your Business Online? – Contact us",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading3",
+        content: "3. Focus on Quality Content",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If there's one thing Google has been consistent about, it's this: it wants to show people useful pages.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "So the right SEO company in India will care a lot about content. Not the old-school kind where the same keyword is repeated fifteen times in a paragraph. Real content that answers the questions your customers actually have.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "When people find genuinely helpful information on your site, they stick around. They trust you a little more. Some of them get in touch. And Google notices all of that.",
+      },
+      {
+        type: "heading3",
+        content: "4. Check Reviews and Client Feedback",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Before you shortlist anyone from the top SEO companies in India, see what their clients are saying.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Reviews will tell you things no sales call ever will. Do they actually reply to emails? Do clients feel the work was worth the money? Were the promised results delivered?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Look for detailed reviews and real case studies, not a wall of vague five-star ratings. And if you're about to sign a long contract, it's perfectly fair to ask if you can speak to one of their existing clients.",
+      },
+      {
+        type: "heading3",
+        content: "5. Understand Their Reporting Process",
+      },
+      {
+        type: "paragraph",
+        content:
+          "You're paying for SEO every month, so you should know what's being done every month.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A decent agency will send regular reports showing keyword rankings, traffic, new backlinks, technical fixes, and what they plan to work on next. But a report full of charts isn't much use if nobody explains it. The better agencies will happily get on a call and walk you through the numbers.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Good communication sounds like a small thing. In practice, it's often what makes or breaks the whole relationship.",
+      },
+      {
+        type: "heading2",
+        content: "How to Choose the Right SEO Agency in India?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Once you know what to look for, picking the right SEO agency in India gets a lot more straightforward.",
+      },
+      {
+        type: "heading3",
+        content: "Understand Your Goals",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Be clear about what you want before you talk to anyone. Is it more traffic? More leads? Showing up when people in your city search for your service? Building your brand? Different agencies are good at different things, so your goal will help narrow the list.",
+      },
+      {
+        type: "heading3",
+        content: "Compare Different SEO Companies",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Get quotes from a few top SEO agencies in India and compare them properly. Look at their experience, what's actually included, the results they've shown, their reviews, and how they communicate. The lowest price is tempting, but cheap SEO has a habit of turning into an expensive problem later.",
+      },
+      {
+        type: "heading3",
+        content: "Ask the Right Questions",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Don't be shy about asking direct questions. What methods do you use? How will you measure success? How often will I hear from you? Have you worked with businesses like mine?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "You'll learn as much from how they answer as from what they say.",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Take Your Digital Presence to the Next Level – Talk to Our Experts",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Common Mistakes to Avoid When Hiring an SEO Company",
+      },
+      {
+        type: "paragraph",
+        content: "A few mistakes come up again and again:",
+      },
+      {
+        type: "list",
+        items: [
+          "Picking an agency just because it's the cheapest",
+          "Believing someone who promises the moon",
+          "Not bothering to check their past work",
+          "Ignoring the fact that they took five days to reply to your first email",
+          "Signing up without really understanding that SEO takes months, not weeks",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you can avoid these, you're already in a better position than most. The rest comes down to trust, patience and keeping the conversation going.",
+      },
+      {
+        type: "heading2",
+        content: "Why Choose the Right SEO Company for Long-Term Growth?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Getting to page one is nice. Staying there year after year is what actually changes a business.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "That's really the whole point of choosing well. The right best SEO agency in India won't chase quick wins that disappear after a Google update. They'll build a stronger website, content that keeps working for you, and a steady flow of customers who found you on their own.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "With competition online only getting tougher in 2026, that kind of steady, well-planned SEO is what keeps a business visible.",
+      },
+      {
+        type: "heading2",
+        content: "Conclusion",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Finding the <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">best SEO company in India 2026</a> isn\'t something you should rush. Look for an agency that\'s honest about how it works, has people who know their stuff, takes content seriously and actually talks to you.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "Whether you run a small local shop or a large company, SEO can help more of the right people find you.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "So shortlist a few of the top SEO companies in India, ask them the hard questions, and go with the one that feels like it genuinely understands your business.",
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions (FAQs)",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question: "1. What does an SEO company do?",
+            answer:
+              "It works on your website so it ranks higher on Google and other search engines. That covers keywords, content, site structure, technical fixes and more, all aimed at bringing in more of the right visitors.",
+          },
+          {
+            question: "2. How do I choose the best SEO company in India?",
+            answer:
+              "Look at their experience, their past results and what clients say about them. Make sure they can explain their strategy clearly and that they actually understand your business.",
+          },
+          {
+            question: "3. How long does SEO take to show results?",
+            answer:
+              "There's no fixed answer. It depends on your website, your competition and your industry. Most businesses see real improvement after a few months of consistent work.",
+          },
+          {
+            question: "4. Why is SEO important for businesses in 2026?",
+            answer:
+              "Because your customers are searching online before they buy. SEO helps you show up in those searches, reach new people and build trust.",
+          },
+          {
+            question:
+              "5. What services does a professional SEO company provide?",
+            answer:
+              "Usually keyword research, on-page SEO, technical SEO, content optimization, link building, local SEO and regular performance reports.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          'Ready to rank higher and turn search traffic into business growth? <a href="https://www.ritgb.com/contact" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Connect with the RITGB SEO team</a>.',
       },
     ],
   },
