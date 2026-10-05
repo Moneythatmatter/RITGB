@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PerformanceMarketingHero from "@/components/expertise/performance-marketing/PerformanceMarketingHero";
 import PerformanceMarketingVisualConcept from "@/components/expertise/performance-marketing/PerformanceMarketingVisualConcept";
 import PerformanceMarketingApproach from "@/components/expertise/performance-marketing/PerformanceMarketingApproach";
+import PerformanceMarketingServicesInclude from "@/components/expertise/performance-marketing/PerformanceMarketingServicesInclude";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -37,6 +38,7 @@ export default function PerformanceMarketingPage() {
         <div id="next-section">
           <PerformanceMarketingVisualConcept />
           <PerformanceMarketingApproach />
+          <PerformanceMarketingServicesInclude />
           <Footer />
         </div>
       </main>
