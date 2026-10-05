@@ -57,7 +57,7 @@ export default function SocialMediaMarketingVisualConcept() {
       className="w-full bg-[#f8f8f7] py-8 md:py-16 px-4 sm:px-6 md:px-14 lg:px-20"
     >
       <div className="w-full bg-[#FFBCD4] rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-14 lg:p-16 relative overflow-hidden text-black min-h-[500px] lg:min-h-[580px] flex flex-col justify-between shadow-xs">
-        <div className="flex items-center justify-between w-full font-sans text-[11px] md:text-xs uppercase tracking-widest text-black font-semibold mb-8 md:mb-12">
+        <div className="flex items-center justify-between w-full font-sans text-[11px] md:text-xs uppercase tracking-widest text-black mb-8 md:mb-12">
           <span>RITGB / SOCIAL MEDIA MARKETING</span>
           <span>VISUAL CONCEPT</span>
         </div>
