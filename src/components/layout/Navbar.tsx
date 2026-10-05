@@ -10,8 +10,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname();
+  const isLightHero = pathname === "/expertise/social-media-marketing";
   const isDark =
-    pathname.startsWith("/expertise/") && pathname !== "/expertise";
+    pathname.startsWith("/expertise/") &&
+    pathname !== "/expertise" &&
+    !isLightHero;
 
   return (
     <>
