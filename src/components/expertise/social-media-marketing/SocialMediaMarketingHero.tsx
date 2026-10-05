@@ -96,7 +96,7 @@ export default function SocialMediaMarketingHero() {
         </div>
       </div>
 
-      <div className="smm-footer w-full flex items-center justify-between pt-12 md:pt-16 border-t border-black/5 text-xs text-neutral-500 font-sans">
+      <div className="smm-footer w-full flex items-center justify-between pt-12 md:pt-16 text-xs text-neutral-500 font-sans">
         <span>Strategy. Creativity. Growth.</span>
 
         <button

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SocialMediaMarketingHero from "@/components/expertise/social-media-marketing/SocialMediaMarketingHero";
 import SocialMediaMarketingVisualConcept from "@/components/expertise/social-media-marketing/SocialMediaMarketingVisualConcept";
+import SocialMediaMarketingApproach from "@/components/expertise/social-media-marketing/SocialMediaMarketingApproach";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -35,6 +36,7 @@ export default function SocialMediaMarketingPage() {
         <SocialMediaMarketingHero />
         <div id="next-section">
           <SocialMediaMarketingVisualConcept />
+          <SocialMediaMarketingApproach />
           <Footer />
         </div>
       </main>
