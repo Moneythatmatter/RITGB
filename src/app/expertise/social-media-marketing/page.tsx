@@ -3,6 +3,8 @@ import SocialMediaMarketingHero from "@/components/expertise/social-media-market
 import SocialMediaMarketingVisualConcept from "@/components/expertise/social-media-marketing/SocialMediaMarketingVisualConcept";
 import SocialMediaMarketingApproach from "@/components/expertise/social-media-marketing/SocialMediaMarketingApproach";
 import SocialMediaMarketingServicesInclude from "@/components/expertise/social-media-marketing/SocialMediaMarketingServicesInclude";
+import SocialMediaMarketingBiggerPicture from "@/components/expertise/social-media-marketing/SocialMediaMarketingBiggerPicture";
+import SocialMediaMarketingHowWeWork from "@/components/expertise/social-media-marketing/SocialMediaMarketingHowWeWork";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,6 +41,8 @@ export default function SocialMediaMarketingPage() {
           <SocialMediaMarketingVisualConcept />
           <SocialMediaMarketingApproach />
           <SocialMediaMarketingServicesInclude />
+          <SocialMediaMarketingBiggerPicture />
+          <SocialMediaMarketingHowWeWork />
           <Footer />
         </div>
       </main>
