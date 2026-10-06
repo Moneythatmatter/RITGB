@@ -12,7 +12,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const isLightHero =
     pathname === "/expertise/social-media-marketing" ||
-    pathname === "/expertise/performance-marketing";
+    pathname === "/expertise/performance-marketing" ||
+    pathname === "/expertise/seo";
   const isDark =
     pathname.startsWith("/expertise/") &&
     pathname !== "/expertise" &&
