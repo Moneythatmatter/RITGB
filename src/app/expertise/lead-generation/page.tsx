@@ -3,6 +3,11 @@ import LeadGenerationHero from "@/components/expertise/lead-generation/LeadGener
 import LeadGenerationVisualConcept from "@/components/expertise/lead-generation/LeadGenerationVisualConcept";
 import LeadGenerationApproach from "@/components/expertise/lead-generation/LeadGenerationApproach";
 import LeadGenerationServicesInclude from "@/components/expertise/lead-generation/LeadGenerationServicesInclude";
+import LeadGenerationBiggerPicture from "@/components/expertise/lead-generation/LeadGenerationBiggerPicture";
+import LeadGenerationHowWeWork from "@/components/expertise/lead-generation/LeadGenerationHowWeWork";
+import LeadGenerationFaq from "@/components/expertise/lead-generation/LeadGenerationFaq";
+import LeadGenerationCta from "@/components/expertise/lead-generation/LeadGenerationCta";
+import LeadGenerationKeepExploring from "@/components/expertise/lead-generation/LeadGenerationKeepExploring";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,6 +44,11 @@ export default function LeadGenerationPage() {
           <LeadGenerationVisualConcept />
           <LeadGenerationApproach />
           <LeadGenerationServicesInclude />
+          <LeadGenerationBiggerPicture />
+          <LeadGenerationHowWeWork />
+          <LeadGenerationFaq />
+          <LeadGenerationCta />
+          <LeadGenerationKeepExploring />
           <Footer />
         </div>
       </main>
