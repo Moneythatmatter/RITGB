@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
       "Discover why SEO and content strategy are essential for business growth in 2026. Learn how SEO, keyword research and valuable content drive visibility, trust and leads.",
     category: "GROWTH",
     categoryLabel: "GROWTH",
-    date: "2026",
+    date: "August 27, 2026",
     readTime: "5 min read",
     image: "/images/blog/blog1.webp",
     excerpt:
@@ -407,7 +407,7 @@ export const blogPosts: BlogPost[] = [
       "Learn how to choose the right digital marketing agency in 2026. Discover what to look for in services, experience, SEO, content, communication, pricing and results.",
     category: "MARKETING",
     categoryLabel: "MARKETING",
-    date: "2026",
+    date: "August 27, 2026",
     readTime: "6 min read",
     image: "/images/blog/blog2.webp",
     excerpt:
@@ -731,7 +731,7 @@ export const blogPosts: BlogPost[] = [
       "Discover how Bhubaneswar businesses can build a strong digital presence in 2026 through SEO, website design, and branding. Learn how they work together for durable growth.",
     category: "BRANDING & SEO",
     categoryLabel: "BRANDING & SEO",
-    date: "2026",
+    date: "September 7, 2026",
     readTime: "6 min read",
     image: "/images/blog/blog3.webp",
     excerpt:
@@ -1197,7 +1197,7 @@ export const blogPosts: BlogPost[] = [
       "Learn how to choose the best digital marketing agency in Bhubaneswar for your business in 2026. Explore services, local market expertise, pricing, metrics and FAQs.",
     category: "DIGITAL MARKETING",
     categoryLabel: "DIGITAL MARKETING",
-    date: "2026",
+    date: "September 7, 2026",
     readTime: "6 min read",
     image: "/images/blog/blog4.webp",
     excerpt:
@@ -1628,7 +1628,7 @@ export const blogPosts: BlogPost[] = [
       "Discover effective social media marketing strategies for small businesses in Bhubaneswar. Learn how local targeting, Instagram, Facebook, and short videos drive real growth.",
     category: "MARKETING",
     categoryLabel: "SOCIAL MEDIA",
-    date: "2026",
+    date: "September 18, 2026",
     readTime: "5 min read",
     image: "/images/blog/blog-5.webp",
     excerpt:
@@ -1992,7 +1992,7 @@ export const blogPosts: BlogPost[] = [
       "Learn how to choose the right SEO agency in India for your business. Discover what to check before hiring, from business goals and services to backlinks, pricing, and realistic results.",
     category: "SEO",
     categoryLabel: "SEO GUIDE",
-    date: "2026",
+    date: "September 22, 2026",
     readTime: "5 min read",
     image: "/images/blog/blog5.webp",
     excerpt:
@@ -2421,7 +2421,7 @@ export const blogPosts: BlogPost[] = [
       "Learn how to pick the right digital marketing agency in India for your business. Discover how to assess your goals, services, SEO capabilities, and team communication.",
     category: "MARKETING",
     categoryLabel: "MARKETING GUIDE",
-    date: "2026",
+    date: "September 22, 2026",
     readTime: "5 min read",
     image: "/images/blog/blog6.webp",
     excerpt:
@@ -2744,7 +2744,7 @@ export const blogPosts: BlogPost[] = [
       "Discover the best digital marketing company in India in 2026. Explore top agency services, SEO, paid ads, social media, and how to choose the right partner.",
     category: "MARKETING",
     categoryLabel: "MARKETING GUIDE",
-    date: "2026",
+    date: "October 3, 2026",
     readTime: "5 min read",
     image: "/images/blog/blog7.webp",
     excerpt:
@@ -3013,7 +3013,7 @@ export const blogPosts: BlogPost[] = [
       "Discover how to choose the best SEO company in India in 2026. Learn what to look for in experience, strategy, content, reviews, reporting, and long-term results.",
     category: "SEO",
     categoryLabel: "SEO GUIDE",
-    date: "2026",
+    date: "October 3, 2026",
     readTime: "5 min read",
     image: "/images/blog/blog8.webp",
     excerpt:
@@ -3321,7 +3321,7 @@ export const blogPosts: BlogPost[] = [
       "Discover how Google Ads helps small businesses in Bhubaneswar reach local customers, get phone calls and enquiries, and grow with smart PPC advertising.",
     category: "PPC",
     categoryLabel: "PPC GUIDE",
-    date: "2026",
+    date: "October 6, 2026",
     readTime: "6 min read",
     image: "/images/blog/blog9.webp",
     excerpt:
@@ -3636,10 +3636,29 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+export function isPublishedThisWeek(dateString: string): boolean {
+  if (!dateString) return false;
+  const postDate = new Date(dateString);
+  if (isNaN(postDate.getTime())) return false;
+  const now = new Date();
+  const diffMs = now.getTime() - postDate.getTime();
+  const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  return diffDays >= -1 && diffDays <= 7;
+}
+
 export function getAllPosts(): BlogPost[] {
-  return blogPosts;
+  return [...blogPosts].sort((a, b) => {
+    const timeA = new Date(a.date).getTime();
+    const timeB = new Date(b.date).getTime();
+    if (isNaN(timeA) || isNaN(timeB)) return 0;
+    if (timeB !== timeA) {
+      return timeB - timeA;
+    }
+    return blogPosts.indexOf(b) - blogPosts.indexOf(a);
+  });
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
+

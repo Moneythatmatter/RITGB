@@ -1,10 +1,12 @@
+
+
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import BlogFAQAccordion from "@/components/blog/BlogFAQAccordion";
-import { getAllPosts, getPostBySlug } from "@/data/blogData";
+import { getAllPosts, getPostBySlug, isPublishedThisWeek } from "@/data/blogData";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -68,6 +70,11 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const isLatest = isPublishedThisWeek(post.date);
+  const isoPublished = !isNaN(new Date(post.date).getTime())
+    ? new Date(post.date).toISOString()
+    : "2026-10-06T18:20:00+05:30";
+
   const faqSection = post.content.find((section) => section.type === "faq");
   const jsonLdArticle = {
     "@context": "https://schema.org",
@@ -75,8 +82,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     headline: post.title,
     description: post.metaDescription,
     image: `https://www.ritgb.com${post.image}`,
-    datePublished: "2026-01-15T08:00:00+05:30",
-    dateModified: "2026-09-07T18:40:00+05:30",
+    datePublished: isoPublished,
+    dateModified: isoPublished,
     inLanguage: "en-US",
     author: {
       "@type": "Organization",
@@ -171,6 +178,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             <span className="text-black">
               {post.categoryLabel || post.category}
             </span>
+            {isLatest && (
+              <span className="inline-flex items-center gap-1.5 bg-black text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full ml-1 shadow-xs">
+                Latest
+              </span>
+            )}
           </div>
 
           {/* Article Header */}
