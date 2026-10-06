@@ -76,7 +76,7 @@ export default function ServicesIncludeSection({
         {services.map((item, index) => (
           <div
             key={index}
-            className="service-row group py-7 md:py-9 border-b border-neutral-300 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-center transition-colors duration-200 hover:bg-neutral-100/60 px-2"
+            className="service-row group py-7 md:py-9 border-b border-neutral-300 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center transition-colors duration-200 hover:bg-neutral-100/60 px-2"
           >
             <div className="md:col-span-1">
               <span className="font-sans font-bold text-xs md:text-sm text-black">

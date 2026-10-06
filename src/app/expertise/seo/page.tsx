@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import SeoHero from "@/components/expertise/seo/SeoHero";
 import SeoVisualConcept from "@/components/expertise/seo/SeoVisualConcept";
+import SeoApproach from "@/components/expertise/seo/SeoApproach";
+import SeoServicesInclude from "@/components/expertise/seo/SeoServicesInclude";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -35,6 +37,8 @@ export default function SeoPage() {
         <SeoHero />
         <div id="next-section">
           <SeoVisualConcept />
+          <SeoApproach />
+          <SeoServicesInclude />
           <Footer />
         </div>
       </main>
