@@ -3,6 +3,11 @@ import PerformanceMarketingHero from "@/components/expertise/performance-marketi
 import PerformanceMarketingVisualConcept from "@/components/expertise/performance-marketing/PerformanceMarketingVisualConcept";
 import PerformanceMarketingApproach from "@/components/expertise/performance-marketing/PerformanceMarketingApproach";
 import PerformanceMarketingServicesInclude from "@/components/expertise/performance-marketing/PerformanceMarketingServicesInclude";
+import PerformanceMarketingBiggerPicture from "@/components/expertise/performance-marketing/PerformanceMarketingBiggerPicture";
+import PerformanceMarketingHowWeWork from "@/components/expertise/performance-marketing/PerformanceMarketingHowWeWork";
+import PerformanceMarketingFaq from "@/components/expertise/performance-marketing/PerformanceMarketingFaq";
+import PerformanceMarketingCta from "@/components/expertise/performance-marketing/PerformanceMarketingCta";
+import PerformanceMarketingKeepExploring from "@/components/expertise/performance-marketing/PerformanceMarketingKeepExploring";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,6 +44,11 @@ export default function PerformanceMarketingPage() {
           <PerformanceMarketingVisualConcept />
           <PerformanceMarketingApproach />
           <PerformanceMarketingServicesInclude />
+          <PerformanceMarketingBiggerPicture />
+          <PerformanceMarketingHowWeWork />
+          <PerformanceMarketingFaq />
+          <PerformanceMarketingCta />
+          <PerformanceMarketingKeepExploring />
           <Footer />
         </div>
       </main>
