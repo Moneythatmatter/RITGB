@@ -3,6 +3,11 @@ import SeoHero from "@/components/expertise/seo/SeoHero";
 import SeoVisualConcept from "@/components/expertise/seo/SeoVisualConcept";
 import SeoApproach from "@/components/expertise/seo/SeoApproach";
 import SeoServicesInclude from "@/components/expertise/seo/SeoServicesInclude";
+import SeoBiggerPicture from "@/components/expertise/seo/SeoBiggerPicture";
+import SeoHowWeWork from "@/components/expertise/seo/SeoHowWeWork";
+import SeoFaq from "@/components/expertise/seo/SeoFaq";
+import SeoCta from "@/components/expertise/seo/SeoCta";
+import SeoKeepExploring from "@/components/expertise/seo/SeoKeepExploring";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,6 +44,11 @@ export default function SeoPage() {
           <SeoVisualConcept />
           <SeoApproach />
           <SeoServicesInclude />
+          <SeoBiggerPicture />
+          <SeoHowWeWork />
+          <SeoFaq />
+          <SeoCta />
+          <SeoKeepExploring />
           <Footer />
         </div>
       </main>
