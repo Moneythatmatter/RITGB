@@ -13,7 +13,8 @@ export default function Navbar() {
   const isLightHero =
     pathname === "/expertise/social-media-marketing" ||
     pathname === "/expertise/performance-marketing" ||
-    pathname === "/expertise/seo";
+    pathname === "/expertise/seo" ||
+    pathname === "/expertise/google-ads";
   const isDark =
     pathname.startsWith("/expertise/") &&
     pathname !== "/expertise" &&

@@ -54,13 +54,12 @@ export default function HowWeWorkSection({
       className="w-full bg-[#080808] text-white py-20 md:py-28 px-6 md:px-14 lg:px-20 border-t border-white/5"
     >
       <div className="flex items-center gap-2.5 pb-4 mb-10 md:mb-14">
-        <span className="font-sans text-[11px] md:text-xs font-semibold uppercase tracking-widest text-neutral-400">
+        <span className="font-sans text-[11px] md:text-xs uppercase tracking-widest text-neutral-400">
           {tag}
         </span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-        {/* Left Column: Headline and Arrow inline */}
         <div className="work-headline lg:col-span-6 flex items-center gap-4 sm:gap-6 flex-wrap sm:flex-nowrap">
           <h2 className="font-(family-name:--font-right-grotesk) text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black uppercase leading-[0.9] tracking-[-0.03em] text-white select-none whitespace-nowrap">
             {headline}

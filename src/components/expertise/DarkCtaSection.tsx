@@ -25,7 +25,7 @@ export default function DarkCtaSection({
   return (
     <section className="w-full bg-black text-white py-24 md:py-36 px-6 md:px-14 lg:px-20 flex flex-col items-center text-center">
       <div className="mb-6 md:mb-8">
-        <span className="font-sans text-[11px] md:text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+        <span className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-neutral-400">
           {tag}
         </span>
       </div>
