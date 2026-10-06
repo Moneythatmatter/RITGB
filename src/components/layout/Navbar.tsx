@@ -15,7 +15,8 @@ export default function Navbar() {
     pathname === "/expertise/performance-marketing" ||
     pathname === "/expertise/seo" ||
     pathname === "/expertise/google-ads" ||
-    pathname === "/expertise/content-marketing";
+    pathname === "/expertise/content-marketing" ||
+    pathname === "/expertise/influencer-marketing";
   const isDark =
     pathname.startsWith("/expertise/") &&
     pathname !== "/expertise" &&
