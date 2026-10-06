@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { BlogPost } from "@/data/blogData";
+import { BlogPost, isPublishedThisWeek } from "@/data/blogData";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -10,6 +10,8 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ post, priority = false }: BlogCardProps) {
+  const isLatest = isPublishedThisWeek(post.date);
+
   return (
     <article className="group flex flex-col h-full bg-white rounded-2xl transition-all duration-300">
       <Link
@@ -17,7 +19,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
         className="flex flex-col h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded-2xl"
       >
         {/* Card Image Container */}
-        <div className="relative aspect-16/10 w-full overflow-hidden bg-neutral-100 shadow-sm">
+        <div className="relative aspect-16/10 w-full overflow-hidden bg-neutral-100 shadow-sm rounded-xl">
           <Image
             src={post.image}
             alt={post.title}
@@ -27,14 +29,26 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+          {/* Latest Badge */}
+          {isLatest && (
+            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10">
+              <span className="inline-flex items-center gap-1.5 bg-black/90 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md backdrop-blur-xs">
+                Latest
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Card Content */}
         <div className="flex flex-col flex-1 pt-6 pb-2">
-          {/* Category Tag with underline */}
-          <div className="mb-3">
+          {/* Category Tag & Full Date */}
+          <div className="flex items-center justify-between gap-3 mb-3">
             <span className="font-arial inline-block text-[11px] md:text-[12px] font-bold tracking-[0.18em] uppercase text-black border-b border-black/20 pb-0.5">
               {post.categoryLabel || post.category}
+            </span>
+            <span className="font-arial text-[11px] md:text-[12px] text-neutral-500 font-medium">
+              {post.date}
             </span>
           </div>
 
