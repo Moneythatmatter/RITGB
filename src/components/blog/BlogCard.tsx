@@ -19,7 +19,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
         className="flex flex-col h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded-2xl"
       >
         {/* Card Image Container */}
-        <div className="relative aspect-16/10 w-full overflow-hidden bg-neutral-100 shadow-sm rounded-xl">
+        <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-100 shadow-sm rounded-xl">
           <Image
             src={post.image}
             alt={post.title}
