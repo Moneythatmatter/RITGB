@@ -212,7 +212,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </header>
 
           {/* Featured Image */}
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-neutral-100 mb-12 md:mb-16 shadow-md">
+          <div className="relative aspect-[12/9] w-full overflow-hidden bg-neutral-100 mb-12 md:mb-16 shadow-md">
             <Image
               src={post.image}
               alt={post.title}
