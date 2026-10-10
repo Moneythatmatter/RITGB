@@ -40,6 +40,7 @@ const EXPERTISE_DATA: ExpertiseCategory[] = [
       { name: "WordPress", slug: "/expertise/wordpress" },
       { name: "Custom Web Development", slug: "/expertise/custom-web-development" },
       { name: "Custom Software", slug: "/expertise/custom-software" },
+      { name: "Mobile App Development", slug: "/expertise/mobile-app-development" },
     ],
   },
   {
