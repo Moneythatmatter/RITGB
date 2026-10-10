@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import CustomSoftwareHero from "@/components/expertise/custom-software/CustomSoftwareHero";
+import CustomSoftwareVisualConcept from "@/components/expertise/custom-software/CustomSoftwareVisualConcept";
+import CustomSoftwareServicesInclude from "@/components/expertise/custom-software/CustomSoftwareServicesInclude";
+import CustomSoftwareBiggerPicture from "@/components/expertise/custom-software/CustomSoftwareBiggerPicture";
+import CustomSoftwareFaq from "@/components/expertise/custom-software/CustomSoftwareFaq";
+import CustomSoftwareCta from "@/components/expertise/custom-software/CustomSoftwareCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -33,6 +38,11 @@ export default function CustomSoftwarePage() {
       <main className="w-full bg-[#f8f8f7] min-h-screen">
         <CustomSoftwareHero />
         <div id="next-section">
+          <CustomSoftwareVisualConcept />
+          <CustomSoftwareServicesInclude />
+          <CustomSoftwareBiggerPicture />
+          <CustomSoftwareFaq />
+          <CustomSoftwareCta />
           <Footer />
         </div>
       </main>

@@ -8,15 +8,19 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export interface BiggerPictureSectionProps {
-  tag?: string;
+  tag?: string | null;
   headline: React.ReactNode;
+  subheading?: React.ReactNode;
   paragraphs: string[];
+  bgClass?: string;
 }
 
 export default function BiggerPictureSection({
   tag = "THE BIGGER PICTURE",
   headline,
+  subheading,
   paragraphs,
+  bgClass = "bg-[#52BEAB]",
 }: BiggerPictureSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -51,19 +55,26 @@ export default function BiggerPictureSection({
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#52BEAB] text-black py-20 md:py-28 px-6 md:px-14 lg:px-20 border-t border-black/5"
+      className={`w-full ${bgClass} text-black py-20 md:py-28 px-6 md:px-14 lg:px-20 border-t border-black/5`}
     >
-      <div className="flex items-center gap-2.5 pb-4 mb-10 md:mb-14">
-        <span className="font-sans text-[11px] md:text-xs uppercase tracking-widest text-black">
-          {tag}
-        </span>
-      </div>
+      {tag && (
+        <div className="flex items-center gap-2.5 pb-4 mb-10 md:mb-14">
+          <span className="font-sans text-[11px] md:text-xs uppercase tracking-widest text-black">
+            {tag}
+          </span>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div className="lg:col-span-6">
           <h2 className="picture-headline font-(family-name:--font-right-grotesk) text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-black uppercase leading-[0.92] tracking-[-0.03em] text-black select-none">
             {headline}
           </h2>
+          {subheading && (
+            <p className="mt-4 sm:mt-6 font-sans font-medium text-2xl sm:text-3xl lg:text-[2rem] text-black leading-snug tracking-tight">
+              {subheading}
+            </p>
+          )}
         </div>
 
         <div className="picture-right lg:col-span-6 flex flex-col items-start lg:pt-2 space-y-6">
