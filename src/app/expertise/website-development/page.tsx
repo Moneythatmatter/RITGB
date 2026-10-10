@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import WebsiteDevelopmentHero from "@/components/expertise/website-development/WebsiteDevelopmentHero";
+import WebsiteDevelopmentVisualConcept from "@/components/expertise/website-development/WebsiteDevelopmentVisualConcept";
+import WebsiteDevelopmentServicesInclude from "@/components/expertise/website-development/WebsiteDevelopmentServicesInclude";
+import WebsiteDevelopmentBiggerPicture from "@/components/expertise/website-development/WebsiteDevelopmentBiggerPicture";
+import WebsiteDevelopmentFaq from "@/components/expertise/website-development/WebsiteDevelopmentFaq";
+import WebsiteDevelopmentCta from "@/components/expertise/website-development/WebsiteDevelopmentCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -33,6 +38,11 @@ export default function WebsiteDevelopmentPage() {
       <main className="w-full bg-[#f8f8f7] min-h-screen">
         <WebsiteDevelopmentHero />
         <div id="next-section">
+          <WebsiteDevelopmentVisualConcept />
+          <WebsiteDevelopmentServicesInclude />
+          <WebsiteDevelopmentBiggerPicture />
+          <WebsiteDevelopmentFaq />
+          <WebsiteDevelopmentCta />
           <Footer />
         </div>
       </main>
