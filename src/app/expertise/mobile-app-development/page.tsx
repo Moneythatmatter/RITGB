@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import MobileAppDevelopmentHero from "@/components/expertise/mobile-app-development/MobileAppDevelopmentHero";
 import MobileAppDevelopmentVisualConcept from "@/components/expertise/mobile-app-development/MobileAppDevelopmentVisualConcept";
+import MobileAppDevelopmentServicesInclude from "@/components/expertise/mobile-app-development/MobileAppDevelopmentServicesInclude";
+import MobileAppDevelopmentBiggerPicture from "@/components/expertise/mobile-app-development/MobileAppDevelopmentBiggerPicture";
+import MobileAppDevelopmentFaq from "@/components/expertise/mobile-app-development/MobileAppDevelopmentFaq";
+import MobileAppDevelopmentCta from "@/components/expertise/mobile-app-development/MobileAppDevelopmentCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -35,6 +39,10 @@ export default function MobileAppDevelopmentPage() {
         <MobileAppDevelopmentHero />
         <div id="next-section">
           <MobileAppDevelopmentVisualConcept />
+          <MobileAppDevelopmentServicesInclude />
+          <MobileAppDevelopmentBiggerPicture />
+          <MobileAppDevelopmentFaq />
+          <MobileAppDevelopmentCta />
           <Footer />
         </div>
       </main>
