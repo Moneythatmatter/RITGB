@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MobileAppDevelopmentHero from "@/components/expertise/mobile-app-development/MobileAppDevelopmentHero";
+import MobileAppDevelopmentVisualConcept from "@/components/expertise/mobile-app-development/MobileAppDevelopmentVisualConcept";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -33,6 +34,7 @@ export default function MobileAppDevelopmentPage() {
       <main className="w-full bg-[#f8f8f7] min-h-screen">
         <MobileAppDevelopmentHero />
         <div id="next-section">
+          <MobileAppDevelopmentVisualConcept />
           <Footer />
         </div>
       </main>
