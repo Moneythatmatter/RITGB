@@ -23,7 +23,6 @@ export default function GoogleAdsFaq() {
     <FaqSection
       tag="QUESTIONS / ANSWERS"
       faqs={googleAdsFaqs}
-      defaultOpenAll={true}
     />
   );
 }

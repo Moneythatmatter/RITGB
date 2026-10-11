@@ -23,7 +23,6 @@ export default function ContentMarketingFaq() {
     <FaqSection
       tag="QUESTIONS / ANSWERS"
       faqs={contentMarketingFaqs}
-      defaultOpenAll={true}
     />
   );
 }
