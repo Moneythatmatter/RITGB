@@ -41,7 +41,7 @@ export default function BlogHero() {
       <div className="flex flex-col items-center mb-6 md:mb-8">
         {lines.map((line, i) => (
           <div key={i} className="relative inline-block overflow-hidden">
-            <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[14vw] sm:text-[11vw] md:text-[7.5rem] lg:text-[8.5rem] font-black leading-[0.88] tracking-[-0.03em] uppercase text-center text-black">
+            <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.013em] text-center text-black">
               {line}
             </h1>
           </div>
