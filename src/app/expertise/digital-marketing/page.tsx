@@ -3,6 +3,11 @@ import DigitalMarketingHero from "@/components/expertise/digital-marketing/Digit
 import DigitalMarketingVisualConcept from "@/components/expertise/digital-marketing/DigitalMarketingVisualConcept";
 import DigitalMarketingPhilosophy from "@/components/expertise/digital-marketing/DigitalMarketingPhilosophy";
 import DigitalMarketingServicesGrid from "@/components/expertise/digital-marketing/DigitalMarketingServicesGrid";
+import DigitalMarketingFullService from "@/components/expertise/digital-marketing/DigitalMarketingFullService";
+import DigitalMarketingProcess from "@/components/expertise/digital-marketing/DigitalMarketingProcess";
+import DigitalMarketingChannels from "@/components/expertise/digital-marketing/DigitalMarketingChannels";
+import DigitalMarketingFaq from "@/components/expertise/digital-marketing/DigitalMarketingFaq";
+import DigitalMarketingCta from "@/components/expertise/digital-marketing/DigitalMarketingCta";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -39,6 +44,11 @@ export default function DigitalMarketingPage() {
           <DigitalMarketingVisualConcept />
           <DigitalMarketingPhilosophy />
           <DigitalMarketingServicesGrid />
+          <DigitalMarketingFullService />
+          <DigitalMarketingProcess />
+          <DigitalMarketingChannels />
+          <DigitalMarketingFaq />
+          <DigitalMarketingCta />
           <Footer />
         </div>
       </main>

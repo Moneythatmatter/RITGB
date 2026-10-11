@@ -13,6 +13,7 @@ export interface FaqSectionProps {
   headline?: React.ReactNode;
   faqs: FAQItem[];
   defaultOpenAll?: boolean;
+  stickyHeadline?: boolean;
 }
 
 export default function FaqSection({
@@ -20,6 +21,7 @@ export default function FaqSection({
   headline,
   faqs,
   defaultOpenAll = false,
+  stickyHeadline = true,
 }: FaqSectionProps) {
   const [openIndices, setOpenIndices] = useState<number[]>(
     defaultOpenAll ? faqs.map((_, i) => i) : [],
@@ -40,7 +42,7 @@ export default function FaqSection({
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        <div className="lg:col-span-5">
+        <div className={`lg:col-span-5 ${stickyHeadline ? "lg:sticky lg:top-28 lg:self-start" : ""}`}>
           <h2 className="font-(family-name:--font-right-grotesk) text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-black uppercase leading-[0.9] tracking-[-0.03em] text-black select-none">
             {headline || (
               <>
