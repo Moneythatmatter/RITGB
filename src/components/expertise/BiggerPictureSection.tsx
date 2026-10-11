@@ -71,7 +71,7 @@ export default function BiggerPictureSection({
             {headline}
           </h2>
           {subheading && (
-            <p className="mt-4 sm:mt-6 font-sans font-medium text-2xl sm:text-3xl lg:text-[2rem] text-black leading-snug tracking-tight">
+            <p className="mt-4 sm:mt-6 font-arial text-2xl sm:text-3xl lg:text-[2rem] text-black leading-snug tracking-tight">
               {subheading}
             </p>
           )}

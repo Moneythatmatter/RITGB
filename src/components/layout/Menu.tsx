@@ -47,7 +47,7 @@ const EXPERTISE_DATA: ExpertiseCategory[] = [
     num: "03",
     title: "MARKETING",
     services: [
-      // { name: "Digital Marketing", slug: "/expertise/digital-marketing" },
+      { name: "Digital Marketing", slug: "/expertise/digital-marketing" },
       { name: "Social Media Marketing", slug: "/expertise/social-media-marketing" },
       { name: "Google Ads", slug: "/expertise/google-ads" },
       { name: "SEO", slug: "/expertise/seo" },
