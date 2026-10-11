@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="flex flex-col items-center text-center px-4 pt-20 md:mt-8 md:pt-0 overflow-visible">
         {lines.map((line, i) => (
           <div key={i} className="relative inline-block">
-            <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[15vw] md:text-[14rem] lg:text-[11vw] font-black leading-[0.89] tracking-[-0.03em] uppercase">
+            <h1 className="font-(family-name:--font-right-grotesk) hero-line text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.013em]">
               {line}
             </h1>
           </div>
@@ -57,7 +57,7 @@ export default function Hero() {
       <div className="flex justify-center mt-6 md:mt-10">
         <GradientButton
           onClick={() => router.push("/contact")}
-          className="font-arial text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
+          className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
         >
           Grow My Brand →
         </GradientButton>

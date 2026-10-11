@@ -61,7 +61,7 @@ export default function GraphicDesignHero() {
           {lines.map((item, index) => (
             <span key={index} className="overflow-hidden block">
               <span
-                className={`graphic-line font-(family-name:--font-right-grotesk) text-[15vw] sm:text-[13vw] lg:text-[9.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block ${
+                className={`graphic-line font-(family-name:--font-right-grotesk) text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.013em] block ${
                   item.isAccent ? "text-[#4db685]" : "text-white"
                 }`}
               >
@@ -83,7 +83,7 @@ export default function GraphicDesignHero() {
             <GradientButton
               theme="light"
               onClick={() => router.push("/contact")}
-              className="font-arial text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-8! py-5! md:px-10! md:py-6! rounded-full!"
+              className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
             >
               Let&apos;s Build It →
             </GradientButton>

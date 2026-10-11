@@ -35,10 +35,10 @@ const EXPERTISE_DATA: ExpertiseCategory[] = [
     title: "TECH",
     services: [
       { name: "Website Development", slug: "/expertise/website-development" },
-      { name: "E-commerce Development", slug: "/expertise/ecommerce-development" },
-      { name: "Shopify", slug: "/expertise/shopify" },
-      { name: "WordPress", slug: "/expertise/wordpress" },
-      { name: "Custom Web Development", slug: "/expertise/custom-web-development" },
+      // { name: "E-commerce Development", slug: "/expertise/ecommerce-development" },
+      // { name: "Shopify", slug: "/expertise/shopify" },
+      // { name: "WordPress", slug: "/expertise/wordpress" },
+      // { name: "Custom Web Development", slug: "/expertise/custom-web-development" },
       { name: "Custom Software", slug: "/expertise/custom-software" },
       { name: "Mobile App Development", slug: "/expertise/mobile-app-development" },
     ],
@@ -47,7 +47,7 @@ const EXPERTISE_DATA: ExpertiseCategory[] = [
     num: "03",
     title: "MARKETING",
     services: [
-      { name: "Digital Marketing", slug: "/expertise/digital-marketing" },
+      // { name: "Digital Marketing", slug: "/expertise/digital-marketing" },
       { name: "Social Media Marketing", slug: "/expertise/social-media-marketing" },
       { name: "Google Ads", slug: "/expertise/google-ads" },
       { name: "SEO", slug: "/expertise/seo" },

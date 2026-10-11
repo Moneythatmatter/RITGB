@@ -35,7 +35,7 @@ export default function AgencyHero() {
         {lines.map((line, i) => (
           <div key={i} className="relative inline-block pb-2">
             <div className="overflow-hidden">
-              <h1 className="font-(family-name:--font-right-grotesk) agency-line text-[15vw] md:text-[13vw] lg:text-[11vw] font-black leading-[0.95] tracking-[-0.03em] uppercase">
+              <h1 className="font-(family-name:--font-right-grotesk) agency-line text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] tracking-[-0.013em] uppercase">
                 {line}
               </h1>
             </div>
@@ -47,7 +47,7 @@ export default function AgencyHero() {
       <div className="flex justify-center mt-12">
         <GradientButton
           onClick={() => router.push("/contact")}
-          className="font-arial flex items-baseline gap-2 text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-6! py-5! md:px-8! md:py-6! rounded-full!"
+          className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
         >
           Grow My Brand →
         </GradientButton>

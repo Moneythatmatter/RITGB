@@ -57,17 +57,12 @@ export default function SocialMediaMarketingHero() {
       ref={containerRef}
       className="w-full bg-[#f8f8f7] text-black flex flex-col justify-between pt-28 md:pt-36 pb-8 md:pb-12 min-h-[96vh] relative overflow-hidden px-6 md:px-14 lg:px-20"
     >
-      <div className="flex justify-center items-center w-full mb-6 md:mb-8">
-        <span className="font-[Arial] text-[11px] md:text-xs uppercase tracking-[0.25em] text-neutral-500 font-medium">
-          RITGB / SERVICE 01
-        </span>
-      </div>
 
       <div className="grow flex flex-col items-center justify-center text-center max-w-5xl mx-auto w-full my-auto">
         <h1 className="flex flex-col items-center text-center select-none mb-8 md:mb-10">
           {lines.map((lineText, index) => (
             <span key={index} className="overflow-hidden block">
-              <span className="smm-line font-(family-name:--font-right-grotesk) text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block text-black">
+              <span className="smm-line font-(family-name:--font-right-grotesk) text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.013em] block text-black">
                 {lineText}
               </span>
             </span>
@@ -75,7 +70,7 @@ export default function SocialMediaMarketingHero() {
         </h1>
 
         <div className="smm-sub-content flex flex-col items-center text-center max-w-2xl mx-auto">
-          <p className="font-sans font-medium text-xl sm:text-2xl md:text-3xl text-neutral-900 leading-snug tracking-tight mb-4 md:mb-5">
+          <p className="font-arial! text-xl sm:text-2xl md:text-3xl text-neutral-900 leading-snug tracking-tight mb-4 md:mb-5">
             Give People a Reason to Follow. And a Reason to Choose You.
           </p>
 
@@ -88,7 +83,7 @@ export default function SocialMediaMarketingHero() {
           <div className="flex justify-center">
             <GradientButton
               onClick={() => router.push("/contact")}
-              className="font-arial text-xs sm:text-sm md:text-base! font-semibold! tracking-widest! uppercase! px-8! py-4! md:px-10! md:py-5! rounded-full!"
+              className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
             >
               Discuss Your Social Media Goals →
             </GradientButton>

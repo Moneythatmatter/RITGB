@@ -60,7 +60,7 @@ export default function BrandingHero() {
           {lines.map((item, index) => (
             <span key={index} className="overflow-hidden block">
               <span
-                className={`branding-line font-(family-name:--font-right-grotesk) text-[15vw] sm:text-[13vw] lg:text-[9.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block ${item.isAccent ? "text-[#4db685]" : "text-white"
+                className={`branding-line font-(family-name:--font-right-grotesk) text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.013em] block ${item.isAccent ? "text-[#4db685]" : "text-white"
                   }`}
               >
                 {item.text}
@@ -71,7 +71,7 @@ export default function BrandingHero() {
 
         {/* Subtitle copy & Centered CTA Button */}
         <div className="branding-sub-content flex flex-col items-center text-center mt-6 md:mt-8 max-w-xl">
-          <p className="text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-6 md:mb-8">
+          <p className="text-arial text-neutral-300 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-6 md:mb-8">
             A clear strategy. A distinctive identity. A brand people know is
             yours before they even see your name.
           </p>
@@ -81,7 +81,7 @@ export default function BrandingHero() {
             <GradientButton
               theme="light"
               onClick={() => router.push("/contact")}
-              className="font-arial text-sm md:text-lg! font-semibold! tracking-widest! uppercase! px-8! py-5! md:px-10! md:py-6! rounded-full!"
+              className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
             >
               Let&apos;s Build It →
             </GradientButton>

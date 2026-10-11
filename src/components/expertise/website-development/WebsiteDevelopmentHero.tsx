@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
 import GradientButton from "@/components/GradientButton";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const lines = [
   "WEBSITE",
@@ -63,7 +63,7 @@ export default function WebsiteDevelopmentHero() {
         <h1 className="flex flex-col items-center text-center select-none mb-8 md:mb-10">
           {lines.map((lineText, index) => (
             <span key={index} className="overflow-hidden block">
-              <span className="wd-line font-(family-name:--font-right-grotesk) text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.03em] block text-black">
+              <span className="wd-line font-(family-name:--font-right-grotesk) text-[14vw] sm:text-[11vw] lg:text-[8.5vw] font-black leading-[0.88] uppercase tracking-[-0.013em] block text-black">
                 {lineText}
               </span>
             </span>
@@ -71,7 +71,7 @@ export default function WebsiteDevelopmentHero() {
         </h1>
 
         <div className="wd-sub-content flex flex-col items-center text-center max-w-2xl mx-auto">
-          <p className="font-sans font-medium text-2xl sm:text-3xl md:text-4xl text-neutral-900 leading-snug tracking-tight mb-4 md:mb-5">
+          <p className="font-arial text-2xl sm:text-3xl md:text-4xl text-neutral-900 leading-snug tracking-tight mb-4 md:mb-5">
             A Website That Does More Than Exist.
           </p>
 
@@ -85,13 +85,10 @@ export default function WebsiteDevelopmentHero() {
 
           <div className="flex justify-center">
             <GradientButton
-              type="button"
-              theme="dark"
               onClick={() => router.push("/contact")}
-              className="group inline-flex items-center gap-2.5 font-sans font-bold text-sm sm:text-base px-8 sm:px-10 py-4 sm:py-4.5 rounded-full active:scale-95 transition-all duration-200 cursor-pointer shadow-lg"
+              className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
             >
-              <span>Let&apos;s Build Your Website</span>
-              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              Let&apos;s Build Your Website →
             </GradientButton>
           </div>
         </div>
