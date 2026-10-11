@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import DigitalMarketingHero from "@/components/expertise/digital-marketing/DigitalMarketingHero";
 import DigitalMarketingVisualConcept from "@/components/expertise/digital-marketing/DigitalMarketingVisualConcept";
 import DigitalMarketingPhilosophy from "@/components/expertise/digital-marketing/DigitalMarketingPhilosophy";
+import DigitalMarketingServicesGrid from "@/components/expertise/digital-marketing/DigitalMarketingServicesGrid";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
@@ -37,6 +38,7 @@ export default function DigitalMarketingPage() {
         <div id="next-section">
           <DigitalMarketingVisualConcept />
           <DigitalMarketingPhilosophy />
+          <DigitalMarketingServicesGrid />
           <Footer />
         </div>
       </main>
