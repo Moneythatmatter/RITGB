@@ -17,7 +17,6 @@ export default function CrmIntegrationsFaq() {
   return (
     <FaqSection
       faqs={crmFaqs}
-      defaultOpenAll={true}
     />
   );
 }

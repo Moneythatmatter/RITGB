@@ -92,7 +92,7 @@ export default function CrmIntegrationsServicesInclude() {
           </div>
 
           <div className="lg:col-span-5 flex flex-col items-start lg:pt-1">
-            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] text-neutral-900 leading-[1.15] tracking-tight">
+            <h3 className="font-arial text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] text-neutral-900 leading-[1.15] tracking-tight">
               Less Re-entering. More <br className="hidden lg:block" />
               Following Up.
             </h3>
