@@ -23,7 +23,8 @@ export default function Navbar() {
     pathname === "/expertise/mobile-app-development" ||
     pathname === "/expertise/website-development" ||
     pathname === "/expertise/digital-marketing" ||
-    pathname === "/expertise/crm-integrations";
+    pathname === "/expertise/crm-integrations" ||
+    pathname === "/expertise/payment-integrations";
   const isDark =
     pathname.startsWith("/expertise/") &&
     pathname !== "/expertise" &&
