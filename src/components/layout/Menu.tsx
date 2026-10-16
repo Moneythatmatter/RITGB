@@ -41,6 +41,9 @@ const EXPERTISE_DATA: ExpertiseCategory[] = [
       // { name: "Custom Web Development", slug: "/expertise/custom-web-development" },
       { name: "Custom Software", slug: "/expertise/custom-software" },
       { name: "Mobile App Development", slug: "/expertise/mobile-app-development" },
+      { name: "CRM Integrations", slug: "/expertise/crm-integrations" },
+      { name: "Payment Integrations", slug: "/expertise/payment-integrations" },
+      { name: "Web Application Development", slug: "/expertise/web-application-development" },
     ],
   },
   {
