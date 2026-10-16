@@ -44,7 +44,8 @@ export default function CrmIntegrationsCta() {
         </div>
 
         <p className="font-sans text-neutral-900 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-xl mx-auto mb-8 md:mb-10">
-          Tell us which tools your team uses and what information needs to move between them.
+          Tell us which tools your team uses and what information needs to move
+          between them.
         </p>
 
         <div className="flex justify-center">
@@ -52,7 +53,7 @@ export default function CrmIntegrationsCta() {
             type="button"
             theme="dark"
             onClick={() => router.push("/contact")}
-            className="group inline-flex items-center gap-2.5 font-sans font-medium text-sm sm:text-base px-8 sm:px-10 py-3.5 sm:py-4 rounded-full active:scale-95 transition-all duration-200 cursor-pointer shadow-lg"
+            className="font-arial text-xs sm:text-sm md:text-base! font-bold! tracking-normal px-8! py-4! md:px-10! md:py-5! rounded-full!"
           >
             <span>Discuss Your CRM Connection</span>
             <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
