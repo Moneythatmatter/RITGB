@@ -40,7 +40,7 @@ export default function WebApplicationDevelopmentCta() {
           <h2 className="font-(family-name:--font-right-grotesk) text-5xl sm:text-6xl md:text-7xl lg:text-[6.2rem] xl:text-[7.2rem] font-black leading-[0.88] uppercase tracking-[-0.03em] text-white">
             LET&apos;S TURN YOUR <br />
             WORKFLOW INTO <br />
-            SOMETHING PEOPLE CAN <br />
+            SOMETHING PEOPLE CAN <br className="hidden lg:block" />
             USE.
           </h2>
         </div>
