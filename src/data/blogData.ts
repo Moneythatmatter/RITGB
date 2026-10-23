@@ -3,13 +3,19 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface TableData {
+  headers: string[];
+  rows: string[][];
+}
+
 export interface BlogContentSection {
-  type: "paragraph" | "heading2" | "heading3" | "list" | "cta" | "quote" | "faq";
+  type: "paragraph" | "heading2" | "heading3" | "list" | "cta" | "quote" | "faq" | "table";
   content?: string;
   items?: string[];
   ctaText?: string;
   ctaLink?: string;
   faqs?: FAQItem[];
+  table?: TableData;
 }
 
 export interface BlogPost {
@@ -4944,6 +4950,470 @@ export const blogPosts: BlogPost[] = [
         type: "paragraph",
         content:
           'If you\'d like help with SEO, social media, paid ads or your website, visit <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">RITGB</a> and talk through what your business needs next.',
+      },
+    ],
+  },
+  {
+    slug: "how-much-does-digital-marketing-cost-in-india-a-simple-pricing-guide-for-2026",
+    title:
+      "How Much Does Digital Marketing Cost in India? A Simple Pricing Guide for 2026",
+    metaDescription:
+      "Explore digital marketing cost in India for 2026. A simple pricing guide breaking down SEO, social media, paid ads, packages, and budgeting for small businesses.",
+    category: "MARKETING",
+    categoryLabel: "PRICING GUIDE",
+    date: "October 23, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog14.webp",
+    excerpt:
+      "Ask three agencies for a quote and you might get three wildly different numbers. Digital marketing cost in India depends on what your business needs, which services you pick and how much work is involved.",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy & Pricing",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "Ask three agencies for a quote and you might get three wildly different numbers. One says ₹15,000 a month. Another says ₹60,000. A third doesn't give a number at all until you've had two meetings.",
+      },
+      {
+        type: "paragraph",
+        content: "No wonder business owners feel confused.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'The truth is, <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">digital marketing cost in India</a> depends on what your business needs, which services you pick and how much work is involved. A neighbourhood sweet shop and an online clothing brand selling across India simply don\'t need the same plan.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "Let's break down the pricing in plain words, so you know what you're paying for.",
+      },
+      {
+        type: "heading2",
+        content: "What's the Average Cost?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For most small and growing businesses, agency fees range from about ₹15,000 to ₹1,00,000 or more per month. Here's a rough idea of digital marketing services cost in India for 2026:",
+      },
+      {
+        type: "table",
+        table: {
+          headers: ["Service", "Estimated Monthly Cost"],
+          rows: [
+            ["Search Engine Optimization (SEO)", "₹15,000 – ₹60,000+"],
+            ["Social Media Marketing", "₹10,000 – ₹50,000+"],
+            ["Google Ads Management", "₹10,000 – ₹50,000+"],
+            ["Content Marketing", "₹10,000 – ₹50,000+"],
+            ["Email Marketing", "₹8,000 – ₹30,000+"],
+            ["Full-Service Digital Marketing", "₹30,000 – ₹1,50,000+"],
+          ],
+        },
+      },
+      {
+        type: "paragraph",
+        content:
+          "These are general market estimates, not fixed prices or RITGB quotations. Actual costs vary by agency and scope of work. Ad budgets, software charges and taxes may be extra.",
+      },
+      {
+        type: "heading2",
+        content: "1. SEO",
+      },
+      {
+        type: "paragraph",
+        content:
+          'SEO helps your website show up on Google when people search for what you offer. Say you run a bakery in Bhubaneswar. You\'d want to appear when someone types "birthday cake shop in Bhubaneswar."',
+      },
+      {
+        type: "paragraph",
+        content:
+          "An agency works on your content, keywords and technical setup to make that happen. Basic SEO usually starts around ₹15,000 a month, while bigger websites or competitive industries need more. Since SEO takes months to deliver, it suits businesses thinking long term.",
+      },
+      {
+        type: "heading2",
+        content: "2. Social Media Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "These days, people check your Instagram before deciding whether to trust you. Social media marketing keeps you visible and active there.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A typical package covers content planning, graphics, reels, captions, posting and monthly reports. Cost depends on how much content you need. A few monthly posts on one Instagram account will cost far less than regular videos across Instagram, Facebook and LinkedIn.",
+      },
+      {
+        type: "heading2",
+        content: "3. Google Ads and Paid Advertising",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Google Ads puts you in front of people already searching for your products. But here's something many first-timers miss: your ad budget and the agency's fee are two different things.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If an agency charges ₹20,000 to manage your ads and you spend ₹30,000 on the ads themselves, your monthly total is ₹50,000, before taxes. Always ask for these to be shown separately before you sign anything.",
+      },
+      {
+        type: "cta",
+        ctaText: "Contact Us for Pricing",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "4. Why Prices Vary So Much",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A few simple factors explain why one business pays ₹20,000 and another pays ₹1 lakh.",
+      },
+      {
+        type: "list",
+        items: [
+          "Business size: A small shop might only need SEO or social media. A larger company may need everything together.",
+          "Competition: Crowded industries need more testing, planning and budget to stand out.",
+          "Services chosen: Handling social media alone is very different from managing SEO, ads, website work and email all at once.",
+          "Volume of work: Eight posts a month is a lot less effort than daily content, videos and several ad campaigns.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "That's why digital marketing pricing in India is rarely the same for any two businesses.",
+      },
+      {
+        type: "heading2",
+        content: "5. Picking the Right Package",
+      },
+      {
+        type: "paragraph",
+        content:
+          "You don't need every service on day one. Start with your biggest problem.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Can't be found on Google? SEO is a good place to begin. Need customers quickly? Try paid ads. People know your brand but rarely engage? Work on your social media.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'When comparing <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">digital marketing cost in India</a>, look at what\'s included, not just the price. Ask about deliverables, reporting, ad charges and any hidden fees.',
+      },
+      {
+        type: "heading2",
+        content: "6. How Much Should a Small Business Spend?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "There's no perfect number. Start with an amount you can comfortably manage.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Suppose you set aside ₹60,000 a month. You might put ₹25,000 toward agency fees and ₹35,000 into ads. That's just an example, not a formula. Your real budget should depend on your profit per sale, how many customers you want and whether your campaigns are actually working. Check the numbers before spending more.",
+      },
+      {
+        type: "heading2",
+        content: "7. Is an Agency Worth It?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Hiring an agency makes sense when your team lacks the skills or time. They can handle planning, content, SEO, ads and tracking.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "But paying an agency doesn't automatically mean more sales. Your product, pricing, customer service and market demand matter just as much.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB is a digital marketing and branding agency in Bhubaneswar offering SEO, social media marketing, Google Ads, content marketing and website development. You can get in touch to discuss your needs and request a quote that fits your business.",
+      },
+      {
+        type: "cta",
+        ctaText: "Get a Quote Today",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Knowing what digital marketing costs helps you avoid spending without a plan. The cheapest package isn't always right, and the most expensive one doesn't guarantee results.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Choose an agency that understands your business, explains its pricing clearly and helps you track what matters. To find out which services suit your goals and budget, visit <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">RITGB</a>.',
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question:
+              "1. How much does digital marketing cost per month in India?",
+            answer:
+              "The digital marketing monthly cost in India depends on your needs. Support for one channel may start around ₹10,000 to ₹20,000, while broader services often cost ₹30,000 to ₹1,00,000 or more. Ad budgets are usually separate from agency fees, so ask for a full breakdown upfront.",
+          },
+          {
+            question: "2. What's included in a digital marketing package?",
+            answer:
+              "Packages can include SEO, social media, paid ads, content, website improvements and reports, but not always all of them. A basic plan may cover only social posts. Check exactly what's included so you don't end up paying extra for work you assumed was covered.",
+          },
+          {
+            question: "3. Is ₹10,000 enough for digital marketing?",
+            answer:
+              "It's enough for something small, like basic social media support or a test ad campaign, but not for complete services. With a tight budget, focus on one goal. A local business, for example, might start by improving its Google Business Profile.",
+          },
+          {
+            question: "4. Should I hire a freelancer or an agency?",
+            answer:
+              "Both can work. A freelancer suits one specific task, like blogs or social media designs. An agency is better when you need several services managed together, though it may cost more. Compare experience, communication and past work before deciding.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-digital-marketing-agency-in-india-for-e-commerce-businesses",
+    title:
+      "Best Digital Marketing Agency in India for E-commerce Businesses",
+    metaDescription:
+      "Looking for the best digital marketing agency in India for e-commerce? Learn how SEO, Google shopping ads, conversion optimization, and tracking grow store sales.",
+    category: "MARKETING",
+    categoryLabel: "E-COMMERCE GUIDE",
+    date: "October 23, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog15.webp",
+    excerpt:
+      "Launching an online store takes a few days. Getting strangers to find it, trust it and actually buy something takes strategy. Discover how an e-commerce marketing agency drives real orders.",
+    author: {
+      name: "RITGB Team",
+      role: "E-commerce Growth",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "Launching an online store takes a few days. Getting strangers to find it, trust it and actually buy something can take much longer.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Many Indian store owners know this feeling. The products are good, the prices are fair and the website looks neat. Yet orders just trickle in.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Usually, the product isn\'t the problem. Either people haven\'t heard of your brand, or they visit your site and leave without buying. Both can be fixed with the right help, which is why choosing the <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">best digital marketing agency in India</a> for your business matters so much.',
+      },
+      {
+        type: "heading2",
+        content: "Why Online Stores Need Digital Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Think about the last thing you bought online. You probably Googled it, spotted it on Instagram, compared prices and read a few reviews before paying.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Your customers do the same. If your brand doesn't show up along that path, a competitor's will.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "An experienced ecommerce digital marketing agency in India knows customers find you at different moments. Someone searching “best running shoes under 3000” is close to buying. Someone scrolling fitness reels might discover your brand for the first time. Both could become customers, but each needs a different message.",
+      },
+      {
+        type: "heading2",
+        content: "What to Look For in an E-commerce Marketing Agency",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Not every agency understands online selling. Some focus on likes and followers, which don't pay the bills. Your store needs traffic, orders, repeat buyers and profitable sales. These services matter most.",
+      },
+      {
+        type: "heading2",
+        content: "1. Search Engine Optimization (SEO)",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If someone searches “best cotton shirts for men” and your store appears, you could win a sale without paying for the click.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A good ecommerce SEO agency in India works on product descriptions, category pages, site speed, useful content and the right keywords. SEO takes months to show real results, but once it works, it keeps bringing visitors in.",
+      },
+      {
+        type: "heading2",
+        content: "2. Google Ads and Shopping Campaigns",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Some people are ready to buy right now. If someone searches “buy wireless headphones online,” a well-placed ad can take them straight to your product page.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A good agency picks the right keywords, keeps your budget in check and adjusts campaigns based on actual sales, not just clicks.",
+      },
+      {
+        type: "heading2",
+        content: "3. Social Media Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Instagram and Facebook help you reach people who've never heard of you. A clever reel or eye-catching ad can make them stop scrolling and take notice.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "An ecommerce marketing agency in India can create product content and run ads that keep your brand visible. But likes alone mean little. Your content should give people a reason to visit your store.",
+      },
+      {
+        type: "heading2",
+        content: "4. Website Experience and Conversions",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Bringing visitors in is only half the job. If pages load slowly, product details are missing or checkout is confusing, people leave.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A proper digital marketing agency for ecommerce also checks how easily visitors can find products and complete a purchase. Small fixes to product pages or checkout can noticeably lift sales.",
+      },
+      {
+        type: "heading2",
+        content: "5. Tracking What Works",
+      },
+      {
+        type: "paragraph",
+        content:
+          "You should know where your money goes. A trustworthy agency tracks visits, orders, ad spend and conversion rates. If you spend ₹20,000 on ads, you should see roughly how many sales it brought in. That makes it easy to decide what to keep and what to change.",
+      },
+      {
+        type: "cta",
+        ctaText: "Find the Best Digital Marketing Agency in India",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "How RITGB Can Help Your Online Store",
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB is a digital marketing and branding agency based in Bhubaneswar. Its services include SEO, Google Ads, social media marketing, performance marketing, content marketing, website development and e-commerce website solutions.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Having all of this under one team is handy. Instead of juggling separate people for your website, ads and content, you can discuss everything with one agency.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Whether you're launching a store or improving an existing one, RITGB is worth adding to your shortlist. Just talk openly about your products, customers, budget and goals before choosing any services.",
+      },
+      {
+        type: "heading2",
+        content: "Questions to Ask Before You Hire",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Before signing with any ecommerce digital marketing company in India, ask: Do they understand your products and customers? Can they explain in plain words how they'll grow your traffic and sales? Will you get clear, regular reports?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Also ask about ad budgets, monthly fees, past work and what's included.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Be wary of anyone promising guaranteed sales or instant Google rankings. No honest agency can promise that. The right team explains its plan clearly and changes course when something isn't working.",
+      },
+      {
+        type: "cta",
+        ctaText: "Get a Consultation Today",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        content:
+          'The <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">best digital marketing agency in India</a> for your store isn\'t the one with the biggest name. It\'s the one that understands your business and helps you make smarter marketing decisions.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "SEO, ads, social media and website improvements should all work toward one goal: helping the right customers find and buy your products.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'If you need marketing support for your online store, visit <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">RITGB</a> and talk to the team about your requirements.',
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question:
+              "1. Which is the best digital marketing agency in India for e-commerce businesses?",
+            answer:
+              "It depends on your products, budget and goals. An agency that suits a big fashion brand may not fit a small online store. Look for one that understands e-commerce, SEO, ads and shopper behaviour, and reports clearly on spending. RITGB is one option to consider. Compare a few proposals before deciding.",
+          },
+          {
+            question: "2. How can digital marketing increase e-commerce sales?",
+            answer:
+              "SEO brings visitors from Google, ads reach interested shoppers, social media builds awareness and email brings past customers back. But product quality, pricing, delivery and website experience matter too. When everything works together, sales grow more steadily.",
+          },
+          {
+            question: "3. Is SEO important for an e-commerce website?",
+            answer:
+              "Yes. Shoppers constantly use search engines to find and compare products. Well-optimized pages are more likely to appear in results, and you don't pay per visitor. It's slow, though, so treat SEO as a long-term investment.",
+          },
+          {
+            question:
+              "4. How much should an e-commerce business spend on digital marketing?",
+            answer:
+              "There's no fixed number. It depends on your prices, margins, competition and what you can afford per customer. Agency fees and ad spend are usually separate. Start small, track results and scale up only when the numbers make sense.",
+          },
+        ],
       },
     ],
   },

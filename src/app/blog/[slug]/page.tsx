@@ -276,6 +276,51 @@ export default async function BlogPostPage({ params }: PageProps) {
                       ))}
                     </ul>
                   );
+                case "table":
+                  return section.table ? (
+                    <div
+                      key={idx}
+                      className="my-8 overflow-x-auto rounded-xl border border-black/10 shadow-xs"
+                    >
+                      <table className="w-full text-left border-collapse">
+                        <thead>
+                          <tr className="bg-neutral-100 border-b border-black/10">
+                            {section.table.headers.map((header, hIdx) => (
+                              <th
+                                key={hIdx}
+                                className="py-4 px-5 sm:px-7 font-arial font-bold text-sm sm:text-base text-black uppercase tracking-wider"
+                              >
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-black/5 font-arial text-sm sm:text-base">
+                          {section.table.rows.map((row, rIdx) => (
+                            <tr
+                              key={rIdx}
+                              className={
+                                rIdx % 2 === 0 ? "bg-white" : "bg-neutral-50/60"
+                              }
+                            >
+                              {row.map((cell, cIdx) => (
+                                <td
+                                  key={cIdx}
+                                  className={`py-4 px-5 sm:px-7 ${
+                                    cIdx === 0
+                                      ? "font-semibold text-black"
+                                      : "text-black/80 font-medium"
+                                  }`}
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : null;
                 case "cta":
                   return (
                     <div
