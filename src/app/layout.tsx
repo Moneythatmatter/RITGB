@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import Preloader from "@/components/Preloader";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MetaPixel from "@/components/MetaPixel";
 import { OrganizationSchema } from "@/components/StructuredData";
 
 const Chatbot = dynamic(
@@ -48,6 +49,7 @@ export default function RootLayout({
       <body className={`${rightGrotesk.variable} text-black antialiased`}>
         <OrganizationSchema />
         <GoogleAnalytics />
+        <MetaPixel />
         <Preloader />
         <Navbar />
         {children}
