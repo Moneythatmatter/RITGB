@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Agency", href: "/agency" },
@@ -6,6 +8,7 @@ const navLinks = [
   { label: "Software", href: "/software" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 export default function SiteFooter() {
@@ -28,14 +31,14 @@ export default function SiteFooter() {
               <p className="font-[Arial] text-[10px] text-white/30 tracking-[0.2em] uppercase mb-1">
                 Pages
               </p>
-              {navLinks.slice(0, 3).map((link) => (
-                <a
+              {navLinks.slice(0, 4).map((link) => (
+                <Link
                   key={link.label}
                   href={link.href}
                   className="font-[Arial] text-sm text-white/60 hover:text-white transition-colors tracking-widest capitalize"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -44,14 +47,14 @@ export default function SiteFooter() {
               <p className="font-[Arial] text-[10px] text-white/30 tracking-[0.2em] uppercase mb-1">
                 &nbsp;
               </p>
-              {navLinks.slice(3).map((link) => (
-                <a
+              {navLinks.slice(4).map((link) => (
+                <Link
                   key={link.label}
                   href={link.href}
                   className="font-[Arial] text-sm text-white/60 hover:text-white transition-colors tracking-widest capitalize"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -108,9 +111,10 @@ export default function SiteFooter() {
 
         {/* Bottom bar — copyright + socials */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-8">
-          <p className="font-[Arial] text-xs text-white/25 tracking-widest uppercase">
-            {new Date().getFullYear()} © — RITGB
-          </p>
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <p className="font-[Arial] text-xs text-white/25 tracking-widest uppercase">
+              {new Date().getFullYear()} © — RITGB
+            </p></div>
           <div className="flex gap-6 md:gap-8">
             <a
               href="https://www.facebook.com/share/1EMh3vxFjp/"
