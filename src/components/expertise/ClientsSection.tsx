@@ -25,9 +25,9 @@ const clients = [
 
   {
     id: 4,
-    name: "Vladivostok Fish Port",
+    name: "Hotel & restaurant association of Palampur",
     file: "/images/clients/client3.webp",
-    alt: "Vladivostok Fish Port – RITGB client",
+    alt: "Hotel & restaurant association of Palampur",
   },
 
   {
@@ -67,9 +67,9 @@ const clients = [
 
   {
     id: 10,
-    name: "Epsum Labs",
+    name: "Hailiot (formerly Epsum Labs)",
     file: "/images/clients/client9.webp",
-    alt: "Epsum Labs – RITGB client",
+    alt: "Hailiot (formerly Epsum Labs) – RITGB client",
   },
 
   {
@@ -77,6 +77,48 @@ const clients = [
     name: "Drivionix",
     file: "/images/clients/client11.webp",
     alt: "Drivionix – RITGB client",
+  },
+  {
+    id: 12,
+    name: "Hotel Prabhupada",
+    file: "/images/clients/client14.webp",
+    alt: "Hotel Prabhupada – RITGB client",
+  },
+  {
+    id: 13,
+    name: "Laghmano",
+    file: "/images/clients/client15.webp",
+    alt: "Laghmano – RITGB client",
+  },
+  {
+    id: 14,
+    name: "Desia",
+    file: "/images/clients/client16.webp",
+    alt: "Desia Koraput – RITGB client",
+  },
+  {
+    id: 15,
+    name: "Aarohana Resort",
+    file: "/images/clients/client17.webp",
+    alt: "Aarohana Wellness Resort & Conventions – RITGB client",
+  },
+  {
+    id: 16,
+    name: "In Interior Design Studio",
+    file: "/images/clients/client18.webp",
+    alt: "In Interior Design Studio – RITGB client",
+  },
+  {
+    id: 17,
+    name: "The HHI Bhubaneswar",
+    file: "/images/clients/client19.webp",
+    alt: "The HHI Bhubaneswar – RITGB client",
+  },
+  {
+    id: 18,
+    name: "The Foothill Farm Stay",
+    file: "/images/clients/client20.webp",
+    alt: "The Foothill Farm Stay – RITGB client",
   },
 ];
 
@@ -91,7 +133,7 @@ export default function ClientsSection() {
         People Who <br /> Said &ldquo;Let&apos;s Build Something Sick&rdquo;
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
         {clients.map((client) => (
           <Image
             key={client.id}
@@ -99,7 +141,7 @@ export default function ClientsSection() {
             alt={client.alt}
             width={160}
             height={80}
-            className="w-full h-auto aspect-[4/3 object-contain bg-[#EFEFEF] p-1"
+            className="w-full h-auto aspect-[4/3] object-contain bg-[#EFEFEF] p-1"
           />
         ))}
       </div>

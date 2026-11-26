@@ -42,7 +42,7 @@ export default function AboutText() {
     >
       {/* Label */}
       <p className="text-[10px] md:text-xs tracking-[0.14em] md:tracking-[0.2em] whitespace-nowrap uppercase text-black mb-4 md:mb-12">
-        RITGB: Full-Service Digital Growth Agency
+        Ray Impact Trinity Global Business: Full-Service Digital Growth Agency
       </p>
 
       {/* Lines */}
@@ -50,9 +50,8 @@ export default function AboutText() {
         {lines.map((line, i) => (
           <div key={i} className="overflow-hidden mb-1">
             <h2
-              className={`statement-line font-(family-name:--font-right-grotesk) text-[9vw] md:text-[7vw] font-black leading-[0.85] tracking-[-0.02em] uppercase ${
-                line.green ? "text-[#4DB685]" : "text-black"
-              }`}
+              className={`statement-line font-(family-name:--font-right-grotesk) text-[9vw] md:text-[7vw] font-black leading-[0.85] tracking-[-0.02em] uppercase ${line.green ? "text-[#4DB685]" : "text-black"
+                }`}
             >
               {line.text}
             </h2>

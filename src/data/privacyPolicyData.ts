@@ -366,7 +366,7 @@ export const privacyPolicyData: PrivacyPolicyData = {
     website: "https://www.ritgb.com",
   },
   footerNote: {
-    agency: "RITGB – Digital Marketing & Branding Agency",
+    agency: "Ray Impact Trinity Global Business – Digital Marketing & Branding Agency",
     statement:
       "We are committed to respecting your privacy and handling your personal information responsibly.",
   },
