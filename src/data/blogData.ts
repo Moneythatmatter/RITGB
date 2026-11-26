@@ -6333,6 +6333,1124 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "on-page-seo-techniques-to-improve-website-rankings-on-google-in-2026",
+    title:
+      "On-Page SEO Techniques to Improve Website Rankings on Google in 2026",
+    metaDescription:
+      "Learn proven on-page SEO techniques to improve your website rankings on Google in 2026. Discover practical tips on keywords, title tags, content, site speed, and internal linking.",
+    category: "SEO",
+    categoryLabel: "SEO GUIDE",
+    date: "November 26, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog20.webp",
+    excerpt:
+      "Often the difference between getting found on Google and losing calls to a competitor comes down to on-page SEO. Discover the essential on-page techniques that actually work in 2026.",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "You spent good money on your website. It looks sharp, and your team is proud of it. But when someone in your city searches Google for what you sell, does your business show up? Or does a competitor with a plainer site get the call?",
+      },
+      {
+        type: "paragraph",
+        content: "Often, the difference comes down to on-page SEO.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The rules have changed. Stuffing a few keywords into the footer used to get you somewhere. It doesn't anymore. Google now favours pages that actually help people, that anyone can use easily, and that don't make visitors wait or squint.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'If you\'re looking into <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">On-Page SEO Services in Bhubaneswar</a>, it helps to know what this work involves. Then you can judge whether your site is really bringing in customers or just sitting there.',
+      },
+      {
+        type: "heading2",
+        content: "So, What Does On-Page SEO Actually Mean?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Put simply, it's the work done on each page of your site so Google can figure out what that page is about and who it's for.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "That covers the page title, headings, the words on the page, images, the links between pages, and how the whole site is organised.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Done well, On-Page SEO Optimization makes your site easy to read for two audiences at once: the search engine and the person looking at the screen.",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Ready to improve your website's visibility? Contact us today for expert On-Page SEO Services in Bhubaneswar!",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "1. Pick Keywords Your Customers Actually Type",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Ranking for a phrase nobody searches, or one that attracts the wrong crowd, won't bring in business.",
+      },
+      {
+        type: "paragraph",
+        content: "You want the words your buyers use when they need you.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "That's the job of Keyword Optimization Services. They dig into real search terms, work out what the person behind each search wants, and match each keyword to the page best suited to it.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Here\'s why intent matters. Someone typing “SEO services in Bhubaneswar” is probably shortlisting agencies. Someone typing “SEO tips” wants to learn and isn\'t ready to hire anyone yet. It\'s the same topic, but a very different person.',
+      },
+      {
+        type: "paragraph",
+        content: "Write each page for the person most likely to land on it.",
+      },
+      {
+        type: "heading2",
+        content: "2. Get Your Titles and Meta Descriptions Right",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The page title is the clickable headline people see in search results. It's also one of the first things Google reads.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Say plainly what the page is about. Don't let clever wording hide the point.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The meta description sits under that headline. Treat it like a short pitch: what's on the page, and why it's worth a click.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Cramming the same keyword in three times reads badly and doesn't help. One clear, honest sentence beats a pile of keywords every time.",
+      },
+      {
+        type: "heading2",
+        content: "3. Answer the Questions People Really Ask",
+      },
+      {
+        type: "paragraph",
+        content:
+          "There's an old belief that longer pages rank better. Length on its own does nothing.",
+      },
+      {
+        type: "paragraph",
+        content: "What matters is whether the page is useful.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Solid SEO Content Optimization means answering what customers want to know, describing your services so a newcomer understands them, and giving people something they can act on.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Write the way you'd explain it across a desk. Break things up with clear headings, and use examples from your own industry and city.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Revisit older pages now and then and fix anything that's out of date. If you have five pages saying roughly the same thing, merge them, because they end up competing with each other.",
+      },
+      {
+        type: "heading2",
+        content: "4. Make the Site Fast and Easy to Use on a Phone",
+      },
+      {
+        type: "paragraph",
+        content:
+          "People are impatient. If a page takes too long to load, they hit back and choose the next result.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Shrink oversized images and remove scripts you no longer use. Test every key page on an actual phone, not just a desktop preview.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Google measures this through Core Web Vitals. These look at how fast a page loads, how quickly it responds when someone taps or clicks, and whether elements jump around while it loads.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A fast site that works well on mobile keeps visitors around longer, and that supports your search performance too.",
+      },
+      {
+        type: "heading2",
+        content: "5. Link Your Pages Together Sensibly",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Internal links point from one page of your site to another, giving visitors an obvious next step.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "They also help Google find your pages and see how they relate to each other.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Say you publish a blog post on SEO basics. Linking it to your main SEO service page shows both readers and Google where to go if they want help.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Good Website SEO Optimization Services treat this as part of a bigger picture. Clean URLs, logical headings, and making sure nothing technical stops Google from reading a page all matter just as much.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you can't say what a page is for in one sentence, it probably needs rethinking.",
+      },
+      {
+        type: "heading2",
+        content: "6. Measure, Adjust, Repeat",
+      },
+      {
+        type: "paragraph",
+        content: "You don't do SEO once and walk away.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Google Search Console is free. It shows how often your pages appear in search, how many people click, which searches bring them in, and whether any pages have trouble getting indexed.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Look beyond traffic, too. Are people filling in your contact form? Are they calling? Those are the numbers that count.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Lasting Website Ranking Improvement comes from steady work: fixing weak spots, adding content that helps, and checking the numbers regularly. Anyone promising page one by next week is selling something else.",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Looking to grow your business online? Get started with our affordable On-Page SEO Services in Bhubaneswar and drive better search results.",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Why Work With RITGB on Your On-Page SEO?",
+      },
+      {
+        type: "paragraph",
+        content:
+          'When you\'re comparing options for an <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">On-Page SEO Services in Bhubaneswar</a>, be cautious of anyone who leads with ranking guarantees.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB is a digital growth agency in Bhubaneswar. Its SEO work starts with keyword research and a technical check of your site, moves on to content improvements, and tracks progress using real search data.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The aim is straightforward: make your site easier to find, and make sure the people finding it are the ones likely to become customers.",
+      },
+      {
+        type: "heading2",
+        content: "Wrapping Up",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If your business competes online in 2026, on-page SEO isn't optional.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Better keyword choices, genuinely useful content, a site that works on mobile, and smarter internal links aren't dramatic on their own. Together, they add up to real gains in search visibility.",
+      },
+      {
+        type: "paragraph",
+        content: "Not sure where your site is falling short?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Take a look at RITGB's SEO services and find out what's holding it back.",
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question: "How long does on-page SEO take to show results?",
+            answer:
+              "It depends on how competitive your market is, what condition the site is in to begin with, and how much gets fixed. Expect real movement over a few weeks to a few months.",
+          },
+          {
+            question: "Can on-page SEO guarantee a top spot on Google?",
+            answer:
+              "No. It can make your site more visible, but nobody controls Google's organic rankings, and no honest agency will promise a specific position.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-choose-the-right-website-design-company-in-odisha-for-your-business",
+    title:
+      "How to Choose the Right Website Design Company in Odisha for Your Business",
+    metaDescription:
+      "Looking for the best website design company in Odisha? Learn how to evaluate agency portfolios, check mobile responsiveness, compare pricing, and pick the right partner.",
+    category: "WEBSITE DESIGN",
+    categoryLabel: "WEB DESIGN GUIDE",
+    date: "November 26, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog21.webp",
+    excerpt:
+      "Most people check your website before they call or visit. Discover practical tips on how to choose the right website design company in Odisha for your business.",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "Think about the last time you looked up a business online before calling them. If the site took forever to open, or you couldn't find a phone number, you probably moved on to the next result. Your customers do the same.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Most people check your website before they read reviews, visit your shop or pick up the phone. So your site has a lot of work to do. It has to explain what you do, earn people's trust and give them an easy way to reach you.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'That\'s why picking a <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Website Design Company in Odisha</a> isn\'t something to rush. Bhubaneswar, Cuttack and the rest of the state have plenty of agencies, and almost all of them will say they\'re the best. Here\'s how to look past the pitch.',
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Want to grow your business with a professional website? Get in touch with our Website Design Company in Odisha and start your digital journey today!",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "1. Get Clear on What You Need First",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Do some homework before you call anyone. Work out what the website is actually for.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Is it a simple site that tells people about your business? An online shop? A showcase of your work? A page built mainly to collect leads?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The answer changes everything. A clinic or a plumber in Bhubaneswar might only need a few service pages and an enquiry form. A clothing brand selling across India needs product listings, a cart and a payment gateway that works.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Once you know what you want, it gets much harder for anyone to sell you features you'll never use.",
+      },
+      {
+        type: "heading2",
+        content: "2. Look Closely at Their Past Work",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Anyone can talk well in a meeting. The portfolio is where you find out whether they can deliver.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Ask for links to live websites they've built, not just a PDF of screenshots. Then open those sites and click around. Do the pages load quickly? Can you find things without hunting? Does the design suit the business it was made for?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Good Professional Website Designers Odisha businesses rely on will have worked across different industries. They'll know a hospital website and a café website shouldn't feel the same.",
+      },
+      {
+        type: "heading2",
+        content: "3. Make Sure It Works on Phones",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Look at your own browsing habits. Most of your customers are scrolling on a phone, just like you.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A site that looks great on a laptop but turns into tiny text and broken menus on mobile will lose people fast. Responsive Website Development fixes this by letting the layout, images, menus and buttons adjust to whatever screen someone is using.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Here's an easy test. Ask the agency for a few of their live projects and open them on your own phone during the meeting. Two minutes of that will tell you more than any sales deck.",
+      },
+      {
+        type: "heading2",
+        content: "4. Ask How They Handle SEO",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A website that looks lovely but never shows up on Google is like a shop on a street nobody walks down.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Search visibility starts while the site is being built, not afterwards. A reliable Web Development Company Odisha businesses trust should handle the basics: proper page titles, a sensible heading structure, clean URLs, fast loading and making sure search engines can read the site.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Getting this right gives you a solid base for any SEO work you do later.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "One caution, though. No designer can promise you the top spot on Google. If someone does, be wary.",
+      },
+      {
+        type: "heading2",
+        content: "5. Decide Between Template and Custom",
+      },
+      {
+        type: "paragraph",
+        content: "Not every business needs a site built from scratch.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you run a small business with simple needs, a well-chosen template can do the job and save you money.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Custom Website Development Odisha agencies offer starts to make sense when you need something specific, like a booking system, a link to your billing software or a layout no template can give you.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Talk it through with the agency. A good one will tell you honestly which route fits your budget, even if it means a smaller bill for them.",
+      },
+      {
+        type: "heading2",
+        content: "6. Read the Quote Line by Line",
+      },
+      {
+        type: "paragraph",
+        content:
+          "When you're comparing Website Design Services Odisha agencies offer, the lowest price can be tempting. Don't let it decide for you.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Check what you're actually getting. Is mobile responsiveness included? Basic SEO setup? Contact forms? Testing and launch?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Then ask the questions people often forget. Will the domain be in your name? Will you get full login access? How many rounds of changes are included? What happens if something breaks a month after launch?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A clear, detailed proposal now saves you from awkward surprise bills later.",
+      },
+      {
+        type: "heading2",
+        content: "7. Think About Enquiries, Not Just Looks",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A website earns its keep when visitors do something: call you, fill in a form, send a WhatsApp message or place an order.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "That comes down to small, practical choices. Plain descriptions of your services. Menus that make sense. A contact button nobody has to search for. Enquiry forms placed where they're actually useful.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Strong Business Website Design Services tie every design choice back to what the business needs. So instead of only asking “does this look modern?”, ask “would a first-time visitor understand what we do and know how to reach us within a few seconds?”",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Ready to take your business online? Contact our Website Design Company in Odisha today and get a stunning website for your brand!",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Why RITGB Is Worth a Look",
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB is a digital growth agency based in Bhubaneswar. It works on website design and development, branding and digital marketing.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Its website process covers planning the site, structuring the pages, building responsive layouts and mapping how visitors move from landing on a page to getting in touch.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you want a professional site that represents your brand properly, RITGB can shape the design and development around what your project actually needs.",
+      },
+      {
+        type: "heading2",
+        content: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Price matters, but it shouldn't be the only thing you compare.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Look at real work they\'ve done, see how their sites behave on a phone and understand exactly what\'s included. Also notice how clearly they talk to you before you\'ve paid a single rupee. That tells you a lot about what working with them will be like. Check <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Website Design Company in Odisha</a>.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "Get these right and your website becomes something that builds trust, brings in enquiries and supports your business for years.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Thinking about a new website? Take a look at RITGB's website design services and start a conversation about what your business needs.",
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions (FAQs)",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question:
+              "How much does it cost to get a website designed in Odisha?",
+            answer:
+              "There's no fixed figure. It depends on how many pages you need, what the site has to do and how complex the build is. A basic business site costs far less than a full online store.",
+          },
+          {
+            question: "How long does it take to build a website?",
+            answer:
+              "A straightforward business website is usually ready in a few weeks. Custom builds with special features take longer, depending on the scope.",
+          },
+          {
+            question: "Does my website really need to be SEO-friendly?",
+            answer:
+              "Yes. A site built with search engines in mind is easier for Google to crawl and understand, and it makes any SEO work you do later far more effective.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-choose-the-best-seo-company-in-bhubaneswar-for-your-business-in-2026",
+    title:
+      "How to Choose the Best SEO Company in Bhubaneswar for Your Business in 2026",
+    metaDescription:
+      "Looking for the best SEO company in Bhubaneswar? Learn how to evaluate SEO agencies, avoid empty promises, assess service scope, and choose the right partner in 2026.",
+    category: "SEO",
+    categoryLabel: "SEO GUIDE",
+    date: "November 26, 2026",
+    readTime: "4 min read",
+    image: "/images/blog/blog22.webp",
+    excerpt:
+      "A website alone doesn't bring in customers—people have to find it. Discover how to choose the best SEO company in Bhubaneswar to grow your business in 2026.",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "Try this. Open Google, type in what you sell along with “Bhubaneswar,” and see where your business shows up. Is it on page one, page three, or nowhere at all?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you had to scroll for a while (or gave up), your customers are probably having the same problem. And they don't scroll. They click on whoever shows up first.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'A website alone doesn\'t bring in customers anymore. People have to actually find it. That\'s where SEO comes in, and it\'s why picking the <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Best SEO Company in Bhubaneswar</a> deserves some thought.',
+      },
+      {
+        type: "paragraph",
+        content: "Here's what to look at.",
+      },
+      {
+        type: "heading2",
+        content: "1. Look for a Company That Understands Your Business",
+      },
+      {
+        type: "paragraph",
+        content:
+          "No two businesses need the same thing from SEO. A café in Saheed Nagar wants hungry people nearby. An online saree store wants buyers from Delhi, Pune and Bengaluru. The goals are different, so the plans should be too.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Pay attention to that first conversation. A good SEO Agency in Bhubaneswar will ask you plenty of questions before suggesting anything. Who are your customers? What do they search for? What does a good month look like for you? If they jump straight to a ready-made package, they'll probably treat you like every other client.",
+      },
+      {
+        type: "heading2",
+        content: "2. Check the SEO Services They Offer",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A lot of people think SEO just means adding keywords to a website. There's much more to it.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "When you're comparing Professional SEO Services Bhubaneswar, ask whether the agency handles:",
+      },
+      {
+        type: "list",
+        items: [
+          "Keyword research",
+          "On-page improvements to your website",
+          "Technical SEO (site speed, mobile-friendliness, fixing errors Google doesn't like)",
+          "Local SEO, including your Google Business Profile",
+          "Content optimisation",
+          "Regular performance reports",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "You don't need to understand all of this yourself. You just need to know it's getting done, and the reports should show you that in plain language.",
+      },
+      {
+        type: "cta",
+        ctaText: "Contact Our SEO Experts Today",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "3. Choose Experience Over Big Promises",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If someone guarantees you a first-page ranking in two weeks, walk away.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Nobody controls Google's rankings, and proper SEO takes time. Good SEO Experts in Bhubaneswar will tell you that upfront, even if it's not what you want to hear. They'll focus on fixing your site, creating useful content, and bringing in visitors who might actually buy from you. It's slower than a shortcut, but the results last.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A simple test: ask to see work they've done for other businesses and what changed after six months or a year.",
+      },
+      {
+        type: "heading2",
+        content: "4. Find Services That Fit Your Budget",
+      },
+      {
+        type: "paragraph",
+        content:
+          'There\'s nothing wrong with choosing an Affordable <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Best SEO Company in Bhubaneswar</a>. Just remember that cheap and affordable aren\'t the same thing.',
+      },
+      {
+        type: "paragraph",
+        content:
+          "Before you sign anything, ask what's included in the monthly fee. How many pages will they work on? How often will you get reports? Is content writing included, or is that extra? A slightly higher price with clear deliverables is usually better value than a low price where you're not sure what you're paying for.",
+      },
+      {
+        type: "heading2",
+        content: "5. Why Consider RITGB for SEO Services?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "RITGB is a digital marketing and branding agency based right here in Bhubaneswar.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "On the SEO side, the team works on keyword research, website improvements, technical SEO, content planning and local search visibility. They also handle website development, branding and digital marketing, which helps if you'd rather not juggle three or four vendors for your online presence.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you're looking for an SEO Consultant in Bhubaneswar, RITGB is worth a conversation.",
+      },
+      {
+        type: "cta",
+        ctaText: "Grow Your Business with Expert SEO",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        content:
+          "There's no magic formula. The right SEO company is one that gets what you're trying to do, explains things without jargon, and is honest about how long results take.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Want more people finding your business on Google? Visit <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">www.ritgb.com</a> and have a chat with the RITGB team about your SEO needs.',
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question: "1. What does an SEO company do?",
+            answer:
+              "It works on your website so it ranks higher when people search on Google and other search engines. That means more of the right people find you.",
+          },
+          {
+            question: "2. How long does SEO take to show results?",
+            answer:
+              "Usually a few months. It depends on the state of your website and how competitive your industry is. Some businesses see movement in three months, while others need six or more.",
+          },
+          {
+            question: "3. Does RITGB offer local SEO services?",
+            answer:
+              "Yes. RITGB helps businesses show up in local searches, which matters a lot if most of your customers are in and around Bhubaneswar.",
+          },
+          {
+            question: "4. Is SEO useful for small businesses?",
+            answer:
+              "Definitely. Small businesses often benefit the most, because SEO puts you in front of people who are already searching for what you offer.",
+          },
+          {
+            question: "5. How can I contact RITGB?",
+            answer:
+              "Head to www.ritgb.com to look through their services and get in touch with the team.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "looking-for-a-digital-marketing-agency-in-bhubaneswar-heres-how-to-grow-your-business-online",
+    title:
+      "Looking for a Digital Marketing Agency in Bhubaneswar? Here's How to Grow Your Business Online!",
+    metaDescription:
+      "Looking for a digital marketing agency in Bhubaneswar? Discover how SEO, social media marketing, Google Ads, and website design can help your business grow online.",
+    category: "MARKETING",
+    categoryLabel: "GROWTH GUIDE",
+    date: "November 26, 2026",
+    readTime: "4 min read",
+    image: "/images/blog/blog23.webp",
+    excerpt:
+      "Having a website isn't enough in today's competitive market. Discover how a leading digital marketing agency in Bhubaneswar can help you grow visibility and leads.",
+    author: {
+      name: "RITGB Team",
+      role: "Digital Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "In today's competitive online world, having a website or social media profile is not enough to attract customers. Businesses need a strong digital presence, effective marketing strategies, and consistent online engagement to stand out. Whether you run a startup, a local business, or an established company, digital marketing can help you reach the right audience and generate quality leads.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'Choosing the right <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">digital marketing agency in Bhubaneswar</a> can make a significant difference in your online growth. With the right approach, your business can improve search engine visibility, connect with potential customers, and build a strong brand reputation.',
+      },
+      {
+        type: "heading2",
+        content: "Why Does Your Business Need Digital Marketing?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Most customers search online before purchasing a product or service. If your business does not appear in relevant search results, you may miss valuable opportunities. Digital marketing helps businesses connect with customers through search engines, social media platforms, websites, and online advertising.",
+      },
+      {
+        type: "paragraph",
+        content: "A well-planned digital marketing strategy can help you:",
+      },
+      {
+        type: "list",
+        items: [
+          "Increase website traffic and online visibility.",
+          "Generate quality leads and potential customers.",
+          "Build brand awareness and credibility.",
+          "Improve customer engagement.",
+          "Reach local and targeted audiences.",
+          "Measure marketing performance and business growth.",
+        ],
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Contact today for professional digital marketing solutions and take the first step towards stronger online growth!",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content:
+          "What Services Should You Expect from a Digital Marketing Agency?",
+      },
+      {
+        type: "paragraph",
+        content:
+          'A professional <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">digital marketing agency in Bhubaneswar</a> offers different services to strengthen your online presence and achieve measurable marketing goals.',
+      },
+      {
+        type: "heading3",
+        content: "1. Search Engine Optimization (SEO)",
+      },
+      {
+        type: "paragraph",
+        content:
+          "SEO helps improve your website's visibility on search engines like Google. It includes keyword research, on-page optimization, technical SEO, content creation, and link-building strategies to attract organic traffic.",
+      },
+      {
+        type: "heading3",
+        content: "2. Social Media Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Social media platforms provide excellent opportunities to connect with your target audience. Consistent posting, engaging creatives, audience targeting, and social media campaigns help build brand awareness and customer relationships.",
+      },
+      {
+        type: "heading3",
+        content: "3. Google Ads and PPC Advertising",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Paid advertising helps businesses reach potential customers quickly. Targeted Google Ads campaigns can increase website visits, generate inquiries, and promote specific products or services.",
+      },
+      {
+        type: "heading3",
+        content: "4. Website Design and Development",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Your website creates the first impression of your business online. A responsive, user-friendly, and SEO-friendly website helps visitors explore your services and take action.",
+      },
+      {
+        type: "heading3",
+        content: "5. Content Marketing",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Informative blogs, engaging website content, and promotional materials help communicate your brand's value. Quality content also supports SEO and builds trust with potential customers.",
+      },
+      {
+        type: "heading2",
+        content: "How to Choose the Right Digital Marketing Partner?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Selecting the right marketing partner requires more than comparing prices. Look for experience, transparent communication, customized strategies, and a clear understanding of your business objectives.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'A reliable <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">digital marketing agency in Bhubaneswar</a> should focus on understanding your target audience, analyzing competitors, and developing strategies that match your goals. Regular performance reports and campaign monitoring are also important for measuring progress.',
+      },
+      {
+        type: "heading2",
+        content: "Ready to Take Your Business to the Next Level?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Your customers are already searching for products and services online. Make sure they can find your business!",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Get started today! Invest in the right digital marketing strategy to improve your online visibility, attract potential customers, and grow your business.",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions (FAQs)",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question: "1. What does a digital marketing agency do?",
+            answer:
+              "A digital marketing agency helps businesses promote their products and services online through SEO, social media marketing, paid advertising, content marketing, and website optimization.",
+          },
+          {
+            question:
+              "2. How can digital marketing help local businesses in Bhubaneswar?",
+            answer:
+              "Digital marketing helps local businesses reach nearby customers, improve Google visibility, generate inquiries, and build brand awareness within their target market.",
+          },
+          {
+            question: "3. How long does SEO take to show results?",
+            answer:
+              "SEO is a long-term strategy. Depending on competition, website condition, and keyword difficulty, noticeable improvements may take around 3–6 months or longer.",
+          },
+          {
+            question: "4. Is digital marketing suitable for small businesses?",
+            answer:
+              "Yes. Digital marketing offers flexible strategies and budgets, making it suitable for startups, small businesses, and established organizations.",
+          },
+          {
+            question: "5. How do I get started with digital marketing?",
+            answer:
+              "Start by identifying your business goals, understanding your target audience, and selecting suitable marketing channels. A well-planned strategy can help you achieve sustainable online growth.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "looking-for-the-top-seo-companies-in-bhubaneswar-in-2026-heres-what-you-should-know",
+    title:
+      "Looking for the Top SEO Companies in Bhubaneswar in 2026? Here's What You Should Know!",
+    metaDescription:
+      "Looking for the top SEO companies in Bhubaneswar in 2026? Discover essential SEO services, tips for choosing the right partner, and how to improve rankings.",
+    category: "SEO",
+    categoryLabel: "SEO GUIDE",
+    date: "November 26, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/blog24.webp",
+    excerpt:
+      "If you want to improve your website rankings, attract organic traffic, and generate quality leads, finding the right SEO partner in 2026 is essential. Here is what you should know.",
+    author: {
+      name: "RITGB Team",
+      role: "Search Strategy",
+    },
+    content: [
+      {
+        type: "paragraph",
+        content:
+          "In today's competitive digital landscape, having a website is not enough to grow your business online. Your website needs to appear in search engine results when potential customers look for products or services related to your business. This is where Search Engine Optimization (SEO) plays an important role.",
+      },
+      {
+        type: "paragraph",
+        content:
+          'If you want to improve your website rankings, attract organic traffic, and generate quality leads, finding the right SEO partner is essential. Exploring the <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Top SEO companies in Bhubaneswar 2026</a> can help you understand the services, strategies, and expertise required to achieve better online visibility.',
+      },
+      {
+        type: "heading2",
+        content: "Why Is SEO Important for Your Business in 2026?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "SEO helps your website reach the right audience through organic search results. A well-optimized website can improve its search engine presence, build customer trust, and generate consistent business opportunities.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "With increasing online competition, businesses need effective SEO strategies to stay visible and relevant. Some major benefits of SEO include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Improved website rankings on Google.",
+          "Increased organic website traffic.",
+          "Better brand awareness and online credibility.",
+          "More relevant leads and customer inquiries.",
+          "Improved website user experience.",
+          "Long-term digital growth.",
+        ],
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Contact us today to improve your website rankings and strengthen your online presence!",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "What Services Should You Expect from an SEO Company?",
+      },
+      {
+        type: "paragraph",
+        content:
+          'When researching the <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Top SEO companies in Bhubaneswar 2026</a>, it is important to understand the SEO services that can support your business goals.',
+      },
+      {
+        type: "heading3",
+        content: "1. On-Page SEO",
+      },
+      {
+        type: "paragraph",
+        content:
+          "On-page SEO focuses on optimizing website elements such as title tags, meta descriptions, headings, URLs, images, internal links, and website content. Proper optimization helps search engines understand your pages and their relevance to specific search queries.",
+      },
+      {
+        type: "heading3",
+        content: "2. Technical SEO",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Technical SEO improves the technical performance of your website. It includes website speed optimization, mobile responsiveness, indexing, crawlability, structured data, and fixing technical errors.",
+      },
+      {
+        type: "heading3",
+        content: "3. Off-Page SEO",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Off-page SEO focuses on building website authority through quality backlinks, relevant brand mentions, and other trustworthy online signals. A strong off-page strategy can improve your website's credibility.",
+      },
+      {
+        type: "heading3",
+        content: "4. Local SEO",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Local SEO helps businesses appear in location-based searches. Google Business Profile optimization, local keyword targeting, customer reviews, and local business listings can help attract customers from Bhubaneswar and nearby areas.",
+      },
+      {
+        type: "heading3",
+        content: "5. SEO Content Optimization",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Quality content is essential for successful SEO. Informative blogs, service pages, landing pages, and keyword-focused website content help answer customer questions and improve organic search visibility.",
+      },
+      {
+        type: "heading2",
+        content: "How to Choose the Right SEO Company in Bhubaneswar?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Choosing an SEO partner requires careful research. Instead of focusing only on pricing or ranking promises, evaluate the company's experience, SEO approach, communication, and reporting process.",
+      },
+      {
+        type: "paragraph",
+        content: "Before making a decision, consider these factors:",
+      },
+      {
+        type: "list",
+        items: [
+          "Check previous SEO projects and case studies.",
+          "Understand the proposed SEO strategy.",
+          "Ask about keyword research and competitor analysis.",
+          "Review reporting methods and performance tracking.",
+          "Ensure the strategies follow search engine guidelines.",
+          "Avoid guaranteed ranking promises.",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          'The <a href="https://www.ritgb.com/" class="text-black font-semibold underline underline-offset-4 decoration-black/30 hover:decoration-black transition-all">Top SEO companies in Bhubaneswar 2026</a> should focus on sustainable optimization practices, transparent reporting, and strategies that align with your business objectives.',
+      },
+      {
+        type: "heading2",
+        content: "Grow Your Business with the Right SEO Strategy!",
+      },
+      {
+        type: "paragraph",
+        content:
+          "A strong SEO strategy can help your business attract the right audience, improve online visibility, and build long-term digital success. Whether you operate a small business, startup, or established organization, investing in SEO can create valuable growth opportunities.",
+      },
+      {
+        type: "cta",
+        ctaText:
+          "Get started now with effective SEO solutions and take your business ahead of the competition.",
+        ctaLink: "https://www.ritgb.com/contact",
+      },
+      {
+        type: "heading2",
+        content: "Frequently Asked Questions (FAQs)",
+      },
+      {
+        type: "faq",
+        faqs: [
+          {
+            question: "1. Why should I hire an SEO company in Bhubaneswar?",
+            answer:
+              "An SEO company can help improve your website visibility, attract organic traffic, optimize website performance, and generate relevant business inquiries.",
+          },
+          {
+            question: "2. How long does SEO take to show results?",
+            answer:
+              "SEO generally takes around 3–6 months to show noticeable improvements, although results depend on competition, website condition, and the SEO strategy.",
+          },
+          {
+            question: "3. What are the most important SEO services in 2026?",
+            answer:
+              "Important SEO services include on-page SEO, technical SEO, off-page SEO, local SEO, keyword research, and content optimization.",
+          },
+          {
+            question: "4. Is local SEO important for small businesses?",
+            answer:
+              "Yes. Local SEO helps small businesses reach nearby customers, improve local search visibility, and generate location-specific inquiries.",
+          },
+          {
+            question: "5. How much do SEO services cost in Bhubaneswar?",
+            answer:
+              "SEO pricing depends on website size, keyword competition, business goals, and the services required. It is best to choose a package based on your specific needs and budget.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function isPublishedThisWeek(dateString: string): boolean {
