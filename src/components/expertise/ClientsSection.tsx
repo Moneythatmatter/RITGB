@@ -120,6 +120,12 @@ const clients = [
     file: "/images/clients/client20.webp",
     alt: "The Foothill Farm Stay – RITGB client",
   },
+  {
+    id: 19,
+    name: "3R Stays",
+    file: "/images/clients/client21.webp",
+    alt: "3R Stays – RITGB client",
+  },
 ];
 
 export default function ClientsSection() {
